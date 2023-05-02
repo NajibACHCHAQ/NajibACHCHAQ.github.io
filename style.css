@@ -12,7 +12,8 @@ body {
 	margin: auto;
 }
 
-header {
+header .anim1
+{
 	background-color: #df1616;
 	color: #351212;
 	padding: 20px;
