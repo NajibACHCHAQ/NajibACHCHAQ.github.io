@@ -1,13 +1,49 @@
+html{
+	background-color: aquamarine;
+}
+
 body {
+	width: 1600px;
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	text-align: center;
+	background-color: azure;
+	margin: auto;
 }
 
 header {
 	background-color: #df1616;
 	color: #351212;
 	padding: 20px;
+	width: 500px;
+	text-align: center;
+	margin: auto;
+	margin-top: 20PX;
+	border: solid 2px black;
+	border-radius: 30% 30% 30% 30%;
+	animation-name: bird;
+	animation-duration: 20s;
+}
+@keyframes  bird {
+    from{
+        background-color: orange;
+    }
+    25%{
+        background-color: blue;
+        width: 75%
+    }
+    50%{
+        background-color: purple;
+        width: 50%
+    }
+    75%{
+        background-color: red;
+        width: 75%;
+    }
+    to{
+        background-color: orange;
+    }
 }
 
 nav ul {
