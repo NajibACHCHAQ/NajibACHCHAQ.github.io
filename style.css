@@ -14,8 +14,11 @@ body {
 
 header 
 {
-	background-color: #df1616;
-	color: #351212;
+	background-image: url(lean.jpg);
+	background-size: contain;
+	text-shadow: 5px 5px black;
+	background-repeat:round;
+	color: #f8fbfc;
 	padding: 20px;
 	width: 500px;
 	text-align: center;
@@ -98,4 +101,9 @@ li p {
 	nav {
 		display: none;
 	}
+}
+img
+{
+	border-radius: 65% 65% 65% 65%;
+	margin: auto;
 }
