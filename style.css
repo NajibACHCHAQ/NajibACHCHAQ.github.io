@@ -1,122 +1,18 @@
-html{
-	background-color: aquamarine;
-}
-
-body {
-	width: 1600px;
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	background-color: azure;
-	margin: auto;
-}
-
-header 
-{
-	background-image: url(lean.jpg);
-	background-size:50% ;
-	
-	text-shadow: 5px 5px black;
-	background-repeat:repeat;
-	color: #f8fbfc;
-	padding: 20px;
-	width: 500px;
-	text-align: center;
-	margin: auto;
-	margin-top: 20PX;
-	border-radius: 30% 30% 30% 30%;
-	animation-name: bird;
-	animation-duration: 20s;
-	box-shadow: 5px 5px rgb(68, 67, 67);
-}
-@keyframes  bird {
-    from{
-        background-color: orange;
-    }
-    25%{
-        background-color: blue;
-        width: 75%
-    }
-    50%{
-        background-color: purple;
-        width: 50%
-    }
-    75%{
-        background-color: red;
-        width: 75%;
-    }
-    to{
-        background-color: orange;
-    }
-}
-
-nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-nav li {
-	display: inline-block;
-	margin-right: 20px;
-}
-
-nav li:last-child {
-	margin-right: 0;
-}
-
-nav a {
-	color: #fff;
-	text-decoration: none;
-}
-
-main {
-	margin: 20px;
-}
-
-section {
-	margin-bottom: 20px;
-}
-
-h2 {
-	font-size: 24px;
-	margin-bottom: 10px;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
-li h3 {
-	margin-top: 0;
-}
-
-li p {
-	margin-bottom: 0;
-}
-
-@media print {
-	nav {
-		display: none;
-	}
-}
-img
-{
-	border-radius: 65% 65% 65% 65%;
-	margin: auto;
-}
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
-
-
+html, body {
+    height: 100%;
+}
+body {
+    font-family: Montserrat, Helvetica, sans-serif;
+    background: rgb(45, 110, 80);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .container {
     max-width: 1600px;
@@ -124,9 +20,8 @@ img
     padding: 100px 20px 0;
 }
 p {
-	font-family: Montserrat, Helvetica, sans-serif;
     text-transform: uppercase;
-    color: #222;
+    color: #f1ebeb;
     font-weight: 900;
     color: transparent;
     font-size: 0px;
@@ -155,14 +50,14 @@ p:nth-child(2) {
     animation: txt-appearance 0s 1.25s forwards;
 }
 p:nth-child(1) span::after {
-    background: rgb(10, 106, 250);
-    animation: slide-in 0.75s ease-out forwards,
-    slide-out 0.75s 1s ease-out forwards;
+    background: rgba(218, 214, 9, 0.966);
+    animation: slide-in 1.2s ease-out forwards,
+    slide-out 1.2s 1s ease-out forwards;
 }
 p:nth-child(2) span::after {
-    background: rgb(240, 224, 5);
-    animation: slide-in 0.75s 0.3s ease-out forwards,
-    slide-out 0.75s 1.3s ease-out forwards;
+    background: royalblue;
+    animation: slide-in 1.2s 0.5s ease-out forwards,
+    slide-out 1.2s 1.5s ease-out forwards;
 }
 
 @keyframes slide-in {
@@ -177,6 +72,6 @@ p:nth-child(2) span::after {
 }
 @keyframes txt-appearance {
     100% {
-        color: #222;
+        color: #faf6f6;
     }
 }
