@@ -1,3 +1,5 @@
+
+/* INITIALISATION PARAMETRE NAVIGATEUR*/
 *, ::before, ::after {
     box-sizing: border-box;
     margin: 0;
@@ -13,6 +15,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* GESTION DE L ANIMATION DE TEXTE */
 
 .container {
     max-width: 1600px;
@@ -44,20 +48,20 @@ p span::after {
 }
 p:nth-child(1) {
     font-weight: 300;
-    animation: txt-appearance 0s 1s forwards;
+    animation: txt-appearance 1s 1.3s forwards;
 }
 p:nth-child(2) {
-    animation: txt-appearance 0s 1.25s forwards;
+    animation: txt-appearance 1s 1.95s forwards;
 }
 p:nth-child(1) span::after {
     background: rgba(218, 214, 9, 0.966);
-    animation: slide-in 1.2s ease-out forwards,
-    slide-out 1.2s 1s ease-out forwards;
+    animation: slide-in 1.5s ease-out forwards,
+    slide-out 1.7s 1s ease-out forwards;
 }
 p:nth-child(2) span::after {
     background: royalblue;
-    animation: slide-in 1.2s 0.5s ease-out forwards,
-    slide-out 1.2s 1.5s ease-out forwards;
+    animation: slide-in 1.9s 1s ease-out forwards,
+    slide-out 1.9s 1s ease-out forwards;
 }
 
 @keyframes slide-in {
@@ -74,4 +78,22 @@ p:nth-child(2) span::after {
     100% {
         color: #faf6f6;
     }
+}
+
+/* Gestion de l'image rotative */
+
+.rotate img 
+{
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+   
+.rotate :hover img 
+{
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+}
+.rotate p
+{
+    text-align: center;
 }
