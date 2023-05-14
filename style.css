@@ -119,6 +119,7 @@ p:nth-child(2) span::after {
     padding: 10px;
     padding-top: 30PX;
     margin-left: 400px;
+    border-image: 5px solid black;
     
     
 }
@@ -129,9 +130,7 @@ p:nth-child(2) span::after {
     height: 10px;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 300PX;
-    margin: 10PX ;
-    
-    
+    margin: 10PX ;   
 }
 header .grid1
 {
@@ -149,9 +148,25 @@ header .grid1
     grid-template-columns: 1fr;
     text-align: center;
     font-size: 60px;
-    color: blanchedalmond;
+    color: #cac2c2;;
 }
-h1
+.titre h1
 {
     text-align: center;
+    text-shadow: 5PX 3PX black;
+}
+
+ul
+{
+    width: 1000PX;
+    text-align: center;
+    margin-left: 300PX;
+    margin-top: 50PX;
+}
+li
+{
+    display: inline-block;
+    padding: 20PX;
+    
+    font-size: 50PX;
 }
