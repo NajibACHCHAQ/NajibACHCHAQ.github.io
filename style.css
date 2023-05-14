@@ -12,8 +12,7 @@ html, body {
 
 
 body {
-    font-family: Brush Script MT, Brush Script Std, cursive,
-     American Typewriter, serif, Helvetica, sans-serif;
+    font-family:  Helvetica, sans-serif;
     background-image: url(bureau.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -30,7 +29,7 @@ body {
     height: 300px;
 }
 p.name {
-    text-transform: uppercase;
+    
     color: #f1ebeb;
     font-weight: 900;
     color: transparent;
@@ -42,7 +41,7 @@ p span {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    font-size: clamp(100px, 8vw, 100px);
+    font-size: clamp(100px, 10vw, 100px);
 }
 p span::after {
     content: "";
@@ -53,6 +52,7 @@ p span::after {
     top: 0;
     left: 0;
     transform: translateX(-100%);
+   
 }
 p:nth-child(1) {
     font-weight: 600;
@@ -62,9 +62,11 @@ p:nth-child(2) {
     animation: txt-appearance 1s 1.95s forwards;
 }
 p:nth-child(1) span::after {
+    
     background: rgba(218, 214, 9, 0.966);
     animation:  slide-in 1.5s ease-out forwards,
                 slide-out 1.7s 1s ease-out forwards;
+                
 }
 p:nth-child(2) span::after {
     background: royalblue;
@@ -84,9 +86,9 @@ p:nth-child(2) span::after {
 }
 @keyframes txt-appearance {
     100% {
-        color: #0e3f88;
-        text-shadow:4PX 2PX black;
-        font-family :Comic Sans MS, Comic Sans;
+        color: #44a3f16e;
+        text-shadow: 5PX 3PX rgba(13, 13, 14, 0.644);
+        
     }
 }
 /* ---------------------------------------------------------*/
@@ -139,13 +141,15 @@ header .grid1
     grid-template-columns: 1fr;
     text-align: center;
     font-size: 60px;
-    color: #cac2c2;
+    color: #44a3f16e;
+    font-family:Brush Script MT, Brush Script Std, cursive,
+     American Typewriter, serif, Helvetica, sans-serif;
 }
 /* Gestion du titre */
 .titre h1
 {
     text-align: center;
-    text-shadow: 5PX 3PX black;
+    text-shadow: 5PX 3PX rgba(13, 13, 14, 0.644);
 }
 
 /* Gestion de la list */
