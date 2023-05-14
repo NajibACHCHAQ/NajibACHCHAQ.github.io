@@ -172,20 +172,25 @@ li
 {
     display: inline-block;
     padding: 20PX;
-    
+    text-shadow: 5PX 2PX rgba(66, 65, 65, 0.795);
     font-size: 50PX;
 }
+.liste1 :hover 
+{
+    color:#f1ebeb;
+}
 
-.present 
+.present div
 {
     text-align: center;
-    
-    line-height: 80PX;
-    margin-top: 50px;
+    line-height: 50PX;
+    margin-top: 40px;
     color:rgb(6, 37, 105);
-    margin-left: 50PX;
-    width: 1600px;
+    margin-left: 70PX;
+    min-width: 800px;
+    max-width: 1500PX;
     font-size: 40PX;
+    
 }
 
 
