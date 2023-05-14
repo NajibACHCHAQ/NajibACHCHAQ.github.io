@@ -15,6 +15,7 @@ body {
     font-family: Brush Script MT, Brush Script Std, cursive,
      American Typewriter, serif, Helvetica, sans-serif;
     background-image: url(bureau.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     
