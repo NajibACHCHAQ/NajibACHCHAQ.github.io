@@ -6,7 +6,8 @@
     padding: 0;
 }
 html, body {
-    height: 100%;
+    height: 980PX;
+    width: 1096PX;
 }
 
 
@@ -117,7 +118,7 @@ p:nth-child(2) span::after {
     border-radius: 100%;
     padding: 10px;
     padding-top: 30PX;
-    margin-left: 300px;
+    margin-left: 400px;
     
     
 }
