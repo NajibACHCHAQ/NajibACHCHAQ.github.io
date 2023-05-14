@@ -119,10 +119,11 @@ p:nth-child(2) span::after {
     padding: 10px;
     padding-top: 30PX;
     margin-left: 400px;
-    border-image: 5px solid black;
+
     
     
 }
+
 .grid1
 {
     display: grid;
@@ -132,6 +133,7 @@ p:nth-child(2) span::after {
     grid-template-rows: 300PX;
     margin: 10PX ;   
 }
+
 header .grid1
 {
     margin: 10px;
@@ -148,14 +150,16 @@ header .grid1
     grid-template-columns: 1fr;
     text-align: center;
     font-size: 60px;
-    color: #cac2c2;;
+    color: #cac2c2;
 }
+/* Gestion du titre */
 .titre h1
 {
     text-align: center;
     text-shadow: 5PX 3PX black;
 }
 
+/* Gestion de la list */
 ul
 {
     width: 1000PX;
@@ -163,6 +167,7 @@ ul
     margin-left: 300PX;
     margin-top: 10PX;
 }
+
 li
 {
     display: inline-block;
@@ -170,3 +175,17 @@ li
     
     font-size: 50PX;
 }
+
+.present 
+{
+    text-align: center;
+    margin-right: ;
+    line-height: 80PX;
+    margin-top: 50px;
+    color:rgb(6, 37, 105);
+    margin-left: 50PX;
+    width: 1600px;
+    font-size: 40PX;
+}
+
+
