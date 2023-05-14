@@ -12,11 +12,11 @@ html, body {
 
 
 body {
-    font-family: Montserrat, Helvetica, sans-serif;
-    background: rgb(45, 110, 80);
-    background-position: center;
-    background-repeat: no-repeat;
+    font-family: Brush Script MT, Brush Script Std, cursive,
+     American Typewriter, serif, Helvetica, sans-serif;
+    background-image: url(bureau.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     
 }
 
@@ -83,30 +83,14 @@ p:nth-child(2) span::after {
 }
 @keyframes txt-appearance {
     100% {
-        color: #faf6f6;
-        text-shadow:5PX 3PX black
+        color: #0e3f88;
+        text-shadow:4PX 2PX black;
+        font-family :Comic Sans MS, Comic Sans;
     }
 }
 /* ---------------------------------------------------------*/
 
-/* Gestion de l'image rotative */
 
-.rotate img 
-{
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-   
-.rotate :hover img 
-{
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-}
-.rotate p
-{
-    text-align: center;
-    padding-top: 600PX;
-}
 
 
 /* ------------------------------------------------------ */
@@ -194,6 +178,7 @@ li
     padding-left: 120PX;
     width: 1400PX;
     font-size: 40PX;
+    font-weight: bold;
      
 }
 
