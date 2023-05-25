@@ -201,7 +201,7 @@ header .grid1
     
 }
 
-.park li
+.park a
 {
     display: inline-block;
     text-align: center;
@@ -221,8 +221,12 @@ header .grid1
  a
  {
     text-decoration: none;
+    
+    
     color: rgba(20, 49, 180, 0.842);
  }
+
+ 
 
 
 
