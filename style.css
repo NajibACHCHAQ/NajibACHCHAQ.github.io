@@ -25,8 +25,8 @@ body {
 .container { 
     margin: 0 180PX;
     padding-top: 50px;
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
 }
 p.name {
     
@@ -88,7 +88,8 @@ p:nth-child(2) span::after {
     100% {
         color: #44a3f16e;
         text-shadow: 5PX 3PX rgba(13, 13, 14, 0.644);
-        
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
     }
 }
 /* ---------------------------------------------------------*/
@@ -101,17 +102,17 @@ p:nth-child(2) span::after {
 /* Gestion photo */
 .maphoto img 
 {
-    display: inline-block;
+    
     width: 300PX;
     height:300PX;
-    border-radius: 100%;
+    border-radius: 20%;
     padding: 10px;
     padding-top: 40PX;
     margin-left: 500px;
-
-    
-    
+   
 }
+
+
 
 .grid1
 {
@@ -153,7 +154,7 @@ header .grid1
 }
 
 /* Gestion de la list */
-ul
+.liste1 ul
 {
     width: 1000PX;
     text-align: center;
@@ -161,7 +162,7 @@ ul
     margin-top: 20PX;
 }
 
-li
+.liste1 li
 {
     display: inline-block;
     padding: 20PX;
@@ -169,7 +170,7 @@ li
     font-size: 50PX;
     line-height: 30px;
 }
-.liste1 :hover 
+.liste1 ul :hover 
 {
     color:#f1ebeb;
 }
@@ -186,5 +187,42 @@ li
     font-weight: bold;
      
 }
+
+.park
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    width: 1700px;
+    margin: auto;
+    margin-top: 50px;
+    padding: auto;
+    font-size: 40px;
+    
+}
+
+.park li
+{
+    display: inline-block;
+    text-align: center;
+    border: 3px solid rgba(7, 59, 117, 0.788);
+    box-shadow: 5PX 3PX rgba(21, 73, 170, 0.514);
+    padding-top: 23px;
+    border-radius: 10px;
+    width: 390px;
+    font-weight: bold;
+}
+
+.park :hover
+{
+    color: rgb(245, 252, 249);
+    background: rgba(9, 83, 133, 0.541);
+}
+ a
+ {
+    text-decoration: none;
+    color: rgba(20, 49, 180, 0.842);
+ }
+
 
 
