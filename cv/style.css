@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
 }
+html
+{
+    overflow-x: hidden;
+}
 html, body {
     height: 90%;
     
@@ -18,7 +22,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+   
     
 }
 
