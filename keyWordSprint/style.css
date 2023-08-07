@@ -1,0 +1,294 @@
+/* Styles généraux pour le corps de la page */
+body {
+    background: url(assets/bg_word.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Borel', cursive;
+}
+
+/* Styles pour la section principale de la page */
+main {
+    display: grid;
+    grid-template-rows: 240px 1fr 1fr 1fr 1fr;
+    background-color: rgba(240, 248, 255, 0.949);
+    min-width: 800px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+/* Styles pour le pied de page */
+footer {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: rgb(146, 40, 40);
+    background-color: aliceblue;
+}
+
+/* Styles pour l'input de l'écriture */
+#inputEcriture {
+    border-radius: 50px;
+    border: none;
+    height: 70px;
+    outline: none;
+    text-align: center;
+    width: 400px;
+    font-family: 'Borel', cursive;
+    font-size: 35px;
+    background: rgb(255, 254, 254);
+    padding-top: 20px;
+}
+
+/* Styles pour la zone de saisie */
+.zoneSaisie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour la zone de proposition */
+.zoneProposition {
+    height: 90px;
+    background: rgba(241, 215, 122, 0.785);
+    min-width: 600px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+    padding-top: 25px;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Borel', cursive;
+    color: rgb(72, 72, 72);
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/* Styles pour l'en-tête de la page */
+header {
+    display: grid;
+    grid-template-rows: 120px 60px 1fr;
+    height: 260px;
+    background: rgba(41, 64, 96, 0.759);
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    color: beige;
+    font-family: 'Borel', cursive;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Styles pour le titre h1 */
+h1 {
+    font-size: 60px;
+}
+
+/* Styles pour la zone des options */
+.zoneOptions {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 150px;
+    font-size: 30px;
+}
+
+/* Styles pour les paragraphes dans la zone des options */
+.zoneOptions p {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(72, 126, 145);
+}
+
+/* Styles pour les inputs dans la zone des options */
+.zoneOptions input {
+    height: 40px;
+    margin-bottom: 10px;
+    size: 130px;
+}
+
+/* Styles pour la zone du score */
+.zoneScore {
+    text-align: center;
+    justify-items: center;
+    padding-top: 40px;
+    font-size: 40px;
+}
+
+/* Styles pour les boutons */
+button {
+    border-radius: 50px;
+    border: none;
+    height: 80px;
+    width: 150px;
+    font-size: 20px;
+    background-color: rgb(188, 235, 194);
+    font-family: 'Borel', cursive;
+    padding-top: 12px;
+    color: rgb(185, 184, 184);
+    cursor: pointer;
+}
+
+/* Styles pour les boutons au survol */
+button:hover {
+    background-color: rgb(140, 200, 155);
+    color: white;
+    transform: scale(1.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Masquer la zone à cocher par défaut */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    background-color: rgb(188, 235, 194);
+}
+
+/* Style de la zone à cocher lorsqu'elle est cochée */
+input[type="radio"]:checked {
+    border-color: #ccc;
+    /* Couleur de la bordure lorsque le bouton radio est coché */
+    background-color: rgb(154, 225, 163);
+    /* Couleur de fond lorsque le bouton radio est coché */
+}
+
+/* Style du point central de la zone à cocher lorsqu'elle est cochée */
+input[type="radio"]::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-top: 7px;
+    /* Ajustez la position du point central */
+    border-radius: 20%;
+    background-color: rgb(241, 241, 241);
+    /* Couleur du point central */
+    border: 1px solid rgb(173, 172, 172);
+}
+
+/* Style du point central de la zone à cocher lorsqu'elle est cochée */
+input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-top: 7px;
+    /* Ajustez la position du point central */
+    border-radius: 50%;
+    background-color: rgb(92, 91, 91);
+    /* Couleur du point central lorsque le bouton radio est coché */
+}
+
+/* Styles pour la popup de partage */
+.popupBackground {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles pour la popup */
+.popup {
+    display: grid;
+    padding: 6px;
+    grid-template-rows: 80px 1fr;
+    height: auto;
+    width: auto;
+    min-width: 350px;
+    background-color: rgb(200, 200, 200);
+    border-radius: 15px;
+    position: relative;
+    outline: 660px solid rgba(140, 192, 188, 0.301);
+}
+
+/* Styles pour le titre de la popup */
+.popup h2 {
+
+    height: 50px;
+    font-size: 30px;
+    left: 5px;
+    color: rgb(107, 148, 206);
+    text-shadow: 2px 2px rgba(73, 99, 106, 0.829);
+    margin: 0px;
+    
+}
+
+
+/* Styles pour le bouton de fermeture de la popup */
+#btnFermerPopup {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    background-color: rgb(255, 131, 131);
+    border-radius: 50px;
+    height: 10px;
+    width: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 10px;
+    font-weight: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles pour les boutons dans la popup */
+.popup button {
+    width: 60px;
+    height: 30px;
+    font-size: 10px;
+    padding: 0px;
+    padding-top: 5px;
+}
+
+
+
+/* Styles pour les inputs dans la popup */
+.popup input {
+    border-radius: 50px;
+    border: none;
+    height: 20px;
+    outline: none;
+    text-align: center;
+    width: auto;
+    font-family: 'Borel', cursive;
+    font-size: 14px;
+    background: rgb(255, 254, 254);
+    padding-top: 10px;
+    margin-bottom: 30px;
+}
