@@ -1,0 +1,315 @@
+*{
+    font-family: 'Borel', cursive;
+    font-family: 'Preahvihear', sans-serif;
+}
+
+body{
+    text-align: center;
+    font-family: 'Borel', cursive;
+    font-family: 'Preahvihear', sans-serif;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1600PX;
+    min-width: 320PX;
+    width: auto;
+    height: 150px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1600PX;
+    min-width: 320PX;
+    width: auto;
+    height: auto;
+    min-height: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: center;
+}
+h2{
+    display: flex;
+    height: 40px;
+    max-width: 1600PX;
+    min-width: 320PX;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(57, 57, 57);
+    font-size: 34px;
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 15px;
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+.in i{
+    font-size: 78px;
+    text-shadow: 12px 12px 12px rgb(114, 113, 113);
+    font-weight: bolder;
+}
+.in{
+    background-color: greenyellow;
+}
+
+.out i{
+    font-size: 78px;
+    text-shadow: 12px 12px 12px rgb(114, 113, 113);
+    font-weight: bolder;
+}
+.out{
+    background-color: brown;
+    color: antiquewhite;
+}
+
+#container
+{
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 5px;
+    width: 300PX;
+    max-height: 280px;
+    height: auto;
+    background-color: rgb(222, 249, 244);
+    box-shadow: 4px 4px 4px 2px rgb(199, 199, 199);
+    justify-content: center;
+    overflow: hidden;
+    overflow-y: auto;
+
+
+}
+
+.item{
+
+    height: 20px; 
+    margin-top: 6px;  
+}
+.enteteCard
+{
+    width: 300px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    height: 40px;
+
+
+}
+
+.enteteCard input
+{
+
+height: 24px;
+border: 2px solid rgb(201, 199, 199);
+margin-bottom: 12px;
+
+}
+
+.enteteCard h1{
+    display: flex;
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+
+}
+h1{
+    margin-bottom: 18px;
+
+    height: 24px;
+    
+}
+h1 input{
+margin-left: auto;
+margin-right: auto;
+height: 24px;
+background-color: rgb(225, 225, 225);
+}
+
+input{
+    height: 18px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 180px;
+}
+
+.addComposant
+{
+    display: flex;
+    width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: left;
+}
+
+
+
+button:hover
+{
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: rgb(64, 175, 64);
+    border: none;
+    box-shadow: 3px 2px 3px 1px rgb(199, 199, 199);
+    color: white;
+
+
+}
+
+a{
+    font-size: 26px;
+    font-weight: bolder;
+}
+
+
+
+.small, .validation{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(127, 255, 212, 0);
+    font-weight: bolder;
+    font-size: 42px;
+    box-shadow: none;
+    color: green;
+    justify-content: left;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+
+.validation
+{
+    font-size: 30px;
+    margin-top: 6px;
+}
+
+.small:hover, .validation:hover{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(127, 255, 212, 0);
+    font-weight: bolder;
+    box-shadow: none;
+    color: rgb(103, 172, 103);
+}
+
+.inputQuantité
+{
+    width: 50PX;
+    margin-left: 12PX;
+}
+
+.valider{
+
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: rgb(64, 175, 64);
+    margin-bottom: 12px;
+    margin-left: 12px;
+    border: none;
+    box-shadow: 3px 2px 3px 1px rgb(199, 199, 199);
+    color: white;
+
+}
+
+#affichageObjetsStockés {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Crée des colonnes automatiquement */
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    justify-content: center; /* Centre l'affichage horizontalement */
+    margin: 0 auto; /* Centre la grille dans son conteneur */
+}
+
+.objet{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px repeat(10,23px);
+    overflow: hidden;
+    background: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8px;
+    font-size: 16px;
+    box-shadow: 3px 2px 3px 1px rgb(199, 199, 199);
+    margin-bottom: 8px;
+    border: 2px solid rgb(173, 173, 173);
+    border-radius: 15px;
+    width: 230px;
+    height: 257PX;
+    min-height: 202px;
+    text-align: center;
+    align-items: center;
+}
+
+div p{
+
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.item-info
+{
+    background-color: rgb(206, 207, 207);
+    height: 23px;
+    width: 230px;
+
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+
+.nom-composant {
+
+
+    font-weight: bolder;
+    margin-bottom: 6px;
+    background-color: rgb(175, 240, 202);
+    height: 70px;
+    font-size: 30px;
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+
+}
+
+.valeur{
+    width: 30px;
+    height: 30px;
+    border:solid 1px black;
+    background-color: aqua;
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+}
+
+.deroulant{
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProFlux</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Preahvihear&display=swap" rel="stylesheet">
+
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    <header>
+
+        <h1>ProFlux</h1>
+        <h3>Optimiser vos flux</h3>
+
+    </header>
+
+
+    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket fa-beat"style="color: #3a5583;"></i>&nbsp;  Entree</h2>
+    <main>
+
+        
+
+        <div id="container">
+            <div class="enteteCard">
+                <button class="btnAddComposant small" id="duplicateButton">+</button>
+                <h1><input type="text" placeholder="Nom du composant"></h1>
+                <button class="validation"><i class="fa-solid fa-check"></i></button>
+            </div>
+            
+            <div class="item">
+                <div class="info">
+                    <input type="text" class="description" placeholder="Conditionnement">
+                    <input type="text" class="inputQuantité" placeholder="Qté">
+                </div>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <h2 class="out"> Sortie &nbsp;<i class="fa-solid fa-arrow-right-from-bracket fa-beat" style="color: #3a5583;"></i></h2>
+
+    
+
+        
+
+        
+        <main id="affichageObjetsStockés"></main>
+
+        <DIv class="deroulant">
+            <select id="objetsStockesDropdown">
+                <option value="">Sélectionner</option>
+            </select>
+            <div class="valeur"></div>
+        </DIv>
+        
+        
+
+        
+
+
+    
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
