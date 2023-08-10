@@ -32,6 +32,7 @@ header {
     margin-bottom: 40px;
 }
 
+
 main{
     display: grid;
     grid-template-columns: 1fr;
