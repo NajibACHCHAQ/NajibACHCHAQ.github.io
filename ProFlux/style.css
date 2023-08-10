@@ -1,6 +1,7 @@
 *{
     font-family: 'Borel', cursive;
     font-family: 'Preahvihear', sans-serif;
+
 }
 
 body{
@@ -18,7 +19,7 @@ header {
     max-width: 1600PX;
     min-width: 320PX;
     width: auto;
-    height: 140px;
+    height: 150px;
     background-color: rgba(215, 216, 216, 0.747);
     margin-left: auto;
     margin-right: auto;
@@ -32,41 +33,50 @@ header {
     margin-bottom: 40px;
     overflow: hidden;
     font-size: 36px; /* Utilisation de vw pour la taille de police */
-    transition: font-size 0.6s ease;
+    transition: font-size 0.4s ease;
 }
 h3{
     
     min-width: 320px;
     font-size: 30px; /* Utilisation de vw pour la taille de police */
-    transition: font-size 0.6s ease;
+    transition: font-size 0.4s ease;
+
 
 }
 @media (max-width: 930px) {
     header {
         font-size: 36px; /* La taille de police reste inchangée entre 500px et 930px */
+        
     }
 
     h3 {
         font-size: 30px; /* La taille de police reste inchangée entre 500px et 930px */
     }
+ 
 }
 @media (max-width: 500px) {
     header {
         font-size: 28px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        height: 145px;
     }
 
     h3 {
         font-size: 21px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
     }
+
+   
 }
 @media (max-width: 350px) {
     header {
         font-size: 24px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        height: 140px;
     }
 
     h3 {
         font-size: 18px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
     }
+
+
 }
 
 
@@ -102,12 +112,12 @@ main{
 
 .imgright{
 
-    margin-left: 5px;
+    margin-left: 80px;
 
 }
 
 .imgleft{
-    margin-right: 5px;
+    margin-right: 80px;
 }
 h2{
     display: flex;
@@ -302,7 +312,6 @@ a{
 #affichageObjetsStockés {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Crée des colonnes automatiquement */
-    grid-template-rows: 280px;
     max-width: 1600px;
     width: 100%;
     height: auto;
