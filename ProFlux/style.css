@@ -18,13 +18,18 @@ header {
     max-width: 1600PX;
     min-width: 320PX;
     width: auto;
-    height: 150px;
-    background-color: aqua;
+    height: 160px;
+    background-color: rgba(215, 216, 216, 0.747);
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
     box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
     text-align: center;
+    font-size: 36PX;
+    color: rgb(61, 81, 110);
+    text-shadow: 0PX 3PX 4PX rgb(66, 118, 179);
+    margin-top: 20PX;
+    margin-bottom: 40px;
 }
 
 main{
@@ -34,10 +39,20 @@ main{
     min-width: 320PX;
     width: auto;
     height: auto;
-    min-height: 280px;
+
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 22px;
     justify-items: center;
+
+}
+
+.zoneCreateObject{
+    grid-template-columns: 1fr 1fr 1fr; /* Crée des colonnes automatiquement */
+
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+
 }
 h2{
     display: flex;
@@ -47,8 +62,9 @@ h2{
     width: auto;
     margin-left: auto;
     margin-right: auto;
-    color: rgb(57, 57, 57);
-    font-size: 34px;
+    color: rgb(87, 87, 87);
+    text-shadow: 0PX 3PX 4PX rgb(114, 114, 114);
+    font-size: 39px;
     box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
     border: 1px solid rgb(199, 199, 199);
     border-radius: 15px;
@@ -62,7 +78,8 @@ h2{
     font-weight: bolder;
 }
 .in{
-    background-color: greenyellow;
+    background-color: rgb(79, 226, 145);
+    
 }
 
 .out i{
@@ -78,26 +95,34 @@ h2{
 #container
 {
     display: grid;
-    grid-template-rows: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50PX repeat(auto-fill, minmax(26px, 1fr)); /* Crée des colonnes automatiquement */
     grid-template-columns: auto;
     border: 1px solid rgb(148, 148, 148);
     border-radius: 5px;
     width: 300PX;
-    max-height: 280px;
+    max-height: 290px;
     height: auto;
-    background-color: rgb(222, 249, 244);
+    background-color: rgba(215, 216, 216, 0.747);
     box-shadow: 4px 4px 4px 2px rgb(199, 199, 199);
     justify-content: center;
     overflow: hidden;
     overflow-y: auto;
 
 
+
+}
+
+.zoneCreateObject img {
+    margin: 5px;
+    width: AUTO;
+    height: 70%;
+    
 }
 
 .item{
 
-    height: 20px; 
-    margin-top: 6px;  
+    height: 30px; 
+ 
 }
 .enteteCard
 {
@@ -105,16 +130,15 @@ h2{
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     height: 40px;
-
-
 }
 
 .enteteCard input
 {
 
-height: 24px;
+
 border: 2px solid rgb(201, 199, 199);
 margin-bottom: 12px;
+background-color: rgb(214, 231, 245);
 
 }
 
@@ -138,7 +162,7 @@ background-color: rgb(225, 225, 225);
 }
 
 input{
-    height: 18px;
+    height: 20px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -148,13 +172,10 @@ input{
     width: 180px;
 }
 
-.addComposant
+.btnAddComposant 
 {
-    display: flex;
-    width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: left;
+    margin-left: 12px;
+    margin-top: 8px;
 }
 
 
@@ -233,12 +254,14 @@ a{
 
 #affichageObjetsStockés {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Crée des colonnes automatiquement */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Crée des colonnes automatiquement */
+    grid-template-rows: 280px;
     max-width: 1600px;
     width: 100%;
     height: auto;
     justify-content: center; /* Centre l'affichage horizontalement */
-    margin: 0 auto; /* Centre la grille dans son conteneur */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .objet{
@@ -273,7 +296,7 @@ div p{
 .item-info
 {
     background-color: rgb(206, 207, 207);
-    height: 23px;
+    height: 30px;
     width: 230px;
 
     display: flex; /* Utiliser un affichage flex */

@@ -14,19 +14,21 @@
     <script src="scripts/script.js"></script>
 </head>
 <body>
-    <header>
 
-        <h1>ProFlux</h1>
-        <h3>Optimiser vos flux</h3>
+    <header>
+        
+        <h1>Opti-Prod</h1>
+            <h3>Optimiser votre productivitée</h3>
 
     </header>
 
 
-    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket fa-beat"style="color: #3a5583;"></i>&nbsp;  Entree</h2>
-    <main>
+    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket fa-beat"style="color: #3a5583;"></i>&nbsp;  Entrée</h2>
+    <main class="zoneCreateObject">
 
         
-
+        <img src="assets/img_ligneprod.jpg" alt="">
+        
         <div id="container">
             <div class="enteteCard">
                 <button class="btnAddComposant small" id="duplicateButton">+</button>
@@ -36,14 +38,18 @@
             
             <div class="item">
                 <div class="info">
-                    <input type="text" class="description" placeholder="Conditionnement">
-                    <input type="text" class="inputQuantité" placeholder="Qté">
+                    <input type="text" class="description" placeholder="Conditionnement" autocomplete="name">
+                    <input type="text" class="inputQuantité" placeholder="Qté" autocomplete="">
                 </div>
             </div>
         </div>
+
+        <img src="assets/img_ligneprod.jpg" alt="">
         
 
     </main>
+
+    <main id="affichageObjetsStockés"></main>
 
     <h2 class="out"> Sortie &nbsp;<i class="fa-solid fa-arrow-right-from-bracket fa-beat" style="color: #3a5583;"></i></h2>
 
@@ -52,7 +58,7 @@
         
 
         
-        <main id="affichageObjetsStockés"></main>
+        
 
         <DIv class="deroulant">
             <select id="objetsStockesDropdown">

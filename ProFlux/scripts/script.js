@@ -98,51 +98,51 @@ duplicateButton.addEventListener("click", () => {
             console.log(objetsStockesDropdown)
         });
 
-        // On crée un objet contenant les données entrées
-        const data = { nomDuComposant: itemName, items };
-        console.log(data);
+            // On crée un objet contenant les données entrées
+            const data = { nomDuComposant: itemName, items };
+            console.log(data);
 
-        // On vide le champ de saisie du nom du composant après validation
-        itemNameInput.value = "";
+            // On vide le champ de saisie du nom du composant après validation
+            itemNameInput.value = "";
 
-        // On ajoute l'objet nouvellement créé à la liste des objets stockés
-        listeObjetsStockés.push(data);
+            // On ajoute l'objet nouvellement créé à la liste des objets stockés
+            listeObjetsStockés.push(data);
 
-        // Suppression des éléments clonés du DOM
-        container.querySelectorAll(".item").forEach(item => {
-            if (item !== container.querySelector(".item")) {
-                item.remove();
-            }
+            // Suppression des éléments clonés du DOM
+            container.querySelectorAll(".item").forEach(item => {
+                if (item !== container.querySelector(".item")) {
+                    item.remove();
+                }
+            });
+
+            // Appel de la fonction pour afficher les objets stockés
+            afficherObjetsStockés();
+            console.log(listeObjetsStockés)
         });
 
-        // Appel de la fonction pour afficher les objets stockés
-        afficherObjetsStockés();
-        console.log(listeObjetsStockés)
-    });
-
-    // Fonction pour afficher les objets stockés dans le DOM
-    function afficherObjetsStockés() {
-        affichageObjetsStockés.innerHTML = "";
-    
-        listeObjetsStockés.forEach(objet => {
-            // Création d'un élément <div> pour afficher l'objet
-            const objetDiv = document.createElement("div");
-            objetDiv.classList.add("objet"); // Ajouter une classe à la div
-            affichageObjetsStockés.appendChild(objetDiv);
-    
-            // Création d'un élément <div> pour le nom du composant
-            const nomDiv = document.createElement("div");
-            nomDiv.textContent = objet.nomDuComposant;
-            nomDiv.classList.add("nom-composant"); // Ajouter une classe au div du nom
-            objetDiv.appendChild(nomDiv);
-    
-            // Affichage de chaque élément de l'objet
-            objet.items.forEach(item => {
-                const itemInfo = document.createElement("p");
-                itemInfo.textContent = `${item.description}, ${item.quantité}`;
-                itemInfo.classList.add("item-info"); // Ajouter une classe au div du nom
-                objetDiv.appendChild(itemInfo);
-            });
+        // Fonction pour afficher les objets stockés dans le DOM
+        function afficherObjetsStockés() {
+            affichageObjetsStockés.innerHTML = "";
+        
+            listeObjetsStockés.forEach(objet => {
+                // Création d'un élément <div> pour afficher l'objet
+                const objetDiv = document.createElement("div");
+                objetDiv.classList.add("objet"); // Ajouter une classe à la div
+                affichageObjetsStockés.appendChild(objetDiv);
+        
+                // Création d'un élément <div> pour le nom du composant
+                const nomDiv = document.createElement("div");
+                nomDiv.textContent = objet.nomDuComposant;
+                nomDiv.classList.add("nom-composant"); // Ajouter une classe au div du nom
+                objetDiv.appendChild(nomDiv);
+        
+                // Affichage de chaque élément de l'objet
+                objet.items.forEach(item => {
+                    const itemInfo = document.createElement("p");
+                    itemInfo.textContent = `${item.description}, ${item.quantité}`;
+                    itemInfo.classList.add("item-info"); // Ajouter une classe au div du nom
+                    objetDiv.appendChild(itemInfo);
+                });
 
             
         });
@@ -176,38 +176,13 @@ duplicateButton.addEventListener("click", () => {
                 // Ajoutez le nom de l'objet à la liste des noms ajoutés
                 nomsObjetsAjoutés.push(nomObjetDescription);
             }
-
-            
+           
         }
 
-        
-    });
+        });  
 
-    
+        });
 
-    
-});
     }
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
