@@ -11,14 +11,14 @@ body{
 }
 
 header {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 90px 40px;
     align-items: center;
     justify-content: center;
     max-width: 1600PX;
     min-width: 320PX;
     width: auto;
-    height: 160px;
+    height: 140px;
     background-color: rgba(215, 216, 216, 0.747);
     margin-left: auto;
     margin-right: auto;
@@ -30,11 +30,45 @@ header {
     text-shadow: 0PX 3PX 4PX rgb(66, 118, 179);
     margin-top: 20PX;
     margin-bottom: 40px;
+    overflow: hidden;
+    font-size: 36px; /* Utilisation de vw pour la taille de police */
+    transition: font-size 0.3s ease;
 }
 h3{
-    font-size: 24px;
-    margin-top: 60px;
+    
+    min-width: 320px;
+    font-size: 30px; /* Utilisation de vw pour la taille de police */
+    transition: font-size 0.3s ease;
+
 }
+@media (max-width: 930px) {
+    header {
+        font-size: 36px; /* La taille de police reste inchangée entre 500px et 930px */
+    }
+
+    h3 {
+        font-size: 30px; /* La taille de police reste inchangée entre 500px et 930px */
+    }
+}
+@media (max-width: 500px) {
+    header {
+        font-size: 28px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+
+    h3 {
+        font-size: 21px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+}
+@media (max-width: 350px) {
+    header {
+        font-size: 24px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+
+    h3 {
+        font-size: 18px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+}
+
 
 
 main{
@@ -151,14 +185,11 @@ background-color: rgb(214, 231, 245);
     display: flex;
     align-items: center; /* Aligner verticalement au centre */
     justify-content: center; /* Aligner horizontalement au centre */
-
-}
-h1{
-    margin-bottom: 18px;
-
+    margin-bottom: 32px;
     height: 24px;
-    
+
 }
+
 h1 input{
 margin-left: auto;
 margin-right: auto;
