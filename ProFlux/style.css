@@ -157,7 +157,7 @@ h2{
     color: antiquewhite;
 }
 
-#container
+#container, #containerComponent
 {
     display: grid;
     grid-template-rows: 50PX repeat(auto-fill, minmax(26px, 1fr)); /* Crée des colonnes automatiquement */
@@ -177,9 +177,19 @@ h2{
 
 }
 
+#containerComponent{
+
+    grid-template-rows: 50PX repeat(auto-fill, minmax(32px, 1fr)); /* Crée des colonnes automatiquement */
+
+}
+
+.fabrication
+{
+    grid-template-columns:1fr 1fr 1fr;
+}
 
 
-.item{
+.item, .itemComponent{
 
     height: 30px; 
  
@@ -229,7 +239,7 @@ input{
     width: 180px;
 }
 
-.btnAddComposant 
+.btnAddComposant , .btnAddComponent
 {
     margin-left: 12px;
     margin-top: 8px;
@@ -257,7 +267,7 @@ a{
 
 
 
-.small, .validation{
+.small, .validation ,.validationComponent{
     display: flex;
     width: 40px;
     height: 40px;
@@ -274,13 +284,13 @@ a{
     justify-content: center; /* Aligner horizontalement au centre */
 }
 
-.validation
+.validation ,.validationComponent
 {
     font-size: 30px;
     margin-top: 6px;
 }
 
-.small:hover, .validation:hover{
+.small:hover, .validation:hover, .validationComponent:hover{
     width: 40px;
     height: 40px;
     background-color: rgba(127, 255, 212, 0);
@@ -309,9 +319,9 @@ a{
 
 }
 
-#affichageObjetsStockés {
+#affichageObjetsStockés, #affichageComposés{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Crée des colonnes automatiquement */
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); /* Crée des colonnes automatiquement */
     max-width: 1600px;
     width: 100%;
     height: auto;
@@ -320,7 +330,7 @@ a{
     margin-left: auto;
 }
 
-.objet{
+.objet , .composé{
 
     display: grid;
     grid-template-columns: 1fr;
@@ -354,13 +364,12 @@ div p{
     background-color: rgb(206, 207, 207);
     height: 30px;
     width: 230px;
-
     display: flex; /* Utiliser un affichage flex */
     align-items: center; /* Aligner verticalement au centre */
     justify-content: center; /* Aligner horizontalement au centre */
 }
 
-.nom-composant {
+.nom-composant{
 
 
     font-weight: bolder;
@@ -373,22 +382,57 @@ div p{
     justify-content: center; /* Aligner horizontalement au centre */
 
 }
-
-.valeur{
-    width: 30px;
-    height: 30px;
-    border:solid 1px black;
-    background-color: aqua;
+.nom-composé {
+    background-color: rgb(216, 200, 131);
+    font-weight: bolder;
+    margin-bottom: 6px;
+    height: 70px;
+    font-size: 30px;
     display: flex; /* Utiliser un affichage flex */
     align-items: center; /* Aligner verticalement au centre */
     justify-content: center; /* Aligner horizontalement au centre */
 }
 
+.valeur{
+    width: 30px;
+    height: 24px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    display: flex; /* Utiliser un affichage flex */
+    align-items: center; /* Aligner verticalement au centre */
+    justify-content: center; /* Aligner horizontalement au centre */
+    margin-left: 2px;
+}
+
 .deroulant{
     margin-left: auto;
     margin-right: auto;
-    width: 120px;
+    width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-radius: 30px;
+}
+
+.infoComponent
+{
+    display: grid;
+    grid-template-columns: 220px 1fr ;
+    justify-content: center;
+    align-items: center;
+}
+
+select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
+    margin-left: 16px;
+    height: 26px;
+    width: 180px;
+}
+.composé
+{
+    margin-left: auto;
+    margin-right: auto;
 }
