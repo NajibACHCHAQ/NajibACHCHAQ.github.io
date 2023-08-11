@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         afficherObjetsStockés();
+        console.log(listeObjetsStockés)
     });
 
     // Affichage des objets stockés dans le DOM
@@ -130,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         const option = document.createElement("option");
                         option.value = index;
                         option.textContent = nomObjetDescription;
+                        option.setAttribute("data-nom-composant", objet.nomDuComposant); // Ajout de l'attribut personnalisé
                         objetsStockesDropdown.appendChild(option);
                         nomsObjetsAjoutés.push(nomObjetDescription);
                     }
@@ -150,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const containerComponent = document.getElementById("containerComponent");
         const listeComposés = [];
         let clonedItemCount = 0; // Variable pour suivre le nombre d'éléments clonés
+        let selectedComponentName = ""; // Ajout de la variable pour stocker le nom du composant sélectionné
 
         duplicateButtonComponent.addEventListener("click", () => {
             const existingItemsComponent = document.querySelectorAll(".itemComponent").length;
@@ -177,34 +180,40 @@ document.addEventListener("DOMContentLoaded", () => {
             
                 // Utilisation de l'ID unique pour le dropdownComponent comme référence
                 dropdownComponent.addEventListener("change", () => {
-                    updateValeurForClonedElement(valeurDivComponent, dropdownComponent); // Utilise le dropdownComponent actuel
+                    updateValeurForClonedElement(valeurDivComponent, dropdownComponent);
+                    selectedComponentName = dropdownComponent.options[dropdownComponent.selectedIndex].getAttribute("data-nom-composant");
                 });
             }
         });
 
-    function updateValeurForClonedElement(valeurDivComponent, dropdownComponent) {
-    const selectedIndex = dropdownComponent.selectedIndex;
-    const selectedDescription = dropdownComponent.options[selectedIndex].text.split(" - ")[1];
-    
-    valeurDivComponent.textContent = ""; // Réinitialisation de la valeur
-
-    if (selectedDescription.trim() !== "") {
-        // Parcourir la liste d'objets stockés pour trouver l'objet correspondant
-        for (const selectedObjet of listeObjetsStockés) {
-            const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
-
-            if (selectedItem) {
-                const selectedQuantite = selectedItem.quantité;
-                valeurDivComponent.textContent = `${selectedQuantite}`;
-                break; // Sortir de la boucle dès que l'objet est trouvé
+        function updateValeurForClonedElement(valeurDivComponent, dropdownComponent) {
+            const selectedIndex = dropdownComponent.selectedIndex;
+            const selectedOption = dropdownComponent.options[selectedIndex];
+            const selectedDescription = selectedOption.text.split(" - ")[1];
+        
+            valeurDivComponent.textContent = ""; // Réinitialisation de la valeur
+        
+            if (selectedDescription.trim() !== "") {
+                const selectedComponentName = selectedOption.getAttribute("data-nom-composant");
+        
+                // Parcourir la liste d'objets stockés pour trouver l'objet correspondant
+                for (const selectedObjet of listeObjetsStockés) {
+                    if (selectedObjet.nomDuComposant === selectedComponentName) {
+                        const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
+        
+                        if (selectedItem) {
+                            const selectedQuantite = selectedItem.quantité;
+                            valeurDivComponent.textContent = `${selectedQuantite}`;
+                            break; // Sortir de la boucle dès que l'objet est trouvé
+                        }
+                    }
+                }
+        
+                if (valeurDivComponent.textContent === "") {
+                    valeurDivComponent.textContent = "Item non trouvé dans l'objet";
+                }
             }
         }
-
-        if (valeurDivComponent.textContent === "") {
-            valeurDivComponent.textContent = "Item non trouvé dans l'objet";
-        }
-    }
-}
 
 
    // Fonction pour afficher les objets composés
@@ -216,12 +225,12 @@ function afficherComposés() {
         const composéDiv = document.createElement("div");
         composéDiv.classList.add("composé");
         affichageComposés.appendChild(composéDiv);
-
+    
         const nomDiv = document.createElement("div");
-        nomDiv.textContent = composé.nomDuComposé;
+        nomDiv.textContent = `${composé.nomDuComposant}, ${composé.nomDuComposé}`; // Utilisation du nom du composant
         nomDiv.classList.add("nom-composé");
         composéDiv.appendChild(nomDiv);
-
+    
         composé.items.forEach(item => {
             const itemInfo = document.createElement("p");
             itemInfo.textContent = `${item.description}, ${item.quantité}`;
@@ -239,16 +248,18 @@ validationButtonComponent.addEventListener("click", () => {
     const itemComponentElements = document.querySelectorAll(".itemComponent .infoComponent");
 
     const itemsComponent = [];
-    
+
     itemComponentElements.forEach(itemComponentElement => {
         const dropdownComponent = itemComponentElement.querySelector(".deroulant select");
         const quantitéInput = itemComponentElement.querySelector(".inputQuantité");
 
-        const selectedDescription = dropdownComponent.options[dropdownComponent.selectedIndex].text.split(" - ")[1];
+        const selectedOption = dropdownComponent.options[dropdownComponent.selectedIndex];
+        const selectedDescription = selectedOption.text.split(" - ")[1];
         const selectedQuantité = quantitéInput.value;
 
         if (selectedDescription.trim() !== "") {
-            itemsComponent.push({ description: selectedDescription, quantité: selectedQuantité });
+            const nomDuComposant = selectedOption.getAttribute("data-nom-composant"); // Récupérer le nom du composant
+            itemsComponent.push({ description: selectedDescription, quantité: selectedQuantité, nomDuComposant }); // Ajouter le nom du composant
         }
 
         quantitéInput.value = "";
@@ -270,28 +281,27 @@ validationButtonComponent.addEventListener("click", () => {
 
     // Appeler la fonction pour afficher les objets composés
     afficherComposés();
-    console.log(listeComposés)
-    
+    console.log(listeComposés);
 });
 
     // Affichage des composés stockés dans le DOM
     function afficherComposés() {
         const affichageComposés = document.getElementById("affichageComposés");
         affichageComposés.innerHTML = "";
-
+    
         listeComposés.forEach(composé => {
             const composéDiv = document.createElement("div");
             composéDiv.classList.add("composé");
             affichageComposés.appendChild(composéDiv);
-
+    
             const nomDiv = document.createElement("div");
             nomDiv.textContent = composé.nomDuComposé;
             nomDiv.classList.add("nom-composé");
             composéDiv.appendChild(nomDiv);
-
+    
             composé.items.forEach(item => {
                 const itemInfo = document.createElement("p");
-                itemInfo.textContent = `${item.description}, ${item.quantité}`;
+                itemInfo.textContent = `${item.nomDuComposant}, ${item.description}, ${item.quantité}`; // Utiliser item.nomDuComposant
                 itemInfo.classList.add("item-info");
                 composéDiv.appendChild(itemInfo);
             });
