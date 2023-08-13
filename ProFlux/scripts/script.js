@@ -55,65 +55,91 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Gestion de la validation du premier formulaire
-    validationButton.addEventListener("click", () => {
-        const itemName = itemNameInput.value;
-        const itemElements = document.querySelectorAll(".item .info");
+// Gestion de la validation du premier formulaire
+// Gestion de la validation du premier formulaire
+validationButton.addEventListener("click", () => {
+    const itemName = itemNameInput.value;
+    const itemElements = document.querySelectorAll(".item .info");
 
-        const items = [];
-        itemElements.forEach(itemElement => {
-            const descriptionInput = itemElement.querySelector(".description");
-            const quantitéInput = itemElement.querySelector(".inputQuantité");
+    const items = [];
+    let quantitéTotaleDansObjet = 1; // Initialisation de la quantité totale dans l'objet
 
-            const description = descriptionInput.value;
-            const quantité = quantitéInput.value;
+    itemElements.forEach(itemElement => {
+        const descriptionInput = itemElement.querySelector(".description");
+        const quantitéInput = itemElement.querySelector(".inputQuantité");
 
-            if (description.trim() !== "") {
-                items.push({ description, quantité });
-            }
+        const description = descriptionInput.value;
+        const quantité = parseFloat(quantitéInput.value); // Convertir la quantité en nombre
 
-            descriptionInput.value = "";
-            quantitéInput.value = "";
-            duplicateButton.disabled = false;
-        });
+        if (description.trim() !== "" && !isNaN(quantité) && quantité !== 0) {
+            quantitéTotaleDansObjet *= quantité; // Mettre à jour la quantité totale dans l'objet
 
-        const data = { nomDuComposant: itemName, items };
+            const item = {
+                description,
+                quantité,
+                quantitéTotaleDansItem: 0, // Initialisation, sera calculée plus tard
+                quantitéDivisée: 0 // Initialisation, sera calculée plus tard
+            };
+            items.push(item);
+        }
 
-        itemNameInput.value = "";
-        listeObjetsStockés.push(data);
-
-        container.querySelectorAll(".item").forEach(item => {
-            if (item !== container.querySelector(".item")) {
-                item.remove();
-            }
-        });
-
-        afficherObjetsStockés();
-        console.log(listeObjetsStockés)
+        descriptionInput.value = "";
+        quantitéInput.value = "";
+        duplicateButton.disabled = false;
     });
 
+    // Calculer la quantité totale dans l'item et la quantité divisée pour chaque item
+    let quantitéDivisée = quantitéTotaleDansObjet;
+    items.forEach(item => {
+        item.quantitéTotaleDansItem = quantitéTotaleDansObjet;
+        item.quantitéDivisée = quantitéDivisée / item.quantité;
+        quantitéDivisée = item.quantitéDivisée; // Mettre à jour la quantité divisée pour l'item suivant
+    });
+
+    const data = { nomDuComposant: itemName, items };
+
+    itemNameInput.value = "";
+    listeObjetsStockés.push(data);
+
+    container.querySelectorAll(".item").forEach(item => {
+        if (item !== container.querySelector(".item")) {
+            item.remove();
+        }
+    });
+
+    afficherObjetsStockés();
+    console.log("liste d'objet");
+    console.log(listeObjetsStockés);
+});
     // Affichage des objets stockés dans le DOM
+ 
     function afficherObjetsStockés() {
         affichageObjetsStockés.innerHTML = "";
-
+    
         listeObjetsStockés.forEach(objet => {
             const objetDiv = document.createElement("div");
             objetDiv.classList.add("objet");
             affichageObjetsStockés.appendChild(objetDiv);
-
+    
             const nomDiv = document.createElement("div");
-            nomDiv.textContent = objet.nomDuComposant;
+            nomDiv.textContent = `${objet.nomDuComposant},${objet.items[0].quantitéTotaleDansItem}`;
             nomDiv.classList.add("nom-composant");
             objetDiv.appendChild(nomDiv);
-
+    
+            let quantiteDivisée = objet.items[0].quantitéTotaleDansObjet;
+    
             objet.items.forEach(item => {
                 const itemInfo = document.createElement("p");
-                itemInfo.textContent = `${item.description}, ${item.quantité}`;
+                const quantiteActuelle = parseFloat(item.quantité);
+                const quantiteMultiplier = quantiteDivisée / quantiteActuelle;
+                itemInfo.textContent = `${item.description},${item.quantité},${item.quantitéDivisée}`;
                 itemInfo.classList.add("item-info");
                 objetDiv.appendChild(itemInfo);
+    
+                quantiteDivisée = quantiteMultiplier;
             });
         });
-
+    
         remplirMenuDeroulant();
     }
 
@@ -252,14 +278,18 @@ validationButtonComponent.addEventListener("click", () => {
     itemComponentElements.forEach(itemComponentElement => {
         const dropdownComponent = itemComponentElement.querySelector(".deroulant select");
         const quantitéInput = itemComponentElement.querySelector(".inputQuantité");
+        const qteParCondi = itemComponentElement.querySelector(".valeur");
+        
 
         const selectedOption = dropdownComponent.options[dropdownComponent.selectedIndex];
         const selectedDescription = selectedOption.text.split(" - ")[1];
+        const selecctedComposant = selectedOption.text.split(" - ")[0];
         const selectedQuantité = quantitéInput.value;
+        const selectedQteParCondi = qteParCondi.textContent;
 
         if (selectedDescription.trim() !== "") {
             const nomDuComposant = selectedOption.getAttribute("data-nom-composant"); // Récupérer le nom du composant
-            itemsComponent.push({ description: selectedDescription, quantité: selectedQuantité, nomDuComposant }); // Ajouter le nom du composant
+            itemsComponent.push({nomDuComposant,Qté_conditionnement:selectedQteParCondi, description: selectedDescription, quantité: selectedQuantité, Compo:selecctedComposant }); // Ajouter le nom du composant
         }
 
         quantitéInput.value = "";
