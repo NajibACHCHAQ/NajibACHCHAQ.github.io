@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
 
 header {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 2px 1fr;
     grid-template-rows: 90px 40px;
     align-items: center;
     justify-content: center;
@@ -71,9 +71,11 @@ header {
 
 header img{
     width: 190PX;
-    margin-top: 110PX;
-    margin-left: 15px;
+    margin-top: 130PX;
+    margin-left: 4px;
     min-width: 60px;
+    transition: 3s;
+    
 
 }
 h3{
@@ -108,14 +110,32 @@ h3{
     {
         font-size: 32px;
     }
+
+}
+
+@media (max-width: 650px) {
+    header {
+        font-size: 26px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        
+    }
+
+    h3 {
+        font-size: 20px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+    .prod
+    {
+        font-size: 32px;
+    }
     header img{
-        width: -50PX;
+        display: none;
+        
         
     
     }
 
    
 }
+
 
 
 
@@ -529,6 +549,8 @@ footer{
    align-items: center;
    min-width: 320PX;
    margin-top: 24PX;
+   margin-left: auto;
+   margin-right: auto;
    margin-bottom: 6PX;
    border-radius: 0PX 0PX 100PX 100PX;
    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
