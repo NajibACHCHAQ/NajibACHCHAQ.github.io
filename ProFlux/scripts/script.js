@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const description = descriptionInput.value;
             const qteCondi = parseFloat(qteCondiInput.value); // Convertir la qteCondi en nombre
+            
 
             if (description.trim() !== "" && !isNaN(qteCondi) && qteCondi !== 0) {
                 qteCondiTotaleDansObjet *= qteCondi; // Mettre à jour la qteCondi totale dans l'objet
