@@ -8,8 +8,23 @@ body{
     text-align: center;
     font-family: 'Borel', cursive;
     font-family: 'Preahvihear', sans-serif;
+    background-color: rgb(222, 247, 239);
 
 }
+
+body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgb(205, 205, 205); /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(89, 134, 186); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid rgb(144, 184, 206); /* creates padding around scroll thumb */
+  }
 
 header {
     display: grid;
@@ -33,13 +48,13 @@ header {
     margin-bottom: 40px;
     overflow: hidden;
     font-size: 36px; /* Utilisation de vw pour la taille de police */
-    transition: font-size 0.4s ease;
+    transition: font-size 0.2s ease;
 }
 h3{
     
     min-width: 320px;
     font-size: 30px; /* Utilisation de vw pour la taille de police */
-    transition: font-size 0.4s ease;
+    transition: font-size 0.2s ease;
 
 
 }
@@ -56,8 +71,8 @@ h3{
 }
 @media (max-width: 500px) {
     header {
-        font-size: 28px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
-        height: 145px;
+        font-size: 31px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        
     }
 
     h3 {
@@ -66,14 +81,26 @@ h3{
 
    
 }
-@media (max-width: 350px) {
+@media (max-width: 358px) {
     header {
-        font-size: 24px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
-        height: 140px;
+        font-size: 26px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        
     }
 
     h3 {
-        font-size: 18px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+        font-size: 20px; /* Vous pouvez ajuster cette taille en fonction de vos besoins */
+    }
+    .prod
+    {
+        font-size: 32px;
+    }
+
+
+}
+@media (max-width: 380px) {
+    .prod
+    {
+        font-size: 32px;
     }
 
 
@@ -90,16 +117,17 @@ main{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 22px;
+
     justify-items: center;
 
 }
 
 .zoneCreateObject{
-    grid-template-columns: 1fr 1fr 1fr; /* Crée des colonnes automatiquement */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    grid-template-columns: 1fr 1fr 1fr; 
+    align-items: center; 
+    justify-content: center; 
     overflow: hidden;
+    height: 315px;
 
 }
 
@@ -133,9 +161,10 @@ h2{
     box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
     border: 1px solid rgb(199, 199, 199);
     border-radius: 15px;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: font-size 0.2s ease;
 }
 .in i{
     font-size: 78px;
@@ -144,10 +173,16 @@ h2{
 }
 .in{
     background-color: rgb(79, 226, 145);
+    color: antiquewhite;
     
 }
 
-.out i{
+.prod{
+    background-color: rgb(221, 161, 77);
+    color: antiquewhite;
+}
+
+.out i, .prod i{
     font-size: 78px;
     text-shadow: 12px 12px 12px rgb(114, 113, 113);
     font-weight: bolder;
@@ -157,21 +192,26 @@ h2{
     color: antiquewhite;
 }
 
-#container, #containerComponent
+#container, #containerComponent, #containerPf, .fabrication
 {
     display: grid;
-    grid-template-rows: 50PX repeat(auto-fill, minmax(26px, 1fr)); /* Crée des colonnes automatiquement */
+    grid-template-rows: 50PX repeat(auto-fill, minmax(25px, 1fr));
     grid-template-columns: auto;
-    border: 1px solid rgb(148, 148, 148);
-    border-radius: 5px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 15px;
     width: 300PX;
-    max-height: 290px;
+    max-height: 300px;
+
     height: auto;
     background-color: rgba(215, 216, 216, 0.747);
-    box-shadow: 4px 4px 4px 2px rgb(199, 199, 199);
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
     justify-content: center;
+    align-items: center;
     overflow: hidden;
     overflow-y: auto;
+    margin-bottom: 12px;
+    padding-bottom: 4px;
+    
 
 
 
@@ -179,7 +219,7 @@ h2{
 
 #containerComponent{
 
-    grid-template-rows: 50PX repeat(auto-fill, minmax(32px, 1fr)); /* Crée des colonnes automatiquement */
+    grid-template-rows: 50PX repeat(auto-fill, minmax(29px, 1fr));
 
 }
 
@@ -188,18 +228,32 @@ h2{
     grid-template-columns:1fr 1fr 1fr;
 }
 
+#container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar, .fabrication::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+    border-radius: 50px;
+    
+  }
+  
+  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar, .fabrication::-webkit-scrollbar-track {
+    background: rgb(205, 205, 205); /* color of the tracking area */
+    
+  }
+  
+  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar, .fabrication::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 226, 226); /* color of the scroll thumb */
+    border-radius: 100px; /* roundness of the scroll thumb */
+    border: 2px solid rgb(144, 184, 206); /* creates padding around scroll thumb */
+    
+  }
 
-.item, .itemComponent{
 
-    height: 30px; 
- 
-}
+
 .enteteCard
 {
     width: 300px;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
-    height: 40px;
+    height: 50px;
 }
 
 .enteteCard input
@@ -207,16 +261,14 @@ h2{
 
 
 border: 2px solid rgb(201, 199, 199);
-margin-bottom: 12px;
+margin-bottom: 10px;
 background-color: rgb(214, 231, 245);
 
 }
 
 .enteteCard h1{
     display: flex;
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
-    margin-bottom: 32px;
+    align-items: center;
     height: 24px;
 
 }
@@ -229,17 +281,18 @@ background-color: rgb(225, 225, 225);
 }
 
 input{
-    height: 20px;
+    height: 19px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    border: none;
+    border: 01px solid rgb(168, 168, 168);
     outline: none;
     width: 180px;
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
 }
 
-.btnAddComposant , .btnAddComponent
+.btnAddComposant , .btnAddComponent, .btnAddPf
 {
     margin-left: 12px;
     margin-top: 8px;
@@ -267,7 +320,7 @@ a{
 
 
 
-.small, .validation ,.validationComponent{
+.small, .validation ,.validationComponent, .validationPf{
     display: flex;
     width: 40px;
     height: 40px;
@@ -279,18 +332,19 @@ a{
     justify-content: left;
     border: none;
     cursor: pointer;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
 }
 
-.validation ,.validationComponent
+.validation ,.validationComponent, .validationPf
 {
     font-size: 30px;
     margin-top: 6px;
 }
 
-.small:hover, .validation:hover, .validationComponent:hover{
+.small:hover, .validation:hover, .validationComponent:hover, .validationPf:hover{
     width: 40px;
     height: 40px;
     background-color: rgba(127, 255, 212, 0);
@@ -299,7 +353,7 @@ a{
     color: rgb(103, 172, 103);
 }
 
-.inputQuantité
+.inputqteCondi
 {
     width: 50PX;
     margin-left: 12PX;
@@ -319,13 +373,13 @@ a{
 
 }
 
-#affichageObjetsStockés, #affichageComposés{
+#affichageObjetsStockés, #affichageComposés, #affichagePf{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); /* Crée des colonnes automatiquement */
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); 
     max-width: 1600px;
     width: 100%;
     height: auto;
-    justify-content: center; /* Centre l'affichage horizontalement */
+    justify-content: center; 
     margin-right: auto;
     margin-left: auto;
 }
@@ -364,9 +418,9 @@ div p{
     background-color: rgb(206, 207, 207);
     height: 30px;
     width: 230px;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .nom-composant{
@@ -377,9 +431,9 @@ div p{
     background-color: rgb(175, 240, 202);
     height: 70px;
     font-size: 30px;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 
 }
 .nom-composé {
@@ -388,21 +442,24 @@ div p{
     margin-bottom: 6px;
     height: 70px;
     font-size: 30px;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 .valeur{
     width: 30px;
-    height: 24px;
+    height: 21px;
     font-size: 12px;
     border-radius: 10px;
     background-color: whitesmoke;
-    display: flex; /* Utiliser un affichage flex */
-    align-items: center; /* Aligner verticalement au centre */
-    justify-content: center; /* Aligner horizontalement au centre */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     margin-left: 2px;
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+    margin-top: 2px;
+    border: 01px solid rgb(168, 168, 168);
 }
 
 .deroulant{
@@ -412,6 +469,7 @@ div p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 30px;
+    
 }
 
 .infoComponent
@@ -420,6 +478,13 @@ div p{
     grid-template-columns: 220px 1fr ;
     justify-content: center;
     align-items: center;
+
+}
+.itemComponent{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
 }
 
 select{
@@ -430,6 +495,9 @@ select{
     margin-left: 16px;
     height: 26px;
     width: 180px;
+    box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+    outline: none;
+    color: rgb(73, 73, 73);
 }
 .composé
 {

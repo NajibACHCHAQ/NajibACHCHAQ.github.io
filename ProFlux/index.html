@@ -6,7 +6,7 @@
     <title>ProFlux</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Borel&family=Preahvihear&display=swap" rel="stylesheet">
@@ -23,11 +23,11 @@
     </header>
 
 
-    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket fa-beat"style="color: #3a5583;"></i>&nbsp;  Entrée</h2>
+    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket"style="color: #3a5583;"></i>&nbsp;  Entrée</h2>
     <main class="zoneCreateObject">
 
         
-        <img class="imgleft" src="assets/img_ligneprod.jpg" alt="">
+        <img class="imgleft" src="assets/img_ligneprod.png" alt="">
         
         <div id="container">
             <div class="enteteCard">
@@ -39,19 +39,21 @@
             <div class="item">
                 <div class="info">
                     <input type="text" class="description" placeholder="Conditionnement" autocomplete="name">
-                    <input type="text" class="inputQuantité" placeholder="Qté" autocomplete="">
+                    <input type="text" class="inputqteCondi" placeholder="Qté" autocomplete="">
                 </div>
             </div>
         </div>
 
-        <img  class="imgright" src="assets/img_ligneprod.jpg" alt="">
+        <img  class="imgright" src="assets/img_ligneprod.png" alt="">
         
 
     </main>
 
     <main id="affichageObjetsStockés"></main>
 
-    <h2 class="out"> Sortie &nbsp;<i class="fa-solid fa-arrow-right-from-bracket fa-beat" style="color: #3a5583;"></i></h2>
+     <!-- --------------------------------------------------------------------------------------------------------- -->
+
+    <h2 class="prod"> Production &nbsp;<i class="fa-solid fa-users-gear" style="color: #3a5583;"></i></h2>
 
 
         
@@ -74,20 +76,49 @@
                         </select>
                         <div class="valeur"></div>
                     </DIv>
-                    <input type="text" class="inputQuantité" placeholder="Qté" autocomplete="">
+                    <input type="text" class="inputqteCondi" placeholder="Qté" autocomplete="">
                 </div>
             </div>
         </div>
+
+        <div></div>
     </main>
 
 
-    <div></div>
+    
 
     <div id="affichageComposés"></div>
 
+        <!-- --------------------------------------------------------------------------------------------------------- -->    
+
+    <h2 class="out"> Sortie &nbsp;<i class="fa-solid fa-arrow-right-from-bracket" style="color: #3a5583;"></i></h2>
     
+    <main class="zoneCreateObject">
 
+        <div></div>
+        
+        <div id="containerPf" class="pf">
+            <div class="enteteCard">
+                <button class="btnAddPf small" id="duplicateButtonPf">+</button>
+                <h1><input type="text" placeholder="Nom du produit fini"></h1>
+                <button class="validationPf"><i class="fa-solid fa-check"></i></button>
+            </div>
+            
+            <div class="itemPf">
+                <div class="infoComponent"> 
+                    <DIv class="deroulant">
+                        <select id="objets&componentStockesDropdown" class="objets&componentStockesDropdownOriginal">
+                            <option value="">Sélectionner</option>
+                        </select>
+                        <div class="valeur"></div>
+                    </DIv>
+                    <input type="text" class="inputqteCondi" placeholder="Qté" autocomplete="">
+                </div>
+            </div>
+        </div>
 
+        <div></div>
+    </main>
 
 
 

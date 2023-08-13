@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (selectedObjet) {
                 const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
                 if (selectedItem) {
-                    const selectedQuantite = selectedItem.quantité;
+                    const selectedQuantite = selectedItem.qteCondi;
                     valeurDiv.textContent = `${selectedQuantite}`;
                 } else {
                     valeurDiv.textContent = "Item non trouvé dans l'objet";
@@ -41,76 +41,81 @@ document.addEventListener("DOMContentLoaded", () => {
     duplicateButton.addEventListener("click", () => {
         const existingItems = document.querySelectorAll(".item").length;
 
-        if (existingItems < 9) {
+        if (existingItems < 10) {
             const newItem = document.querySelector(".item").cloneNode(true);
 
             newItem.querySelector(".description").value = "";
-            newItem.querySelector(".inputQuantité").value = "";
+            newItem.querySelector(".inputqteCondi").value = "";
 
             container.appendChild(newItem);
 
-            if (existingItems + 1 === 9) {
+            if (existingItems + 1 === 10) {
                 duplicateButton.disabled = true;
             }
         }
     });
 
-// Gestion de la validation du premier formulaire
-// Gestion de la validation du premier formulaire
-validationButton.addEventListener("click", () => {
-    const itemName = itemNameInput.value;
-    const itemElements = document.querySelectorAll(".item .info");
 
-    const items = [];
-    let quantitéTotaleDansObjet = 1; // Initialisation de la quantité totale dans l'objet
+    // Gestion de la validation du premier formulaire
+    validationButton.addEventListener("click", () => {
+        const itemName = itemNameInput.value;
+        const itemElements = document.querySelectorAll(".item .info");
 
-    itemElements.forEach(itemElement => {
-        const descriptionInput = itemElement.querySelector(".description");
-        const quantitéInput = itemElement.querySelector(".inputQuantité");
+        const items = [];
+        let qteCondiTotaleDansObjet = 1; // Initialisation de la qteCondi totale dans l'objet
 
-        const description = descriptionInput.value;
-        const quantité = parseFloat(quantitéInput.value); // Convertir la quantité en nombre
+        itemElements.forEach(itemElement => {
+            const descriptionInput = itemElement.querySelector(".description");
+            const qteCondiInput = itemElement.querySelector(".inputqteCondi");
 
-        if (description.trim() !== "" && !isNaN(quantité) && quantité !== 0) {
-            quantitéTotaleDansObjet *= quantité; // Mettre à jour la quantité totale dans l'objet
+            const description = descriptionInput.value;
+            const qteCondi = parseFloat(qteCondiInput.value); // Convertir la qteCondi en nombre
 
-            const item = {
-                description,
-                quantité,
-                quantitéTotaleDansItem: 0, // Initialisation, sera calculée plus tard
-                quantitéDivisée: 0 // Initialisation, sera calculée plus tard
-            };
-            items.push(item);
-        }
+            if (description.trim() !== "" && !isNaN(qteCondi) && qteCondi !== 0) {
+                qteCondiTotaleDansObjet *= qteCondi; // Mettre à jour la qteCondi totale dans l'objet
 
-        descriptionInput.value = "";
-        quantitéInput.value = "";
-        duplicateButton.disabled = false;
+                const item = {
+                    description,
+                    qteCondi,
+                    pcb: 0, // Initialisation, sera calculée plus tard
+                    qteUnitaire: 0 // Initialisation, sera calculée plus tard
+                };
+                items.push(item);
+            
+            }
+            return qteCondiTotaleDansObjet;
+
+            descriptionInput.value = "";
+            qteCondiInput.value = "";
+            duplicateButton.disabled = false;
+        });
+
+        // Calculer la qteCondi totale dans l'item et la qteCondi divisée pour chaque item
+        let qteUnitaire = qteCondiTotaleDansObjet;
+        items.forEach(item => {
+            item.pcb = qteCondiTotaleDansObjet;
+            item.qteUnitaire = qteUnitaire / item.qteCondi;
+            qteUnitaire = item.qteUnitaire; // Mettre à jour la qteCondi divisée pour l'item suivant
+        });
+
+        const data = { nomDuComposant: itemName, items };
+
+        itemNameInput.value = "";
+
+        
+        listeObjetsStockés.push(data);
+
+        container.querySelectorAll(".item").forEach(item => {
+            if (item !== container.querySelector(".item")) {
+                item.remove();
+            }
+        });
+
+        afficherObjetsStockés();
+        console.log("liste composant");
+        console.log(listeObjetsStockés);
     });
 
-    // Calculer la quantité totale dans l'item et la quantité divisée pour chaque item
-    let quantitéDivisée = quantitéTotaleDansObjet;
-    items.forEach(item => {
-        item.quantitéTotaleDansItem = quantitéTotaleDansObjet;
-        item.quantitéDivisée = quantitéDivisée / item.quantité;
-        quantitéDivisée = item.quantitéDivisée; // Mettre à jour la quantité divisée pour l'item suivant
-    });
-
-    const data = { nomDuComposant: itemName, items };
-
-    itemNameInput.value = "";
-    listeObjetsStockés.push(data);
-
-    container.querySelectorAll(".item").forEach(item => {
-        if (item !== container.querySelector(".item")) {
-            item.remove();
-        }
-    });
-
-    afficherObjetsStockés();
-    console.log("liste d'objet");
-    console.log(listeObjetsStockés);
-});
     // Affichage des objets stockés dans le DOM
  
     function afficherObjetsStockés() {
@@ -122,17 +127,17 @@ validationButton.addEventListener("click", () => {
             affichageObjetsStockés.appendChild(objetDiv);
     
             const nomDiv = document.createElement("div");
-            nomDiv.textContent = `${objet.nomDuComposant},${objet.items[0].quantitéTotaleDansItem}`;
+            nomDiv.textContent = `${objet.nomDuComposant},${objet.items[0].pcb}`;
             nomDiv.classList.add("nom-composant");
             objetDiv.appendChild(nomDiv);
     
-            let quantiteDivisée = objet.items[0].quantitéTotaleDansObjet;
+            let quantiteDivisée = objet.items[0].qteCondiTotaleDansObjet;
     
             objet.items.forEach(item => {
                 const itemInfo = document.createElement("p");
-                const quantiteActuelle = parseFloat(item.quantité);
+                const quantiteActuelle = parseFloat(item.qteCondi);
                 const quantiteMultiplier = quantiteDivisée / quantiteActuelle;
-                itemInfo.textContent = `${item.description},${item.quantité},${item.quantitéDivisée}`;
+                itemInfo.textContent = `${item.description},${item.qteCondi},${item.qteUnitaire}`;
                 itemInfo.classList.add("item-info");
                 objetDiv.appendChild(itemInfo);
     
@@ -170,149 +175,150 @@ validationButton.addEventListener("click", () => {
     // Deuxième formulaire
     // --------------------------------------
 
-    // Sélection des éléments du deuxième formulaire
+    
 
 
     // Deuxième formulaire
-        const duplicateButtonComponent = document.getElementById("duplicateButtonComponent");
-        const containerComponent = document.getElementById("containerComponent");
-        const listeComposés = [];
-        let clonedItemCount = 0; // Variable pour suivre le nombre d'éléments clonés
-        let selectedComponentName = ""; // Ajout de la variable pour stocker le nom du composant sélectionné
+    const duplicateButtonComponent = document.getElementById("duplicateButtonComponent");
+    const containerComponent = document.getElementById("containerComponent");
+    const listeComposés = [];
+    let clonedItemCount = 0; // Variable pour suivre le nombre d'éléments clonés
+    let selectedComponentName = ""; // Ajout de la variable pour stocker le nom du composant sélectionné
 
-        duplicateButtonComponent.addEventListener("click", () => {
-            const existingItemsComponent = document.querySelectorAll(".itemComponent").length;
+    duplicateButtonComponent.addEventListener("click", () => {
+        const existingItemsComponent = document.querySelectorAll(".itemComponent").length;
 
-            if (existingItemsComponent < 9) {
-                const itemComponentTemplate = document.querySelector(".itemComponent");
-                const itemComponentClone = itemComponentTemplate.cloneNode(true);
+        if (existingItemsComponent < 9) {
+            const itemComponentTemplate = document.querySelector(".itemComponent");
+            const itemComponentClone = itemComponentTemplate.cloneNode(true);
 
-                clonedItemCount++;
-                const uniqueId = `itemComponentClone_${clonedItemCount}`;
-                itemComponentClone.id = uniqueId;
+            clonedItemCount++;
+            const uniqueId = `itemComponentClone_${clonedItemCount}`;
+            itemComponentClone.id = uniqueId;
 
-                const deroulantClone = itemComponentClone.querySelector(".deroulant");
-                const dropdownComponent = deroulantClone.querySelector("select");
-                const valeurDivComponent = itemComponentClone.querySelector(".valeur");
+            const deroulantClone = itemComponentClone.querySelector(".deroulant");
+            const dropdownComponent = deroulantClone.querySelector("select");
+            const valeurDivComponent = itemComponentClone.querySelector(".valeur");
 
-                dropdownComponent.selectedIndex = 0;
-                valeurDivComponent.textContent = "";
+            dropdownComponent.selectedIndex = 0;
+            valeurDivComponent.textContent = "";
 
-                containerComponent.appendChild(itemComponentClone);
+            containerComponent.appendChild(itemComponentClone);
 
-                if (existingItemsComponent + 1 === 9) {
-                    duplicateButtonComponent.disabled = true;
-                }
-            
-                // Utilisation de l'ID unique pour le dropdownComponent comme référence
-                dropdownComponent.addEventListener("change", () => {
-                    updateValeurForClonedElement(valeurDivComponent, dropdownComponent);
-                    selectedComponentName = dropdownComponent.options[dropdownComponent.selectedIndex].getAttribute("data-nom-composant");
-                });
+            if (existingItemsComponent + 1 === 9) {
+                duplicateButtonComponent.disabled = true;
             }
-        });
+        
+            // Utilisation de l'ID unique pour le dropdownComponent comme référence
+            dropdownComponent.addEventListener("change", () => {
+                updateValeurForClonedElement(valeurDivComponent, dropdownComponent);
+                selectedComponentName = dropdownComponent.options[dropdownComponent.selectedIndex].getAttribute("data-nom-composant");
+            });
+        }
+    });
 
-        function updateValeurForClonedElement(valeurDivComponent, dropdownComponent) {
-            const selectedIndex = dropdownComponent.selectedIndex;
-            const selectedOption = dropdownComponent.options[selectedIndex];
-            const selectedDescription = selectedOption.text.split(" - ")[1];
-        
-            valeurDivComponent.textContent = ""; // Réinitialisation de la valeur
-        
-            if (selectedDescription.trim() !== "") {
-                const selectedComponentName = selectedOption.getAttribute("data-nom-composant");
-        
-                // Parcourir la liste d'objets stockés pour trouver l'objet correspondant
-                for (const selectedObjet of listeObjetsStockés) {
-                    if (selectedObjet.nomDuComposant === selectedComponentName) {
-                        const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
-        
-                        if (selectedItem) {
-                            const selectedQuantite = selectedItem.quantité;
-                            valeurDivComponent.textContent = `${selectedQuantite}`;
-                            break; // Sortir de la boucle dès que l'objet est trouvé
-                        }
+    function updateValeurForClonedElement(valeurDivComponent, dropdownComponent) {
+        const selectedIndex = dropdownComponent.selectedIndex;
+        const selectedOption = dropdownComponent.options[selectedIndex];
+        const selectedDescription = selectedOption.text.split(" - ")[1];
+    
+        valeurDivComponent.textContent = ""; // Réinitialisation de la valeur
+    
+        if (selectedDescription.trim() !== "") {
+            const selectedComponentName = selectedOption.getAttribute("data-nom-composant");
+    
+            // Parcourir la liste d'objets stockés pour trouver l'objet correspondant
+            for (const selectedObjet of listeObjetsStockés) {
+                if (selectedObjet.nomDuComposant === selectedComponentName) {
+                    const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
+    
+                    if (selectedItem) {
+                        const selectedQuantite = selectedItem.qteCondi;
+                        valeurDivComponent.textContent = `${selectedQuantite}`;
+                        break; // Sortir de la boucle dès que l'objet est trouvé
                     }
                 }
-        
-                if (valeurDivComponent.textContent === "") {
-                    valeurDivComponent.textContent = "Item non trouvé dans l'objet";
-                }
+            }
+    
+            if (valeurDivComponent.textContent === "") {
+                valeurDivComponent.textContent = "Item non trouvé dans l'objet";
             }
         }
+    }
 
 
-   // Fonction pour afficher les objets composés
-function afficherComposés() {
-    const affichageComposés = document.getElementById("affichageComposés");
-    affichageComposés.innerHTML = "";
+    // Fonction pour afficher les objets composés
+    function afficherComposés() {
+        const affichageComposés = document.getElementById("affichageComposés");
+        affichageComposés.innerHTML = "";
 
-    listeComposés.forEach(composé => {
-        const composéDiv = document.createElement("div");
-        composéDiv.classList.add("composé");
-        affichageComposés.appendChild(composéDiv);
-    
-        const nomDiv = document.createElement("div");
-        nomDiv.textContent = `${composé.nomDuComposant}, ${composé.nomDuComposé}`; // Utilisation du nom du composant
-        nomDiv.classList.add("nom-composé");
-        composéDiv.appendChild(nomDiv);
-    
-        composé.items.forEach(item => {
-            const itemInfo = document.createElement("p");
-            itemInfo.textContent = `${item.description}, ${item.quantité}`;
-            itemInfo.classList.add("item-info");
-            composéDiv.appendChild(itemInfo);
-        });
-    });
-}
-
-const validationButtonComponent = document.querySelector(".validationComponent");
-
-// Gestion de la validation du deuxième formulaire
-validationButtonComponent.addEventListener("click", () => {
-    const composéName = document.querySelector("#containerComponent h1 input").value;
-    const itemComponentElements = document.querySelectorAll(".itemComponent .infoComponent");
-
-    const itemsComponent = [];
-
-    itemComponentElements.forEach(itemComponentElement => {
-        const dropdownComponent = itemComponentElement.querySelector(".deroulant select");
-        const quantitéInput = itemComponentElement.querySelector(".inputQuantité");
-        const qteParCondi = itemComponentElement.querySelector(".valeur");
+        listeComposés.forEach(composé => {
+            const composéDiv = document.createElement("div");
+            composéDiv.classList.add("composé");
+            affichageComposés.appendChild(composéDiv);
         
+            const nomDiv = document.createElement("div");
+            nomDiv.textContent = `${composé.nomDuComposant}, ${composé.nomDuComposé}`; // Utilisation du nom du composant
+            nomDiv.classList.add("nom-composé");
+            composéDiv.appendChild(nomDiv);
+        
+            composé.items.forEach(item => {
+                const itemInfo = document.createElement("p");
+                itemInfo.textContent = `${item.description}, ${item.qteCondi}`;
+                itemInfo.classList.add("item-info");
+                composéDiv.appendChild(itemInfo);
+            });
+        });
+    }
 
-        const selectedOption = dropdownComponent.options[dropdownComponent.selectedIndex];
-        const selectedDescription = selectedOption.text.split(" - ")[1];
-        const selecctedComposant = selectedOption.text.split(" - ")[0];
-        const selectedQuantité = quantitéInput.value;
-        const selectedQteParCondi = qteParCondi.textContent;
+    const validationButtonComponent = document.querySelector(".validationComponent");
 
-        if (selectedDescription.trim() !== "") {
-            const nomDuComposant = selectedOption.getAttribute("data-nom-composant"); // Récupérer le nom du composant
-            itemsComponent.push({nomDuComposant,Qté_conditionnement:selectedQteParCondi, description: selectedDescription, quantité: selectedQuantité, Compo:selecctedComposant }); // Ajouter le nom du composant
-        }
+    // Gestion de la validation du deuxième formulaire
+    validationButtonComponent.addEventListener("click", () => {
+        const composéName = document.querySelector("#containerComponent h1 input").value;
+        const itemComponentElements = document.querySelectorAll(".itemComponent .infoComponent");
 
-        quantitéInput.value = "";
-        dropdownComponent.selectedIndex = 0;
-        duplicateButtonComponent.disabled = false;
+        const itemsComponent = [];
+
+        itemComponentElements.forEach(itemComponentElement => {
+            const dropdownComponent = itemComponentElement.querySelector(".deroulant select");
+            const qteCondiInput = itemComponentElement.querySelector(".inputqteCondi");
+            const qteParCondi = itemComponentElement.querySelector(".valeur");
+            
+
+            const selectedOption = dropdownComponent.options[dropdownComponent.selectedIndex];
+            const selectedDescription = selectedOption.text.split(" - ")[1];
+            const selecctedComposant = selectedOption.text.split(" - ")[0];
+            const selectedqteCondi = qteCondiInput.value;
+            const selectedQteParCondi = qteParCondi.textContent;
+
+            if (selectedDescription.trim() !== "") {
+                const nomDuComposant = selectedOption.getAttribute("data-nom-composant"); // Récupérer le nom du composant
+                itemsComponent.push({nomDuComposant,Qté_conditionnement:selectedQteParCondi, description: selectedDescription, qteCondi: selectedqteCondi, Compo:selecctedComposant }); // Ajouter le nom du composant
+            }
+
+            qteCondiInput.value = "";
+            dropdownComponent.selectedIndex = 0;
+            duplicateButtonComponent.disabled = false;
+        });
+
+        const composéData = { nomDuComposé: composéName, items: itemsComponent };
+
+        document.querySelector("#containerComponent h1 input").value = "";
+
+        listeComposés.push(composéData);
+
+        containerComponent.querySelectorAll(".itemComponent").forEach(itemComponent => {
+            if (itemComponent !== document.querySelector(".itemComponent")) {
+                itemComponent.remove();
+            }
+        });
+
+        // Appeler la fonction pour afficher les objets composés
+        afficherComposés();
+        console.log("liste composé");
+        console.log(listeComposés);
     });
-
-    const composéData = { nomDuComposé: composéName, items: itemsComponent };
-
-    document.querySelector("#containerComponent h1 input").value = "";
-
-    listeComposés.push(composéData);
-
-    containerComponent.querySelectorAll(".itemComponent").forEach(itemComponent => {
-        if (itemComponent !== document.querySelector(".itemComponent")) {
-            itemComponent.remove();
-        }
-    });
-
-    // Appeler la fonction pour afficher les objets composés
-    afficherComposés();
-    console.log(listeComposés);
-});
 
     // Affichage des composés stockés dans le DOM
     function afficherComposés() {
@@ -331,7 +337,7 @@ validationButtonComponent.addEventListener("click", () => {
     
             composé.items.forEach(item => {
                 const itemInfo = document.createElement("p");
-                itemInfo.textContent = `${item.nomDuComposant}, ${item.description}, ${item.quantité}`; // Utiliser item.nomDuComposant
+                itemInfo.textContent = `${item.nomDuComposant}, ${item.description}, ${item.qteCondi}`; // Utiliser item.nomDuComposant
                 itemInfo.classList.add("item-info");
                 composéDiv.appendChild(itemInfo);
             });
