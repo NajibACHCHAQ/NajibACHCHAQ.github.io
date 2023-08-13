@@ -33,7 +33,7 @@ header {
     align-items: center;
     justify-content: center;
     max-width: 1600PX;
-    min-width: 466PX;
+    min-width: 320PX;
     width: auto;
     height: 200px;
     background-color: rgba(215, 216, 216, 0.747);
@@ -64,6 +64,8 @@ header {
     margin-left: 10px;
     min-width: 420px;
 }
+
+
 
 
 
@@ -107,7 +109,7 @@ h3{
         font-size: 32px;
     }
     header img{
-        width: 130PX;
+        width: -50PX;
         
     
     }
