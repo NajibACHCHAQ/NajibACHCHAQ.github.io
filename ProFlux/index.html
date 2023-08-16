@@ -15,6 +15,8 @@
 </head>
 <body>
 
+    
+
     <header>
         
         <div class="imgtitre"><img src="assets/leanball-removebg-preview.png" alt=""></div><div class="titre"><h1>Opti-Prod</h1>
@@ -23,12 +25,23 @@
 
     </header>
 
+    <footer class="header">
+        <div class="menu-item">Gamme</div>
+        <div class="menu-item">Flux</div>
+        <div class="menu-item">Stats</div>
+    </footer>
+
 
     <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket"style="color: #3a5583;"></i>&nbsp;  Entrée</h2>
     <main class="zoneCreateObject">
 
         
-        <img class="imgleft" src="assets/img_ligneprod.png" alt="">
+        <div class="consigne"><div class="consigneText">
+            Renseignez les différents conditionnements et sous conditionnements composants vos produits entrant
+        </div>
+            <div class="imgExemple">
+                <div class="exemple">Exemple :</div><img class="imgex" src="assets/exprodin.png" alt=""></div>
+        </div>
         
         <div id="container">
             <div class="enteteCard">
@@ -45,7 +58,7 @@
             </div>
         </div>
 
-        <img  class="imgright" src="assets/img_ligneprod.png" alt="">
+        <img  class="imgright" src="assets/Palette-removebg-preview.png" alt="">
         
 
     </main>
@@ -60,7 +73,12 @@
         
     <main class="zoneCreateObject">
 
-        <div></div>
+        <div class="consigne"><div class="consigneText">
+            Selectionnez les composants et conditionnements à utiliser et renseingnez la quantité souhaitée
+        </div>
+            <div class="imgExemple">
+                <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
+        </div>
         
         <div id="containerComponent" class="fabrication">
             <div class="enteteCard">
@@ -71,18 +89,18 @@
             
             <div class="itemComponent">
                 <div class="infoComponent"> 
-                    <DIv class="deroulant">
+                    <div class="deroulant">
                         <select id="objetsStockesDropdown" class="objetsStockesDropdownOriginal">
                             <option value="">Sélectionner composant</option>
                         </select>
                         <div class="valeur"></div>
-                    </DIv>
+                    </div>
                     <input type="text" class="inputqteCondi" placeholder="Qté" autocomplete="">
                 </div>
             </div>
         </div>
 
-        <div></div>
+        <img  class="imgright" src="assets/img_ligneprod.png" alt="">
     </main>
 
 
@@ -96,7 +114,12 @@
     
     <main class="zoneCreateObject">
 
-        <div></div>
+        <div class="consigne"><div class="consigneText">
+            Selectionnez les composants et composés à utiliser et renseignez la quantité souhaitée
+        </div>
+            <div class="imgExemple">
+                <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
+        </div>
         
         <div id="containerPf" class="pf">
             <div class="enteteCard">
@@ -106,24 +129,53 @@
             </div>
             
             <div class="itemPf">
-                <div class="infoComponent"> 
-                    <DIv class="deroulant">
-                        <select id="objets&componentStockesDropdown" class="objets&componentStockesDropdownOriginal">
+                <div class="infoPf"> 
+                    <div class="deroulant">
+                        <select id="objets-componentStockesDropdown" class="objets-componentStockesDropdownOriginal">
                             <option value="">Sélectionner</option>
                         </select>
-                        <div class="valeur"></div>
-                    </DIv>
+                        <div class="valeurPf"></div>
+                    </div>
                     <input type="text" class="inputqteCondi" placeholder="Qté" autocomplete="">
                 </div>
             </div>
         </div>
 
-        <div></div>
+        <img  class="imgright" src="assets/img_ligneprod.png" alt="">
     </main>
 
+    <div id="affichagePf"></div>
 
+    <h2 class="out">Processus &nbsp;<i class="fa-solid fa-arrow-right-from-bracket" style="color: #3a5583;"></i></h2>
+    
+    
 
+    <div class="tableauOperation">
 
+        <div class="operationHeader">
+            <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp">+</button>Opération</div>
+            <div class="titreop">Composant</div>
+            <div class="titreop">Time</div>
+            <div class="titreop">Total time/U</div>
+            <div class="titreop">Opération</div>    
+        </div>
+        <div class="arrayContent">
+            <div class="itemOp">
+                <input type="text">
+                <div class="deroulant">
+                    <select id="objets-operationStockesDropdown" class="objets-componentStockesDropdownOriginal">
+                        <option value="">Sélectionner</option>
+                    </select>
+                </div>
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+    
+
+        </div>
+        
+    </div>
    
 
         

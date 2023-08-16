@@ -12,7 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const validationButton = document.querySelector(".validation");
     const affichageObjetsStockés = document.getElementById("affichageObjetsStockés");
     const objetsStockesDropdown = document.getElementById("objetsStockesDropdown");
-    const valeursDiv = document.querySelectorAll(".valeur");
+    const valeursdiv = document.querySelectorAll(".valeur");
+    
 
     const listeObjetsStockés = [];
 
@@ -22,16 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedObjet = listeObjetsStockés[selectedIndex];
         const selectedDescription = objetsStockesDropdown.options[objetsStockesDropdown.selectedIndex].text.split(" - ")[1];
 
-        valeursDiv.forEach((valeurDiv) => {
-            valeurDiv.textContent = "";
+        valeursdiv.forEach((valeurdiv) => {
+            valeurdiv.textContent = "";
 
             if (selectedObjet) {
                 const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
                 if (selectedItem) {
                     const selectedQuantite = selectedItem.qteCondi;
-                    valeurDiv.textContent = `${selectedQuantite}`;
+                    valeurdiv.textContent = `${selectedQuantite}`;
                 } else {
-                    valeurDiv.textContent = "Item non trouvé dans l'objet";
+                    valeurdiv.textContent = "Item non trouvé dans l'objet";
                 }
             }
         });
@@ -123,30 +124,34 @@ document.addEventListener("DOMContentLoaded", () => {
         affichageObjetsStockés.innerHTML = "";
     
         listeObjetsStockés.forEach(objet => {
-            const objetDiv = document.createElement("div");
-            objetDiv.classList.add("objet");
-            affichageObjetsStockés.appendChild(objetDiv);
+            const objetdiv = document.createElement("div");
+            objetdiv.classList.add("objet");
+            affichageObjetsStockés.appendChild(objetdiv);
     
-            const nomDiv = document.createElement("div");
-            nomDiv.textContent = `${objet.nomDuComposant},${objet.items[0].pcb}`;
-            nomDiv.classList.add("nom-composant");
-            objetDiv.appendChild(nomDiv);
+            const nomdiv = document.createElement("div");
+            nomdiv.textContent = `${objet.nomDuComposant},${objet.items[0].pcb}`;
+            nomdiv.classList.add("nom-composant");
+            objetdiv.appendChild(nomdiv);
     
-            let quantiteDivisée = objet.items[0].qteCondiTotaleDansObjet;
+            let quantitedivisée = objet.items[0].qteCondiTotaleDansObjet;
     
             objet.items.forEach(item => {
                 const itemInfo = document.createElement("p");
                 const quantiteActuelle = parseFloat(item.qteCondi);
-                const quantiteMultiplier = quantiteDivisée / quantiteActuelle;
+                const quantiteMultiplier = quantitedivisée / quantiteActuelle;
                 itemInfo.textContent = `${item.description},${item.qteCondi},${item.qteUnitaire}`;
                 itemInfo.classList.add("item-info");
-                objetDiv.appendChild(itemInfo);
+                objetdiv.appendChild(itemInfo);
     
-                quantiteDivisée = quantiteMultiplier;
+                quantitedivisée = quantiteMultiplier;
             });
         });
     
         remplirMenuDeroulant();
+        remplirMenuDeroulantGlobal(dropdownOperation);
+        remplirMenuDeroulantGlobal(dropdownPf);
+        
+
     }
 
     // Remplissage du dropdown des objets stockés
@@ -172,9 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --------------------------------------
-    // Deuxième formulaire
-    // --------------------------------------
 
     
 
@@ -199,78 +201,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const deroulantClone = itemComponentClone.querySelector(".deroulant");
             const dropdownComponent = deroulantClone.querySelector("select");
-            const valeurDivComponent = itemComponentClone.querySelector(".valeur");
+            const valeurdivComponent = itemComponentClone.querySelector(".valeur");
 
             dropdownComponent.selectedIndex = 0;
-            valeurDivComponent.textContent = "";
+            valeurdivComponent.textContent = "";
 
             containerComponent.appendChild(itemComponentClone);
 
             if (existingItemsComponent + 1 === 9) {
                 duplicateButtonComponent.disabled = true;
             }
-        
-            // Utilisation de l'ID unique pour le dropdownComponent comme référence
-            dropdownComponent.addEventListener("change", () => {
-                updateValeurForClonedElement(valeurDivComponent, dropdownComponent);
-                selectedComponentName = dropdownComponent.options[dropdownComponent.selectedIndex].getAttribute("data-nom-composant");
-            });
+                   
         }
+
     });
 
-    function updateValeurForClonedElement(valeurDivComponent, dropdownComponent) {
-        const selectedIndex = dropdownComponent.selectedIndex;
-        const selectedOption = dropdownComponent.options[selectedIndex];
-        const selectedDescription = selectedOption.text.split(" - ")[1];
-    
-        valeurDivComponent.textContent = ""; // Réinitialisation de la valeur
-    
-        if (selectedDescription.trim() !== "") {
-            const selectedComponentName = selectedOption.getAttribute("data-nom-composant");
-    
-            // Parcourir la liste d'objets stockés pour trouver l'objet correspondant
-            for (const selectedObjet of listeObjetsStockés) {
-                if (selectedObjet.nomDuComposant === selectedComponentName) {
-                    const selectedItem = selectedObjet.items.find(item => item.description === selectedDescription);
-    
-                    if (selectedItem) {
-                        const selectedQuantite = selectedItem.qteCondi;
-                        valeurDivComponent.textContent = `${selectedQuantite}`;
-                        break; // Sortir de la boucle dès que l'objet est trouvé
-                    }
-                }
-            }
-    
-            if (valeurDivComponent.textContent === "") {
-                valeurDivComponent.textContent = "Item non trouvé dans l'objet";
-            }
-        }
-    }
-
-
-    // Fonction pour afficher les objets composés
-    function afficherComposés() {
-        const affichageComposés = document.getElementById("affichageComposés");
-        affichageComposés.innerHTML = "";
-
-        listeComposés.forEach(composé => {
-            const composéDiv = document.createElement("div");
-            composéDiv.classList.add("composé");
-            affichageComposés.appendChild(composéDiv);
-        
-            const nomDiv = document.createElement("div");
-            nomDiv.textContent = `${composé.nomDuComposant}, ${composé.nomDuComposé}`; // Utilisation du nom du composant
-            nomDiv.classList.add("nom-composé");
-            composéDiv.appendChild(nomDiv);
-        
-            composé.items.forEach(item => {
-                const itemInfo = document.createElement("p");
-                itemInfo.textContent = `${item.description}, ${item.qteCondi}`;
-                itemInfo.classList.add("item-info");
-                composéDiv.appendChild(itemInfo);
-            });
-        });
-    }
 
     const validationButtonComponent = document.querySelector(".validationComponent");
 
@@ -304,9 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const composéData = { nomDuComposé: composéName, items: itemsComponent };
-
         document.querySelector("#containerComponent h1 input").value = "";
-
         listeComposés.push(composéData);
 
         containerComponent.querySelectorAll(".itemComponent").forEach(itemComponent => {
@@ -319,34 +262,203 @@ document.addEventListener("DOMContentLoaded", () => {
         afficherComposés();
         console.log("liste composé");
         console.log(listeComposés);
+        
     });
 
-    // Affichage des composés stockés dans le DOM
     function afficherComposés() {
         const affichageComposés = document.getElementById("affichageComposés");
         affichageComposés.innerHTML = "";
     
         listeComposés.forEach(composé => {
-            const composéDiv = document.createElement("div");
-            composéDiv.classList.add("composé");
-            affichageComposés.appendChild(composéDiv);
+            const composédiv = document.createElement("div");
+            composédiv.classList.add("composé");
+            affichageComposés.appendChild(composédiv);
     
-            const nomDiv = document.createElement("div");
-            nomDiv.textContent = composé.nomDuComposé;
-            nomDiv.classList.add("nom-composé");
-            composéDiv.appendChild(nomDiv);
+            const nomdiv = document.createElement("div");
+            nomdiv.textContent = composé.nomDuComposé;
+            nomdiv.classList.add("nom-composé");
+            composédiv.appendChild(nomdiv);
     
             composé.items.forEach(item => {
                 const itemInfo = document.createElement("p");
                 itemInfo.textContent = `${item.nomDuComposant}, ${item.description}, ${item.qteCondi}`; // Utiliser item.nomDuComposant
                 itemInfo.classList.add("item-info");
-                composéDiv.appendChild(itemInfo);
+                composédiv.appendChild(itemInfo);
+            });
+            remplirMenuDeroulantGlobal(dropdownOperation)
+            remplirMenuDeroulantGlobal(dropdownPf)
+        });
+    }
+    
+    // Affichage des objets PFs dans le DOM
+    function afficherPf() {
+        const affichagePf = document.getElementById("affichagePf");
+        affichagePf.innerHTML = "";
+
+        listePf.forEach(pf => {
+            const pfdiv = document.createElement("div");
+            pfdiv.classList.add("pf");
+            affichagePf.appendChild(pfdiv);
+
+            const nomdiv = document.createElement("div");
+            nomdiv.textContent = pf.nomDuPf;
+            nomdiv.classList.add("nom-pf");
+            pfdiv.appendChild(nomdiv);
+
+            pf.items.forEach(item => {
+                const itemInfo = document.createElement("p");
+                const type = item.description.includes("(Composant)") ? "composant" : "pf";
+                itemInfo.textContent = `${item.nomDuComposant} - ${item.description}, ${item.qteCondi}`;
+                itemInfo.classList.add("item-info");
+                pfdiv.appendChild(itemInfo);
+            });
+        });
+    }
+    const dropdownOperation = document.getElementById("objets-operationStockesDropdown");
+    const dropdownPf = document.querySelector("#objets-componentStockesDropdown")
+
+    function remplirMenuDeroulantGlobal(dropdown) {
+        dropdown.innerHTML = '<option value="">Sélectionner</option>';
+
+        listeObjetsStockés.forEach((objet, index) => {
+            objet.items.forEach(item => {
+                const option = document.createElement("option");
+                option.value = index;
+                option.textContent = `${objet.nomDuComposant} - ${item.description}`;
+                //option.setAttribute("data-type", "composant"); // Ajouter un attribut pour indiquer le type
+                option.setAttribute("data-nom-composant", objet.nomDuComposant);
+                dropdown.appendChild(option);
+            });
+        });
+
+        listeComposés.forEach((composé, index) => {
+            composé.items.forEach(item => {
+                const option = document.createElement("option");
+                option.value = index;
+                option.textContent = `${composé.nomDuComposé} - ${item.description}`;
+                option.setAttribute("data-type", "composé"); // Ajouter un attribut pour indiquer le type
+                option.setAttribute("data-nom-composant", composé.nomDuComposé);
+                dropdown.appendChild(option);
+            });
+        });
+
+        listePf.forEach((pf, index) => {
+            pf.items.forEach(item => {
+                const option = document.createElement("option");
+                option.value = index;
+                option.textContent = `${pf.nomDuPf} - ${item.description}`;
+                option.setAttribute("data-type", "pf"); // Ajouter un attribut pour indiquer le type
+                dropdown.appendChild(option);
             });
         });
     }
 
-    // Appels initiaux
-    afficherObjetsStockés();
-    remplirMenuDeroulant();
+    //--     3eme Formulaire      --//
+
+        const duplicateButtonPf = document.getElementById("duplicateButtonPf");
+        const containerPf = document.getElementById("containerPf");
+        const listePf = [];
+
+        duplicateButtonPf.addEventListener("click", () => {
+            const existingItemsPf = document.querySelectorAll(".itemPf").length;
+
+            if (existingItemsPf < 9) {
+                const itemPfTemplate = document.querySelector(".itemPf");
+                const itemPfClone = itemPfTemplate.cloneNode(true);
+
+                const dropdownPf = itemPfClone.querySelector(".objets-componentStockesDropdownOriginal");
+                const valeurdivPf = itemPfClone.querySelector(".valeurPf");
+                const inputQteCondiPf = itemPfClone.querySelector(".inputqteCondi");
+
+                dropdownPf.selectedIndex = 0;
+                valeurdivPf.textContent = "";
+
+                containerPf.appendChild(itemPfClone);
+
+                if (existingItemsPf + 1 === 9) {
+                    duplicateButtonPf.disabled = true;
+                }
+
+            }
+    });
+
+    const validationButtonPf = document.querySelector(".validationPf");
+
     
+    validationButtonPf.addEventListener("click", () => {
+        const composéName = document.querySelector("#containerPf h1 input").value;
+        const itemPfElements = document.querySelectorAll(".itemPf .infoPf");
+    
+        const itemsPf = [];
+    
+        itemPfElements.forEach(itemPfElement => {
+            const dropdownPf = itemPfElement.querySelector(".objets-componentStockesDropdownOriginal");
+            
+            const qteCondiInputPf = itemPfElement.querySelector(".inputqteCondi");
+            const valeurdivPf = itemPfElement.querySelector(".valeurPf");
+    
+            const selectedIndex = dropdownPf.selectedIndex;
+            const selectedOption = dropdownPf.options[selectedIndex];
+    
+            const selectedDescription = selectedOption.text.split(" - ")[1];
+            const selectedqteCondiPf = qteCondiInputPf.value;
+            const nomDuComposant = selectedOption.getAttribute("data-nom-composant");
+    
+            if (selectedDescription.trim() !== "") {
+                itemsPf.push({ nomDuComposant, description: selectedDescription, qteCondi: selectedqteCondiPf });
+            }
+    
+            qteCondiInputPf.value = "";
+            dropdownPf.selectedIndex = 0;
+            duplicateButtonPf.disabled = false;
+        });
+    
+        const pfData = { nomDuPf: composéName, items: itemsPf };
+    
+        document.querySelector("#containerPf h1 input").value = "";
+    
+        listePf.push(pfData);
+    
+        containerPf.querySelectorAll(".itemPf").forEach(itemPf => {
+            if (itemPf !== document.querySelector(".itemPf")) {
+                itemPf.remove();
+            }
+        });
+
+           
+        afficherPf();
+        remplirMenuDeroulantGlobal(dropdownOperation)
+        remplirMenuDeroulantGlobal(dropdownPf)
+        console.log("liste Pf")
+        console.log(listePf)
+        
+    });
+
+    
+    const duplicateButtonOp = document.getElementById("duplicateButtonOp");
+    const containerOp = document.querySelector(".tableauOperation");
+    const listeOp = [];
+    
+    duplicateButtonOp.addEventListener("click", () => {
+        const existingItemsOp = document.querySelectorAll(".itemOp").length;
+    
+        if (existingItemsOp ) {
+            const itemOpTemplate = document.querySelector(".itemOp"); // Template d'origine
+            const itemOpClone = itemOpTemplate.cloneNode(true); // Cloner le template
+    
+            const dropdownOp = itemOpClone.querySelector(".objets-componentStockesDropdownOriginal");
+    
+            dropdownOp.selectedIndex = 0;
+    
+            // Trouver le conteneur approprié et ajouter le clone à l'intérieur
+            const arrayContent = containerOp.querySelector(".arrayContent"); // Trouver le conteneur
+            arrayContent.appendChild(itemOpClone); // Ajouter le clone à l'intérieur
+    
+           
+        }
+    });
+
+
+    // Appels initiaux
+
 });
