@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
 
 header {
     display: grid;
-    grid-template-columns: 2px 1fr;
+    grid-template-columns:  1fr;
     grid-template-rows: 90px 40px;
     align-items: center;
     justify-content: center;
@@ -52,40 +52,28 @@ header {
     transition: font-size 0.6s ease;
 }
 
-.titre h1, .titre h3 {
-    margin: 0px;
-    padding: 0px;
-    
-}
-.titre h1{
-    margin-top: 85px;
-}
-.titre{
-    margin-left: 10px;
-    min-width: 420px;
-}
 
+h3,h1{
+    margin: 0%;
+    height: 100px;
 
-
+}
+.titreop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 header img{
+    position: relative;
+    top: 70px;
+    right: 470px;
     width: 190PX;
-    margin-top: 130PX;
-    margin-left: 4px;
     min-width: 60px;
     transition: 3s;
-    
-
 }
-h3{
-    
-    min-width: 320px;
-    font-size: 30px; 
-    transition: font-size 0.6s ease;
 
-
-}
 @media (max-width: 930px) {
     header {
         font-size: 38px; 
@@ -98,14 +86,7 @@ h3{
  
 }
 @media (max-width: 770px) {
-    header {
-        font-size: 28px; 
-        
-    }
-
-    h3 {
-        font-size: 21px;
-    }
+ 
     .prod
     {
         font-size: 32px;
@@ -117,7 +98,7 @@ h3{
    
 
     .imgtitre{
-        display: none;
+        
         width: 0px;
          
     }
@@ -126,8 +107,26 @@ h3{
     {
         font-size: 12px;
     }
+    header {
+        font-size: 34px; 
+        
+    }
+
+    h3 {
+        font-size: 26px; 
+    }
 
 
+}
+@media (max-width: 650px){
+    header {
+        font-size: 30px; 
+        
+    }
+
+    h3 {
+        font-size: 22px; 
+    }
 }
 @media (max-width:400px){
     .header .menu-item{
@@ -279,35 +278,30 @@ h2{
 
 .enteteCard
 {
+    display: flex;
     width: 300px;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .enteteCard input
 {
 
-
-border: 2px solid rgb(201, 199, 199);
-margin-bottom: 10px;
-background-color: rgb(214, 231, 245);
-
-}
-
-.enteteCard h1{
     display: flex;
     align-items: center;
     height: 24px;
+    border: 2px solid rgb(201, 199, 199);
+    margin-bottom: 10px;
+    background-color: rgb(214, 231, 245);
 
 }
 
-h1 input{
-margin-left: auto;
-margin-right: auto;
-height: 24px;
-background-color: rgb(225, 225, 225);
-}
+
+
+
 
 input{
     height: 19px;
@@ -359,7 +353,7 @@ a{
 
 
 
-.small, .validation ,.validationComponent, .validationPf{
+.small, .validation ,.validationComponent, .validationPf, .validationOp{
     display: flex;
     width: 40px;
     height: 40px;
@@ -377,13 +371,13 @@ a{
     
 }
 
-.validation ,.validationComponent, .validationPf
+.validation ,.validationComponent, .validationPf, .validationOp
 {
     font-size: 30px;
     margin-top: 6px;
 }
 
-.small:hover, .validation:hover, .validationComponent:hover, .validationPf:hover{
+.small:hover, .validation:hover, .validationComponent:hover, .validationPf:hover, .validationOp:hover{
     width: 40px;
     height: 40px;
     background-color: rgba(127, 255, 212, 0);
@@ -489,7 +483,9 @@ div p{
 }
 .nom-pf{
     background-color: rgb(116, 151, 152);
+
 }
+
 
 .valeur ,.valeurPf{
     width: 30px;
@@ -607,8 +603,8 @@ footer{
     border-radius: 15px 15px 0 0;
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 600px;
     height: 50px;
     background-color: rgb(207, 229, 213);
     margin-left: auto;
@@ -629,7 +625,7 @@ footer{
 
 .arrayContent{
     display: grid;
-    width: 800px;
+    width: 600px;
     margin-right:auto ;
     margin-left: auto;
     grid-template-rows:  repeat(auto-fill, minmax(40px, 1fr));
@@ -644,8 +640,8 @@ footer{
 
 .itemOp{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 800px;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    width: 600px;
     height: 40px;
     margin-right:auto ;
     margin-left: auto;
@@ -665,14 +661,29 @@ footer{
     width: 5px;
     position: relative;
     bottom: 12px;
-    right: 26px;
+    right: 22px;
+}
+.validationOp{
+    width: 5px;
+    position: relative;
+    bottom: 12px;
+    left: 12px;
+    font-size: 30px;
 }
 
 .btnAddOp:hover{
     width: 5px;
     position: relative;
     bottom: 12px;
-    right: 26px;
+    right: 22px;
+}
+
+.validationOp:hover{
+    width: 5px;
+    position: relative;
+    bottom: 12px;
+    left: 12px;
+    font-size: 30px;
 }
 
 .consigne img{

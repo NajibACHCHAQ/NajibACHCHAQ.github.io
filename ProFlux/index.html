@@ -46,7 +46,7 @@
         <div id="container">
             <div class="enteteCard">
                 <button class="btnAddComposant small" id="duplicateButton">+</button>
-                <h1><input type="text" placeholder="Nom du composant"></h1>
+                <input type="text" placeholder="Nom du composant">
                 <button class="validation"><i class="fa-solid fa-check"></i></button>
             </div>
             
@@ -80,10 +80,10 @@
                 <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
         </div>
         
-        <div id="containerComponent" class="fabrication">
+        <div id="containerComponent" >
             <div class="enteteCard">
                 <button class="btnAddComponent small" id="duplicateButtonComponent">+</button>
-                <h1><input type="text" placeholder="Nom du composé"></h1>
+                <input type="text" placeholder="Nom du composé">
                 <button class="validationComponent"><i class="fa-solid fa-check"></i></button>
             </div>
             
@@ -121,10 +121,10 @@
                 <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
         </div>
         
-        <div id="containerPf" class="pf">
+        <div id="containerPf" >
             <div class="enteteCard">
                 <button class="btnAddPf small" id="duplicateButtonPf">+</button>
-                <h1><input type="text" placeholder="Nom du produit fini"></h1>
+                <input type="text" placeholder="Nom du produit fini">
                 <button class="validationPf"><i class="fa-solid fa-check"></i></button>
             </div>
             
@@ -156,20 +156,20 @@
             <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp">+</button>Opération</div>
             <div class="titreop">Composant</div>
             <div class="titreop">Time</div>
-            <div class="titreop">Total time/U</div>
-            <div class="titreop">Opération</div>    
+
+            <div class="titreop">Opération<button class="validationOp" ><i class="fa-solid fa-check"></i></button></div>    
         </div>
         <div class="arrayContent">
             <div class="itemOp">
-                <input type="text">
+                <input type="text" class="descriptionOp">
                 <div class="deroulant">
                     <select id="objets-operationStockesDropdown" class="objets-componentStockesDropdownOriginal">
                         <option value="">Sélectionner</option>
                     </select>
                 </div>
+                <input type="text"class="timeOp">
                 <input type="text">
-                <input type="text">
-                <input type="text">
+
             </div>
     
 

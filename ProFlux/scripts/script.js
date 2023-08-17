@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sélection des éléments du premier formulaire
     const duplicateButton = document.getElementById("duplicateButton");
     const container = document.getElementById("container");
-    const itemNameInput = document.querySelector("h1 input");
+    const itemNameInput = document.querySelector("input");
     const validationButton = document.querySelector(".validation");
     const affichageObjetsStockés = document.getElementById("affichageObjetsStockés");
     const objetsStockesDropdown = document.getElementById("objetsStockesDropdown");
@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Gestion de la validation du deuxième formulaire
     validationButtonComponent.addEventListener("click", () => {
-        const composéName = document.querySelector("#containerComponent h1 input").value;
+        const composéName = document.querySelector("#containerComponent input").value;
         const itemComponentElements = document.querySelectorAll(".itemComponent .infoComponent");
 
         const itemsComponent = [];
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const composéData = { nomDuComposé: composéName, items: itemsComponent };
-        document.querySelector("#containerComponent h1 input").value = "";
+        document.querySelector("#containerComponent input").value = "";
         listeComposés.push(composéData);
 
         containerComponent.querySelectorAll(".itemComponent").forEach(itemComponent => {
@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     validationButtonPf.addEventListener("click", () => {
-        const composéName = document.querySelector("#containerPf h1 input").value;
+        const composéName = document.querySelector("#containerPf input").value;
         const itemPfElements = document.querySelectorAll(".itemPf .infoPf");
     
         const itemsPf = [];
@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         const pfData = { nomDuPf: composéName, items: itemsPf };
     
-        document.querySelector("#containerPf h1 input").value = "";
+        document.querySelector("#containerPf input").value = "";
     
         listePf.push(pfData);
     
@@ -456,6 +456,56 @@ document.addEventListener("DOMContentLoaded", () => {
     
            
         }
+    });
+
+    const validationButtonOp = document.querySelector(".validationOp");
+
+    // Gestion de la validation du deuxième formulaire
+    validationButtonOp.addEventListener("click", () => {
+        
+        const itemOpElements = document.querySelectorAll(".itemOp");
+
+        const itemsOp = [];
+
+        itemOpElements.forEach(itemOpElement => {
+            const dropdownOp = itemOpElement.querySelector(".arrayContent .objets-componentStockesDropdownOriginal");
+            const inputDescription = itemOpElement.querySelector(".descriptionOp");
+            const inputTimePerOp = itemOpElement.querySelector(".timeOp");
+
+            const description = inputDescription.value;
+            const timePerOp = inputTimePerOp.value;
+
+  
+            const selectedIndex = dropdownOp.selectedIndex;
+            const selectedOption = dropdownOp.options[selectedIndex];           
+            const selectedDescription = selectedOption.text.split(" - ")[1];
+            const selectedComposant = selectedOption.text.split(" - ")[0];
+
+            if (selectedDescription.trim() !== "") {
+                
+                itemsOp.push({Composant:selectedComposant,Conditonnement:selectedDescription,timePerOp,description}); // Ajouter le nom du composant
+            }
+
+            //qteCondiInput.value = "";
+            dropdownOp.selectedIndex = 0;
+            duplicateButtonComponent.disabled = false;
+        });
+
+        const composéData = { items: itemsOp };
+        
+        listeOp.push(composéData);
+
+        containerOp.querySelectorAll(".itemOp").forEach(itemOp => {
+            if (itemOp !== document.querySelector(".itemOp")) {
+                itemOp.remove();
+            }
+        });
+
+        // Appeler la fonction pour afficher les objets composés
+
+        console.log(listeOp)
+        
+        
     });
 
 
