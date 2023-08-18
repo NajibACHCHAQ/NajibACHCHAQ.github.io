@@ -32,7 +32,7 @@
     </footer>
 
 
-    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket"style="color: #3a5583;"></i>&nbsp;  Entrée</h2>
+    <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket"style="color: #3a5583;"></i>&nbsp; Composants</h2>
     <main class="zoneCreateObject">
 
         
@@ -67,7 +67,7 @@
 
      <!-- --------------------------------------------------------------------------------------------------------- -->
 
-    <h2 class="prod"> Production &nbsp;<i class="fa-solid fa-users-gear" style="color: #3a5583;"></i></h2>
+    <h2 class="prod"> Composés&nbsp;<i class="fa-solid fa-users-gear" style="color: #3a5583;"></i></h2>
 
 
         
@@ -110,7 +110,7 @@
 
         <!-- --------------------------------------------------------------------------------------------------------- -->    
 
-    <h2 class="out"> Sortie &nbsp;<i class="fa-solid fa-arrow-right-from-bracket" style="color: #3a5583;"></i></h2>
+    <h2 class="produitFini"> Produit-Fini &nbsp;<i class="fa-solid fa-arrow-right-from-bracket" style="color: #3a5583;"></i></h2>
     
     <main class="zoneCreateObject">
 
@@ -141,7 +141,7 @@
             </div>
         </div>
 
-        <img  class="imgright" src="assets/img_ligneprod.png" alt="">
+        <img  class="imgright" src="assets/processusimg-removebg-preview.png" alt="">
     </main>
 
     <div id="affichagePf"></div>
@@ -149,34 +149,43 @@
     <h2 class="out">Processus &nbsp;<i class="fa-solid fa-arrow-right-from-bracket" style="color: #3a5583;"></i></h2>
     
     
+    <main class="zoneCreateObject" id="zoneCreateObjectProcessus"> 
 
-    <div class="tableauOperation">
-
-        <div class="operationHeader">
-            <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp">+</button>Opération</div>
-            <div class="titreop">Composant</div>
-            <div class="titreop">Time</div>
-
-            <div class="titreop">Opération<button class="validationOp" ><i class="fa-solid fa-check"></i></button></div>    
+        <div class="consigne"><div class="consigneText">
+            Détaillez le processus de production en détaillant chaque opération et allouez un temps pour chaque opérations
         </div>
-        <div class="arrayContent">
-            <div class="itemOp">
-                <input type="text" class="descriptionOp">
-                <div class="deroulant">
-                    <select id="objets-operationStockesDropdown" class="objets-componentStockesDropdownOriginal">
-                        <option value="">Sélectionner</option>
-                    </select>
+            <div class="imgExemple">
+                <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
+        </div>
+
+        <div class="tableauOperation">
+
+            <div class="operationHeader">
+                <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp">+</button>Opération</div>
+                <div class="titreop">Composant</div>
+                <div class="titreop">Time/sec</div>
+
+                <div class="titreop">Opération<button class="validationOp" ><i class="fa-solid fa-check"></i></button></div>    
+            </div>
+            <div class="arrayContent">
+                <div class="itemOp">
+                    <input type="text" class="descriptionOp">
+                    <div class="deroulant">
+                        <select id="objets-operationStockesDropdown" class="objets-componentStockesDropdownOriginal">
+                            <option value="">Sélectionner</option>
+                        </select>
+                    </div>
+                    <input type="text"class="timeOp">
+                    <input type="text">
+
                 </div>
-                <input type="text"class="timeOp">
-                <input type="text">
+        
 
             </div>
-    
-
+            
         </div>
-        
-    </div>
-   
+
+    </main>     
 
         
         
