@@ -31,6 +31,8 @@
         <div class="menu-item">Stats</div>
     </footer>
 
+    
+
 
     <h2 class="in"><i class="fa-solid fa-arrow-right-to-bracket"style="color: #3a5583;"></i>&nbsp; Composants</h2>
     <main class="zoneCreateObject">
@@ -151,21 +153,27 @@
     
     <main class="zoneCreateObject" id="zoneCreateObjectProcessus"> 
 
-        <div class="consigne"><div class="consigneText">
+        <div class="consigne">
+            <div class="contentConsigne">
+            <div class="consigneText">
             Détaillez le processus de production en détaillant chaque opération et allouez un temps pour chaque opérations
-        </div>
+            </div>
             <div class="imgExemple">
-                <div class="exemple">Exemple :</div><img src="assets/exprodin.png" alt=""></div>
+                <div class="exemple">Exemple :</div>
+            <img src="assets/Capture d’écranOp.png" alt="">
+            </div>
+        </div>
         </div>
 
         <div class="tableauOperation">
 
             <div class="operationHeader">
-                <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp">+</button>Opération</div>
+                
+                <div class="titreop"><button class="btnAddOp small" id="duplicateButtonOp" name="validation">+</button>Opération</div>
                 <div class="titreop">Composant</div>
                 <div class="titreop">Time/sec</div>
-
-                <div class="titreop">Opération<button class="validationOp" ><i class="fa-solid fa-check"></i></button></div>    
+                <div class="titreop">Diviseur</div>
+                <div class="titreop">Multiplicateur<button class="validationOp" ><i class="fa-solid fa-check"></i></button></div>    
             </div>
             <div class="arrayContent">
                 <div class="itemOp">
@@ -177,6 +185,7 @@
                     </div>
                     <input type="text"class="timeOp">
                     <input type="text">
+                    <input type="text">
 
                 </div>
         
@@ -185,28 +194,34 @@
             
         </div>
 
-    </main>     
-
-        
-        
-
+    </main>    
     
 
         
         
 
- 
-        
-        
-
-        
 
 
     
+    <select id="menuDeroulant"></select>
+
 
     <footer>
         Ce site est crée par ACHCHAQ Najib
     </footer>
     
 </body>
+
+
+<!-- Fenêtre modale -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modaltext"><h4>Bienvenue sur Opti-Prod</h4>
+        <div>Vous pouvez réaliser vos gammes de production en ligne afin d'optmiser vos processus et donc d'optimiser vos couts de production</div>
+        <div class="f">Bientot disponible</div></div>
+    </div>
+</div>
+
+
 </html>

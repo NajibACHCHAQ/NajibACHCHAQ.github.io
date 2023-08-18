@@ -9,18 +9,19 @@ body{
     font-family: 'Borel', cursive;
     font-family: 'Preahvihear', sans-serif;
     background-color: rgb(222, 247, 239);
+    
 
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, html::-webkit-scrollbar {
     width: 12px; /* width of the entire scrollbar */
   }
   
-  body::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track, html::-webkit-scrollbar-track{
     background: rgb(205, 205, 205); /* color of the tracking area */
   }
   
-  body::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb, html::-webkit-scrollbar-thumb {
     background-color: rgb(89, 134, 186); /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 3px solid rgb(144, 184, 206); /* creates padding around scroll thumb */
@@ -35,6 +36,7 @@ header {
     max-width: 1600PX;
     min-width: 320PX;
     width: auto;
+    max-height: 200px;
     height: 200px;
     background-color: rgba(215, 216, 216, 0.747);
     margin-left: auto;
@@ -49,7 +51,7 @@ header {
     margin-bottom: 15px;
     overflow: hidden;
     font-size: 36px; /* Utilisation de vw pour la taille de police */
-    transition: font-size 0.6s ease;
+    transition: font-size 4s ease;
 }
 
 
@@ -68,23 +70,12 @@ h3,h1{
 header img{
     position: relative;
     top: 70px;
-    right: 470px;
+    right: 400px;
     width: 190PX;
     min-width: 60px;
-    transition: 3s;
+
 }
 
-@media (max-width: 930px) {
-    header {
-        font-size: 38px; 
-        
-    }
-
-    h3 {
-        font-size: 32px; 
-    }
- 
-}
 @media (max-width: 770px) {
  
     .prod
@@ -121,11 +112,15 @@ header img{
 @media (max-width: 650px){
     header {
         font-size: 30px; 
-        
+              
     }
-
+   
+    .titre{
+        margin-top: 40px;
+    }
     h3 {
         font-size: 22px; 
+        
     }
 }
 @media (max-width:400px){
@@ -155,10 +150,10 @@ main{
     grid-template-columns: 1fr 1fr 1fr; 
     align-items: center; 
     justify-content: center; 
-    overflow: hidden;
     height: 370px;
     max-width: 1600px;
     margin-bottom: 20px;
+    overflow:visible;
 
 }
 
@@ -265,12 +260,12 @@ h2{
     
   }
   
-  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar,{
+  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar{
     background: rgb(205, 205, 205); /* color of the tracking area */
     
   }
   
-  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar,{
+  #container::-webkit-scrollbar, #containerComponent::-webkit-scrollbar, #containerPf::-webkit-scrollbar{
     background-color: rgb(226, 226, 226); /* color of the scroll thumb */
     border-radius: 100px; /* roundness of the scroll thumb */
     border: 2px solid rgb(144, 184, 206); /* creates padding around scroll thumb */
@@ -605,8 +600,8 @@ footer{
     border-radius: 15px 15px 0 0;
     display: grid;
     grid-template-rows: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 800px;
     height: 50px;
     background-color: rgb(207, 229, 213);
     margin-left: auto;
@@ -628,7 +623,7 @@ footer{
 
 .arrayContent{
     display: grid;
-    width: 600px;
+    width: 800px;
     margin-right:auto ;
     margin-left: auto;
     grid-template-rows:  repeat(auto-fill, minmax(40px, 1fr));
@@ -639,12 +634,13 @@ footer{
     background-color: rgb(233, 232, 230);
     border-radius: 0 0 15px 15px;
     box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+
 }
 
 .itemOp{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 800px;
     height: 40px;
     margin-right:auto ;
     margin-left: auto;
@@ -670,7 +666,7 @@ footer{
     width: 5px;
     position: relative;
     bottom: 12px;
-    left: 12px;
+    left: 4px;
     font-size: 30px;
 }
 
@@ -685,14 +681,32 @@ footer{
     width: 5px;
     position: relative;
     bottom: 12px;
-    left: 12px;
+    left: 4px;
     font-size: 30px;
 }
+.imgExemple{
+    width: 140px;
+    overflow: hidden;
+}
+
 
 .consigne img{
-    width: 150px;
+    width: 100%;
+    transition: transform 2s;
    
 }
+.consigne img:hover{
+    -ms-transform: scale(0.7) ; /* IE 9 */
+    -webkit-transform: scale(0.7) ; /* Safari 3-8 */
+    transform: scale(0.7) ;
+   
+}
+.imgExemple:hover{
+    width: 500px;
+    overflow: hidden;
+}
+
+
 
 .consigne
 {
@@ -707,6 +721,7 @@ footer{
     padding: 4PX;
     border-radius: 12PX;
     box-shadow: 6px 4px 6px 2px rgb(199, 199, 199);
+    
 
 
 }
@@ -717,9 +732,11 @@ footer{
     color: rgb(78, 102, 136);
     text-shadow: 2PX 2PX 4PX;
     font-weight: bold;
+    text-decoration: underline 3px;
     
 
 }
+
 
 .consigneText{
     display: flex;
@@ -730,13 +747,84 @@ footer{
     color: rgb(78, 102, 136);
     text-shadow: 2PX 2PX 4PX;
     margin-right: 5PX;
-    max-height: 50px;
+    height: fit-content;
+    
 }
 
 #zoneCreateObjectProcessus{
-    height: fit-content;
+    grid-template-columns: 455px 1fr 1fr;
+}
+
+.tableauOperation{
+
+
+}
+
+#menuDeroulant{
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
+/* Style de la fenêtre modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
 
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    
+    min-width: 300px;
+    border-radius: 10px;
+    border: 15px solid rgba(56, 105, 148, 0.303);
+    overflow-wrap: break-word;
+}
+
+/* Style du bouton de fermeture */
+.close {
+    color: #aaa;
+    float:right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px; /* Ajoutez une marge à droite pour éviter qu'elle ne soit trop proche du bord */
+
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.f{
+    color: rgb(35, 100, 192);
+    font-weight: bold;
+    font-size: 26px;
+    margin-top: 22px;
+}
+
+.modaltext
+{
+    margin-bottom: 60px;
+    
+}
+
+h4{
+    font-size: 32px;
+}
+
+/*-----------------------------------------------------------------------*/
 

@@ -1,9 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Code exécuté lorsque le DOM est complètement chargé
 
-    // --------------------------------------
-    // Premier formulaire
-    // --------------------------------------
 
     // Sélection des éléments du premier formulaire
     const duplicateButton = document.getElementById("duplicateButton");
@@ -112,6 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.remove();
             }
         });
+
+        const listeObjetsStockésJSON = JSON.stringify(listeObjetsStockés);
+        // Stocker les données dans le Local Storage
+        localStorage.setItem('listeObjetsStockés', listeObjetsStockésJSON);
+
+        
 
         afficherObjetsStockés();
         console.log("liste composant");
@@ -223,46 +226,65 @@ document.addEventListener("DOMContentLoaded", () => {
     validationButtonComponent.addEventListener("click", () => {
         const composéName = document.querySelector("#containerComponent input").value;
         const itemComponentElements = document.querySelectorAll(".itemComponent .infoComponent");
-
+    
         const itemsComponent = [];
-
+    
         itemComponentElements.forEach(itemComponentElement => {
             const dropdownComponent = itemComponentElement.querySelector(".deroulant select");
             const qteCondiInput = itemComponentElement.querySelector(".inputqteCondi");
             const qteParCondi = itemComponentElement.querySelector(".valeur");
-            
-
+    
             const selectedOption = dropdownComponent.options[dropdownComponent.selectedIndex];
             const selectedDescription = selectedOption.text.split(" - ")[1];
             const selecctedComposant = selectedOption.text.split(" - ")[0];
             const selectedqteCondi = qteCondiInput.value;
             const selectedQteParCondi = qteParCondi.textContent;
-
+    
             if (selectedDescription.trim() !== "") {
-                const nomDuComposant = selectedOption.getAttribute("data-nom-composant"); // Récupérer le nom du composant
-                itemsComponent.push({nomDuComposant,Qté_conditionnement:selectedQteParCondi, description: selectedDescription, qteCondi: selectedqteCondi, Compo:selecctedComposant }); // Ajouter le nom du composant
+                const nomDuComposant = selectedOption.getAttribute("data-nom-composant");
+                
+                // Trouver le composant sélectionné dans la liste
+                const selectedComposantObj = listeObjetsStockés.find(objet => objet.nomDuComposant === selecctedComposant);
+    
+                if (selectedComposantObj) {
+                    const selectedItem = selectedComposantObj.items.find(item => item.description === selectedDescription);
+    
+                    if (selectedItem) {
+                        itemsComponent.push({
+                            nomDuComposant:selecctedComposant,
+                            Qté_conditionnement: selectedQteParCondi,
+                            description: selectedDescription,
+                            qteCondi: selectedqteCondi,
+                            qteCondiCompo: selectedItem.qteCondi,
+                            pcb: selectedItem.pcb,
+                            qteUnitaire: selectedItem.qteUnitaire
+                        });
+                    }
+                }
             }
-
+            
             qteCondiInput.value = "";
             dropdownComponent.selectedIndex = 0;
             duplicateButtonComponent.disabled = false;
         });
-
+    
         const composéData = { nomDuComposé: composéName, items: itemsComponent };
         document.querySelector("#containerComponent input").value = "";
         listeComposés.push(composéData);
-
+    
         containerComponent.querySelectorAll(".itemComponent").forEach(itemComponent => {
             if (itemComponent !== document.querySelector(".itemComponent")) {
                 itemComponent.remove();
             }
         });
 
+        const listeComposésJSON = JSON.stringify(listeComposés);
+        localStorage.setItem('listeComposés', listeComposésJSON);
+    
         // Appeler la fonction pour afficher les objets composés
         afficherComposés();
         console.log("liste composé");
         console.log(listeComposés);
-        
     });
 
     function afficherComposés() {
@@ -403,6 +425,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const selectedDescription = selectedOption.text.split(" - ")[1];
             const selectedqteCondiPf = qteCondiInputPf.value;
             const nomDuComposant = selectedOption.getAttribute("data-nom-composant");
+            
     
             if (selectedDescription.trim() !== "") {
                 itemsPf.push({ nomDuComposant, description: selectedDescription, qteCondi: selectedqteCondiPf });
@@ -428,9 +451,13 @@ document.addEventListener("DOMContentLoaded", () => {
            
         afficherPf();
         remplirMenuDeroulantGlobal(dropdownOperation)
-        remplirMenuDeroulantGlobal(dropdownPf)
         console.log("liste Pf")
         console.log(listePf)
+
+        const listePfJSON = JSON.stringify(listePf);
+        localStorage.setItem('listePf', listePfJSON);
+
+
         
     });
 
@@ -460,36 +487,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const validationButtonOp = document.querySelector(".validationOp");
 
-    // Gestion de la validation du deuxième formulaire
+    // Gestion de la validation 
     validationButtonOp.addEventListener("click", () => {
-        
         const itemOpElements = document.querySelectorAll(".itemOp");
-
         const itemsOp = [];
-
+    
         itemOpElements.forEach(itemOpElement => {
             const dropdownOp = itemOpElement.querySelector(".arrayContent .objets-componentStockesDropdownOriginal");
             const inputDescription = itemOpElement.querySelector(".descriptionOp");
             const inputTimePerOp = itemOpElement.querySelector(".timeOp");
-
+    
             const description = inputDescription.value;
             const timePerOp = inputTimePerOp.value;
-
-  
+    
             const selectedIndex = dropdownOp.selectedIndex;
             const selectedOption = dropdownOp.options[selectedIndex];           
             const selectedDescription = selectedOption.text.split(" - ")[1];
             const selectedComposant = selectedOption.text.split(" - ")[0];
-
-            if (selectedDescription.trim() !== "") {
+    
+            // Trouver le composant sélectionné dans la liste
+            const selectedComposantObj = listeObjetsStockés.find(objet => objet.nomDuComposant === selectedComposant);
+    
+            if (selectedDescription.trim() !== "" && selectedComposantObj) {
+                const selectedItem = selectedComposantObj.items.find(item => item.description === selectedDescription);
                 
-                itemsOp.push({Composant:selectedComposant,Conditonnement:selectedDescription,timePerOp,description}); // Ajouter le nom du composant
+                // Vérifier que l'élément est trouvé avant d'ajouter les informations
+                if (selectedItem) {
+                    itemsOp.push({
+                        Composant: selectedComposant,
+                        Conditonnement: selectedDescription,
+                        timePerOp,
+                        description,
+                        qteCondi: selectedItem.qteCondi,
+                        pcb: selectedItem.pcb,
+                        qteUnitaire: selectedItem.qteUnitaire
+                    });
+                }
             }
-
-            //qteCondiInput.value = "";
+    
             dropdownOp.selectedIndex = 0;
             duplicateButtonComponent.disabled = false;
         });
+    
 
         const composéData = { items: itemsOp };
         
@@ -501,14 +540,126 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Appeler la fonction pour afficher les objets composés
+        // Convertir les données en chaînes JSON
+        const listeOpJSON = JSON.stringify(listeOp);
+
+        // Stocker les données dans le Local Storage
+        localStorage.setItem('listeOp', listeOpJSON);
 
         console.log(listeOp)
         
         
     });
 
+    // Obtenir la fenêtre modale, le bouton de fermeture et la fenêtre de contenu
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn"); // Vous aurez besoin d'un élément déclencheur (un bouton, par exemple)
+    var span = document.getElementsByClassName("close")[0];
+
+    // Ouvrir la fenêtre modale lorsque la page est chargée
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // Fermer la fenêtre modale lorsque l'utilisateur clique sur le bouton de fermeture
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Fermer la fenêtre modale si l'utilisateur clique en dehors de celle-ci
+    window.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
 
     // Appels initiaux
-
 });
+
+
+
+// // Fonction pour ajouter des données au localStorage
+// function ajouterAuLocalStorage(cle, nouvellesDonnees) {
+//     // Récupérer les données actuelles du localStorage
+//     const donneesExistantes = JSON.parse(localStorage.getItem(cle)) || [];
+
+//     // Ajouter les nouvelles données aux données existantes
+//     const donneesMisesAJour = [...donneesExistantes, ...nouvellesDonnees];
+
+//     // Stocker les données mises à jour dans le localStorage
+//     localStorage.setItem(cle, JSON.stringify(donneesMisesAJour));
+// }
+
+// // ...
+
+// // Lors de la validation des formulaires et de l'ajout de données aux listes
+// // listeOp et listeComposés sont des exemples. Vous pouvez l'adapter pour d'autres listes.
+// listeOp.push(composeData);
+// ajouterAuLocalStorage('donneesOp', [composeData]);
+
+// // ...
+
+// // Au chargement de la page, récupérez les données du localStorage et affichez-les dans le menu déroulant
+// function chargerDonneesDepuisLocalStorage() {
+//     const donneesOp = JSON.parse(localStorage.getItem('donneesOp')) || [];
+//     const donneesComposes = JSON.parse(localStorage.getItem('donneesComposes')) || [];
+
+//     // Appelez la fonction remplirMenuDeroulant avec les nouvelles données
+//     remplirMenuDeroulant(donneesOp, donneesComposes);
+// }
+
+// // ...
+
+// // Appelez la fonction chargerDonneesDepuisLocalStorage au chargement de la page
+// window.addEventListener('load', () => {
+//     chargerDonneesDepuisLocalStorage();
+// });
+
+
+
+
+    
+window.addEventListener('load', () => {
+    // Récupérer les données depuis le Local Storage
+    const listeOpJSON = localStorage.getItem('listeOp');
+    const listeComposésJSON = localStorage.getItem('listeComposés');
+    // ...
+
+    // Si les données existent, les convertir en objets JavaScript
+    if (listeOpJSON) {
+        listeOp = JSON.parse(listeOpJSON);
+    }
+    if (listeComposésJSON) {
+        listeComposés = JSON.parse(listeComposésJSON);
+    }
+    // ...
+
+    // Appeler la fonction pour remplir le menu déroulant avec les données récupérées
+    remplirMenuDeroulant(listeOp, listeComposés);
+});
+
+
+function remplirMenuDeroulant(listeOp, listeComposés) {
+    const menuDeroulant = document.getElementById('menuDeroulant');
+
+    menuDeroulant.innerHTML = '';
+
+    listeOp.forEach((op, index) => {
+        const option = document.createElement('option');
+        option.value = JSON.stringify(op);
+        option.textContent = `Opération ${index + 1}: ${op.items.length > 0 ? op.items[0].description : 'Aucune description'}`;
+        menuDeroulant.appendChild(option);
+    });
+
+    listeComposés.forEach((composé, index) => {
+        const option = document.createElement('option');
+        option.value = JSON.stringify(composé);
+        option.textContent = `Composé ${index + 1}: ${composé.items.length > 0 ? composé.items[0].description : 'Aucune description'}`;
+        menuDeroulant.appendChild(option);
+    });
+
+    menuDeroulant.addEventListener('change', (event) => {
+        const selectedData = JSON.parse(event.target.value);
+        // Utilisez selectedData pour afficher ou manipuler les données sélectionnées
+    });
+}
