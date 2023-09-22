@@ -26,7 +26,9 @@
 
       // Créer le Soleil (une sphère jaune)
       const sunGeometry = new THREE.SphereGeometry(5, 64, 64);
-      const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+      const textureLoader = new THREE.TextureLoader();
+      const sunTexture = textureLoader.load('soleil.jpg'); // Assurez-vous que le chemin de l'image est correct
+      const sunMaterial = new THREE.MeshBasicMaterial({ map: sunTexture });
       const sun = new THREE.Mesh(sunGeometry, sunMaterial);
       scene.add(sun);
 
@@ -35,9 +37,9 @@
       scene.add(earthOrbit);
 
       // Créer la Terre (une sphère avec texture)
-      const earthGeometry = new THREE.SphereGeometry(1, 64, 64);
-      const textureLoader = new THREE.TextureLoader();
-      const earthTexture = textureLoader.load('world.jpg'); // Charger votre image ici
+      const earthGeometry = new THREE.SphereGeometry(2, 64, 64);
+
+      const earthTexture = textureLoader.load('world.jpg'); // Assurez-vous que le chemin de l'image est correct
       const earthMaterial = new THREE.MeshBasicMaterial({ map: earthTexture });
       const earth = new THREE.Mesh(earthGeometry, earthMaterial);
 
@@ -48,12 +50,32 @@
       // Ajouter la Terre à l'orbite
       earthOrbit.add(earth);
 
+      // Créer un groupe pour l'orbite de Mars
+      const marsOrbit = new THREE.Group();
+      scene.add(marsOrbit);
+
+      // Créer Mars (une sphère avec une couleur)
+      const marsGeometry = new THREE.SphereGeometry(1, 64, 64);
+      const marsTexture = textureLoader.load('mars.jpg'); // Assurez-vous que le chemin de l'image est correct
+      const marsMaterial = new THREE.MeshBasicMaterial({ map: marsTexture });
+      const mars = new THREE.Mesh(marsGeometry, marsMaterial);
+
+      // Positionner Mars à une distance du Soleil (plus éloignée que la Terre)
+      const distanceFromSunMars = 15;
+      mars.position.set(distanceFromSunMars, 0, 0);
+
+      // Ajouter Mars à l'orbite de Mars
+      marsOrbit.add(mars);
+
       // Fonction d'animation
       const animate = () => {
         requestAnimationFrame(animate);
 
         // Faites tourner l'orbite de la Terre
         earthOrbit.rotation.y += 0.005;
+
+        // Faites tourner l'orbite de Mars plus lentement
+        marsOrbit.rotation.y += 0.002;
 
         renderer.render(scene, camera);
       };
@@ -63,6 +85,8 @@
     </script>
   </body>
 </html>
+
+
 
 
 
