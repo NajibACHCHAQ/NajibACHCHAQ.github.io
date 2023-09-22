@@ -1,43 +1,23 @@
-import * as THREE from 'three';
+// // Créer une variable pour gérer le niveau de zoom
+// let zoomLevel = 1;
 
-// Créer une scène
-const scene = new THREE.Scene();
+// // Fonction pour gérer le zoom avant
+// const zoomIn = () => {
+//   zoomLevel -= 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
+//   camera.position.z = 30 * zoomLevel;
+// };
 
-// Créer une caméra
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 30;
+// // Fonction pour gérer le zoom arrière
+// const zoomOut = () => {
+//   zoomLevel += 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
+//   camera.position.z = 30 * zoomLevel;
+// };
 
-// Créer un moteur de rendu WebGL
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-// Créer le Soleil (une sphère jaune)
-const sunGeometry = new THREE.SphereGeometry(5, 32, 32);
-const sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-const sun = new THREE.Mesh(sunGeometry, sunMaterial);
-scene.add(sun);
-
-// Créer la Terre (une sphère bleue)
-const earthGeometry = new THREE.SphereGeometry(1, 32, 32);
-const earthMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-const earth = new THREE.Mesh(earthGeometry, earthMaterial);
-scene.add(earth);
-
-// Ajouter la Terre en orbite autour du Soleil
-const earthOrbit = new THREE.Group();
-scene.add(earthOrbit);
-earthOrbit.add(earth);
-
-// Fonction d'animation
-const animate = () => {
-  requestAnimationFrame(animate);
-
-  // Faites tourner la Terre autour du Soleil
-  earthOrbit.rotation.y += 0.005;
-
-  renderer.render(scene, camera);
-};
-
-// Appeler la fonction d'animation
-animate();
+// // Écouter les événements de la souris pour détecter le zoom
+// document.addEventListener('wheel', (event) => {
+//   if (event.deltaY > 0) {
+//     zoomIn();
+//   } else {
+//     zoomOut();
+//   }
+// });
