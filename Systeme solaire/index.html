@@ -113,6 +113,28 @@
         }
       });
 
+      // Créez une géométrie de texte en utilisant une police intégrée à Three.js
+      const fontLoader = new THREE.FontLoader();
+      fontLoader.load( 'https://threejs.org/examples/fonts/helvetiker_bold.typeface.json', function ( font ) {
+        const textGeometry = new THREE.TextGeometry( "Invests in space", {
+          font: font,
+          size: 4, // Taille du texte
+          height: 0.2 // Épaisseur du texte
+        } );
+
+        // Créer un matériau pour le texte
+        const textMaterial = new THREE.MeshBasicMaterial( { color: 0xffffff } );
+
+        // Créer un objet Mesh pour le texte en utilisant la géométrie et le matériau
+        const textMesh = new THREE.Mesh( textGeometry, textMaterial );
+
+        // Positionnez le texte dans la scène
+        textMesh.position.set( -23, 20, -12 ); // Ajustez les coordonnées selon vos besoins
+
+        // Ajoutez le texte à la scène
+        scene.add( textMesh );
+      } );
+
     </script>
     <script src="script.js"></script>
   </body>
