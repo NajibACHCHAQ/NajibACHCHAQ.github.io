@@ -74,8 +74,13 @@
         // Faites tourner l'orbite de la Terre
         earthOrbit.rotation.y += 0.005;
 
+        earth.rotation.y += 0.1;
+
         // Faites tourner l'orbite de Mars plus lentement
         marsOrbit.rotation.y += 0.002;
+
+        // Faites tourner le Soleil sur lui-même
+        sun.rotation.y += 0.01;
 
         renderer.render(scene, camera);
       };
