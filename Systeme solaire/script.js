@@ -27,7 +27,6 @@
 
       // Créer la Terre (une sphère avec texture)
       const earthGeometry = new THREE.SphereGeometry(2, 64, 64);
-
       const earthTexture = textureLoader.load('world.jpg'); // Assurez-vous que le chemin de l'image est correct
       const earthMaterial = new THREE.MeshBasicMaterial({ map: earthTexture });
       const earth = new THREE.Mesh(earthGeometry, earthMaterial);
@@ -53,8 +52,25 @@
       const distanceFromSunMars = 15;
       mars.position.set(distanceFromSunMars, 0, 0);
 
-      // Ajouter Mars à l'orbite de Mars
+      // Ajouter Mars à l'orbite 
       marsOrbit.add(mars);
+
+      // Créer un groupe pour l'orbite de Mars
+      const saturnOrbit = new THREE.Group();
+      scene.add(saturnOrbit);
+
+      // Créer Saturn (une sphère avec une couleur)
+      const saturnGeometry = new THREE.SphereGeometry(0.5, 64, 64);
+      const saturnTexture = textureLoader.load('saturn.jpg'); // Assurez-vous que le chemin de l'image est correct
+      const saturnMaterial = new THREE.MeshBasicMaterial({ map: saturnTexture });
+      const saturn = new THREE.Mesh(saturnGeometry, saturnMaterial);
+
+      // Positionner Mars à une distance du Soleil (plus éloignée que la Terre)
+      const distanceFromSunSaturn = 20;
+      saturn.position.set(distanceFromSunSaturn, 0, 0);
+
+      // Ajouter Mars à l'orbite 
+      saturnOrbit.add(saturn);
 
       // Fonction d'animation
       const animate = () => {
@@ -63,7 +79,7 @@
         // Faites tourner l'orbite de la Terre
         earthOrbit.rotation.y += 0.005;
 
-        earth.rotation.y += 0.1;
+        earth.rotation.y += 0.2;
 
         // Faites tourner l'orbite de Mars plus lentement
         marsOrbit.rotation.y += 0.02;
@@ -71,6 +87,9 @@
 
         // Faites tourner le Soleil sur lui-même
         sun.rotation.y += 0.01;
+
+        saturnOrbit.rotation.y += 0.007;
+        saturn.rotation.y += 0.1;
 
         renderer.render(scene, camera);
       };
