@@ -1,12 +1,66 @@
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
-      import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js';
 
-      // Créer une scène
-      const scene = new THREE.Scene();
 
-      // Créer une caméra
-      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-      camera.position.z = 30;
+// Créer une scène
+const scene = new THREE.Scene();
+
+// Créer une caméra
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 30;
+
+// Déclarer la variable de zoom
+let zoomLevel = 1;
+
+// Définir des variables pour suivre les mouvements de la souris
+let isMouseDown = false;
+let previousMouseX = 0;
+
+// Écouter les événements de la souris pour détecter les mouvements
+document.addEventListener('mousedown', (event) => {
+  isMouseDown = true;
+  previousMouseX = event.clientX;
+});
+
+document.addEventListener('mousemove', (event) => {
+  if (isMouseDown) {
+    const deltaX = event.clientX - previousMouseX;
+    previousMouseX = event.clientX;
+
+    // Ajuster la rotation de la caméra en fonction du mouvement de la souris
+    camera.rotation.y += deltaX * 0.01; // Vous pouvez ajuster le facteur de rotation selon vos besoins
+  }
+});
+
+document.addEventListener('mouseup', () => {
+  isMouseDown = false;
+});
+
+// Fonction pour gérer le zoom avant
+const zoomIn = () => {
+  zoomLevel -= 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
+
+  // Déplacez la caméra vers l'avant
+  camera.position.z = 30 * zoomLevel;
+
+  // Ajustez la position de la caméra pour qu'elle regarde toujours vers le soleil
+  camera.lookAt(sun.position);
+};
+
+// Fonction pour gérer le zoom arrière
+const zoomOut = () => {
+  zoomLevel += 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
+
+  // Déplacez la caméra vers l'arrière
+  camera.position.z = 30 * zoomLevel;
+
+  // Ajustez la position de la caméra pour qu'elle regarde toujours vers le soleil
+  camera.lookAt(sun.position);
+};
+
+// Reste du code...
+
+
 
       // Activer l'antialiasing
       const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -76,6 +130,9 @@
       const animate = () => {
         requestAnimationFrame(animate);
 
+        // Mettre à jour les contrôles
+
+
         // Faites tourner l'orbite de la Terre
         earthOrbit.rotation.y += 0.005;
 
@@ -96,21 +153,6 @@
 
       // Appeler la fonction d'animation
       animate();
-
-      // Créer une variable pour gérer le niveau de zoom
-      let zoomLevel = 1;
-
-      // Fonction pour gérer le zoom avant
-      const zoomIn = () => {
-        zoomLevel -= 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
-        camera.position.z = 30 * zoomLevel;
-      };
-
-      // Fonction pour gérer le zoom arrière
-      const zoomOut = () => {
-        zoomLevel += 0.1; // Vous pouvez ajuster le facteur de zoom selon vos besoins
-        camera.position.z = 30 * zoomLevel;
-      };
 
       // Écouter les événements de la souris pour détecter le zoom
       document.addEventListener('wheel', (event) => {
@@ -163,13 +205,13 @@ function onMouseClick(event) {
 
     if (obj === earth) {
       // La Terre a été cliquée
-      console.log('La Terre a été cliquée !');
+      console.log('Cette planete est la terre!');
     } else if (obj === mars) {
       // Mars a été cliquée
-      console.log('Mars a été cliquée !');
+      console.log('Cette planete est Mars!');
     } else if (obj === sun) {
       // Autre planète a été cliquée
-      console.log('Soleil a été cliquée !');
+      console.log('Cette planete est le soleil!');
     }
   }
 }
