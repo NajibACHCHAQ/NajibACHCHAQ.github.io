@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55886494004",
+    "project_id": "cda-2023-2024",
+    "storage_bucket": "cda-2023-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55886494004:android:41ced2d266605696324d61",
+        "android_client_info": {
+          "package_name": "com.testfutter.testfluutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN3SwKULfRc5e0mdpkdmPvaFhB8fC0n-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
