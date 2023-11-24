@@ -44,7 +44,7 @@ body{
     padding-left: 20px;
 }
 .animation-entete{
-    font-size: 45px;
+    font-size: 35px;
     margin: 0 auto;
     color: #006982;
 }
@@ -62,7 +62,7 @@ body{
 }
 
 .titre-container img {
-    width: 400px;
+    width: 300px;
 }
 
 .titre {
@@ -73,7 +73,7 @@ body{
 
 .sous-titre {
     margin: 0 auto;
-    font-size: 35px;
+    font-size: 25px;
     color: #036a717f;
 }
 .titre-site{
