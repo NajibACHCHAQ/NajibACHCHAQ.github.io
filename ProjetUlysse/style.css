@@ -72,6 +72,7 @@ body{
 }
 
 .sous-titre {
+    width: fit-content;
     margin: 0 auto;
     font-size: 25px;
     color: #036a717f;
