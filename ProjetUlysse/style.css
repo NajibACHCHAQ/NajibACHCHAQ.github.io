@@ -204,13 +204,13 @@ form{
     border: #266b86;
 }
 input{
-    padding: 6px;
-    font-size: 22px;
+    padding:  6px !important;
+    font-size: 22px !important;
     font-weight: bold;
     border-radius: 15px;
     height: 80%;
     width: 80%;
-    color: #006982;
+    color: #006982 !important;
 }
 #start-test{
     margin-top: 12px;
