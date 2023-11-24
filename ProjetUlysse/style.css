@@ -49,7 +49,7 @@ body{
     margin-right: auto;
     margin-top: 35PX;
     display: grid;
-    grid-template-rows: 70px auto;
+    grid-template-rows: auto auto;
     justify-content: center;
     align-items: center;
     width: fit-content;
@@ -59,7 +59,7 @@ body{
 }
 
 .titre-container img {
-    width: 300px;
+    width: 350px;
 }
 
 .titre {
