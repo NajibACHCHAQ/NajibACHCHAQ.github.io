@@ -8,23 +8,23 @@
     <link rel="stylesheet" href="loader.css">
 </head>
 <body>
-    <div class="loader-container">
-        <div id="typed-strings">
-            <p>Intégrer notre <strong>Entreprise Pédagogique</strong>.</p>
-        </div>
-        <h2><span class="animation-entete" id="typed"></span></h2>
-
-        <img src="boat.png" alt="Logo animé">
-            
-        <div id="typed-strings2">
-            <p>Et naviguer vers <strong>la Réussite</strong>.</p>
-        </div>
-        <!-- Correctement fermée la balise span -->
-        <h2><span class="animation-entete" id="typed2" style="display: none;"></span></h2>
+    <div id="typed-strings">
+        <p>Intégrer notre <strong>Entreprise Pédagogique</strong>.</p>
     </div>
+    <h2><span class="animation-entete" id="typed"></span></h2>
+
+    <div class="loader-container">  
+        <img src="boat.png" alt="Logo animé">              
+    </div>
+
+    <div id="typed-strings2">
+        <p>Et naviguer vers <strong>la Réussite</strong>.</p>
+    </div>
+    <!-- Correctement fermée la balise span -->
+    <h2><span class="animation-entete" id="typed2" style="display: none;"></span></h2>
     
     <script>
-        setTimeout(function() {window.location.href = "main.html";}, 8000);
+        //setTimeout(function() {window.location.href = "main.html";}, 8000);
         
         // Initialiser typed2 en dehors de la fonction onComplete
         var typed2 = new Typed('#typed2', {
@@ -37,9 +37,9 @@
         
         var typed = new Typed('#typed', {
             stringsElement: '#typed-strings',
-            typeSpeed: 70,
+            typeSpeed: 80,
             backSpeed: 35,
-            showCursor: false,
+            showCursor: true,
             loop: false,
             onComplete: function () {
                 // Cette fonction sera appelée lorsque la première instance de Typed est terminée

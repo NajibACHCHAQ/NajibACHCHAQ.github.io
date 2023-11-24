@@ -8,8 +8,10 @@
 }
 
 body {
+    text-align: center;
     margin: 0;
-    display: flex;
+    display: grid;
+    grid-template-rows: 1FR 1FR 1FR 1FR;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -20,7 +22,8 @@ body {
 }
 
 
-img{
+.loader-container img{
+    width: 50%;
     max-width: 50%;
 }
 
