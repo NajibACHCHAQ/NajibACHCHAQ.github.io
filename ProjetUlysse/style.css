@@ -50,6 +50,8 @@ body{
 }
 
 .titre-container {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 35PX;
     display: grid;
     grid-template-rows: 70px auto;

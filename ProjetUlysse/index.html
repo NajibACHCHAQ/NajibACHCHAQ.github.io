@@ -1,82 +1,53 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ulysse 21</title>
+    <title>Loader Page</title>
+    <link rel="stylesheet" href="loader.css">
 </head>
-
-
 <body>
-    <header class="entete">
-
-        <img src="logo-greta-21.png" alt="logo">
+    <div class="loader-container">
         <div id="typed-strings">
-            <p>Une formation <strong>sur mesure</strong>.</p>
-            <p>Une formation <strong>adaptée à vos besoins</strong>.</p>
-            <p>Une équipe pédagogique <strong> à votre écoute</strong>.</p>
-          </div>
-          <h2><span class="animation-entete" id="typed"></span></h2>
-        <div class="titre-container">
-                <img src="logoGreta-removebg-preview.png" alt="">
-            <div class="sous-titre">Accompagne vos ambitions</div>
+            <p>Intégrer notre <strong>Entreprise Pédagogique</strong>.</p>
         </div>
+        <h2><span class="animation-entete" id="typed"></span></h2>
+
+        <img src="boat.png" alt="Logo animé">
+            
+        <div id="typed-strings2">
+            <p>Et naviguer vers <strong>la Réussite</strong>.</p>
+        </div>
+        <!-- Correctement fermée la balise span -->
+        <h2><span class="animation-entete" id="typed2" style="display: none;"></span></h2>
+    </div>
+    
+    <script>
+        setTimeout(function() {window.location.href = "main.html";}, 8000);
         
-    </header>
-    <div class="titre-site">Entreprise d'Entrainement Pédagogique</div>
-    <nav class="menu">
-        <a href="">Ulysse</a>
-        <a href="pre-inscricption.html">Pré-inscription</a>
-        <a href="">Renseignement</a>
-        <a href="">Nous contacter</a>
-    </nav>    
-
-    <div class="section plein">
-        <div class="parallax-img">
-            <h1>Ulysse 21 c'est quoi ?</h1>  
-            <iframe src="https://www.youtube.com/embed/7xIF9blpcGY" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class=" section card-container">
-        <div class="titre-section">Un parcours sur mesure</div>
-            <div class="card-content">
-                <div class="card">
-                    
-                </div>   
-                <div class="card">
-                    
-                </div>   
-                <div class="card">
-                    
-                </div> 
-            </div>       
-    </div>
-
-    <div class="section plein">
-        <div class="parallax-content">
-            <h1>Ulysse 21 c'est quoi ?</h1>  
-           <iframe src="https://www.youtube.com/embed/7xIF9blpcGY" frameborder="0" allowfullscreen></iframe>
-          </div>       
-    </div>
-
-    <div class="section mmm">
-        <div class="parallax-content">
-            <h1>Ulysse 21 c'est quoi ?</h1>  
-           <iframe src="https://www.youtube.com/embed/7xIF9blpcGY" frameborder="0" allowfullscreen></iframe>
-          </div>       
-    </div>
-
-    <footer class="footer">
-        <a href="">mentions légale</a>
-        <a href="">nos partenaires</a>
-        <a href="">Le résau Greta</a>
-        <a href="">Je ne sais pas quoi</a>
-    </footer>
-    <script src="script.js"></script>
+        // Initialiser typed2 en dehors de la fonction onComplete
+        var typed2 = new Typed('#typed2', {
+            stringsElement: '#typed-strings2',
+            typeSpeed: 40,
+            backSpeed: 15,
+            loop: false,
+        });
+        
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 70,
+            backSpeed: 35,
+            loop: false,
+            onComplete: function () {
+                // Cette fonction sera appelée lorsque la première instance de Typed est terminée
+                // Rendre visible #typed2 une fois que typed est terminé
+                document.getElementById('typed2').style.display = 'inline';
+            },
+        });
+    </script>
 </body>
 </html>
+
+
+
