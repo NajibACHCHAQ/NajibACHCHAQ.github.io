@@ -110,6 +110,7 @@ body{
     top: 0;
     z-index: 2;
     padding: 12px;
+    backdrop-filter: blur(8px);
 }
 
 .menu a{
@@ -124,6 +125,16 @@ padding: 10px;
  color: #a6ba1f;
  background-color: rgba(149, 200, 220, 0.383);
 }
+@media only screen and (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu a {
+      margin-top: 10px; /* Ajoute un espace entre les liens dans le menu */
+    }
+  }
 
 
 .section{
@@ -182,68 +193,26 @@ iframe{
 
 
 @keyframes slide {
-    0%{
-        transform: translateX(0%) translateY(5px) rotate(3deg);
-    }
-    5%{
-        transform: translateX(100%) translateY(10px) rotate(-3deg);
-    }
-    10% {
-        transform: translateX(200%) translateY(5px) rotate(-3deg);
-    }
-    15% {
-        transform: translateX(300%) translateY(5px) rotate(3deg);
-    }
-    20% {
-        transform: translateX(400%) translateY(10px) rotate(-3deg);
-    }
-    25% {
-        transform: translateX(500%) translateY(5px) rotate(3deg);
-    }
-    30% {
-        transform: translateX(600%) translateY(10px) rotate(-3deg);
-    }
-    35% {
-        transform: translateX(700%) translateY(5px) rotate(3deg);
-    }
-    40% {
-        transform: translateX(800%) translateY(10px) rotate(-3deg);
-    }
-    45% {
-        transform: translateX(900%) translateY(5px) rotate(3deg);
-    }
-    50% {
-        transform: translateX(1000%) translateY(10px) rotate(-3deg);
-    }
-    55%{
-        transform: translateX(1100%) translateY(5px) rotate(3deg);
-    }
-    60%{
-        transform: translateX(1200%) translateY(10px) rotate(-3deg);
-    }
-    65% {
-        transform: translateX(1300%) translateY(5px) rotate(-3deg);
-    }
-    70% {
-        transform: translateX(1400%) translateY(5px) rotate(3deg);
-    }
-    75% {
-        transform: translateX(1500%) translateY(10px) rotate(-3deg);
-    }
-    80% {
-        transform: translateX(1600%) translateY(5px) rotate(3deg);
-    }
-    85% {
-        transform: translateX(1700%) translateY(10px) rotate(-3deg);
-    }
-    90% {
-        transform: translateX(1800%) translateY(5px) rotate(3deg);
-    }
-    100% {
-        transform: translateX(1900%) translateY(10px) rotate(-3deg);
-    }
-
-
+    0%{transform: translateX(0%) translateY(5px) rotate(3deg);}
+    5%{transform: translateX(100%) translateY(10px) rotate(-3deg);}
+    10% {transform: translateX(200%) translateY(5px) rotate(-3deg);}
+    15% {transform: translateX(300%) translateY(5px) rotate(3deg);}
+    20% {transform: translateX(400%) translateY(10px) rotate(-3deg);}
+    25% {transform: translateX(500%) translateY(5px) rotate(3deg);}
+    30% {transform: translateX(600%) translateY(10px) rotate(-3deg);}
+    35% {transform: translateX(700%) translateY(5px) rotate(3deg);}
+    40% {transform: translateX(800%) translateY(10px) rotate(-3deg);}
+    45% {transform: translateX(900%) translateY(5px) rotate(3deg);}
+    50% {transform: translateX(1000%) translateY(10px) rotate(-3deg);}
+    55%{transform: translateX(1100%) translateY(5px) rotate(3deg);}
+    60%{transform: translateX(1200%) translateY(10px) rotate(-3deg);}
+    65% {transform: translateX(1300%) translateY(5px) rotate(-3deg);}
+    70% {transform: translateX(1400%) translateY(5px) rotate(3deg);}
+    75% {transform: translateX(1500%) translateY(10px) rotate(-3deg);}
+    80% {transform: translateX(1600%) translateY(5px) rotate(3deg);}
+    85% {transform: translateX(1700%) translateY(10px) rotate(-3deg);}
+    90% {transform: translateX(1800%) translateY(5px) rotate(3deg);}
+    100% {transform: translateX(1900%) translateY(10px) rotate(-3deg);}
 }
 
 .titre-section{
