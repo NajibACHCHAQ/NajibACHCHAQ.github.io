@@ -177,7 +177,7 @@ iframe{
 .navivation-boat img {
     width: 400px;
     position: absolute;
-    animation: slide 40s linear infinite;
+    animation: slide 25s linear infinite;
 }
 
 
