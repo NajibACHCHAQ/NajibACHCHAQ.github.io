@@ -74,7 +74,7 @@ body{
     font-size: 25px;
     color: #036a717f;
 }
-.titre-site{
+.titre-site {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,15 +85,17 @@ body{
     margin-right: auto;
     margin-top: 12px;
     margin-bottom: 12px;
-    background-color: rgb(255, 255, 255)(242, 238, 238);
+    background-color: rgb(242, 238, 238);
     height: fit-content;
     text-align: center;
-    background:url(fond-mur-texture-beton-bleu-grunge-vintage-vignette.jpg);
+    background: url(fond-mur-texture-beton-bleu-grunge-vintage-vignette.jpg);
     border-radius: 100px;
     color: white;
-    box-shadow: 6PX 6PX 6PX gray ;
+    box-shadow: 0px 6px 6px gray; /* Paramètres de l'ombre : x-offset, y-offset, flou, couleur */
     text-shadow: 3px 3px 3px rgba(245, 245, 245, 0.524);
-}
+    border: 6px solid  #266b86;
+  }
+   
 
 .menu {
     display: flex;
@@ -149,7 +151,7 @@ padding: 10px;
 
 
 .mmm{
-    background: url(summer_background_47_a.jpg);
+    background: url(summer_background_47_a.png);
 }
 
 
@@ -164,7 +166,7 @@ iframe{
 
 .navivation-boat {
     height: 150px;
-    padding: 30px;
+    padding: 32px;
     position: relative;
     left: 0;
     overflow: hidden;
@@ -178,48 +180,97 @@ iframe{
     animation: slide 40s linear infinite;
 }
 
+
 @keyframes slide {
-    0%, 100% {
-        transform: translateX(-100%) translateY(5px) rotate(5deg);
+    0%{
+        transform: translateX(0%) translateY(5px) rotate(3deg);
+    }
+    5%{
+        transform: translateX(100%) translateY(10px) rotate(-3deg);
     }
     10% {
-        transform: translateX(0%) translateY(15px) rotate(-5deg);
+        transform: translateX(200%) translateY(5px) rotate(-3deg);
+    }
+    15% {
+        transform: translateX(300%) translateY(5px) rotate(3deg);
     }
     20% {
-        transform: translateX(2000%) translateY(5px) rotate(5deg);
+        transform: translateX(400%) translateY(10px) rotate(-3deg);
+    }
+    25% {
+        transform: translateX(500%) translateY(5px) rotate(3deg);
     }
     30% {
-        transform: translateX(2000%) translateY(15px) rotate(-5deg);
+        transform: translateX(600%) translateY(10px) rotate(-3deg);
+    }
+    35% {
+        transform: translateX(700%) translateY(5px) rotate(3deg);
     }
     40% {
-        transform: translateX(0%) translateY(5px) rotate(5deg);
+        transform: translateX(800%) translateY(10px) rotate(-3deg);
+    }
+    45% {
+        transform: translateX(900%) translateY(5px) rotate(3deg);
     }
     50% {
-        transform: translateX(-50%) translateY(15px) rotate(-5deg);
+        transform: translateX(1000%) translateY(10px) rotate(-3deg);
     }
-    60% {
-        transform: translateX(100%) translateY(5px) rotate(5deg);
+    55%{
+        transform: translateX(1100%) translateY(5px) rotate(3deg);
+    }
+    60%{
+        transform: translateX(1200%) translateY(10px) rotate(-3deg);
+    }
+    65% {
+        transform: translateX(1300%) translateY(5px) rotate(-3deg);
     }
     70% {
-        transform: translateX(1000%) translateY(15px) rotate(-5deg);
+        transform: translateX(1400%) translateY(5px) rotate(3deg);
+    }
+    75% {
+        transform: translateX(1500%) translateY(10px) rotate(-3deg);
     }
     80% {
-        transform: translateX(1500%) translateY(15px) rotate(5deg);
+        transform: translateX(1600%) translateY(5px) rotate(3deg);
+    }
+    85% {
+        transform: translateX(1700%) translateY(10px) rotate(-3deg);
     }
     90% {
-        transform: translateX(0%) translateY(-10px) rotate(5deg);
+        transform: translateX(1800%) translateY(5px) rotate(3deg);
     }
+    95% {
+        transform: translateX(1900%) translateY(10px) rotate(-3deg);
+    }
+    100% {
+        transform: translateX(2000%) translateY(5px) rotate(3deg);
+    }
+
 }
 
-
+.titre-section{
+    margin: 0 auto;
+    color: white;
+    font-size: 56px;
+    width: fit-content;
+}
 
 .card-container{
+
+    text-align: center;
     width: 100%;
     background: url(summer_background_47_a.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 .card-content{ 
-    grid-template-columns: 1fr 1fr 1fr;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-content img{
+    width: 90%;
 }
 .card{
     margin: 0 auto;
