@@ -245,6 +245,8 @@ iframe{
 }
 .card-content img{
     width: 90%;
+    margin-bottom: 30px;
+    border-radius: 20px;
 }
 .card{
     margin: 0 auto;
