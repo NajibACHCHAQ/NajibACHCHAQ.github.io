@@ -88,10 +88,11 @@ body{
     background-color: rgb(255, 255, 255)(242, 238, 238);
     height: fit-content;
     text-align: center;
-    background-color: #006982;
+    background:url(fond-mur-texture-beton-bleu-grunge-vintage-vignette.jpg);
     border-radius: 100px;
     color: white;
     box-shadow: 6PX 6PX 6PX gray ;
+    text-shadow: 3px 3px 3px rgba(245, 245, 245, 0.524);
 }
 
 .menu {
@@ -132,7 +133,7 @@ padding: 10px;
  padding: 30PX;
  width: 100%;
  background: url(hexagon-background.png) ;
- filter: grayscale(30%); /* Ajoute un filtre de niveau de gris de 50%, ajustez selon vos préférences */
+ /*filter: grayscale(30%); /* Ajoute un filtre de niveau de gris de 50%, ajustez selon vos préférences */
  background-color: #4d8ea7b1;
  background-size: cover;
  background-repeat: no-repeat;
@@ -148,8 +149,7 @@ padding: 10px;
 
 
 .mmm{
-    background: #4d8ea7b1;
-    filter: grayscale(30%);
+    background: url(summer_background_47_a.jpg);
 }
 
 
@@ -161,9 +161,62 @@ iframe{
     margin-top: 22px;
     z-index: 3;
 }
+
+.navivation-boat {
+    height: 150px;
+    padding: 30px;
+    position: relative;
+    left: 0;
+    overflow: hidden;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto;
+}
+
+.navivation-boat img {
+    width: 400px;
+    position: absolute;
+    animation: slide 40s linear infinite;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(-100%) translateY(5px) rotate(5deg);
+    }
+    10% {
+        transform: translateX(0%) translateY(15px) rotate(-5deg);
+    }
+    20% {
+        transform: translateX(2000%) translateY(5px) rotate(5deg);
+    }
+    30% {
+        transform: translateX(2000%) translateY(15px) rotate(-5deg);
+    }
+    40% {
+        transform: translateX(0%) translateY(-10px) rotate(5deg);
+    }
+    50% {
+        transform: translateX(-50%) translateY(5px) rotate(-5deg);
+    }
+    60% {
+        transform: translateX(100%) translateY(15px) rotate(5deg);
+    }
+    70% {
+        transform: translateX(1000%) translateY(5px) rotate(-5deg);
+    }
+    80% {
+        transform: translateX(1500%) translateY(15px) rotate(5deg);
+    }
+    90% {
+        transform: translateX(0%) translateY(-10px) rotate(5deg);
+    }
+}
+
+
+
 .card-container{
     width: 100%;
-    background: #006982;
+    background: url(summer_background_47_a.jpg);
+    background-size: cover;
 }
 .card-content{ 
     grid-template-columns: 1fr 1fr 1fr;
@@ -172,7 +225,7 @@ iframe{
     margin: 0 auto;
     width: 500px;
     height: 500px;
-    background-color: rgba(170, 173, 176, 0.522);
+    background-color: rgba(7, 48, 88, 0.679);
     border-radius: 15px;
 }
 
