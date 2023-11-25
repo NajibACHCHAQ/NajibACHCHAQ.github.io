@@ -239,12 +239,10 @@ iframe{
     90% {
         transform: translateX(1800%) translateY(5px) rotate(3deg);
     }
-    95% {
+    100% {
         transform: translateX(1900%) translateY(10px) rotate(-3deg);
     }
-    100% {
-        transform: translateX(2000%) translateY(5px) rotate(3deg);
-    }
+
 
 }
 
