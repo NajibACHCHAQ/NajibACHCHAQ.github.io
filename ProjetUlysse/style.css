@@ -192,16 +192,16 @@ iframe{
         transform: translateX(2000%) translateY(15px) rotate(-5deg);
     }
     40% {
-        transform: translateX(0%) translateY(-10px) rotate(5deg);
+        transform: translateX(0%) translateY(5px) rotate(5deg);
     }
     50% {
-        transform: translateX(-50%) translateY(5px) rotate(-5deg);
+        transform: translateX(-50%) translateY(15px) rotate(-5deg);
     }
     60% {
-        transform: translateX(100%) translateY(15px) rotate(5deg);
+        transform: translateX(100%) translateY(5px) rotate(5deg);
     }
     70% {
-        transform: translateX(1000%) translateY(5px) rotate(-5deg);
+        transform: translateX(1000%) translateY(15px) rotate(-5deg);
     }
     80% {
         transform: translateX(1500%) translateY(15px) rotate(5deg);
