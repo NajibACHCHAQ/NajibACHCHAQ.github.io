@@ -233,6 +233,7 @@ iframe{
     width: fit-content;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .titre-section img{
     width: 80px;
@@ -338,10 +339,10 @@ color: beige;
 
   @keyframes scrollText {
     0% {
-      transform: translateX(100%);
+      transform: translateX(20%);
     }
     100% {
-      transform: translateX(-100%);
+      transform: translateX(-20%);
     }
 
   }
