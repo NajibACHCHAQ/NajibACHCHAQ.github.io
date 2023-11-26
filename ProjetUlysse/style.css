@@ -225,10 +225,18 @@ iframe{
 }
 
 .titre-section{
+    display: grid;
+    grid-template-columns: auto auto auto;
     margin: 0 auto;
     color: white;
-    font-size: 56px;
+    font-size: 68px;
     width: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.titre-section img{
+    width: 80px;
+
 }
 
 .card-container{
@@ -310,3 +318,30 @@ input{
     border-radius: 50px;
     background-color: #a6ba1f;
 }
+
+.scrolling-text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    background: #006982;
+    border-top:12px solid #a6ba1f;
+    border-bottom:12px solid #a6ba1f;
+    position: relative;
+  }
+
+.scrolling-text {
+display: inline-block;
+animation: scrollText 120s linear infinite;
+font-size: 36px;
+color: beige;
+
+}
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+
+  }
