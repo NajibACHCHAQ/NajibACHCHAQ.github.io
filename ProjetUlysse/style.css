@@ -172,6 +172,10 @@ body{
 
 .mmm{
     background: url(summer_background_47_a.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 3px 3px 12px 6px rgba(99, 99, 251, 0.756);
+
 }
 
 
