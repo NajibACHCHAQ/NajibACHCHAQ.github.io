@@ -281,12 +281,16 @@ iframe{
 footer{
     display: flex;
     width: 100%;
-    background-color: rgba(156, 128, 128, 0.495);
+    background-color: rgba(128, 139, 156, 0.495);
     height: 120px;
     position: relative;
     bottom: 0;
     justify-content: space-around;
     align-items: center;
+    color: #1f22bab6;
+}
+footer a:hover{
+    color: #1f98bab6;
 }
 
 form{
@@ -299,6 +303,7 @@ form{
     border: 3px solid white;
     border-radius: 15px;
     box-shadow: 6PX 6PX 6PX gray;
+    
 }
 .titre-form{
     margin: 0;
