@@ -1,0 +1,15 @@
+
+.validation-participation{
+    width: fit-content;
+    height: fit-content;
+    border:3px solid rgba(0, 85, 255, 0.886);
+    margin-top: 120px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 28px;
+    text-align: center;
+    background-color: azure;
+    box-shadow: 3px 3px 3px rgba(128, 128, 128, 0.766);
+    border-radius: 20px;
+}
