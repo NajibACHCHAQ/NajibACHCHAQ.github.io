@@ -234,6 +234,9 @@ iframe{
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #0068826c;
+    padding: 12px;
+    border-radius: 50px;
 }
 .titre-section img{
     width: 80px;
@@ -247,6 +250,7 @@ iframe{
     background: url(summer_background_47_a.jpg);
     background-size: cover;
     background-attachment: fixed;
+    padding-top: 20px;
 }
 .card-content{ 
     
