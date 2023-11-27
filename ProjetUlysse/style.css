@@ -78,7 +78,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 70px;
+    font-size: 52px;
     width: fit-content;
     padding: 18px;
     margin-left: auto;
@@ -234,7 +234,7 @@ iframe{
     grid-template-columns: auto auto auto;
     margin: 0 auto;
     color: white;
-    font-size: 68px;
+    font-size: 46px;
     width: fit-content;
     justify-content: center;
     align-items: center;
@@ -244,7 +244,7 @@ iframe{
     border-radius: 50px;
 }
 .titre-section img{
-    width: 80px;
+    
 
 }
 
@@ -265,8 +265,10 @@ iframe{
 }
 .card-content img{
     width: 90%;
+    height: 90%;
     margin-bottom: 30px;
     border-radius: 20px;
+
 }
 .card{
     margin: 0 auto;
