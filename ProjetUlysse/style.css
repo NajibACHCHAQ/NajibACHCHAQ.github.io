@@ -88,8 +88,8 @@ body{
     background-color: rgb(242, 238, 238);
     height: fit-content;
     text-align: center;
-    background: url(fond-mur-texture-beton-bleu-grunge-vintage-vignette.jpg);
-    background-size: cover;
+    background: url(fond-mur-texture-beton.webp);
+    background-size:contain;
     background-attachment: fixed;
     border-radius: 100px;
     color: white;
@@ -252,7 +252,7 @@ iframe{
 
     text-align: center;
     width: 100%;
-    background: url(summer_background_47_a.jpg);
+    background: url(summer_background.webp);
     background-size: cover;
     background-attachment: fixed;
     padding-top: 20px;
