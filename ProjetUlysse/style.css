@@ -390,39 +390,53 @@ color: beige;
   }
 
 
-
+.defilement-cloud{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    height: auto;
+    overflow:hidden;
+}
   .cloud {
     width: 120px;
-    position: absolute;
-    left: 200px;
+    position: relative;
+
     animation: slide 200s linear infinite;
+    top: 50px;
   }
 
   .cloud1 {
     width: 90px;
-    position: absolute;
-    right: 150px;
-    animation: slide 190s linear infinite;
+    position: relative;
+
+    animation: slide 170s linear infinite;
+    left: -100px;
 
 
   }
   .cloud3 {
     width: 110px;
-    left: 600px;
-    position: absolute;
-    animation: slide 180s linear infinite ;
+
+    position: relative;
+    animation: slide 140s linear infinite ;
+    bottom: 50px;
+    animation-delay: 6s;
+    left: -100px;
     
 }
   
 .cloud4 {
     width: 120px;
-    position: absolute;
+    position: relative;
     animation: slide 180s linear infinite ;
-    right: 300px;
+    bottom: 100px;
+    animation-delay: 2s;
+    left: -100px;
 }
 .cloud5 {
     width: 100px;
     position: absolute;
-    animation: slide 180s linear infinite ;
-    right: 700px;
+    animation: slide 130s linear infinite ;
+    bottom: 50px;
+    animation-delay: 0s;
+    left: -100px;
 }
