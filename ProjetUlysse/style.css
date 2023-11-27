@@ -220,6 +220,7 @@ iframe{
     overflow: hidden;
     width: 100%; /* Ajustez la largeur selon vos besoins */
     margin: 0 auto;
+    margin-top: 28px;
 }
 
 .navivation-boat img {
@@ -275,7 +276,7 @@ iframe{
     width: 100%;
     background: url(summer_background.webp);
     background-size: cover;
-    background-attachment: fixed;
+
     padding-top: 20px;
 }
 .card-content{ 
@@ -387,3 +388,31 @@ color: beige;
     }
 
   }
+
+
+
+  .cloud {
+    width: 120px;
+    position: absolute;
+    animation: slide 200s linear infinite;
+  }
+
+  .cloud1 {
+    width: 90px;
+    position: absolute;
+    animation: slide 150s linear infinite;
+    transform: translateX(-150%);
+
+  }
+  .cloud3 {
+    width: 100px;
+    position: absolute;
+    animation: slide 100s linear infinite ;
+    
+}
+  
+.cloud4 {
+    width: 100px;
+    position: absolute;
+    animation: slide 80s linear infinite ;
+}
