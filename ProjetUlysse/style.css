@@ -407,7 +407,7 @@ color: beige;
 
   }
   .cloud3 {
-    width: 100px;
+    width: 110px;
     left: 600px;
     position: absolute;
     animation: slide 180s linear infinite ;
@@ -415,7 +415,7 @@ color: beige;
 }
   
 .cloud4 {
-    width: 100px;
+    width: 120px;
     position: absolute;
     animation: slide 180s linear infinite ;
     right: 300px;
