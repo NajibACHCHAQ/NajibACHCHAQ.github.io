@@ -394,25 +394,35 @@ color: beige;
   .cloud {
     width: 120px;
     position: absolute;
+    left: 200px;
     animation: slide 200s linear infinite;
   }
 
   .cloud1 {
     width: 90px;
     position: absolute;
-    animation: slide 150s linear infinite;
-    transform: translateX(-150%);
+    right: 150px;
+    animation: slide 190s linear infinite;
+
 
   }
   .cloud3 {
     width: 100px;
+    left: 600px;
     position: absolute;
-    animation: slide 100s linear infinite ;
+    animation: slide 180s linear infinite ;
     
 }
   
 .cloud4 {
     width: 100px;
     position: absolute;
-    animation: slide 80s linear infinite ;
+    animation: slide 180s linear infinite ;
+    right: 300px;
+}
+.cloud5 {
+    width: 100px;
+    position: absolute;
+    animation: slide 180s linear infinite ;
+    right: 700px;
 }
