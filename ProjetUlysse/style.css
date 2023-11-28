@@ -20,6 +20,7 @@
 body{
     font-family: 'Marianne';
     background-color: rgb(255, 255, 255);
+    height: 100%;
 } 
 
 .entete {
@@ -358,7 +359,7 @@ iframe{
     align-items: center;
 }
 .start .card{
-    min-width: 255px;
+    min-width: 230px;
 }
 .titre-card-parcours{
     border-radius: 15px 15px 0px 0px;
