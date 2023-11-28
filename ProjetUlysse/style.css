@@ -401,17 +401,18 @@ color: beige;
 .defilement-cloud{
     display: grid;
     grid-template-rows: auto;
+    padding: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
-
     overflow:hidden;
-    margin-top: 0px;
 }
   .cloud {
     width: 120px;
     position: relative;
     left: -50px;
+    top: 15px;
     animation: slide 200s linear infinite;
+    margin-bottom: 20px;
 
   }
 
@@ -427,6 +428,7 @@ color: beige;
     position: relative;
     animation: slide 140s linear infinite ;
     animation-delay: 6s;
+    top: 15px;
     left: -80px;
     
 }
@@ -437,6 +439,8 @@ color: beige;
     animation: slide 180s linear infinite ;
     animation-delay: 2s;
     left: -100px;
+    top: 25px;
+    margin-bottom: 10px;
 }
 .cloud5 {
     width: 100px;
@@ -444,4 +448,5 @@ color: beige;
     animation: slide 130s linear infinite ;
     animation-delay: 0s;
     left: -100px;
+
 }
