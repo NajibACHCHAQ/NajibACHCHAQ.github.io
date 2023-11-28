@@ -287,7 +287,7 @@ iframe{
     padding-top: 20px;
 }
 .card-content{ 
-    width: 90%;
+    width: 85%;
     padding:30px;
     background-color: rgba(240, 248, 255, 0.491);
     display: grid;
@@ -308,20 +308,29 @@ iframe{
 }
 .card{
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto repeat(auto-fill, 1fr);
     margin: 0 auto;
     width: 300px;
-    height: 300px;
+    height: auto;
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 15px ;
     box-shadow: -1px -1px 37px 4px #393838a6;
 }
+
+
+
+
+
 .titre-card-parcours{
-    border-radius: 15px ;
+    border-radius: 15px 15px 0px 0px;
+    padding: 12px;
     width: 100%;
-    height: auto;
+    height: fit-content;
     background-color: #006982;
     font-size: 4vh;
+}
+.card-element{
+    padding: 6px;
 }
 .etape{
     width: 100%;
@@ -329,10 +338,13 @@ iframe{
     display: grid;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: 1fr 1fr;
+}
+.deux{
+    width: 70%;
 }
 
 footer{
@@ -392,6 +404,8 @@ input{
 }
 
 .scrolling-text-container {
+    display: flex;
+    padding-bottom:6px ;
     overflow: hidden;
     white-space: nowrap;
     background: #006982;
