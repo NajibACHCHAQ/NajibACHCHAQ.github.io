@@ -109,7 +109,7 @@ body{
     width: 100%;
     height: 100%;
     justify-content: space-around;
-    font-size: 100%;
+    font-size: 130%;
     font-weight: bold;
     color: #266b86;
     background-color: rgba(255, 255, 255, 0.345); /* Fond transparent pour voir l'ombre de l'entête */
@@ -209,7 +209,6 @@ body{
 .titre-card-formation{
     width: 100%;
     height: 100%;
-
     padding: 16px;
 }
 
@@ -230,7 +229,7 @@ iframe{
     overflow: hidden;
     width: 100%; /* Ajustez la largeur selon vos besoins */
     margin: 0 auto;
-    margin-top: 28px;
+
 }
 
 .navivation-boat img {
@@ -314,10 +313,11 @@ iframe{
     width: 300px;
     height: 300px;
     background-color: rgba(7, 48, 88, 0.679);
-    border-radius: 15px;
+    border-radius: 15px ;
     box-shadow: -1px -1px 37px 4px #393838a6;
 }
 .titre-card-parcours{
+    border-radius: 15px ;
     width: 100%;
     height: auto;
     background-color: #006982;
