@@ -31,7 +31,7 @@ body{
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 260PX;
+    height: auto;
     background: rgb(250, 250, 251);
     box-shadow: 3px 3px 6px rgba(123, 122, 122, 0.825);
     font-family: 'Marianne', sans-serif;
@@ -39,15 +39,18 @@ body{
     padding-left: 20px;
 }
 .animation-entete{
-    font-size: 35px;
+    font-size: 150%;
     margin: 0 auto;
     color: #006982;
+}
+
+.logo-greta-region-entete{
+    width: 80%;
 }
 
 .titre-container {
     margin-left: auto;
     margin-right: auto;
-
     display: grid;
     grid-template-rows: auto auto;
     justify-content: center;
@@ -55,11 +58,11 @@ body{
     width: fit-content;
     height: fit-content;
     padding: 10px;
-    border-radius: 30px 5px 30px 5px;
+
 }
 
 .titre-container img {
-    width: 350px;
+    width: 250px;
 }
 
 .titre {
@@ -69,16 +72,18 @@ body{
 }
 
 .sous-titre {
+    display: flex;
+    text-align: center;
     width: fit-content;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 100%;
     color: #036a717f;
 }
 .titre-site {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 52px;
+    font-size: 200%;
     width: fit-content;
     padding: 18px;
     margin-left: auto;
@@ -104,7 +109,7 @@ body{
     width: 100%;
     height: 100%;
     justify-content: space-around;
-    font-size: 36px;
+    font-size: 100%;
     font-weight: bold;
     color: #266b86;
     background-color: rgba(255, 255, 255, 0.345); /* Fond transparent pour voir l'ombre de l'entête */
