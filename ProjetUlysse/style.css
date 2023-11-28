@@ -274,7 +274,7 @@ iframe{
     align-items: center;
     text-align: center;
     background-color: #0068826c;
-    padding: 12px;
+    padding: 14px;
     border-radius: 50px;
 }
 
@@ -300,7 +300,8 @@ iframe{
     margin-bottom: 30px;
     align-items: center;
     box-shadow: -1px -1px 37px 4px #415d958c;
-    border-radius: 20px;
+    border-radius: 0px 20px 0px 20pxpx;
+    z-index:1;;
 }
 .card-content img{
     width: 90%;
@@ -319,7 +320,12 @@ iframe{
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 15px ;
     box-shadow: -1px -1px 37px 4px #393838a6;
-    background-color: rgba(255, 255, 255, 0.611)
+    background-color: rgba(255, 255, 255, 0.611);
+
+}
+.card:hover, .etape .card:hover {
+    transform: scale(1.3) !important;
+    transition: 1.3s;
 }
 
 
@@ -334,11 +340,14 @@ iframe{
     padding: 12px;
     width: 100%;
     height: fit-content;
-    background-color: #006982;
-    font-size: 4vh;
+    background-color: #024c5f;
+    font-size: 140%;
+    font-weight: bolder;
+    color: whitesmoke;
 }
 .card-element{
     padding: 6px;
+    font-size: 100%;
 }
 .etape{
     width: 100%;
