@@ -314,8 +314,7 @@ iframe{
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
     margin: 0 auto;
-    width: 90%;
-    max-width: 300px;
+    width: fit-content;
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 15px ;
@@ -323,17 +322,24 @@ iframe{
     background-color: rgba(255, 255, 255, 0.611);
 
 }
+
+
+
 .card:hover, .etape .card:hover {
-    transform: scale(1.5) !important;
+    transform: scale(1.45) !important;
     transition: 1.3s;
     margin: 0 auto;
 }
-
+.start .card:hover .titre-card-parcours, .etape .card:hover .titre-card-parcours {
+    background-color: #020d5f;
+}
 
 
 .start{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 
 .titre-card-parcours{
@@ -361,9 +367,7 @@ iframe{
     margin-right: auto;
     grid-template-columns: 1fr 1fr;
 }
-.deux{
-    width: 70%;
-}
+
 
 footer{
     display: flex;
