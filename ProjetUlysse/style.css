@@ -289,7 +289,9 @@ iframe{
 .card-content{ 
     width: 85%;
     padding:30px;
-    background-color: rgba(240, 248, 255, 0.491);
+    background:url(fon-eau.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     margin-left: auto;
@@ -319,7 +321,10 @@ iframe{
 
 
 
-
+.start{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 .titre-card-parcours{
     border-radius: 15px 15px 0px 0px;
