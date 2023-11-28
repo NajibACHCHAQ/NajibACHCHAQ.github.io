@@ -400,9 +400,10 @@ color: beige;
 
 .defilement-cloud{
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: 100%;
-    height:fit-content;
+
     overflow:hidden;
     margin-top: 0px;
 }
