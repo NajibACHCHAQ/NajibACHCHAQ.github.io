@@ -161,16 +161,17 @@ body{
  width: 100%;
  background: url(hexagon-background.png) ;
  /*filter: grayscale(30%); /* Ajoute un filtre de niveau de gris de 50%, ajustez selon vos préférences */
- background-color: #4d8ea7b1;
  background-size: cover;
+ background-color: rgba(121, 180, 204, 0.185);
  background-repeat: no-repeat;
  background-attachment: fixed;
- font-size: 56PX;
+ font-size: 38PX;
  text-align: center;
- color: white;
+ color: rgba(22, 63, 227, 0.717);
  font-weight: bold;
  overflow: hidden;
  position: relative;
+ text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.776);
 }
 
 
