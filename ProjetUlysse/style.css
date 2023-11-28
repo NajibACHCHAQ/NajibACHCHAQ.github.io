@@ -295,6 +295,9 @@ iframe{
     height: 90%;
     margin-bottom: 30px;
     border-radius: 20px;
+    box-shadow: -1px -1px 37px 4px #415d958c;
+
+    
 
 }
 .card{
@@ -367,8 +370,8 @@ input{
     overflow: hidden;
     white-space: nowrap;
     background: #006982;
-    border-top:12px solid #a6ba1f;
-    border-bottom:12px solid #a6ba1f;
+    border-top:12px ridge #a6ba1f;
+    border-bottom:12px ridge #a6ba1f;
     position: relative;
   }
 
@@ -397,35 +400,33 @@ color: beige;
 
 .defilement-cloud{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    height: auto;
-    overflow:hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    width: 100%;
+    height: 10px;
+    overflow:visible;
+    margin-top: 0px;
 }
   .cloud {
     width: 120px;
     position: relative;
-
+    left: -50px;
     animation: slide 200s linear infinite;
-    top: 50px;
+
   }
 
   .cloud1 {
     width: 90px;
     position: relative;
-
     animation: slide 170s linear infinite;
-    left: -100px;
-
-
+    left: -150px;
   }
   .cloud3 {
     width: 110px;
 
     position: relative;
     animation: slide 140s linear infinite ;
-    bottom: 50px;
     animation-delay: 6s;
-    left: -100px;
+    left: -80px;
     
 }
   
@@ -433,15 +434,13 @@ color: beige;
     width: 120px;
     position: relative;
     animation: slide 180s linear infinite ;
-    bottom: 100px;
     animation-delay: 2s;
     left: -100px;
 }
 .cloud5 {
     width: 100px;
-    position: absolute;
+    position: relative;
     animation: slide 130s linear infinite ;
-    bottom: 50px;
     animation-delay: 0s;
     left: -100px;
 }
