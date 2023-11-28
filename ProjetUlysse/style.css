@@ -311,18 +311,30 @@ iframe{
     border-radius: 20px;
     box-shadow: -1px -1px 37px 4px #415d958c;
 }
-.card{
+.card {
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
     width: fit-content;
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
-    border-radius: 15px ;
+    border-radius: 15px;
     box-shadow: -1px -1px 37px 4px #393838a6;
     background-color: rgba(255, 255, 255, 0.611);
     margin-left: auto;
     margin-right: auto;
+    overflow: auto;
+    resize: both;
+    z-index: 1;
+    border: 2px ridge #266b86;
+}
 
+@media screen and (max-width: 900px) {
+    /* Ajustez les styles pour les écrans de 600 pixels de largeur ou moins */
+    .card {
+        width: 90%; /* Par exemple, ajustez la largeur pour s'adapter à l'écran étroit */
+        margin: 10px auto; /* Centrez la carte avec une petite marge */
+        font-size: 80%;
+    }
 }
 
 
@@ -331,9 +343,11 @@ iframe{
     transform: scale(1.45) !important;
     transition: 1.3s;
     margin: 0 auto;
+    z-index: 2;
 }
 .start .card:hover .titre-card-parcours, .etape .card:hover .titre-card-parcours {
     background-color: #020d5f;
+    z-index: 2;
 }
 
 
@@ -343,7 +357,9 @@ iframe{
     justify-content: space-around;
     align-items: center;
 }
-
+.start .card{
+    min-width: 255px;
+}
 .titre-card-parcours{
     border-radius: 15px 15px 0px 0px;
     padding: 12px;
@@ -362,7 +378,7 @@ iframe{
     width: 100%;
     height: 100%;
     display: grid;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-top: 70px;
     grid-template-columns: 1fr 1fr;
