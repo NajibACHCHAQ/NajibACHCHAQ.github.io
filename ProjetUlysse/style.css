@@ -290,6 +290,7 @@ iframe{
     width: 85%;
     padding:30px;
     background:url(fon-eau.png);
+    opacity: 0.8;
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
@@ -312,11 +313,13 @@ iframe{
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
     margin: 0 auto;
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 15px ;
     box-shadow: -1px -1px 37px 4px #393838a6;
+    background-color: rgba(255, 255, 255, 0.611)
 }
 
 
