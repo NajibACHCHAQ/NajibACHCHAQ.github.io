@@ -451,6 +451,8 @@ input{
     border-top:12px ridge #a6ba1f;
     border-bottom:12px ridge #a6ba1f;
     position: relative;
+    text-shadow: 2px 2px 2px rgba(66, 66, 66, 0.869);
+
   }
 
 .scrolling-text {
