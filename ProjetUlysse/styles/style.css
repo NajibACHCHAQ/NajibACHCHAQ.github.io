@@ -12,8 +12,8 @@
 /* stylesFont.css */
 @font-face {
     font-family: 'Marianne';
-    src: url('font_marianne_web/Marianne-Regular.woff2') format('woff2'),
-         url('font_marianne_web/Marianne-Regular.woff') format('woff');
+    src: url('/font_marianne_web/Marianne-Regular.woff2') format('woff2'),
+         url('/font_marianne_web/Marianne-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
