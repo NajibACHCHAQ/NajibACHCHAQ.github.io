@@ -578,6 +578,7 @@ input:hover {
 /* Gestion du defilement des nuages*/
 
 .defilement-cloud{
+    margin-top: 40px;
     display: grid;
     grid-template-rows: auto;
     padding: 10px;
