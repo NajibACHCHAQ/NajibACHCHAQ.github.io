@@ -102,7 +102,7 @@ body {
     background-color: rgb(242, 238, 238);
     height: fit-content;
     text-align: center;
-    background: url(/assets/fond-mur-texture-beton.webp);
+    background: url(../assets/fond-mur-texture-beton.webp);
     background-size: contain;
     background-attachment: fixed;
     border-radius: 100px;
@@ -173,7 +173,7 @@ body {
     height: 100%;
     padding: 3vw; /* Responsive padding */
     width: auto;
-    background: url(/assets/hexagon-background.png);
+    background: url(../assets/hexagon-background.png);
     background-size: cover;
     background-color: rgba(121, 180, 204, 0.185);
     background-repeat: no-repeat;
