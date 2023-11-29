@@ -362,6 +362,8 @@ iframe{
     min-width: 230px;
 }
 .titre-card-parcours{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     border-radius: 15px 15px 0px 0px;
     padding: 12px;
     width: 100%;
@@ -370,6 +372,9 @@ iframe{
     font-size: 140%;
     font-weight: bolder;
     color: whitesmoke;
+}
+.sous-titre-card{
+    font-size: 90%;
 }
 .card-element{
     padding: 6px;
