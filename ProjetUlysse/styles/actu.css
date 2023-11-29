@@ -8,8 +8,8 @@
     margin: 0 auto;
     padding: 2vw;
     border-radius: 20px;
-    background: url(hexagon-background.png);
-    background-color: url(fond-mur-texture-beton.webp);
+    background: url(/assets/hexagon-background.png);
+    background-color: url(/assets/fond-mur-texture-beton.webp);
     background-size: cover;
     background-attachment: fixed;
     margin-top: 2vw;

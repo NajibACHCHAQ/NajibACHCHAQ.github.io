@@ -4,8 +4,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-quiz.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style-result.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulysse 21</title>
@@ -15,7 +15,7 @@
 <body>
     <header class="entete">
 
-        <img src="logo-greta-21.png" alt="logo">
+        <img src="/assets/logo-greta-21.png" alt="logo">
         <div id="typed-strings">
             <p>Une formation <strong>sur mesure</strong>.</p>
             <p>Une formation <strong>adaptée à vos besoins</strong>.</p>
@@ -23,27 +23,22 @@
           </div>
           <h2><span class="animation-entete" id="typed"></span></h2>
         <div class="titre-container">
-                <img src="boat.png" alt="">
+                <img src="/assets/boat.png" alt="">
             <div class="sous-titre">Accompagne vos ambitions</div>
         </div>
         
     </header>
-    <div id="quiz-container">
-        <div id="timer"><span id="time-display"></span></div>
-        <div id="question-container">
-            <p id="question"></p>
-        </div>
-        <div id="answer-buttons" class="btn-container">
-            <!-- Les boutons de réponse seront ajoutés ici via JavaScript -->
-        </div>
+
+    <nav class="menu">
+        <a href="/pages/main.html">Ulysse</a>
+        <a href="">Renseignement</a>
+        <a href="">Nous contacter</a>
+    </nav> 
+
+<div class="validation-participation"> <p>Nous sommes heureux de vous informer que votre participation a été validée avec succès. Vous recevrez sous peu une confirmation par e-mail. De plus, veuillez noter que dans les prochains jours, une conseillère en formation prendra contact avec vous afin de discuter plus amplement des détails et des étapes à suivre afin de vous accompagner dans votre parcours de formation.
+    </p>
     </div>
-    
-    <footer class="footer">
-        <a href="">mentions légals</a>
-        <a href="">nos partenaires</a>
-        <a href="https://www.bourgogne-greta.fr/vos-greta-en-bourgogne/le-greta-21/presentation/">Le Greta 21</a>
-    </footer>
-    <script src="script.js"></script>
-    <script src="script-quiz.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
+
 </html>
