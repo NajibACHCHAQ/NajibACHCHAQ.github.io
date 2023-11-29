@@ -40,6 +40,9 @@ body {
     z-index: 3;
     padding-left: 20px;
 }
+.typed{
+    font-size: 1vh;
+}
 .entete img{
     width: 90%;
 }
@@ -163,9 +166,9 @@ body {
     grid-template-rows: auto 1fr;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100%;
     padding: 3vw; /* Responsive padding */
-    width: 100%;
+    width: auto;
     background: url(hexagon-background.png);
     background-size: cover;
     background-color: rgba(121, 180, 204, 0.185);
@@ -176,7 +179,6 @@ body {
     color: rgba(22, 63, 227, 0.717);
     font-weight: bold;
     overflow: hidden;
-    position: relative;
     text-shadow: 0.3vw 0.1vw 0.3vw rgba(0, 0, 0, 0.776); /* Responsive text shadow */
 }
 
@@ -243,7 +245,6 @@ iframe {
     border-radius: 2vw; /* Responsive border radius */
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3); /* Responsive box shadow */
     width: 90%; /* Responsive width */
-    max-width: 900px; /* Set a max-width for larger screens */
     height: auto; /* Responsive height */
     max-height: 460px; /* Set a max-height for larger screens */
     margin-top: 2vw; /* Responsive margin top */
@@ -430,9 +431,17 @@ iframe {
     }
 }
 
-.start .card:hover .titre-card-parcours {
+.card:hover .titre-card-parcours {
     background-color: #020d5f;
 }
+.card:hover {
+    transform: scale(1.4) !important; /* Added !important to ensure higher specificity */
+    transition: 1.3s;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+
 
 .titre-card-parcours {
     display: grid;
