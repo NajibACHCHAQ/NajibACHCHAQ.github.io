@@ -119,7 +119,7 @@ body {
     font-size: 2vw; /* Responsive font size */
     font-weight: bold;
     color: #266b86;
-    background-color: rgba(255, 255, 255, 0.345); /* Transparent background to see the header shadow */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background to see the header shadow */
     position: sticky;
     top: 0;
     z-index: 2;
@@ -478,7 +478,7 @@ footer {
     width: 100%;
     background-color: rgba(128, 139, 156, 0.495);
     height: 120px;
-
+    margin-bottom: 0;
     justify-content: space-around;
     align-items: center;
     color: #1f22bab6;

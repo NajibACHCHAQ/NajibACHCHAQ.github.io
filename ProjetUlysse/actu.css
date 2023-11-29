@@ -9,15 +9,33 @@
     padding: 2vw;
     border-radius: 20px;
     background: url(hexagon-background.png);
+    background-color: url(fond-mur-texture-beton.webp);
     background-size: cover;
     background-attachment: fixed;
     margin-top: 2vw;
-    border: 6px ridge blue;
+    border: 12px ridge rgba(92, 127, 174, 0.737);
+    margin-bottom: 2vw;
+    box-shadow: -1px -1px 37px 4px #595858b2;
+
 }
 body{
-    background: url(fond-mur-texture-beton.webp);
+    /*background: url(fond-mur-texture-beton.webp);*/
     background-size: cover;
     background-attachment: fixed;
+}
+
+.barre-recherche{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 90%;
+}
+select{
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 6px;
+    float: right;
+
 }
 
 .actu-details{
@@ -25,16 +43,20 @@ body{
     width: 95%;
     grid-template-rows: auto auto;
     height: 230px;
-    background-color: blueviolet;
+    background-color: rgba(238, 238, 238, 0.536);
     margin: 0 auto;
     margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 37px 4px #595858b2;
+
 }
 .actu-titre{
     height: fit-content;
     text-align: center;
     width: 100%;
-    background: blanchedalmond;
+    background: rgba(255, 235, 205, 0.409);
     padding: 12px;
+    border-radius: 20px 20px 0 0;
 }
 
 .actu-elements{
@@ -48,7 +70,10 @@ body{
 .recherche{
     width: 30%;
     margin: 0 auto;
+    float: left;
 }
 .recherche input{
     padding: 0.7vw;
+    background-color: rgba(186, 218, 248, 0.555)
+
 }
