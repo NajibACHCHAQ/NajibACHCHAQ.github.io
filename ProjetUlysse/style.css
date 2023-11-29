@@ -478,8 +478,7 @@ footer {
     width: 100%;
     background-color: rgba(128, 139, 156, 0.495);
     height: 120px;
-    position: relative;
-    bottom: 0;
+
     justify-content: space-around;
     align-items: center;
     color: #1f22bab6;
