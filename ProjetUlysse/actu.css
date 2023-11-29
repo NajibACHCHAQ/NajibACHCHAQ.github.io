@@ -6,7 +6,18 @@
     height: auto;
     background-color: aqua;
     margin: 0 auto;
-    padding: 4vw;
+    padding: 2vw;
+    border-radius: 20px;
+    background: url(hexagon-background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 2vw;
+    border: 6px ridge blue;
+}
+body{
+    background: url(fond-mur-texture-beton.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .actu-details{
@@ -37,4 +48,7 @@
 .recherche{
     width: 30%;
     margin: 0 auto;
+}
+.recherche input{
+    padding: 0.7vw;
 }
