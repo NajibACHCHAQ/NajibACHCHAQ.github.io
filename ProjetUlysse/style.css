@@ -337,7 +337,7 @@ iframe {
 
 .card-content {
     width: 85%;
-    padding: 2vw; /* Responsive padding */
+    padding-bottom: 2vw; /* Responsive padding */
     background: url(fon-eau.png);
     opacity: 0.8;
     background-size: cover;
@@ -347,7 +347,6 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2vw; /* Responsive margin */
-    align-items: center;
     box-shadow: -1px -1px 2vw rgba(65, 93, 149, 0.8); /* Responsive box shadow */
     border-radius: 2px 0vw 0px 0vw; /* Responsive border radius */
 }
@@ -390,21 +389,20 @@ iframe {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr; /* Responsive grid */
     gap: 1vw; /* Responsive gap between columns */
-    justify-content: space-around;
-    align-items: center;
+
     height: fit-content;
 }
 @media screen and (max-width: 900px) {
     .start {
-        grid-template-columns: 1fr;
+
         justify-content: center;
     }
     .start-right
     {
-        display: none;
+        width: auto;
     }
     .start-left{
-        display: none;
+        width: auto;
     }
 }
 
