@@ -41,7 +41,7 @@ body {
     padding-left: 20px;
 }
 .typed{
-    font-size: 1vh;
+    font-size: 0.5vh;
 }
 .entete img{
     width: 90%;
@@ -362,7 +362,7 @@ iframe {
 .card {
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
-    width: 90%; /* Responsive width */
+    width: 70%; /* Responsive width */
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 2vw; /* Responsive border radius */
@@ -372,18 +372,14 @@ iframe {
     resize: both;
     z-index: 1;
     border: 2px ridge #266b86;
-    font-size: 2vw; /* Responsive font size */
+    font-size: 1.7vw; /* Responsive font size */
 }
 
 @media screen and (max-width: 900px) {
     .card {
-        font-size: 3vw; /* Adjust font size for smaller screens */
+        font-size: 1.7vw; /* Adjust font size for smaller screens */
     }
 }
-
-
-
-
 
 .start {
     display: grid;
@@ -409,7 +405,7 @@ iframe {
 
 
 .start .card {
-    min-width: 100%; /* Adjusted to 100% for better responsiveness */
+    width: 60%; /* Adjusted to 100% for better responsiveness */
     margin-bottom: 10px; /* Added space between cards */
 }
 @media screen and (max-width: 900px) {
@@ -450,7 +446,7 @@ iframe {
 .card-element {
     width: 100%;
     padding: 6px;
-    font-size: 100%;
+    font-size: 1.3vw;
 }
 
 .card-element span {
@@ -466,11 +462,11 @@ iframe {
 
 .etape {
     width: 100%;
-    height: 90%;
+    height: fit-content;
     display: grid;
     justify-content: space-around;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 0px;
     grid-template-columns: 1fr 1fr;
 }
 
