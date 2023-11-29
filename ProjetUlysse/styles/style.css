@@ -76,7 +76,7 @@ body {
 }
 
 .titre {
-    font-size: 4vw; /* Responsive font size */
+    font-size: 4.2vw; /* Responsive font size */
     color: #a6ba1f;
     font-weight: bold;
 }
@@ -116,7 +116,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
-    justify-content: center;
+    justify-content:center;
     font-size: 2vw; 
     font-weight: bold;
     color: #266b86;
