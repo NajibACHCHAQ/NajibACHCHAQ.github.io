@@ -303,7 +303,7 @@ iframe{
     align-items: center;
     box-shadow: -1px -1px 37px 4px #415d958c;
     border-radius: 0px 20px 0px 20pxpx;
-    z-index:1;;
+
 }
 .card-content img{
     width: 90%;
@@ -323,7 +323,7 @@ iframe{
     background-color: rgba(255, 255, 255, 0.611);
     margin-left: auto;
     margin-right: auto;
-    overflow: auto;
+
     resize: both;
     z-index: 1;
     border: 2px ridge #266b86;
@@ -334,7 +334,7 @@ iframe{
     .card {
         width: 90%; /* Par exemple, ajustez la largeur pour s'adapter à l'écran étroit */
         margin: 10px auto; /* Centrez la carte avec une petite marge */
-        font-size: 80%;
+        font-size: 60%;
     }
 }
 
@@ -458,6 +458,7 @@ input{
     position: relative;
     text-shadow: 2px 2px 2px rgba(66, 66, 66, 0.869);
 
+
   }
 
 .scrolling-text {
@@ -465,7 +466,6 @@ display: inline-block;
 animation: scrollText 120s linear infinite;
 font-size: 36px;
 color: beige;
-
 }
 
 .scrolling-text strong{
