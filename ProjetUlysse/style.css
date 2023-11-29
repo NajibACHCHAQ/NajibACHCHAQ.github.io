@@ -385,18 +385,6 @@ iframe {
 
 
 
-.card,
-.etape .card {
-    transition: transform 1.3s;
-    margin: 0 auto;
-    z-index: 1;
-}
-
-.card:hover,
-.etape .card:hover {
-    transform: scale(1.45);
-    z-index: 2;
-}
 
 .start {
     display: grid;
@@ -404,6 +392,7 @@ iframe {
     gap: 1vw; /* Responsive gap between columns */
     justify-content: space-around;
     align-items: center;
+    height: fit-content;
 }
 @media screen and (max-width: 900px) {
     .start {
