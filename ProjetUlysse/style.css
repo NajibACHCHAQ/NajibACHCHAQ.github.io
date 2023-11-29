@@ -329,6 +329,7 @@ iframe{
     border: 2px ridge #266b86;
 }
 
+
 @media screen and (max-width: 900px) {
     /* Ajustez les styles pour les écrans de 600 pixels de largeur ou moins */
     .card {
@@ -379,6 +380,15 @@ iframe{
 .card-element{
     padding: 6px;
     font-size: 100%;
+}
+.card-element span{
+    color: #1f27ba;
+    font-weight: bolder;
+}
+.sous-titre-card-parcours{
+    font-size: 60%;
+    font-weight: bold;
+    color: greenyellow;
 }
 .etape{
     width: 100%;
