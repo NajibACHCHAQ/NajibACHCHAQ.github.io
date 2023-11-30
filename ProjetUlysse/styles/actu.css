@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: auto repeat(auto-fill, auto);
     width: 90%;
-    height: auto;
+    height: 800px;
     background-color: aqua;
     margin: 0 auto;
     padding: 2vw;
@@ -16,6 +16,7 @@
     border: 12px ridge rgba(92, 127, 174, 0.737);
     margin-bottom: 2vw;
     box-shadow: -1px -1px 37px 4px #595858b2;
+    overflow:scroll;
 
 }
 body{
@@ -32,6 +33,9 @@ body{
     justify-content: center;
     text-align: center;
     align-items: center;
+    position: sticky;
+    top: 120px;
+    height: fit-content;
 }
 select{
     border: 2px solid blue;
