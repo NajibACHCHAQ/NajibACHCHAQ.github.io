@@ -53,7 +53,7 @@ body {
   justify-content: center;
   width: 7vw; /* Use vw for width to make it responsive */
   height: 7vw; /* Use vw for height to make it responsive */
-  padding: 1.2vw; /* Use vw for padding to make it responsive */
+  padding-bottom: 12px; /* Use vw for padding to make it responsive */
   background-color: rgba(240, 240, 110, 0.643);
   margin: 0 auto;
   font-size: 5vw; /* Use vw for font size to make it responsive */
