@@ -1,5 +1,5 @@
 body {
-  background: url(hexagon-background.png);
+  background: url(../assets/hexagon-background.png);
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,7 +13,8 @@ body {
   padding: 20px;
   background-color: #b3b3b3;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2vw rgba(46, 46, 46, 0.483); /* Responsive box shadow */
+
 }
 
 .btn-container {
