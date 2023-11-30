@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: auto repeat(auto-fill, auto);
     width: 90%;
-    height: 800px;
+    height: 400px;
     background-color: aqua;
     margin: 0 auto;
     padding: 2vw;
@@ -33,8 +33,8 @@ body{
     justify-content: center;
     text-align: center;
     align-items: center;
-    position: sticky;
-    top: 120px;
+
+
     height: fit-content;
 }
 select{
@@ -82,7 +82,7 @@ select{
 }
 .recherche{
     width: 100%;
-    margin: 0 auto;
+    display: flex;
     float: left;
     height: 50%;
 }
