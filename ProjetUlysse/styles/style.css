@@ -250,7 +250,7 @@ body {
     font-size: 75%;
     width: 90%;
     height: auto;
-    border-radius: 5vw; /* Responsive border radius */
+    border-radius: 2vw; /* Responsive border radius */
     background-color: rgba(240, 248, 255, 0.43);
     margin: 0 auto;
     padding: 0 2vw 3vw 2vw; /* Responsive padding */
@@ -260,7 +260,7 @@ body {
 .card-formation img {
     margin: 0 auto;
     width: 90%;
-    border-radius: 5vw; /* Responsive border radius */
+    border-radius: 1vw; /* Responsive border radius */
 }
 
 .titre-card-formation {
@@ -361,7 +361,7 @@ body {
     width: 90%;
     height: 90%;
     margin-bottom: 2vw; /* Responsive margin */
-    border-radius: 2vw; /* Responsive border radius */
+    border-radius: 0.5vw; /* Responsive border radius */
     box-shadow: -1px -1px 2vw rgba(65, 93, 149, 0.8); /* Responsive box shadow */
 }
 
