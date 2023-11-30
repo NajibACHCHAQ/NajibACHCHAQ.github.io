@@ -17,11 +17,17 @@
     font-weight: normal;
     font-style: normal;
 }
-
+html{
+    height: fit-content;
+}
 body {
     font-family: 'Marianne';
     background-color: rgb(255, 255, 255);
     height: 100%;
+
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 } 
 
 .entete {
@@ -477,11 +483,13 @@ footer {
     width: 100%;
     background-color: rgba(128, 139, 156, 0.495);
     height: 120px;
-    margin-bottom: 0;
+    bottom: 0;
     justify-content: space-around;
     align-items: center;
     color: #1f22bab6;
     flex-wrap: wrap; 
+    position: relative;
+    margin-top: 20px;
 }
 
 footer a:hover {
