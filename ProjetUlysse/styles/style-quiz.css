@@ -1,14 +1,14 @@
 body {
   background: url(../assets/hexagon-background.png);
   background-attachment: fixed;
-  background-size: cover;
+  background-size: ;
   background-repeat: no-repeat;
 }
 
 #quiz-container {
   margin: 50px auto;
   width: 40%; /* Use a percentage for responsiveness */
-  min-width: 250px;
+  min-width: 100px;
   height: auto;
   padding: 20px;
   background-color: #b3b3b3;
