@@ -368,7 +368,8 @@ body {
 .card {
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
-    width: 70%; /* Responsive width */
+    width: 60%; /* Responsive width */
+    min-width: 100px;
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
     border-radius: 2vw; /* Responsive border radius */
@@ -438,19 +439,20 @@ body {
     width: 100%;
     height: fit-content;
     background-color: #024c5f;
-    font-size: 140%;
+    font-size: 2vw;
     font-weight: bolder;
     color: whitesmoke;
 }
 
 .sous-titre-card {
-    font-size: 90%;
+    font-size: 1.8vw;
 }
 
 .card-element {
     width: 100%;
     padding: 6px;
-    font-size: 1.3vw;
+    font-size: 1.5vw;
+    color: #202131;
 }
 
 .card-element span {

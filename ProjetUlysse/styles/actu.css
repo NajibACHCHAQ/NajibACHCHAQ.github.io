@@ -26,9 +26,12 @@ body{
 
 .barre-recherche{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     width: 90%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 select{
     border: 2px solid blue;
@@ -58,6 +61,12 @@ select{
     padding: 12px;
     border-radius: 20px 20px 0 0;
 }
+.titre-actu{
+    font-size: 2.5vw;
+}
+.titre-actu span{
+    font-size: 4vw;
+}
 
 .actu-elements{
     width: 100%;
@@ -68,9 +77,10 @@ select{
     text-align: center;
 }
 .recherche{
-    width: 30%;
+    width: 100%;
     margin: 0 auto;
     float: left;
+    height: 50%;
 }
 .recherche input{
     padding: 0.7vw;
