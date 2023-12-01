@@ -82,11 +82,11 @@ table {
 }
 
 table {
-    border-collapse: collapse;
-    width: 100%;
-    border:2px solid #006982 ;
-    color: rgb(36, 36, 36);
 
+    width: 100%;
+
+    color: rgb(36, 36, 36);
+    border: 1px solid#006982 !important;
 }
 
 tr {
@@ -94,7 +94,7 @@ tr {
     text-align: center;
 }
 .am-hour, .pm-hour{
-    border-bottom: 2px solid #006982;
-    border-right: 2px solid#006982;
+    border-bottom: 1px solid #006982;
+    border-right: 1px solid#006982;
 
 }
