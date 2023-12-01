@@ -237,7 +237,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow: 0.3vw 0.3vw 1.2vw 0.6vw rgba(99, 99, 251, 0.756); /* Responsive box shadow */
 }
 
 @media only screen and (max-width: 900px) {
@@ -498,15 +497,16 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     width: 100%;
-    background-color: rgba(128, 139, 156, 0);
-    height: 120px;
-    
+    background-color: rgba(255, 255, 255, 0.797);
+    height: 120px; 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; 
     position: relative;
     bottom: 0;
     align-items: center;
+    box-shadow: 0.3vw 0.3vw 1.2vw 0.6vw rgba(53, 53, 53, 0.902); /* Responsive box shadow */
+
 }
 footer a {
     margin: 0 auto;
@@ -580,6 +580,8 @@ input:hover {
     position: relative;
     text-shadow: 2px 2px 2px rgba(66, 66, 66, 0.869);
     z-index: 1 !important;
+    box-shadow: 0.2vw 0.2vw 1.1vw 0.4vw rgba(53, 53, 53, 0.902); /* Responsive box shadow */
+
 }
 /* Texte défilant*/
 .scrolling-text {
