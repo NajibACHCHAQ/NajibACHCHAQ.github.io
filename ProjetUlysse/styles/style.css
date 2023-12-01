@@ -413,7 +413,7 @@ body {
         font-size: 2vw; /* Adjust font size for smaller screens */
     }
     .card:hover {
-    transform: scale(1.7) !important;
+    transform: scale(1.51) !important;
     transition: 1.3s;
     margin: 0 auto;
     position: relative;
