@@ -1,24 +1,26 @@
-
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
 
 body {
     text-align: center;
-    margin: 0;
     display: grid;
-    grid-template-rows: 1FR 1FR 1FR 1FR;
+    grid-template-rows: auto auto auto  ;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    font-size: 45px;
+    font-size: 1.3vw;
     font-family: 'Kdam Thmor Pro', sans-serif;
     background-color: rgba(204, 204, 204, 0.459);
     color: #006982;
     text-shadow: 3px 3px 3px;
+    margin-top: 12vw;
 }
 
 
 .loader-container img{
-    width: 400px;
-    max-width: 400px;
+    width: 20%;
+
 }
 
 .loader-container {
