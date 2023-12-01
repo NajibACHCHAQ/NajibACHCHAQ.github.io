@@ -384,12 +384,19 @@ body {
     z-index: 1;
     border: 2px ridge #266b86;
     font-size: 1.7vw; /* Responsive font size */
+    cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
     .card {
-        font-size: 1.7vw; /* Adjust font size for smaller screens */
+        font-size: 2vw; /* Adjust font size for smaller screens */
     }
+    .card:hover {
+    transform: scale(2) !important;
+    transition: 1.3s;
+    margin: 0 auto;
+    z-index: 2;
+}
 }
 
 .start {
