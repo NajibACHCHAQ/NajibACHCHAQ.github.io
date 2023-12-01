@@ -499,7 +499,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr 1fr ;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.797);
-    height: 120px; 
+    height: auto; 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; 
