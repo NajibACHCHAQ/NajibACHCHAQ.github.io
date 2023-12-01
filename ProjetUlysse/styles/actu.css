@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: auto repeat(auto-fill, auto);
     width: 90%;
-    height: 400px;
+    height: 38vw;
     background-color: aqua;
     margin: 0 auto;
     padding: 2vw;
