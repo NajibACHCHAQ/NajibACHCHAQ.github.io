@@ -1,3 +1,7 @@
+section{
+    text-shadow: none;
+}
+
 form {
     display: grid;
     grid-template-rows:auto repeat(7, auto);
@@ -12,6 +16,7 @@ form {
     box-shadow: -1px -1px 37px 4px #393838d6;
     width: fit-content; 
     margin-top: 2vw;
+    text-shadow: none;
 }
 
 .elements-form{
