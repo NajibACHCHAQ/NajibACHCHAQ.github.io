@@ -111,7 +111,7 @@ function initializeQuiz() {
         // Mettez à jour le nom de la section sur la page
         const sectionNameElement = document.getElementById('section-name');
         if (sectionNameElement) {
-            sectionNameElement.innerText = `Section : ${section.section}`;
+            sectionNameElement.innerText = `${section.section}`;
         }
 
         showQuestion(section.questions[currentQuestionIndex]);
@@ -191,7 +191,6 @@ function initializeQuiz() {
             const sectionNames = quizData.map(section => section.section);
             localStorage.setItem('sectionNames', JSON.stringify(sectionNames));
             localStorage.setItem('quizData', JSON.stringify(quizData));
-            // Rediriger vers la page de résultats du quiz avec les scores
             window.location.href = `result.html?totalScore=${totalScore}&sectionScores=${encodeURIComponent(JSON.stringify(quizData.map(section => section.score)))}`;
         }
     }
@@ -205,23 +204,3 @@ function initializeQuiz() {
 // Appelez la fonction d'initialisation du quiz
 initializeQuiz();
 
-// Gérez le bouton "Accéder au Quiz"
-document.getElementById('access-button').addEventListener('click', function() {
-    // Récupérez les données du formulaire
-    const name = document.getElementById('name').value;
-    const birthdate = document.getElementById('birthdate').value;
-    const email = document.getElementById('email').value;
-
-    // Vérifiez si toutes les données sont remplies
-    if (name && birthdate && email) {
-        // Encodez les données pour les passer en paramètres d'URL
-        const encodedName = encodeURIComponent(name);
-        const encodedBirthdate = encodeURIComponent(birthdate);
-        const encodedEmail = encodeURIComponent(email);
-
-        // Redirigez vers la page du quiz en passant les données en paramètres d'URL
-        window.location.href = `quiz.html?name=${encodedName}&birthdate=${encodedBirthdate}&email=${encodedEmail}`;
-    } else {
-        alert('Veuillez remplir tous les champs du formulaire.');
-    }
-});
