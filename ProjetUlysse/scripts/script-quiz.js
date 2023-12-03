@@ -186,11 +186,12 @@ function initializeQuiz() {
             // Passer à la section suivante
             currentSectionIndex++;
             showSection(quizData[currentSectionIndex]);
-        } else {
+        }  else {
             console.log('Fin du quiz!');
             const sectionNames = quizData.map(section => section.section);
             localStorage.setItem('sectionNames', JSON.stringify(sectionNames));
             localStorage.setItem('quizData', JSON.stringify(quizData));
+            // Rediriger vers la page de résultats du quiz avec les scores
             window.location.href = `result.html?totalScore=${totalScore}&sectionScores=${encodeURIComponent(JSON.stringify(quizData.map(section => section.score)))}`;
         }
     }

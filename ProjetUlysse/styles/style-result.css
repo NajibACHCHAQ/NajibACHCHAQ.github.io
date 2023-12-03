@@ -29,10 +29,12 @@ body{
 
 }
 #result-container{
-    display: inline;
+
     width: fit-content;
-    font-size: 2vw;
-    border: 2px solid black;
+    font-size: 1vw;
+    background-color: rgba(199, 247, 247, 0.253);
+    border: 6px ridge rgb(6, 52, 98);
+    border-radius: 20px;
     margin: 0 auto;
     text-align: center;
     padding: 1vw;

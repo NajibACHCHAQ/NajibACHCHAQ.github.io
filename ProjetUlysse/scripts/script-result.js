@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Récupérez les scores depuis l'URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -12,14 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Récupérez les noms des sections depuis le localStorage
     const sectionNames = JSON.parse(localStorage.getItem('sectionNames')) || [];
 
-    // Affichez les scores dans la console pour le débogage
-    console.log('Total Score:', totalScore);
-    console.log('Section Scores:', sectionScores);
+    // Récupérez quizData du localStorage
+    const quizData = JSON.parse(localStorage.getItem('quizData')) || [];
 
-    // Affichez le score total sur la page
+    // Calculez le nombre total de questions dans le quiz
+    const totalQuestions = quizData.reduce((total, section) => total + section.questions.length, 0);
+
+    // Affichez le score total sur la page au format "1/3"
     const totalScoreElement = document.getElementById('total-score-value');
     if (totalScoreElement) {
-        totalScoreElement.innerText = totalScore;
+        totalScoreElement.innerText = `${totalScore} / ${totalQuestions}`;
     }
 
     // Affichez les scores de chaque section sur la page
@@ -27,11 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sectionScoresElement) {
         sectionScores.forEach((score, index) => {
             const scoreElement = document.createElement('p');
-            // Utilisez les noms des sections depuis le localStorage
             const sectionName = sectionNames[index] || "Section inconnue";
-            scoreElement.innerText = `${sectionName} : ${score}`;
+            const nbQuestionsInSection = quizData[index].questions.length;
+            const sectionScoreString = `${score} / ${nbQuestionsInSection}`;
+            
+            scoreElement.innerText = `${sectionName} : ${sectionScoreString}`;
             sectionScoresElement.appendChild(scoreElement);
         });
     }
 });
-
