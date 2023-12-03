@@ -269,7 +269,7 @@ body {
 .titre-card-formation {
     width: 100%;
     height: 100%;
-    padding: 1vw; 
+    padding: 1.5vw; 
     font-size: 2.5vw;
 }
 .navivation-boat {
@@ -522,42 +522,67 @@ footer a:hover {
 
 form {
     display: grid;
-    grid-template-rows: repeat(5, 1fr); 
-    justify-content: space-around;
+    grid-template-rows:auto repeat(8, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin: 0 auto;
     background-color: rgba(127, 229, 255, 0.415);
     padding: 20px;
     border: 3px solid white;
     border-radius: 15px;
     box-shadow: -1px -1px 37px 4px #393838d6;
+    width: fit-content; /* Ajout d'une largeur maximale pour la mise en page responsive */
 }
+
+.elements-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form label{
+    float: left;
+}
+
 
 .titre-form {
     margin: 0;
     width: 100%;
     color: #266b86;
-}
-
-.titre-form input:active {
-    border: 3px solid #266b86;
+    font-size: 24px; /* Ajustement de la taille du texte */
 }
 
 input {
+    float: right;
     padding: 10px;
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: bold;
     border-radius: 15px;
-    height: 80%; 
-    width: 80%; 
+    height: 40px; /* Ajustement de la hauteur en pixels */
+    width: 60%; /* Utilisation de 100% pour la largeur pour une mise en page responsive */
     color: #006982;
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
     text-align: center;
+    box-sizing: border-box; /* Boîte de modèle de bordure pour inclure le rembourrage dans la largeur et la hauteur */
+    margin-bottom: 10px; /* Ajout d'une marge inférieure pour l'espace entre les champs */
 }
 
-input:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+/* Ajout de styles pour le bouton */
+button {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #006982;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
+
+
 
 #start-test{
     margin-top: 12px;
