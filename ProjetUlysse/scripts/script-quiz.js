@@ -3,52 +3,79 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializeQuiz() {
         const quizData = [
             {
-                question: 'Quelle est la capitale de la France ?',
-                answers: ['Paris', 'Berlin', 'Londres', 'Madrid'],
-                correctAnswer: 'Paris'
+                section: 'Géographie',
+                score: 0,
+                questions: [
+                    {
+                        question: "Quelle est la capitale de l'Espagne ?",
+                        answers: ['Paris', 'Berlin', 'Londres', 'Madrid'],
+                        correctAnswer: 'Madrid'
+                    },
+                    {
+                        question: 'Quel est le plus long fleuve du monde ?',
+                        answers: ['Nil', 'Amazone', 'Yangtsé', 'Mississippi'],
+                        correctAnswer: 'Amazone'
+                    },
+                    {
+                        question: 'Quelle est la plus grande île au monde ?',
+                        answers: ['Groenland', 'Australie', 'Borneo', 'Islande'],
+                        correctAnswer: 'Groenland'
+                    },
+                ]
             },
             {
-                question: 'Quel est le plus grand océan du monde ?',
-                answers: ['Atlantique', 'Arctique', 'Indien', 'Pacifique'],
-                correctAnswer: 'Pacifique'
+                section: 'Sciences',
+                score: 0,
+                questions: [
+                    {
+                        question: 'Quelle est la planète la plus proche du soleil ?',
+                        answers: ['Vénus', 'Mercure', 'Mars', 'Jupiter'],
+                        correctAnswer: 'Mercure'
+                    },
+                    {
+                        question: "Quel est l'élément le plus abondant dans l'univers ?",
+                        answers: ['Oxygène', 'Carbone', 'Hydrogène', 'Azote'],
+                        correctAnswer: 'Hydrogène'
+                    },
+                    {
+                        question: 'Quel est le plus grand mammifère terrestre ?',
+                        answers: ['Éléphant', 'Baleine bleue', 'Rhinothéros', 'Girafe'],
+                        correctAnswer: 'Éléphant'
+                    },
+                ]
             },
-            {
-                question: 'Quelle est la plus grande planète de notre système solaire ?',
-                answers: ['Terre', 'Jupiter', 'Mars', 'Vénus'],
-                correctAnswer: 'Jupiter'
-            },
-            {
-                question: 'Combien de continents y a-t-il sur Terre ?',
-                answers: ['4', '6', '7', '8'],
-                correctAnswer: '7'
-            },
-            {
-                question: 'Quelle est la capitale du Japon ?',
-                answers: ['Séoul', 'Pékin', 'Hanoï', 'Tokyo'],
-                correctAnswer: 'Tokyo'
-            },
-            {
-                question: "Quel est l'océan qui borde l'Australie à l'ouest ?",
-                answers: ['Océan Atlantique', 'Océan Indien', 'Océan Pacifique', 'Mer de Timor'],
-                correctAnswer: 'Océan Indien'
-            },
-            {
-                question: 'Quelle est la plus haute montagne du monde ?',
-                answers: ['Mont Everest', 'Mont Kilimandjaro', 'Mont McKinley', 'Mont Fuji'],
-                correctAnswer: 'Mont Everest'
-            },
+            // ... autres sections
         ];
 
         let timer;
+        let totalScore = 0;
         let currentQuestionIndex = 0;
         const questionElement = document.getElementById('question');
         const answerButtonsElement = document.getElementById('answer-buttons');
         const timeDisplayElement = document.getElementById('time-display');
 
+        let currentSectionIndex = 0;
+        let scores = {};
+
         function startQuiz() {
-            currentQuestionIndex = 0;
-            showQuestion(quizData[currentQuestionIndex]);
+            currentSectionIndex = 0;
+            scores = {};
+            showSection(quizData[currentSectionIndex]);
         }
+
+        function showSection(section) {
+            currentQuestionIndex = 0;
+    
+            // Mettez à jour le nom de la section sur la page
+            const sectionNameElement = document.getElementById('section-name');
+            if (sectionNameElement) {
+                sectionNameElement.innerText = `Section : ${section.section}`;
+            }
+    
+            showQuestion(section.questions[currentQuestionIndex]);
+        }
+
+        
 
         function showQuestion(question) {
             resetTimer();
@@ -89,20 +116,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function selectAnswer(selectedAnswer, correctAnswer) {
             resetTimer();
-
+    
             if (selectedAnswer === correctAnswer) {
                 console.log('Correct!');
+                // Mettez à jour le score pour la section actuelle
+                quizData[currentSectionIndex].score++;
+                // Mettez à jour le score global
+                totalScore++;
             } else {
                 console.log('Incorrect!');
             }
-
-            if (currentQuestionIndex < quizData.length - 1) {
+    
+            if (currentQuestionIndex < quizData[currentSectionIndex].questions.length - 1) {
+                // Passer à la question suivante de la section actuelle
                 currentQuestionIndex++;
-                showQuestion(quizData[currentQuestionIndex]);
+                showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+            } else if (currentSectionIndex < quizData.length - 1) {
+                // Passer à la section suivante
+                currentSectionIndex++;
+                showSection(quizData[currentSectionIndex]);
             } else {
                 console.log('Fin du quiz!');
-                // Rediriger vers la page de résultat du quiz
-                window.location.href = 'result.html';
+                // Rediriger vers la page de résultats du quiz avec les scores
+                window.location.href = `result.html?totalScore=${totalScore}&sectionScores=${encodeURIComponent(JSON.stringify(quizData.map(section => section.score)))}`;
             }
         }
 

@@ -37,7 +37,13 @@
         <a href="../pages/contact.html">Contact</a>
     </nav> 
 
-<div class="validation-participation"> <p>Nous sommes heureux de vous informer que votre participation a été validée avec succès. Vous recevrez sous peu une confirmation par e-mail. De plus, veuillez noter que dans les prochains jours, une conseillère en formation prendra contact avec vous afin de discuter plus amplement des détails et des étapes à suivre afin de vous accompagner dans votre parcours de formation.
+<div class="validation-participation" style="display: flex; flex-direction: column;"> 
+    <div id="result-container">
+        <h2>Résultats du quiz</h2>
+        <p id="total-score">Votre score total : <span id="total-score-value"></span></p>
+        <div id="section-scores"></div>
+    </div>
+    <p>Nous sommes heureux de vous informer que votre participation a été validée avec succès. Vous recevrez sous peu une confirmation par e-mail. De plus, veuillez noter que dans les prochains jours, une conseillère en formation prendra contact avec vous afin de discuter plus amplement des détails et des étapes à suivre afin de vous accompagner dans votre parcours de formation.
     </p>
     </div>
 
@@ -49,7 +55,40 @@
         <a href="https://www.bourgogne-greta.fr/vos-greta-en-bourgogne/le-greta-21/presentation/" target="_blank"><img src="../assets/logoGreta-removebg-preview.png" alt="" style="width: 90%;"></a>
     </footer>
 
+    <script src="script-quiz.js"></script>
     <script src="../scripts/script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Récupérez les scores depuis l'URL
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const totalScore = parseInt(urlParams.get('totalScore')) || 0;
+    const sectionScoresString = urlParams.get('sectionScores');
+    const quizData = [];
+
+    // Affichez les scores dans la console pour le débogage
+    console.log('Total Score:', totalScore);
+    console.log('Section Scores String:', sectionScoresString);
+
+    // Affichez le score total sur la page
+    const totalScoreElement = document.getElementById('total-score-value');
+    if (totalScoreElement) {
+        totalScoreElement.innerText = totalScore;
+    }
+
+    // Affichez les scores de chaque section sur la page
+    const sectionScoresElement = document.getElementById('section-scores');
+    if (sectionScoresElement) {
+        const sectionScoresArray = sectionScoresString.split('/');
+        sectionScoresArray.forEach((score, index) => {
+            const scoreElement = document.createElement('p');
+            scoreElement.innerText = `${section} : ${score}`;
+            sectionScoresElement.appendChild(scoreElement);
+        });
+    }
+});
+
+    </script>
 </body>
 
 </html>
