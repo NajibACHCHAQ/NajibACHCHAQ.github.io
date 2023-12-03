@@ -74,7 +74,7 @@ select{
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
-    background: url(../assets/fond-mur-texture-beton.webp);
+    background: url(../assets/fond-mur-texture-beton-min.webp);
     background-size: cover;
     width: fit-content;
     border-radius: 100px;

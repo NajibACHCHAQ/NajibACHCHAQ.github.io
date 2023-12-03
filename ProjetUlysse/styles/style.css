@@ -109,7 +109,7 @@ body {
     background-color: rgb(242, 238, 238);
     height: fit-content;
     text-align: center;
-    background: url(../assets/fond-mur-texture-beton.webp);
+    background: url(../assets/fond-mur-texture-beton-min.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
@@ -232,7 +232,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-around;
     align-items: center;
-    background: url(../assets/fond-mur-texture-beton.webp);
+    background: url(../assets/fond-mur-texture-beton-min.webp);
     background-repeat: no-repeat;
     background-size: cover;
 
