@@ -118,6 +118,11 @@ body {
     text-shadow: 3px 3px 3px rgba(245, 245, 245, 0.524);
     border: 12px ridge #266b86;
 }
+@media only screen and (max-width: 600px) {
+    .titre-site{
+        font-size: 3.5vw;
+    }
+}
 
 .menu {
     display: grid;
