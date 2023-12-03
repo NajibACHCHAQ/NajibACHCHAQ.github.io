@@ -28,6 +28,15 @@ body{
     margin-bottom: 30px;
 
 }
+#result-container{
+    display: inline;
+    width: fit-content;
+    font-size: 2vw;
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1vw;
+}
 
 
 @media screen and (max-width: 900px) {
