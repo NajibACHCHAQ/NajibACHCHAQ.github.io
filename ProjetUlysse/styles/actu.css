@@ -8,9 +8,10 @@
     margin: 0 auto;
     padding: 2vw;
     border-radius: 20px;
-    background: url(/assets/hexagon-background.png);
-    background-color: url(/assets/fond-mur-texture-beton.webp);
-    background-size: cover;
+    background: url(../assets/hexagon-background.png);
+    background-color: rgba(240, 248, 255, 0.546);
+
+    background-size: contain;
     background-attachment: fixed;
     margin-top: 2vw;
     border: 12px ridge rgba(92, 127, 174, 0.737);
@@ -20,9 +21,10 @@
 
 }
 body{
-    /*background: url(fond-mur-texture-beton.webp);*/
+    background: url(../assets/hexagon-background.png);
     background-size: cover;
     background-attachment: fixed;
+
 }
 
 .barre-recherche{
@@ -101,6 +103,8 @@ select{
 }
 .recherche input{
     padding: 0.7vw;
-    background-color: rgba(186, 218, 248, 0.555)
+    background-color: rgba(255, 255, 255, 0.866);
+    border-radius: 50px;
+    text-align: center;
 
 }

@@ -510,9 +510,12 @@ footer {
     position: relative; /* Utilisation de relative au lieu de fixed */
     width: 100%;
     box-shadow: 0.3vw 0.3vw 1.2vw 0.6vw rgba(53, 53, 53, 0.902);
+    padding: 1vw;
 }
 footer a {
     margin: 0 auto;
+    width: 20%;
+    max-width: 150px;
 }
 
 footer a:hover {
