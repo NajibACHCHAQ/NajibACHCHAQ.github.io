@@ -355,11 +355,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr auto 1fr;
     margin-left: auto;
     margin-right: auto;
     box-shadow: -1px -1px 2vw rgba(65, 93, 149, 0.8); /* Responsive box shadow */
     border-radius: 2px 0vw 0px 0vw; /* Responsive border radius */
+}
+
+.orientation{
+    font-size: 4vw;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
 }
 
 .card-content img {
@@ -377,7 +383,7 @@ body {
     min-width: 100px;
     height: auto;
     background-color: rgba(7, 48, 88, 0.679);
-    border-radius: 2vw; /* Responsive border radius */
+    border-radius: 20px; /* Responsive border radius */
     box-shadow: -1px -1px 2vw rgba(57, 56, 56, 0.65); /* Responsive box shadow */
     background-color: rgba(255, 255, 255, 0.611);
     margin: 2vw auto; /* Responsive margin */
@@ -451,7 +457,7 @@ body {
 .titre-card-parcours {
     display: grid;
     grid-template-rows: auto auto;
-    border-radius: 2vw 2vw 0 0;
+    border-radius: 20px 20px 0 0;
     padding: 12px;
     width: 100%;
     height: fit-content;
@@ -520,80 +526,7 @@ footer a:hover {
 }
 
 
-form {
-    display: grid;
-    grid-template-rows:auto repeat(8, 1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    background-color: rgba(127, 229, 255, 0.415);
-    padding: 20px;
-    border: 3px solid white;
-    border-radius: 15px;
-    box-shadow: -1px -1px 37px 4px #393838d6;
-    width: fit-content; /* Ajout d'une largeur maximale pour la mise en page responsive */
-}
 
-.elements-form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-form label{
-    float: left;
-}
-
-
-.titre-form {
-    margin: 0;
-    width: 100%;
-    color: #266b86;
-    font-size: 24px; /* Ajustement de la taille du texte */
-}
-
-input {
-    float: right;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 15px;
-    height: 40px; /* Ajustement de la hauteur en pixels */
-    width: 60%; /* Utilisation de 100% pour la largeur pour une mise en page responsive */
-    color: #006982;
-    border: none;
-    outline: none;
-    text-align: center;
-    box-sizing: border-box; /* Boîte de modèle de bordure pour inclure le rembourrage dans la largeur et la hauteur */
-    margin-bottom: 10px; /* Ajout d'une marge inférieure pour l'espace entre les champs */
-}
-
-/* Ajout de styles pour le bouton */
-button {
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 15px;
-    background-color: #006982;
-    color: white;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-
-
-
-#start-test{
-    margin-top: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    height: fit-content;
-    padding: 12px;
-    border-radius: 50px;
-    background-color: #a6ba1f;
-}
 /* -----------------Gestion du defilement de texte------------------- */
 
 /* Container de défilement de texte */
