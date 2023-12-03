@@ -9,7 +9,7 @@ body {
 #quiz-container {
   margin: 50px auto;
   width: 40%; /* Use a percentage for responsiveness */
-  min-width: 180px;
+  min-width: 250px;
   height: auto;
   padding: 20px;
   background-color: #dcdcdcb7;
@@ -26,7 +26,7 @@ body {
 .btn {
   margin-top: 10px;
   padding: 10px;
-  font-size: 1.5vw; /* Use vw for font size to make it responsive */
+  font-size: 2vw; /* Use vw for font size to make it responsive */
   cursor: pointer;
   background-color: #3498db;
   color: #fff;
@@ -54,13 +54,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 7vw; /* Use vw for width to make it responsive */
-  height: 7vw; /* Use vw for height to make it responsive */
+  width: 7vw; 
+  height: 7vw;
   background-color: rgba(240, 240, 110, 0.643);
   margin: 0 auto;
-  font-size: 5vw; /* Use vw for font size to make it responsive */
+  font-size: 5vw; 
   color: #2052a8;
-  border-radius: 100px; /* Use percentage for border-radius */
+  border-radius: 100px; 
   font-weight: bolder;
   padding-bottom: 1vw;
 }
