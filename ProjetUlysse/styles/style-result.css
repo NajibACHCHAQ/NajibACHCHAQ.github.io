@@ -31,13 +31,14 @@ body{
 #result-container{
 
     width: fit-content;
-    font-size: 1vw;
+    min-width: 200px;
+    font-size: 1.4vw;
     background-color: rgba(199, 247, 247, 0.253);
     border: 6px ridge rgb(6, 52, 98);
     border-radius: 20px;
     margin: 0 auto;
     text-align: center;
-    padding: 1vw;
+    padding: 0.8vw;
 }
 
 
