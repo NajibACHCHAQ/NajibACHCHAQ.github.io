@@ -183,3 +183,28 @@ const quizData = [
     },
     
 ];
+
+{
+    section: 'Anglais',
+    score: 0,
+    questions: [
+        {
+            type: 'multiple-choice',
+            question: "What's ______ name ?",
+            answers: ['you', 'your', "you're", 'yours'],
+            correctAnswers: 'your', // Mettez 'your' dans un tableau
+        },
+        {
+            type: 'multiple-choice',
+            question: 'There is______ apple on ______ kitchen table',
+            answers: ['an-the', 'a-an', 'the-an', 'the-the'],
+            correctAnswers: 'an-the', // Mettez 'an-the' dans un tableau
+        },
+        {
+            type: 'multiple-choice',
+            question: "______ are you from ?",
+            answers: ['were', 'when', 'where', 'who'],
+            correctAnswers: 'where', // Mettez 'where' dans un tableau
+        }
+    ]
+},
