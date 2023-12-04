@@ -367,200 +367,447 @@ function initializeQuiz() {
             ]
         },
         {
-            section: 'Anglais',
+            section: 'Other',
             score: 0,
             questions: [
                 {
                     type: 'multiple-choice',
-                    question: "What's ______ name ?",
-                    answers: ['you', 'your', "you're", 'yours'],
-                    correctAnswers: 'your', // Mettez 'your' dans un tableau
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: 'There is______ apple on ______ kitchen table',
-                    answers: ['an-the', 'a-an', 'the-an', 'the-the'],
-                    correctAnswers: 'an-the', // Mettez 'an-the' dans un tableau
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "______ are you from ?",
-                    answers: ['were', 'when', 'where', 'who'],
-                    correctAnswers: 'where', // Mettez 'where' dans un tableau
-                }
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
             ]
         },
         {
-            section: 'Comptabilité',
+            section: 'Other',
             score: 0,
             questions: [
                 {
                     type: 'multiple-choice',
-                    question: 'En quoi consiste la comptabilité générale ? En quoi consiste la comptabilité générale ?',
-                    answers: ['A remplir des tableaux sur Excel uniquement',
-                     'À faire des factures',
-                     'À enregistrer des écritures',
-                      'Je ne sais pas'],
-                    correctAnswer: 'À enregistrer des écritures'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Quelle est la qualité première d’un comptable ?",
-                    answers: ['Etre fort en maths', 'Savoir lire', 'Rester longtemps assis', 'Je ne sais pas'],
-                    correctAnswer: 'Savoir lire'
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Tenir une comptabilité est obligatoire ?",
-                    answers: ['Vrai', 'Faux', 'Je ne sais pas'],
-                    correctAnswer: 'Vrai'
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: 'Laquelle de ces tâches n’est pas réalisée par le comptable dans une PME ?',
-                    answers: ['Démarcher les clients',
-                     'Pointer le compte banque',
-                     'Etablir le bilan',
-                      'Je ne sais pas'],
-                    correctAnswer: 'Démarcher les clients'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Le bilan est composé de : ",
-                    answers: ['Du débit et du passif', 'Du débit et du crédit', "De l'actif et du passif", 'Je ne sais pas'],
-                    correctAnswer: "De l'actif et du passif"
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "On a l’obligation de faire le bilan tous les mois :",
-                    answers: ['Vrai', 'Faux', 'Je ne sais pas'],
-                    correctAnswer: 'Faux'
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: 'Le bilan donne quelles informations de l’entreprise ?',
-                    answers: ["Les biens de l'entreprise et le bénéfice",
-                     'Le nombre de salariés',
-                     'Les biens et les ressources',
-                      'Je ne sais pas'],
-                    correctAnswer: 'Les biens et les ressources'
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Comment est déterminé le bénéfice ou la perte de l’entreprise ?",
-                    answers: ['Quand on a bien vendu', 
-                    'Quand l’entreprise ne règle pas ses dépenses', 
-                    'Quand on fait la différence entre ses charges et ses produits',
-                     'Je ne sais pas'],
-                    correctAnswer: 'Quand on fait la différence entre ses charges et ses produits'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Comment appelle-t-on l’argent que nous doivent les clients ?",
-                    answers: ['Une dette client',
-                     'Une ardoise client', 
-                     'Une créance',
-                     'Je ne sais pas'],
-                    correctAnswer: 'Une créance'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: 'Quand j’achète à crédit une voiture, elle appartient à qui ?',
-                    answers: ['Au vendeur',
-                     'A la banque',
-                     "A l'entreprise",
-                      'Je ne sais pas'],
-                    correctAnswer: "A l'entreprise"
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "A quoi sert le compte d’exploitation ?",
-                    answers: ['À chiffrer les ventes de l’année', 
-                    'A déterminer le résultat de l’année', 
-                    "À renseigner comment l’entreprise est exploité", 
-                    'Je ne sais pas'],
-                    correctAnswer: "A déterminer le résultat de l’année"
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "A quoi sert une balance ?",
-                    answers: ['À peser pour évaluer les comptes', 
-                    'À lister les soldes des comptes',
-                     'Ça n’existe pas',
-                    'Je ne sais pas'],
-                    correctAnswer: 'À lister les soldes des comptes'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Lorsqu’on achète à crédit de la marchandise, on doit l’argent à qui ?",
-                    answers: ['À la banque', 
-                    'À un organisme de crédit type Sofinco', 
-                    "Au fournisseur", 
-                    'Je ne sais pas'],
-                    correctAnswer: "Au fournisseur"
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Mon client me paye comptant, est-ce qu’il a le droit de se déduire un % du montant de sa facture ?",
-                    answers: ['Oui il a le droit car il a demandé la permission', 
-                    'Non c’est interdit',
-                     'Oui il peut, c’est inscrit sur sa facture',
-                    'Je ne sais pas'],
-                    correctAnswer: 'Oui il peut, c’est inscrit sur sa facture'
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Qu’est-ce qu’une immobilisation ?",
-                    answers: ['Un immeuble', 
-                    'Les stocks',
-                     "Les biens de l'entreprise",
-                    'Je ne sais pas'],
-                    correctAnswer: "Les biens de l'entreprise"
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Qu’est-ce qu’un effet de commerce ?",
-                    answers: ['Une réduction financière', 
-                    'Un mode de paiement', 
-                    "Un chèque du CIC", 
-                    'Je ne sais pas'],
-                    correctAnswer: "Un mode de paiement"
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Si le montant d’une facture est inexact, le comptable peut : ",
-                    answers: ['La modifier et la mettre dans ses comptes', 
-                    'La déchirer et en demander une autre',
-                     'Réclamer un avoir',
-                    'Je ne sais pas'],
-                    correctAnswer: 'Réclamer un avoir'
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "La TVA coûte chère à l’entreprise ?",
-                    answers: ['Vrai', 
-                    'Faux',
-                    'Je ne sais pas'],
-                    correctAnswer: "Faux"
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Quelle est le document que le comptable ne transcrit pas en comptabilité ?",
-                    answers: ['Une facture client', 
-                    'Un relevé du fournisseur', 
-                    "Un chèque", 
-                    'Je ne sais pas'],
-                    correctAnswer: "Un relevé du fournisseur"
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
                 },
                 {
                     type: 'multiple-choice',
-                    question: "Une écriture comptable comprend :",
-                    answers: ['Au moins un débit d’un compte et un crédit d’un autre compte', 
-                    'Le débit et le crédit du même compte',
-                     'Au moins 3 lignes',
-                    'Je ne sais pas'],
-                    correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte'
-                }
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "",
+                    answers: ['', '', ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: 'multiple-choice',
+                    question: '',
+                    answers: ['',
+                     '',
+                     '',
+                      ''],
+                    correctAnswer: ''
+                },
+                {
+                    type: '',
+                    question: "",
+                    answers: ['', '', "", ''],
+                    correctAnswer: ""
+                },
             ]
         },
         
