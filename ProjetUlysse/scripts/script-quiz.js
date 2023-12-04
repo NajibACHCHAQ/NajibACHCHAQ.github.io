@@ -428,8 +428,8 @@ function initializeQuiz() {
     
         var answerButtonsElement = document.getElementById('answer-buttons');
         if (answerButtonsElement) {
-            answerButtonsElement.textContent = '';  // Utilisation de textContent au lieu de innerHTML
-        
+            answerButtonsElement.textContent = '';
+    
             if (question.type === 'open-ended') {
                 // Ajoutez trois champs de saisie et un bouton pour les questions de type open-ended
                 for (let i = 0; i < 3; i++) {
@@ -438,8 +438,9 @@ function initializeQuiz() {
                     input.placeholder = `Réponse ${i + 1}`;
                     answerButtonsElement.appendChild(input);
                 }
-        
+    
                 const submitButton = document.createElement('button');
+                submitButton.id = 'submit-button';
                 submitButton.innerText = 'Soumettre';
                 submitButton.classList.add('btn');
                 submitButton.addEventListener('click', () => {
@@ -449,10 +450,10 @@ function initializeQuiz() {
                         const input = answerButtonsElement.querySelector(`input:nth-child(${i + 1})`);
                         userAnswers.push(input.value.trim());
                     }
-                    selectAnswer(userAnswers, question.correctAnswers);
+                    // Passer à la question suivante lorsque le bouton Soumettre est cliqué
+                    moveToNextQuestionOrSection(() => selectAnswer(userAnswers, question.correctAnswers));
                 });
-                
-        
+    
                 answerButtonsElement.appendChild(submitButton);
             } else {
                 // Utilisez des boutons pour les questions à choix multiples
@@ -461,31 +462,45 @@ function initializeQuiz() {
                     button.innerText = answer;
                     button.classList.add('btn');
                     button.addEventListener('click', () => selectAnswer(answer, question.correctAnswer));
-        
+    
                     answerButtonsElement.appendChild(button);
                 });
             }
         }
-        
     
-        startTimer(30, () => selectAnswer());
+        startTimer(30, () => moveToNextQuestionOrSection(() => selectAnswer()), () => {
+            // Ne rien faire ici, car la fonction de soumission n'est pas utilisée pour les questions à choix multiples
+        });
     }
     
     
+    
+    
 
-    function startTimer(duration, callback) {
+    function startTimer(duration, callback, submitCallback) {
         let timeRemaining = duration;
         updateTimerDisplay(timeRemaining);
         timer = setInterval(() => {
             timeRemaining--;
             updateTimerDisplay(timeRemaining);
-
+    
             if (timeRemaining < 0) {
                 clearInterval(timer);
                 callback();
             }
         }, 1000);
+    
+        // Ajout de l'écouteur d'événements pour le bouton Soumettre
+        const submitButton = document.getElementById('submit-button');
+        if (submitButton) {
+            submitButton.addEventListener('click', () => {
+                clearInterval(timer);
+                submitCallback();
+            });
+        }
     }
+    
+    
 
     function updateTimerDisplay(time) {
         timeDisplayElement.innerText = time;
@@ -503,10 +518,35 @@ function initializeQuiz() {
         if (currentQuestion.type === 'open-ended') {
             handleOpenEndedAnswer(selectedAnswer, currentQuestion.correctAnswers);
         } else {
-            // Logique existante pour les questions à choix multiples
             handleMultipleChoiceAnswer(selectedAnswer, correctAnswer);
         }
+    
+        moveToNextQuestionOrSection();
     }
+    
+    
+    function moveToNextQuestionOrSection(isTimeUp) {
+        if (currentQuestionIndex < quizData[currentSectionIndex].questions.length - 1) {
+            currentQuestionIndex++;
+            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+        } else if (currentSectionIndex < quizData.length - 1) {
+            currentSectionIndex++;
+            showSection(quizData[currentSectionIndex]);
+        } else {
+            console.log('Fin du quiz!');
+            const sectionNames = quizData.map(section => section.section);
+            localStorage.setItem('sectionNames', JSON.stringify(sectionNames));
+            localStorage.setItem('quizData', JSON.stringify(quizData));
+            window.location.href = `result.html?totalScore=${totalScore}&sectionScores=${encodeURIComponent(JSON.stringify(quizData.map(section => section.score)))}`;
+        }
+    
+        // Si le temps est écoulé, passer à la question suivante
+        if (isTimeUp) {
+            moveToNextQuestionOrSection(false);
+        }
+    }
+    
+    
     
     function handleOpenEndedAnswer(userAnswers, correctAnswers) {
         console.log('Valeur de userAnswers:', userAnswers);
@@ -550,21 +590,6 @@ function initializeQuiz() {
         }
     }
     
-    function moveToNextQuestionOrSection() {
-        if (currentQuestionIndex < quizData[currentSectionIndex].questions.length - 1) {
-            currentQuestionIndex++;
-            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
-        } else if (currentSectionIndex < quizData.length - 1) {
-            currentSectionIndex++;
-            showSection(quizData[currentSectionIndex]);
-        } else {
-            console.log('Fin du quiz!');
-            const sectionNames = quizData.map(section => section.section);
-            localStorage.setItem('sectionNames', JSON.stringify(sectionNames));
-            localStorage.setItem('quizData', JSON.stringify(quizData));
-            window.location.href = `result.html?totalScore=${totalScore}&sectionScores=${encodeURIComponent(JSON.stringify(quizData.map(section => section.score)))}`;
-        }
-    }
     
     // Démarrez le quiz une fois que la page est chargée
     startQuiz();
