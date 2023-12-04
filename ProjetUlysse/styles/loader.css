@@ -4,17 +4,8 @@ html{
     align-items: center;}
 
 body {
-    text-align: center;
-    display: grid;
-    grid-template-rows: auto auto auto  ;
-    align-items: center;
     justify-content: center;
-    font-size: 1.3vw;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    background-color: rgba(204, 204, 204, 0.459);
-    color: #006982;
-    text-shadow: 3px 3px 3px;
-    margin-top: 12vw;
+    align-items: center;
 }
 
 
@@ -25,4 +16,18 @@ body {
 
 .loader-container {
     text-align: center;
+}
+.loader{
+
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto  ;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3vw;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    background-color: rgba(255, 255, 255, 0.459);
+    color: #006982;
+    text-shadow: 3px 3px 3px;
+    margin-top: 12vw;
 }
