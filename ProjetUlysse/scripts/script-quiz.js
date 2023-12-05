@@ -1,7 +1,7 @@
 
 import {quizData} from "./quiz.js";
-function initializeQuiz() {
 
+function initializeQuiz() {
     // Initialisation des variables globales
     let timer;  // Déclarez la variable timer ici
     let totalScore = 0;
@@ -10,13 +10,15 @@ function initializeQuiz() {
     const answerButtonsElement = document.getElementById('answer-buttons');
     const timeDisplayElement = document.getElementById('time-display');       
     let currentSectionIndex = 0;
-    let scores = {};       
+    let scores = {};
+
     // Fonction pour démarrer le quiz
     function startQuiz() {
         currentSectionIndex = 0;
         scores = {};
         showSection(quizData[currentSectionIndex]);
-    }       
+    }
+
     // Fonction pour afficher une section spécifique du quiz
     function showSection(section) {
         currentQuestionIndex = 0;
@@ -26,7 +28,8 @@ function initializeQuiz() {
             sectionNameElement.innerText = `${section.section}`;
         }
         showQuestion(section.questions[currentQuestionIndex]);
-    }        
+    }
+
     // Fonction pour afficher une question spécifique
     function showQuestion(question) {
         resetTimer();
@@ -88,24 +91,25 @@ function initializeQuiz() {
         }        
         // Démarrer le timer pour la question actuelle
         startTimer(30, () => moveToNextQuestionOrSection(() => selectAnswer()), () => {});
-    }       
+    }
+
     // Fonction appelée lorsqu'un utilisateur soumet une réponse à une question ouverte
     function handleSubmitButtonClick() {
-    console.log('Bouton Soumettre cliqué!');        
-    // Récupérer les réponses de l'utilisateur depuis les champs de texte
-    const userAnswers = [];
-    const answerInputs = document.querySelectorAll('#answer-buttons input');       
-    answerInputs.forEach(input => {
-        userAnswers.push(input.value.trim());
-    });       
+        console.log('Bouton Soumettre cliqué!');        
+        // Récupérer les réponses de l'utilisateur depuis les champs de texte
+        const userAnswers = [];
+        const answerInputs = document.querySelectorAll('#answer-buttons input');       
+        answerInputs.forEach(input => {
+            userAnswers.push(input.value.trim());
+        });       
 
-    // Appeler la fonction pour gérer les réponses ouvertes
-    handleOpenEndedAnswer(userAnswers, quizData[currentSectionIndex].questions[currentQuestionIndex].correctAnswer);
+        // Appeler la fonction pour gérer les réponses ouvertes
+        handleOpenEndedAnswer(userAnswers, quizData[currentSectionIndex].questions[currentQuestionIndex].correctAnswer);
 
-    // Passer à la question suivante ou à la section suivante
-    moveToNextQuestionOrSection(false); // Utilisez false car le temps n'est pas écoulé
-    console.log('After moveToNextQuestionOrSection');
-}
+        // Passer à la question suivante ou à la section suivante
+        moveToNextQuestionOrSection(false); // Utilisez false car le temps n'est pas écoulé
+        console.log('After moveToNextQuestionOrSection');
+    }
 
     // Fonction pour démarrer le timer avec une durée spécifiée et des callbacks
     function startTimer(duration, callback, submitCallback) {
@@ -128,6 +132,7 @@ function initializeQuiz() {
 
         }
     }
+
     // Fonction pour mettre à jour l'affichage du timer
     function updateTimerDisplay(time) {
         console.log('Updating timer display:', time);
@@ -173,17 +178,18 @@ function initializeQuiz() {
             }
         }        
        // Réinitialiser le timer ici, après avoir décidé si le temps est écoulé ou non
-    resetTimer();
+        resetTimer();
 
-    // Si le temps est écoulé, passer à la question suivante
-    if (isTimeUp && currentSectionIndex < quizData.length) {
-        showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+        // Si le temps est écoulé, passer à la question suivante
+        if (isTimeUp && currentSectionIndex < quizData.length) {
+            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+        }
+        // Sinon, afficher la question suivante
+        else {
+            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+        }
     }
-    // Sinon, afficher la question suivante
-    else {
-        showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
-    }
-    }
+    
     function handleOpenEndedAnswer(userAnswers, correctAnswers) {
         console.log('Valeur de userAnswers:', userAnswers);
         console.log('Valeur de correctAnswers:', correctAnswers);
@@ -218,10 +224,6 @@ function initializeQuiz() {
             }
         }
     }
-    
-
-
-
 
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {
@@ -246,9 +248,9 @@ function initializeQuiz() {
     }        
     // Démarrez le quiz une fois que la page est chargée
     startQuiz();       
-    }        
-    // Appelez la fonction d'initialisation du quiz
-    initializeQuiz();
-        
-       
+}
+
+// Appelez la fonction d'initialisation du quiz
+initializeQuiz();
+
 
