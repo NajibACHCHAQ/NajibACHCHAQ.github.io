@@ -29,7 +29,7 @@ body {
     display: flex;
     flex-direction: column;
 } 
-
+/* Style pour l'entete 3 col pour {logo - textanimé - logo} */
 .entete {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 1fr;
@@ -46,13 +46,12 @@ body {
     z-index: 3;
     padding-left: 20px;
 }
-
+/* Gestion des images de l'entete */
 .entete img{
     width: 90%;
 }
-
-.animation-entete {
-    
+/* Style pour le texte animé de l'entete */
+.animation-entete {    
     margin: 0 auto;
     color: #006982;
     font-size: 2vw;
@@ -91,7 +90,7 @@ body {
 }
 
 
-
+/* Gestion du titre principal du site */
 .titre-site {
     display: flex;
     justify-content: center;
@@ -121,7 +120,7 @@ body {
         font-size: 2.2vw;
     }
 }
-
+/* Gestion du menu de navigation */
 .menu {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -140,14 +139,13 @@ body {
     backdrop-filter: blur(8px);
     margin: 0 auto;
 }
-
+/* Gestion des lien dans le menu */
 .menu a {
     padding: 10px;
     border-radius: 50px;
     width: fit-content;
     margin: 0 auto;
 }
-
 .menu a:hover {
     padding: 10px;
     transform: scale(1.1);
@@ -156,17 +154,14 @@ body {
     background-color: #266b86;
     font-weight: 700;
 }
-
 @media only screen and (max-width: 1010px) {
     .menu {
         flex-direction: column;
         align-items: center;
     }
-
     .menu a {
         margin-top: 10px; 
     }
-
     .menu a:hover {
         transform: scale(1.1);
         transition: 0.4s;
@@ -197,7 +192,6 @@ body {
     font-weight: bold;
     overflow: hidden;
 }
-
 .section .video-container {
     position: relative;
     display: flex;
@@ -205,7 +199,6 @@ body {
     width: 100%;
     padding-top: 50.25%; /* 16:9 Aspect Ratio (9 / 16 * 100) */
 }
-
 .section iframe {
     border-radius: 2vw; /* Responsive border radius */
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.3); /* Responsive box shadow */
@@ -216,8 +209,6 @@ body {
     z-index: 0;
     margin-top: 5%;
 }
-
-
 @media only screen and (max-width: 600px) {
     
     .section {
@@ -226,10 +217,6 @@ body {
         text-shadow: 0.5vw 0.2vw 0.5vw rgba(0, 0, 0, 0.776);
     }
 }
-
-
-
-
 .mmm {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -239,12 +226,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-}
-
-@media only screen and (max-width: 900px) {
-    .mmm {
-        box-shadow: 0.6vw 0.6vw 2.4vw 1.2vw rgba(99, 99, 251, 0.756);
-    }
 }
 
 .card-formation {
@@ -261,37 +242,37 @@ body {
     box-shadow: -0.3vw -0.3vw 1vw 0.1vw #393838; /* Responsive box shadow */
     overflow: hidden;
 }
-
 .card-formation img {
 
     width: 100vw;
     border-radius: 0 0 0.5vw 0.5vw; /* Responsive border radius */
 }
-
 .titre-card-formation {
     width: 100%;
     height: 100%;
     padding: 1.5vw; 
     font-size: 2.5vw;
 }
+
+/* ------------------------Animation bateau-----------------------------*/
+/* gestion taile et position de la barre de défilement du bateau*/
 .navivation-boat {
     height: 150px;
     padding:23px;
     position: relative;
     left: 0;
     overflow: hidden;
-    width: 100%; /* Ajustez la largeur selon vos besoins */
+    width: 100%; 
     margin: 0 auto;
 
 }
-
+/* Gestion de la taille et position du bateau /animation */
 .navivation-boat img {
     width: 400px;
     position: absolute;
     animation: slide 25s linear infinite;
 }
-
-
+/* Animation pour déplacer le bateau de gauche à droite de l'écran */
 @keyframes slide {
     0%{transform: translateX(0%) translateY(5px) rotate(3deg);}
     5%{transform: translateX(100%) translateY(10px) rotate(-3deg);}
@@ -316,6 +297,7 @@ body {
     100% {transform: translateX(2000%) translateY(5px) rotate(3deg);}
 }
 
+/*------------------------------------------------------------------*/
 .titre-section {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -331,15 +313,11 @@ body {
     border-radius: 5vw; /* Responsive border radius */
     
 }
-
 @media screen and (max-width: 600px) {
     .titre-section {
         font-size: 6vw;
     }
 }
-
-
-
 .card-container {
     text-align: center;
     width: 100%;
@@ -348,7 +326,6 @@ body {
 
 
 }
-
 .card-content {
     width: 100%;
     padding-bottom: 2vw; /* Responsive padding */
@@ -363,13 +340,11 @@ body {
     box-shadow: -1px -1px 2vw rgba(65, 93, 149, 0.8); /* Responsive box shadow */
     border-radius: 2px 0vw 0px 0vw; /* Responsive border radius */
 }
-
 .orientation{
     font-size: 4vw;
     color: rgb(255, 255, 255);
     font-weight: bolder;
 }
-
 .card-content img {
     width: 100%;
     height: 100%;
@@ -377,7 +352,6 @@ body {
     border-radius: 0.5vw; /* Responsive border radius */
     box-shadow: -1px -1px 2vw rgba(65, 93, 149, 0.8); /* Responsive box shadow */
 }
-
 .card {
     display: grid;
     grid-template-rows: auto repeat(auto-fill, 1fr);
@@ -396,13 +370,9 @@ body {
     cursor: pointer;
     position: relative;
 }
-
 .start .card {
     width: 60%; 
     margin-bottom: 10px; 
-}
-@media screen and (max-width: 900px) {
-
 }
 
 .card:hover .titre-card-parcours {
@@ -415,7 +385,6 @@ body {
     z-index: 2 !important;
     position: relative;
 }
-
 @media screen and (max-width: 900px) {
     .card {
         font-size: 2vw; /* Adjust font size for smaller screens */
@@ -425,18 +394,8 @@ body {
     transition: 1.3s;
     margin: 0 auto;
     position: relative;
-    z-index: 2 !important;;
-}
-}
-
-.start {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Responsive grid */
-    gap: 1vw; /* Responsive gap between columns */
-
-    height: 80%;
-}
-@media screen and (max-width: 900px) {
+    z-index: 2 !important;
+    }
     .start {
 
         justify-content: center;
@@ -448,14 +407,17 @@ body {
     .start-left{
         width: auto;
     }
+    .mmm {
+        box-shadow: 0.6vw 0.6vw 2.4vw 1.2vw rgba(99, 99, 251, 0.756);
+    }
 }
 
-
-
-
-
-
-
+.start {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Responsive grid */
+    gap: 1vw; /* Responsive gap between columns */
+    height: 80%;
+}
 .titre-card-parcours {
     display: grid;
     grid-template-rows: auto auto;
@@ -468,11 +430,9 @@ body {
     font-weight: bolder;
     color: whitesmoke;
 }
-
 .sous-titre-card {
     font-size: 1.8vw;
 }
-
 .card-element {
     width: 100%;
     padding: 6px;
@@ -480,18 +440,15 @@ body {
     font-weight: bolder;
     color: #202131;
 }
-
 .card-element span {
     color: #1f27ba;
     font-weight: bolder;
 }
-
 .sous-titre-card-parcours {
     font-size: 60%;
     font-weight: bold;
     color: greenyellow;
 }
-
 .etape {
     width: 100%;
     height: fit-content;
@@ -501,8 +458,6 @@ body {
     margin-top: 0px;
     grid-template-columns: 1fr 1fr;
 }
-
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -525,8 +480,6 @@ footer a:hover {
     color: #1f98bab6;
 }
 
-
-
 /* -----------------Gestion du defilement de texte------------------- */
 
 /* Container de défilement de texte */
@@ -544,7 +497,7 @@ footer a:hover {
     box-shadow: 0.2vw 0.2vw 1.1vw 0.4vw rgba(53, 53, 53, 0.902); /* Responsive box shadow */
 
 }
-/* Texte défilant*/
+/* ----------------------Texte défilant--------------------------------*/
 .scrolling-text {
     display: inline-block;
     animation: scrollText 60s linear infinite; /* Adjusted animation duration */
@@ -565,61 +518,6 @@ footer a:hover {
         transform: translateX(-100%);
     }
 }
+/*---------------------------------------------------------------*/
 
-/* Gestion du defilement des nuages*/
 
-.defilement-cloud{
-    margin-top: 40px;
-    display: grid;
-    grid-template-rows: auto;
-    padding: 10px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    width: 100%;
-    overflow:hidden;
-    height:fit-content;
-}
-
-/* les differents nuages" */
-  .cloud {
-    width: 120px;
-    position: relative;
-    left: -50px;
-    top: 15px;
-    animation: slide 200s linear infinite;
-    margin-bottom: 20px;
-
-  }
-
-  .cloud1 {
-    width: 90px;
-    position: relative;
-    animation: slide 170s linear infinite;
-    left: -150px;
-  }
-  .cloud3 {
-    width: 110px;
-    position: relative;
-    animation: slide 140s linear infinite ;
-    animation-delay: 6s;
-    top: 15px;
-    left: -80px;
-    
-}
-  
-.cloud4 {
-    width: 120px;
-    position: relative;
-    animation: slide 180s linear infinite ;
-    animation-delay: 2s;
-    left: -100px;
-    top: 25px;
-    margin-bottom: 10px;
-}
-.cloud5 {
-    width: 100px;
-    position: relative;
-    animation: slide 130s linear infinite ;
-    animation-delay: 0s;
-    left: -100px;
-
-}
