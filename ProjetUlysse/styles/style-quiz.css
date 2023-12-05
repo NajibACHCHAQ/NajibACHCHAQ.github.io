@@ -75,6 +75,32 @@ body {
 }
 input{
   margin-bottom: 1vw !important;
-  font-size: 2vw !important;
+  font-size: 2.5vw !important;
   text-align: center !important;
+}
+#question-image{
+  display: none; 
+  width: 50%; 
+  margin: 0 auto;
+}
+@media only screen and (max-width: 700px) {
+  #section-name{
+    font-size: 3vw;
+  }
+  .btn {
+    font-size: 2.9vw; /* Use vw for font size to make it responsive */
+  }
+  #question {
+    font-size: 3.5vw; /* Use vw for font size to make it responsive */
+  }
+  input{
+
+    font-size: 2.8vw !important;
+
+  }
+  #question-image{
+    width: 70%; 
+
+  }
+
 }
