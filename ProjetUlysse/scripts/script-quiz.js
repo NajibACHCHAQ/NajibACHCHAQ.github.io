@@ -184,43 +184,41 @@ function initializeQuiz() {
         showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
     }
     }
-// Fonction pour gérer les réponses aux questions ouvertes
-function handleOpenEndedAnswer(userAnswers, correctAnswers) {
-    console.log('Valeur de userAnswers:', userAnswers);
-    console.log('Valeur correctReponse:', correctAnswers);
-
-    // Filtrer les réponses vides de l'utilisateur
-    const trimmedUserAnswers = userAnswers.filter(answer => answer.trim() !== '');
-
-    // Vérifier que correctAnswers est défini et non vide
-    if (correctAnswers && correctAnswers.length > 0) {
-        let isCorrect = false;
-
-        // Vérifier le format du modèle de réponse correcte
-        if (Array.isArray(correctAnswers[0])) {
-            // Modèle avec une liste de chaînes
-            isCorrect = trimmedUserAnswers.length === correctAnswers[0].length &&
-                trimmedUserAnswers.every((userAnswer, index) =>
-                    userAnswer.trim() === correctAnswers[0][index].trim()
+    function handleOpenEndedAnswer(userAnswers, correctAnswers) {
+        console.log('Valeur de userAnswers:', userAnswers);
+        console.log('Valeur de correctAnswers:', correctAnswers);
+    
+        // Filtrer les réponses vides de l'utilisateur
+        const trimmedUserAnswers = userAnswers.filter(answer => answer.trim() !== '');
+    
+        // Vérifier que correctAnswers est défini
+        if (correctAnswers) {
+            let isCorrect = false;
+    
+            // Vérifier le format du modèle de réponse correcte
+            if (Array.isArray(correctAnswers[0])) {
+                // Modèle avec une liste de chaînes
+                const correctSubset = correctAnswers[0].slice(0, trimmedUserAnswers.length);
+                isCorrect = trimmedUserAnswers.every((userAnswer, index) =>
+                    userAnswer.trim() === correctSubset[index].trim()
                 );
-        } else {
-            // Modèle avec une seule chaîne
-            isCorrect = trimmedUserAnswers.length === 1 &&
-                trimmedUserAnswers[0].trim() === correctAnswers[0].trim();
-        }
-
-        // Mettre à jour les scores et passer à la question suivante
-        if (isCorrect) {
-            console.log('Correct!');
-            updateScores(true);
-        } else {
-            console.log('Incorrect!');
-            updateScores(false);
+            } else {
+                // Modèle avec une seule chaîne
+                isCorrect = trimmedUserAnswers.length === 1 &&
+                    trimmedUserAnswers[0].trim() === correctAnswers[0].trim();
+            }
+    
+            // Mettre à jour les scores et passer à la question suivante
+            if (isCorrect) {
+                console.log('Correct!');
+                updateScores(true);
+            } else {
+                console.log('Incorrect!');
+                updateScores(false);
+            }
         }
     }
-
-    moveToNextQuestionOrSection();
-}
+    
 
 
 
