@@ -184,29 +184,46 @@ function initializeQuiz() {
         showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
     }
     }
-    // Fonction pour gérer les réponses aux questions ouvertes
-    // Fonction pour gérer les réponses aux questions ouvertes
+// Fonction pour gérer les réponses aux questions ouvertes
 function handleOpenEndedAnswer(userAnswers, correctAnswers) {
     console.log('Valeur de userAnswers:', userAnswers);
-    console.log('userAnswers:', userAnswers);
-    console.log('correctAnswers:', correctAnswers);
+    console.log('Valeur correctReponse:', correctAnswers);
 
-    // Comparer chaque réponse utilisateur avec les réponses correctes
-    const isCorrect = userAnswers.every((userAnswer, index) =>
-        userAnswer.trim() === correctAnswers[index]
-    );
+    // Filtrer les réponses vides de l'utilisateur
+    const trimmedUserAnswers = userAnswers.filter(answer => answer.trim() !== '');
 
-    // Mettre à jour les scores et passer à la question suivante
-    if (isCorrect) {
-        console.log('Correct!');
-        updateScores(true);
-    } else {
-        console.log('Incorrect!');
-        updateScores(false);
+    // Vérifier que correctAnswers est défini et non vide
+    if (correctAnswers && correctAnswers.length > 0) {
+        let isCorrect = false;
+
+        // Vérifier le format du modèle de réponse correcte
+        if (Array.isArray(correctAnswers[0])) {
+            // Modèle avec une liste de chaînes
+            isCorrect = trimmedUserAnswers.length === correctAnswers[0].length &&
+                trimmedUserAnswers.every((userAnswer, index) =>
+                    userAnswer.trim() === correctAnswers[0][index].trim()
+                );
+        } else {
+            // Modèle avec une seule chaîne
+            isCorrect = trimmedUserAnswers.length === 1 &&
+                trimmedUserAnswers[0].trim() === correctAnswers[0].trim();
+        }
+
+        // Mettre à jour les scores et passer à la question suivante
+        if (isCorrect) {
+            console.log('Correct!');
+            updateScores(true);
+        } else {
+            console.log('Incorrect!');
+            updateScores(false);
+        }
     }
 
     moveToNextQuestionOrSection();
 }
+
+
+
 
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {

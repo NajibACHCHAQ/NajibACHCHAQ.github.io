@@ -208,7 +208,7 @@ const quizData = [
                 id: 21,
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires d\'un courrier d\'entreprise.',
-                correctAnswers: ['nom entreprise', 'forme juridique', 'montant capital', 'adresse siège social', 'SIREN', 'RCS'],
+                correctAnswers: [['SIREN'],['nom entreprise'],'forme juridique','montant capital','adresse siège social','RCS'],
                 numberOfInputs: 3
                 
             },
