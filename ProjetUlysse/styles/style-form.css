@@ -10,6 +10,7 @@ form {
     text-align: center;
     margin: 0 auto;
     background-color: rgba(127, 229, 255, 0.415);
+    backdrop-filter: blur(18px);
 
     border: 3px solid white;
     border-radius: 15px;
