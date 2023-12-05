@@ -91,17 +91,22 @@ function initializeQuiz() {
     }       
     // Fonction appelée lorsqu'un utilisateur soumet une réponse à une question ouverte
     function handleSubmitButtonClick() {
-        console.log('Bouton Soumettre cliqué!');        
-        // Récupérer les réponses de l'utilisateur depuis les champs de texte
-        const userAnswers = [];
-        const answerInputs = document.querySelectorAll('#answer-buttons input');       
-        answerInputs.forEach(input => {
-            userAnswers.push(input.value.trim());
-        });       
-        // Passer à la question suivante ou à la section suivante
-        moveToNextQuestionOrSection();
-        console.log('After moveToNextQuestionOrSection');
-    }        
+    console.log('Bouton Soumettre cliqué!');        
+    // Récupérer les réponses de l'utilisateur depuis les champs de texte
+    const userAnswers = [];
+    const answerInputs = document.querySelectorAll('#answer-buttons input');       
+    answerInputs.forEach(input => {
+        userAnswers.push(input.value.trim());
+    });       
+
+    // Appeler la fonction pour gérer les réponses ouvertes
+    handleOpenEndedAnswer(userAnswers, quizData[currentSectionIndex].questions[currentQuestionIndex].correctAnswer);
+
+    // Passer à la question suivante ou à la section suivante
+    moveToNextQuestionOrSection(false); // Utilisez false car le temps n'est pas écoulé
+    console.log('After moveToNextQuestionOrSection');
+}
+
     // Fonction pour démarrer le timer avec une durée spécifiée et des callbacks
     function startTimer(duration, callback, submitCallback) {
         console.log('startTimer called');       
@@ -116,20 +121,13 @@ function initializeQuiz() {
                 if (timeRemaining < 0) {
                     clearInterval(timer);
                     resetTimer();  // Réinitialiser le timer ici
-                    callback();
+                    callback();    // Utiliser le callback fourni à la place de moveToNextQuestionOrSection
                 }
             }, 1000);       
             // Ajout de l'écouteur d'événements pour le bouton Soumettre
-            const submitButton = document.getElementById('submit-button');
-            if (submitButton) {
-                submitButton.addEventListener('click', () => {
-                    clearInterval(timer);
-                    resetTimer();  // Réinitialiser le timer ici
-                    submitCallback();
-                });
-            }
+
         }
-    }       
+    }
     // Fonction pour mettre à jour l'affichage du timer
     function updateTimerDisplay(time) {
         console.log('Updating timer display:', time);
@@ -174,37 +172,42 @@ function initializeQuiz() {
                 return; // Arrêtez l'exécution si le quiz est terminé
             }
         }        
-        // Réinitialiser le timer ici, après avoir décidé si le temps est écoulé ou non
-        if (!isTimeUp) {
-            resetTimer();
-        }        
-        // Si le temps est écoulé, passer à la question suivante
-        if (isTimeUp && currentSectionIndex < quizData.length) {
-            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
-            moveToNextQuestionOrSection(false);
-        } else {
-            // Afficher la question suivante
-            showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
-        }
+       // Réinitialiser le timer ici, après avoir décidé si le temps est écoulé ou non
+    resetTimer();
+
+    // Si le temps est écoulé, passer à la question suivante
+    if (isTimeUp && currentSectionIndex < quizData.length) {
+        showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+    }
+    // Sinon, afficher la question suivante
+    else {
+        showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
+    }
     }
     // Fonction pour gérer les réponses aux questions ouvertes
-    function handleOpenEndedAnswer(userAnswers, correctAnswers) {
-        console.log('Valeur de userAnswers:', userAnswers);
-    
-        // Comparer chaque réponse utilisateur avec les réponses correctes
-        const isCorrect = userAnswers.every((userAnswer, index) =>
-            userAnswer.trim() === correctAnswers[index]
-        );        
-        // Mettre à jour les scores et passer à la question suivante
-        if (isCorrect) {
-            console.log('Correct!');
-            updateScores(true);
-        } else {
-            console.log('Incorrect!');
-            updateScores(false);
-        }       
-        moveToNextQuestionOrSection();
-    }        
+    // Fonction pour gérer les réponses aux questions ouvertes
+function handleOpenEndedAnswer(userAnswers, correctAnswers) {
+    console.log('Valeur de userAnswers:', userAnswers);
+    console.log('userAnswers:', userAnswers);
+    console.log('correctAnswers:', correctAnswers);
+
+    // Comparer chaque réponse utilisateur avec les réponses correctes
+    const isCorrect = userAnswers.every((userAnswer, index) =>
+        userAnswer.trim() === correctAnswers[index]
+    );
+
+    // Mettre à jour les scores et passer à la question suivante
+    if (isCorrect) {
+        console.log('Correct!');
+        updateScores(true);
+    } else {
+        console.log('Incorrect!');
+        updateScores(false);
+    }
+
+    moveToNextQuestionOrSection();
+}
+
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {
         if (selectedAnswer === correctAnswer) {
