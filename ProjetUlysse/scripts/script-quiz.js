@@ -1,7 +1,6 @@
 
 import {quizData} from "./quiz.js";
 
-
 function initializeQuiz() {
     // Initialisation des variables globales
     let timer;  // Déclarez la variable timer ici

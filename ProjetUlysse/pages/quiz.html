@@ -44,7 +44,22 @@
             <!-- Les boutons de réponse seront ajoutés ici via JavaScript -->
         </div>
     </div>
+    <script>
+        // empeche le retour en arriere dans le navigateur
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+});
 
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+        // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
+        window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
+    }
+});
+
+
+    </script>
     
     <script src="../scripts/script.js"></script>
     <script type="Module" src="../scripts/quiz.js"></script>
