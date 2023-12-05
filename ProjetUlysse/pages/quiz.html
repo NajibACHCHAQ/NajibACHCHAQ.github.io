@@ -54,7 +54,6 @@
 document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'hidden') {
         // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
-        alert("vous avez visité un autre onglet le test à été annulé")
         window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
     }
 });
