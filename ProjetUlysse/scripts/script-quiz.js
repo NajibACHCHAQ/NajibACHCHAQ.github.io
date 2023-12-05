@@ -363,6 +363,16 @@ function initializeQuiz() {
                      'Au moins 3 lignes',
                     'Je ne sais pas'],
                     correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte'
+                },
+                {
+                    type: 'multiple-choice',
+                    question: "Une écriture comptable comprend :",
+                    answers: ['Au moins un débit d’un compte et un crédit d’un autre compte', 
+                    'Le débit et le crédit du même compte',
+                     'Au moins 3 lignes',
+                    'Je ne sais pas'],
+                    correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte',
+                    imageUrl: '../assets/facture-test.png' // Ajoutez le chemin de votre image ici
                 }
             ]
         },
@@ -372,12 +382,13 @@ function initializeQuiz() {
             questions: [
                 {
                     type: 'multiple-choice',
-                    question: '',
-                    answers: ['',
-                     '',
-                     '',
-                      ''],
-                    correctAnswer: ''
+                    question: "Une écriture comptable comprend :",
+                    answers: ['Au moins un débit d’un compte et un crédit d’un autre compte', 
+                    'Le débit et le crédit du même compte',
+                     'Au moins 3 lignes',
+                    'Je ne sais pas'],
+                    correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte',
+                    image: '../assets/facture-test.png' // Ajoutez le chemin de votre image ici
                 },
                 {
                     type: 'multiple-choice',
@@ -845,11 +856,22 @@ function initializeQuiz() {
         resetTimer();
     
         var questionElement = document.getElementById('question');
+        var answerButtonsElement = document.getElementById('answer-buttons');
+        var questionImageElement = document.getElementById('question-image'); // Nouvel élément pour l'image
+
         if (questionElement) {
             questionElement.innerText = question.question;
         }
+        if (questionImageElement) {
+            // Afficher l'image si elle est disponible, sinon masquer l'élément
+            if (question.image) {
+                questionImageElement.src = question.image;
+                questionImageElement.style.display = 'block';
+            } else {
+                questionImageElement.style.display = 'none';
+            }
+        }
     
-        var answerButtonsElement = document.getElementById('answer-buttons');
         if (answerButtonsElement) {
             answerButtonsElement.textContent = '';
     

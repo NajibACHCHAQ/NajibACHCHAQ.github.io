@@ -24,6 +24,7 @@ body{
     background: url(../assets/hexagon-background.png);
     background-size: cover;
     background-attachment: fixed;
+    width: 100%;
 
 }
 
@@ -108,3 +109,29 @@ select{
     text-align: center;
 
 }
+
+.container-facebook {
+    display: grid;
+    grid-template-rows: auto repeat(auto-fill, auto);
+    width: 90%;
+    height: 38vw;
+    background-color: aqua;
+    margin: 0 auto;
+    padding: 2vw;
+    border-radius: 20px;
+    background: url(../assets/hexagon-background.png);
+    background-color: rgba(240, 248, 255, 0.546);
+    background-size: contain;
+    background-attachment: fixed;
+    margin-top: 2vw;
+    border: 12px ridge rgba(92, 127, 174, 0.737);
+    margin-bottom: 2vw;
+    box-shadow: -1px -1px 37px 4px #595858b2;
+    overflow: scroll;
+  }
+  
+  .fb-page {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
