@@ -33,7 +33,21 @@ function initializeQuiz() {
     // Fonction pour afficher une question spécifique
     function showQuestion(question) {
         resetTimer();
-    
+        // Calcul du décompte global des questions
+    const totalQuestionsCount = quizData.reduce((acc, section) => acc + section.questions.length, 0);
+    const globalQuestionIndex = quizData.reduce((acc, section, index) => {
+        if (index < currentSectionIndex) {
+            return acc + section.questions.length;
+        }
+        return acc;
+    }, 0);
+
+    // Mise à jour du décompte global des questions
+    const questionCountElement = document.getElementById('question-count');
+    if (questionCountElement) {
+        questionCountElement.innerText = `${globalQuestionIndex + currentQuestionIndex + 1}/${totalQuestionsCount}`;
+    }
+
         // Récupération des éléments du DOM
         const questionElement = document.getElementById('question');
         const answerButtonsElement = document.getElementById('answer-buttons');
