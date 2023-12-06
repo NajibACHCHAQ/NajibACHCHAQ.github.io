@@ -205,7 +205,7 @@ const quizData = [
                 correctAnswer: "Une taxe sur les achats et les ventes"
             },
             {
-                id: 22,
+                id: 21,
                 type: 'open-ended',
                 question: 'Que veut dire le sigle PGI ?',
                 correctAnswer: ['progiciel de gestion intégré'],
@@ -213,7 +213,7 @@ const quizData = [
                 
             },
             {
-                id: 23,
+                id: 22,
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires d\'un courrier d\'entreprise.',
                 correctAnswer: ['SIREN','nom entreprise','forme juridique','montant capital','adresse siège social','RCS'],
@@ -221,7 +221,7 @@ const quizData = [
                 
             },
             {
-                id: 24,
+                id: 23,
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires sur une facture',
                 correctAnswer: ["date, numéro de facture, nom de l'entreprise", "adresse siège", 'adresse facturation', 'SIREN', "SIRET", "nom du client", "taux TVA", "Identifiant TVA"],
@@ -229,7 +229,7 @@ const quizData = [
                 
             },
             {
-                id: 25,
+                id: 24,
                 type: 'open-ended',
                 question: 'Citez 2 moyens de communication internes en entreprise',
                 correctAnswer: ['mail', 'site internet', 'réseaux sociaux', 'téléphone', 'courrier', 'affichage'],
@@ -237,7 +237,7 @@ const quizData = [
                 
             },
             {
-                id: 26,
+                id: 25,
                 type: 'open-ended',
                 question: 'Citez 2 moyens de paiement professionnel',
                 correctAnswer: ['chèque', 'prélévement', 'virement', 'carte bancaire', 'effet de commerce', 'lettre de change', 'billet à ordre'],
@@ -245,7 +245,7 @@ const quizData = [
                 
             },
             {
-                id: 27,
+                id: 26,
                 type: 'open-ended',
                 question: 'Citez 2 moyens de classement dans une entreprise',
                 correctAnswer: ['alphabétique', 'alphanumérique', 'cloud', 'réseau', 'dossier suspendu', 'collaboratif', 'par auteur'],
@@ -263,7 +263,7 @@ const quizData = [
         score: 0,
         questions: [
             {
-                id: 22,
+                id: 27,
                 type: 'multiple-choice',
                 question: 'En quoi consiste la comptabilité générale ? En quoi consiste la comptabilité générale ?',
                 answers: ['A remplir des tableaux sur Excel uniquement',
@@ -273,21 +273,21 @@ const quizData = [
                 correctAnswer: 'À enregistrer des écritures'
             },
             {
-                id: 23,
+                id: 28,
                 type: 'multiple-choice',
                 question: "Quelle est la qualité première d’un comptable ?",
                 answers: ['Etre fort en maths', 'Savoir lire', 'Rester longtemps assis', 'Je ne sais pas'],
                 correctAnswer: 'Savoir lire'
             },
             {
-                id: 24,
+                id: 29,
                 type: 'multiple-choice',
                 question: "Tenir une comptabilité est obligatoire ?",
                 answers: ['Vrai', 'Faux', 'Je ne sais pas'],
                 correctAnswer: 'Vrai'
             },
             {
-                id: 25,
+                id: 30,
                 type: 'multiple-choice',
                 question: 'Laquelle de ces tâches n’est pas réalisée par le comptable dans une PME ?',
                 answers: ['Démarcher les clients',
@@ -297,21 +297,21 @@ const quizData = [
                 correctAnswer: 'Démarcher les clients'
             },
             {
-                id: 26,
+                id: 31,
                 type: 'multiple-choice',
                 question: "Le bilan est composé de : ",
                 answers: ['Du débit et du passif', 'Du débit et du crédit', "De l'actif et du passif", 'Je ne sais pas'],
                 correctAnswer: "De l'actif et du passif"
             },
             {
-                id: 27,
+                id: 32,
                 type: 'multiple-choice',
                 question: "On a l’obligation de faire le bilan tous les mois :",
                 answers: ['Vrai', 'Faux', 'Je ne sais pas'],
                 correctAnswer: 'Faux'
             },
             {
-                id: 28,
+                id: 33,
                 type: 'multiple-choice',
                 question: 'Le bilan donne quelles informations de l’entreprise ?',
                 answers: ["Les biens de l'entreprise et le bénéfice",
@@ -321,7 +321,7 @@ const quizData = [
                 correctAnswer: 'Les biens et les ressources'
             },
             {
-                id: 29,
+                id: 34,
                 type: 'multiple-choice',
                 question: "Comment est déterminé le bénéfice ou la perte de l’entreprise ?",
                 answers: ['Quand on a bien vendu', 
@@ -331,7 +331,7 @@ const quizData = [
                 correctAnswer: 'Quand on fait la différence entre ses charges et ses produits'
             },
             {
-                id: 30,
+                id: 35,
                 type: 'multiple-choice',
                 question: "Comment appelle-t-on l’argent que nous doivent les clients ?",
                 answers: ['Une dette client',
@@ -341,7 +341,7 @@ const quizData = [
                 correctAnswer: 'Une créance'
             },
             {
-                id: 31,
+                id: 36,
                 type: 'multiple-choice',
                 question: 'Quand j’achète à crédit une voiture, elle appartient à qui ?',
                 answers: ['Au vendeur',
@@ -351,7 +351,7 @@ const quizData = [
                 correctAnswer: "A l'entreprise"
             },
             {
-                id: 32,
+                id: 37,
                 type: 'multiple-choice',
                 question: "A quoi sert le compte d’exploitation ?",
                 answers: ['À chiffrer les ventes de l’année', 
@@ -361,7 +361,7 @@ const quizData = [
                 correctAnswer: "A déterminer le résultat de l’année"
             },
             {
-                id: 33,
+                id: 38,
                 type: 'multiple-choice',
                 question: "A quoi sert une balance ?",
                 answers: ['À peser pour évaluer les comptes', 
@@ -371,7 +371,7 @@ const quizData = [
                 correctAnswer: 'À lister les soldes des comptes'
             },
             {
-                id: 34,
+                id: 39,
                 type: 'multiple-choice',
                 question: "Lorsqu’on achète à crédit de la marchandise, on doit l’argent à qui ?",
                 answers: ['À la banque', 
@@ -381,7 +381,7 @@ const quizData = [
                 correctAnswer: "Au fournisseur"
             },
             {
-                id: 35,
+                id: 40,
                 type: 'multiple-choice',
                 question: "Mon client me paye comptant, est-ce qu’il a le droit de se déduire un % du montant de sa facture ?",
                 answers: ['Oui il a le droit car il a demandé la permission', 
@@ -391,7 +391,7 @@ const quizData = [
                 correctAnswer: 'Oui il peut, c’est inscrit sur sa facture'
             },
             {
-                id: 36,
+                id: 41,
                 type: 'multiple-choice',
                 question: "Qu’est-ce qu’une immobilisation ?",
                 answers: ['Un immeuble', 
@@ -401,7 +401,7 @@ const quizData = [
                 correctAnswer: "Les biens de l'entreprise"
             },
             {
-                id: 37,
+                id: 42,
                 type: 'multiple-choice',
                 question: "Qu’est-ce qu’un effet de commerce ?",
                 answers: ['Une réduction financière', 
@@ -411,7 +411,7 @@ const quizData = [
                 correctAnswer: "Un mode de paiement"
             },
             {
-                id: 38,
+                id: 43,
                 type: 'multiple-choice',
                 question: "Si le montant d’une facture est inexact, le comptable peut : ",
                 answers: ['La modifier et la mettre dans ses comptes', 
@@ -421,7 +421,7 @@ const quizData = [
                 correctAnswer: 'Réclamer un avoir'
             },
             {
-                id: 39,
+                id: 44,
                 type: 'multiple-choice',
                 question: "La TVA coûte chère à l’entreprise ?",
                 answers: ['Vrai', 
@@ -430,7 +430,7 @@ const quizData = [
                 correctAnswer: "Faux"
             },
             {
-                id: 40,
+                id: 45,
                 type: 'multiple-choice',
                 question: "Quelle est le document que le comptable ne transcrit pas en comptabilité ?",
                 answers: ['Une facture client', 
@@ -440,7 +440,7 @@ const quizData = [
                 correctAnswer: "Un relevé du fournisseur"
             },
             {
-                id: 41,
+                id: 46,
                 type: 'multiple-choice',
                 question: "Une écriture comptable comprend :",
                 answers: ['Au moins un débit d’un compte et un crédit d’un autre compte', 
@@ -457,7 +457,7 @@ const quizData = [
         score: 0,
         questions: [ 
             {
-                id: 42,
+                id: 47,
                 type: 'open-ended',
                 question: "D'après le document veuillez compléter : Remise 5% ",
                 correctAnswer: ['44'],
@@ -465,7 +465,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 43,
+                id: 48,
                 type: 'open-ended',
                 question: "D'après le document veuillez compléter : Sous-total remise reduite ",
                 correctAnswer: ['836'],
@@ -473,7 +473,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 44,
+                id: 49,
                 type: 'open-ended',
                 question: "D'après le document veuillez compléter : Total HT ",
                 correctAnswer: ['876'],
@@ -481,7 +481,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 45,
+                id: 50,
                 type: 'open-ended',
                 question: "D'après le document veuillez compléter : TVA 20% ",
                 correctAnswer: ['175.20'],
@@ -489,7 +489,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 46,
+                id: 51,
                 type: 'open-ended',
                 question: "D'après le document veuillez compléter : Total TTC ",
                 correctAnswer: ['1051.20'],
@@ -497,7 +497,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 47,
+                id: 52,
                 type: 'open-ended',
                 question: "L'article 2 coûte 110 € : si j'augmente mon prix de vente de 6%, quelle opération dois-je faire et quel est le résultat (exemple : 20,00 x 4,5 = 90,00)",
                 correctAnswer: ['110,00 x 1,06 = 116,60','1.06 x 110,00 = 116,60'],
@@ -505,7 +505,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 48,
+                id: 53,
                 type: 'open-ended',
                 question: "Je dois acheter une marchandise qui me coûte 235 € TTC, quelle est sa valeur en HT (TVA 20%)",
                 correctAnswer: ['195,83'],
@@ -513,7 +513,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 49,
+                id: 54,
                 type: 'open-ended',
                 question: "J'ai un chiffre d'affaires de 250 930 € HT, l'article 2 m'a rapporté 65 200€ qu'elle est la part de cet artcile par rapport au chiffre d'affaire total ? (en pourcentage)",
                 correctAnswer: ['25,98'],
@@ -523,12 +523,12 @@ const quizData = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         section: 'Français',
         score: 0,
         questions: [ 
             {
-                id: 42,
+                id: 55,
                 type: 'open-ended',
                 question: "Elle lui (couper) la parole.",
                 correctAnswer: ['a coupé'],
@@ -536,7 +536,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 43,
+                id: 56,
                 type: 'open-ended',
                 question: "Ces informations nous (sembler) erronées.",
                 correctAnswer: ['ont semblé'],
@@ -544,7 +544,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 44,
+                id: 57,
                 type: 'open-ended',
                 question: "Elle (préparer) plusieurs concours et s'(engager) à travailler.",
                 correctAnswer: ["a préparé" ,"s'est engagée"],
@@ -552,7 +552,7 @@ const quizData = [
                 numberOfInputs: 2
             },
             {
-                id: 45,
+                id: 58,
                 type: 'open-ended',
                 question: "Ce sont des films qu'il (voir) au cinéma. ",
                 correctAnswer: ['a vus'],
@@ -560,7 +560,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 46,
+                id: 59,
                 type: 'open-ended',
                 question: "Ils (parler) un peu pour se distraire.",
                 correctAnswer: ['ont parlé'],
@@ -568,7 +568,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 47,
+                id: 60,
                 type: 'open-ended',
                 question: "La discussion que nous (avoir) profitera à l'entreprise.",
                 correctAnswer: ['avons eu'],
@@ -576,7 +576,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 48,
+                id: 61,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Jules (parler) très souvent à ses parents mais il les voit peu. ",
                 correctAnswer: ['parlait'],
@@ -584,7 +584,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 49,
+                id: 62,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Nous (penser) que vous l'avez compris rapidement.",
                 correctAnswer: ['pensions'],
@@ -592,7 +592,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 48,
+                id: 63,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Elles (appeler) toujours leurs amis par des surnoms qui leur plaisent. ",
                 correctAnswer: ['parlait','plaisaient'],
@@ -603,12 +603,12 @@ const quizData = [
         ]
     },
     {
-        id: 3,
+        id: 6,
         section: 'Anglais',
         score: 0,
         questions: [
             {
-                id: 22,
+                id: 64,
                 type: 'multiple-choice',
                 question: 'There is ______ apple on ______ kitchen table',
                 answers: ['an / the',
@@ -618,21 +618,21 @@ const quizData = [
                 correctAnswer: 'an / the'
             },
             {
-                id: 23,
+                id: 65,
                 type: 'multiple-choice',
                 question: "QWhat's ______ name ?",
                 answers: ['you', 'your', "you're", 'yours'],
                 correctAnswer: 'your'
             },
             {
-                id: 24,
+                id: 66,
                 type: 'multiple-choice',
                 question: "______ are you from ?",
                 answers: ['were', 'when', 'where','who'],
                 correctAnswer: 'where'
             },
             {
-                id: 25,
+                id: 67,
                 type: 'multiple-choice',
                 question: 'I have a sister, ______ name is sarah ?',
                 answers: ['she',
@@ -642,21 +642,21 @@ const quizData = [
                 correctAnswer: 'her'
             },
             {
-                id: 26,
+                id: 68,
                 type: 'multiple-choice',
                 question: "She ______ in London.",
                 answers: ['living', 'lives', "live", 'leave'],
                 correctAnswer: 'lives'
             },
             {
-                id: 27,
+                id: 69,
                 type: 'multiple-choice',
                 question: "We ______ at the moment.",
                 answers: ['are studying', 'study', 'studies','are study'],
                 correctAnswer: 'are studying'
             },
             {
-                id: 28,
+                id: 70,
                 type: 'multiple-choice',
                 question: '______ you like something to drink ?',
                 answers: ["would",
@@ -666,7 +666,7 @@ const quizData = [
                 correctAnswer: 'would'
             },
             {
-                id: 29,
+                id: 71,
                 type: 'multiple-choice',
                 question: "Our supplier ______ 12 different kinds copy machines",
                 answers: ['carrys', 
@@ -676,7 +676,7 @@ const quizData = [
                 correctAnswer: 'carries'
             },
             {
-                id: 30,
+                id: 72,
                 type: 'multiple-choice',
                 question: "______ laptop is this ?",
                 answers: ["who's",
@@ -686,7 +686,7 @@ const quizData = [
                 correctAnswer: 'whose'
             },
             {
-                id: 31,
+                id: 73,
                 type: 'multiple-choice',
                 question: 'He ______ go to work yesterday, he was ill.',
                 answers: ['not',
@@ -696,7 +696,7 @@ const quizData = [
                 correctAnswer: "didn't"
             },
             {
-                id: 32,
+                id: 74,
                 type: 'multiple-choice',
                 question: "This hotel ______ in the 1930's.",
                 answers: ['found', 
@@ -706,7 +706,7 @@ const quizData = [
                 correctAnswer: "was founded"
             },
             {
-                id: 33,
+                id: 75,
                 type: 'multiple-choice',
                 question: "Our hotel is interested ______ purchasing 50 new double beds.",
                 answers: ['by', 
@@ -716,7 +716,7 @@ const quizData = [
                 correctAnswer: 'in'
             },
             {
-                id: 34,
+                id: 76,
                 type: 'multiple-choice',
                 question: "She has been working here ______ 10 years.",
                 answers: ['since', 
@@ -726,7 +726,7 @@ const quizData = [
                 correctAnswer: "for"
             },
             {
-                id: 35,
+                id: 77,
                 type: 'multiple-choice',
                 question: "He's no longer works here, but he ______ manage the accounting department.",
                 answers: ['was', 
@@ -736,7 +736,7 @@ const quizData = [
                 correctAnswer: 'used to'
             },
             {
-                id: 36,
+                id: 78,
                 type: 'multiple-choice',
                 question: "They're slowly ______ their new boss.",
                 answers: ['getting used to', 
@@ -746,7 +746,7 @@ const quizData = [
                 correctAnswer: "getting used to"
             },
             {
-                id: 37,
+                id: 79,
                 type: 'multiple-choice',
                 question: "I've bought my ticket, so next week ______ to Rome !",
                 answers: ['I will flying', 
@@ -756,7 +756,7 @@ const quizData = [
                 correctAnswer: "I am flying"
             },
             {
-                id: 38,
+                id: 80,
                 type: 'multiple-choice',
                 question: "When we ______ the design, we will send it to you",
                 answers: ['have finish', 
@@ -766,7 +766,7 @@ const quizData = [
                 correctAnswer: 'finish'
             },
             {
-                id: 39,
+                id: 81,
                 type: 'multiple-choice',
                 question: "The CEO of our company has decided to ______ after 30 years in his post",
                 answers: ['step down', 
@@ -775,7 +775,7 @@ const quizData = [
                 correctAnswer: "step down"
             },
             {
-                id: 40,
+                id: 82,
                 type: 'multiple-choice',
                 question: "______ we go to the gym now?",
                 answers: ["Let's", 
@@ -785,7 +785,7 @@ const quizData = [
                 correctAnswer: "Shall"
             },
             {
-                id: 41,
+                id: 83,
                 type: 'multiple-choice',
                 question: "______ the time I'm 25, i will have travelled the world",
                 answers: ['When', 
@@ -795,7 +795,7 @@ const quizData = [
                 correctAnswer: 'By'
             },
             {
-                id: 32,
+                id: 84,
                 type: 'multiple-choice',
                 question: "If we ______ you, we would have told you",
                 answers: ['seen', 
@@ -805,93 +805,93 @@ const quizData = [
                 correctAnswer: "had seen"
             },
             {
-                id: 33,
+                id: 85,
                 type: 'multiple-choice',
-                question: "Our hotel is interested ______ purchasing 50 new double beds.",
-                answers: ['by', 
-                'from',
-                 'to',
-                'in'],
-                correctAnswer: 'in'
+                question: "Do you ______ if I open the window ?",
+                answers: ['bother', 
+                'mind',
+                 'please',
+                'matter'],
+                correctAnswer: 'mind'
             },
             {
-                id: 34,
+                id: 86,
                 type: 'multiple-choice',
-                question: "She has been working here ______ 10 years.",
-                answers: ['since', 
-                'for', 
-                "during", 
-                'while'],
-                correctAnswer: "for"
+                question: "Once the plane has reached its cruising altitude, you can ______ your seat belts",
+                answers: ['unfasten', 
+                'undress', 
+                "unlock", 
+                'untie'],
+                correctAnswer: "unfasten"
             },
             {
-                id: 35,
+                id: 87,
                 type: 'multiple-choice',
-                question: "He's no longer works here, but he ______ manage the accounting department.",
-                answers: ['was', 
-                'use to',
-                 'was used to',
-                'used to'],
-                correctAnswer: 'used to'
+                question: "This device ______ take photos under water",
+                answers: ['allows you', 
+                'permits to',
+                 'allows you to',
+                'permits you'],
+                correctAnswer: 'allows you to'
             },
             {
-                id: 36,
+                id: 88,
                 type: 'multiple-choice',
-                question: "They're slowly ______ their new boss.",
-                answers: ['getting used to', 
-                'get used to',
-                 "getting use to",
-                'get use to'],
-                correctAnswer: "getting used to"
+                question: "I'm always ______ that mistake too",
+                answers: ['making', 
+                'do',
+                 "doing",
+                'make'],
+                correctAnswer: "making"
             },
             {
-                id: 37,
+                id: 89,
                 type: 'multiple-choice',
-                question: "I've bought my ticket, so next week ______ to Rome !",
-                answers: ['I will flying', 
-                'I will to fly', 
-                "I am flying", 
-                'I am fly'],
-                correctAnswer: "I am flying"
+                question: "If I ______ the lottery, i would give money to charity",
+                answers: ['winned', 
+                'was winning', 
+                "have won", 
+                'won'],
+                correctAnswer: "won"
             },
             {
-                id: 38,
+                id: 90,
                 type: 'multiple-choice',
-                question: "When we ______ the design, we will send it to you",
-                answers: ['have finish', 
-                'finish',
-                 'finished',
-                'will finish'],
-                correctAnswer: 'finish'
+                question: "He said ______ he write the report",
+                answers: ['would', 
+                'does',
+                 'has',
+                'will to'],
+                correctAnswer: 'would'
             },
             {
-                id: 39,
+                id: 91,
                 type: 'multiple-choice',
-                question: "The CEO of our company has decided to ______ after 30 years in his post",
-                answers: ['step down', 
-                'step up',
-                'step over','step around'],
-                correctAnswer: "step down"
+                question: "We ______ renovate this old hotel, and we have succeeded",
+                answers: ['set out', 
+                'set out to',
+                'wanted','set about'],
+                correctAnswer: "set out to"
             },
             {
-                id: 40,
+                id: 92,
                 type: 'multiple-choice',
-                question: "______ we go to the gym now?",
-                answers: ["Let's", 
-                'Did', 
-                "Does", 
-                'Shall'],
-                correctAnswer: "Shall"
+                question: "Last week our copy machine kept ______ ",
+                answers: ["broke down", 
+                'did break down', 
+                "breaking down", 
+                'breaking up'],
+                correctAnswer: "breaking down"
             },
             {
-                id: 41,
+                id: 93,
                 type: 'multiple-choice',
-                question: "______ the time I'm 25, i will have travelled the world",
-                answers: ['When', 
-                'In',
-                 'By',
-                'On'],
-                correctAnswer: 'By'
+                question: "I'd rather you ______ smoke in here",
+                answers: ["don't to", 
+                "wouldn't to",
+                 "didn't",
+                "aren't"],
+                correctAnswer: "didn't"
             }
         ]
     }
