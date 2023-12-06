@@ -546,7 +546,7 @@ const quizData = [
             {
                 id: 57,
                 type: 'open-ended',
-                question: "Ils (mettre) toujours des shorts en été.",
+                question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Ils (mettre) toujours des shorts en été.",
                 correctAnswer: ['mettent'],
                 image: '',
                 numberOfInputs: 1
@@ -645,7 +645,7 @@ const quizData = [
             {
                 id: 68,
                 type: 'multiple-choice',
-                question: "QWhat's ______ name ?",
+                question: "What's ______ name ?",
                 answers: ['you', 'your', "you're", 'yours'],
                 correctAnswer: 'your'
             },
