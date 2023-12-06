@@ -530,53 +530,78 @@ const quizData = [
             {
                 id: 55,
                 type: 'open-ended',
-                question: "Elle lui (couper) la parole.",
-                correctAnswer: ['a coupé'],
+                question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Tu (penser) t'inscrire à ce stage et tu (savoir) que si tu t'y (inscrire), tu t'(engager) à signer un contrat. ",
+                correctAnswer: ['penses',' sais','inscris','engages'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 4
             },
             {
                 id: 56,
                 type: 'open-ended',
-                question: "Ces informations nous (sembler) erronées.",
-                correctAnswer: ['ont semblé'],
-                image: '',
-                numberOfInputs: 1
-            },
-            {
-                id: 57,
-                type: 'open-ended',
-                question: "Elle (préparer) plusieurs concours et s'(engager) à travailler.",
-                correctAnswer: ["a préparé" ,"s'est engagée"],
+                question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Je (être) en vacances et je (prendre) le temps de me reposer.",
+                correctAnswer: ['suis', 'prends'],
                 image: '',
                 numberOfInputs: 2
             },
             {
+                id: 57,
+                type: 'open-ended',
+                question: "Ils (mettre) toujours des shorts en été.",
+                correctAnswer: ['mettent'],
+                image: '',
+                numberOfInputs: 1
+            },
+
+            {
                 id: 58,
                 type: 'open-ended',
-                question: "Ce sont des films qu'il (voir) au cinéma. ",
-                correctAnswer: ['a vus'],
+                question: "Mettez au passé composé les verbes entre parenthèses : Elle lui (couper) la parole.",
+                correctAnswer: ['a coupé'],
                 image: '',
                 numberOfInputs: 1
             },
             {
                 id: 59,
                 type: 'open-ended',
-                question: "Ils (parler) un peu pour se distraire.",
-                correctAnswer: ['ont parlé'],
+                question: "Mettez au passé composé les verbes entre parenthèses : Ces informations nous (sembler) erronées.",
+                correctAnswer: ['ont semblé'],
                 image: '',
                 numberOfInputs: 1
             },
             {
                 id: 60,
                 type: 'open-ended',
-                question: "La discussion que nous (avoir) profitera à l'entreprise.",
+                question: "Mettez au passé composé les verbes entre parenthèses : Elle (préparer) plusieurs concours et s'(engager) à travailler.",
+                correctAnswer: ["a préparé" ,"s'est engagée"],
+                image: '',
+                numberOfInputs: 2
+            },
+            {
+                id: 61,
+                type: 'open-ended',
+                question: "Mettez au passé composé les verbes entre parenthèses : Ce sont des films qu'il (voir) au cinéma. ",
+                correctAnswer: ['a vus'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 62,
+                type: 'open-ended',
+                question: "Mettez au passé composé les verbes entre parenthèses : Ils (parler) un peu pour se distraire.",
+                correctAnswer: ['ont parlé'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 63,
+                type: 'open-ended',
+                question: "Mettez au passé composé les verbes entre parenthèses : La discussion que nous (avoir) profitera à l'entreprise.",
                 correctAnswer: ['avons eu'],
                 image: '',
                 numberOfInputs: 1
             },
             {
-                id: 61,
+                id: 64,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Jules (parler) très souvent à ses parents mais il les voit peu. ",
                 correctAnswer: ['parlait'],
@@ -584,7 +609,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 62,
+                id: 65,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Nous (penser) que vous l'avez compris rapidement.",
                 correctAnswer: ['pensions'],
@@ -592,7 +617,7 @@ const quizData = [
                 numberOfInputs: 1
             },
             {
-                id: 63,
+                id: 66,
                 type: 'open-ended',
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Elles (appeler) toujours leurs amis par des surnoms qui leur plaisent. ",
                 correctAnswer: ['parlait','plaisaient'],
@@ -608,7 +633,7 @@ const quizData = [
         score: 0,
         questions: [
             {
-                id: 64,
+                id: 67,
                 type: 'multiple-choice',
                 question: 'There is ______ apple on ______ kitchen table',
                 answers: ['an / the',
@@ -618,21 +643,21 @@ const quizData = [
                 correctAnswer: 'an / the'
             },
             {
-                id: 65,
+                id: 68,
                 type: 'multiple-choice',
                 question: "QWhat's ______ name ?",
                 answers: ['you', 'your', "you're", 'yours'],
                 correctAnswer: 'your'
             },
             {
-                id: 66,
+                id: 69,
                 type: 'multiple-choice',
                 question: "______ are you from ?",
                 answers: ['were', 'when', 'where','who'],
                 correctAnswer: 'where'
             },
             {
-                id: 67,
+                id: 70,
                 type: 'multiple-choice',
                 question: 'I have a sister, ______ name is sarah ?',
                 answers: ['she',
@@ -642,21 +667,21 @@ const quizData = [
                 correctAnswer: 'her'
             },
             {
-                id: 68,
+                id: 71,
                 type: 'multiple-choice',
                 question: "She ______ in London.",
                 answers: ['living', 'lives', "live", 'leave'],
                 correctAnswer: 'lives'
             },
             {
-                id: 69,
+                id: 72,
                 type: 'multiple-choice',
                 question: "We ______ at the moment.",
                 answers: ['are studying', 'study', 'studies','are study'],
                 correctAnswer: 'are studying'
             },
             {
-                id: 70,
+                id: 73,
                 type: 'multiple-choice',
                 question: '______ you like something to drink ?',
                 answers: ["would",
@@ -666,7 +691,7 @@ const quizData = [
                 correctAnswer: 'would'
             },
             {
-                id: 71,
+                id: 74,
                 type: 'multiple-choice',
                 question: "Our supplier ______ 12 different kinds copy machines",
                 answers: ['carrys', 
@@ -676,7 +701,7 @@ const quizData = [
                 correctAnswer: 'carries'
             },
             {
-                id: 72,
+                id: 75,
                 type: 'multiple-choice',
                 question: "______ laptop is this ?",
                 answers: ["who's",
@@ -686,7 +711,7 @@ const quizData = [
                 correctAnswer: 'whose'
             },
             {
-                id: 73,
+                id: 76,
                 type: 'multiple-choice',
                 question: 'He ______ go to work yesterday, he was ill.',
                 answers: ['not',
@@ -696,7 +721,7 @@ const quizData = [
                 correctAnswer: "didn't"
             },
             {
-                id: 74,
+                id: 77,
                 type: 'multiple-choice',
                 question: "This hotel ______ in the 1930's.",
                 answers: ['found', 
@@ -706,7 +731,7 @@ const quizData = [
                 correctAnswer: "was founded"
             },
             {
-                id: 75,
+                id: 78,
                 type: 'multiple-choice',
                 question: "Our hotel is interested ______ purchasing 50 new double beds.",
                 answers: ['by', 
@@ -716,7 +741,7 @@ const quizData = [
                 correctAnswer: 'in'
             },
             {
-                id: 76,
+                id: 79,
                 type: 'multiple-choice',
                 question: "She has been working here ______ 10 years.",
                 answers: ['since', 
@@ -726,7 +751,7 @@ const quizData = [
                 correctAnswer: "for"
             },
             {
-                id: 77,
+                id: 80,
                 type: 'multiple-choice',
                 question: "He's no longer works here, but he ______ manage the accounting department.",
                 answers: ['was', 
@@ -736,7 +761,7 @@ const quizData = [
                 correctAnswer: 'used to'
             },
             {
-                id: 78,
+                id: 81,
                 type: 'multiple-choice',
                 question: "They're slowly ______ their new boss.",
                 answers: ['getting used to', 
@@ -746,7 +771,7 @@ const quizData = [
                 correctAnswer: "getting used to"
             },
             {
-                id: 79,
+                id: 82,
                 type: 'multiple-choice',
                 question: "I've bought my ticket, so next week ______ to Rome !",
                 answers: ['I will flying', 
@@ -756,7 +781,7 @@ const quizData = [
                 correctAnswer: "I am flying"
             },
             {
-                id: 80,
+                id: 83,
                 type: 'multiple-choice',
                 question: "When we ______ the design, we will send it to you",
                 answers: ['have finish', 
@@ -766,7 +791,7 @@ const quizData = [
                 correctAnswer: 'finish'
             },
             {
-                id: 81,
+                id: 84,
                 type: 'multiple-choice',
                 question: "The CEO of our company has decided to ______ after 30 years in his post",
                 answers: ['step down', 
@@ -775,7 +800,7 @@ const quizData = [
                 correctAnswer: "step down"
             },
             {
-                id: 82,
+                id: 85,
                 type: 'multiple-choice',
                 question: "______ we go to the gym now?",
                 answers: ["Let's", 
@@ -785,7 +810,7 @@ const quizData = [
                 correctAnswer: "Shall"
             },
             {
-                id: 83,
+                id: 86,
                 type: 'multiple-choice',
                 question: "______ the time I'm 25, i will have travelled the world",
                 answers: ['When', 
@@ -795,7 +820,7 @@ const quizData = [
                 correctAnswer: 'By'
             },
             {
-                id: 84,
+                id: 87,
                 type: 'multiple-choice',
                 question: "If we ______ you, we would have told you",
                 answers: ['seen', 
@@ -805,7 +830,7 @@ const quizData = [
                 correctAnswer: "had seen"
             },
             {
-                id: 85,
+                id: 88,
                 type: 'multiple-choice',
                 question: "Do you ______ if I open the window ?",
                 answers: ['bother', 
@@ -815,7 +840,7 @@ const quizData = [
                 correctAnswer: 'mind'
             },
             {
-                id: 86,
+                id: 89,
                 type: 'multiple-choice',
                 question: "Once the plane has reached its cruising altitude, you can ______ your seat belts",
                 answers: ['unfasten', 
@@ -825,7 +850,7 @@ const quizData = [
                 correctAnswer: "unfasten"
             },
             {
-                id: 87,
+                id: 90,
                 type: 'multiple-choice',
                 question: "This device ______ take photos under water",
                 answers: ['allows you', 
@@ -835,7 +860,7 @@ const quizData = [
                 correctAnswer: 'allows you to'
             },
             {
-                id: 88,
+                id: 91,
                 type: 'multiple-choice',
                 question: "I'm always ______ that mistake too",
                 answers: ['making', 
@@ -845,7 +870,7 @@ const quizData = [
                 correctAnswer: "making"
             },
             {
-                id: 89,
+                id: 92,
                 type: 'multiple-choice',
                 question: "If I ______ the lottery, i would give money to charity",
                 answers: ['winned', 
@@ -855,7 +880,7 @@ const quizData = [
                 correctAnswer: "won"
             },
             {
-                id: 90,
+                id: 93,
                 type: 'multiple-choice',
                 question: "He said ______ he write the report",
                 answers: ['would', 
@@ -865,7 +890,7 @@ const quizData = [
                 correctAnswer: 'would'
             },
             {
-                id: 91,
+                id: 94,
                 type: 'multiple-choice',
                 question: "We ______ renovate this old hotel, and we have succeeded",
                 answers: ['set out', 
@@ -874,7 +899,7 @@ const quizData = [
                 correctAnswer: "set out to"
             },
             {
-                id: 92,
+                id: 95,
                 type: 'multiple-choice',
                 question: "Last week our copy machine kept ______ ",
                 answers: ["broke down", 
@@ -884,7 +909,7 @@ const quizData = [
                 correctAnswer: "breaking down"
             },
             {
-                id: 93,
+                id: 96,
                 type: 'multiple-choice',
                 question: "I'd rather you ______ smoke in here",
                 answers: ["don't to", 
