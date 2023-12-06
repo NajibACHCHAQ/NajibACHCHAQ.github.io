@@ -51,12 +51,12 @@
         history.pushState(null, null, document.URL);
 });
 
-document.addEventListener('visibilitychange', function() {
-    if (document.visibilityState === 'hidden') {
-        // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
-        window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
-    }
-});
+// document.addEventListener('visibilitychange', function() {
+//     if (document.visibilityState === 'hidden') {
+//         // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
+//         window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
+//     }
+// });
 
 
     </script>
