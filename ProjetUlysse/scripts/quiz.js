@@ -205,13 +205,56 @@ const quizData = [
                 correctAnswer: "Une taxe sur les achats et les ventes"
             },
             {
-                id: 21,
+                id: 22,
+                type: 'open-ended',
+                question: 'Que veut dire le sigle PGI ?',
+                correctAnswer: ['progiciel de gestion intégré'],
+                numberOfInputs: 1
+                
+            },
+            {
+                id: 23,
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires d\'un courrier d\'entreprise.',
                 correctAnswer: ['SIREN','nom entreprise','forme juridique','montant capital','adresse siège social','RCS'],
                 numberOfInputs: 3
                 
             },
+            {
+                id: 24,
+                type: 'open-ended',
+                question: 'Citez 3 mentions obligatoires sur une facture',
+                correctAnswer: ["date, numéro de facture, nom de l'entreprise", "adresse siège", 'adresse facturation', 'SIREN', "SIRET", "nom du client", "taux TVA", "Identifiant TVA"],
+                numberOfInputs: 3
+                
+            },
+            {
+                id: 25,
+                type: 'open-ended',
+                question: 'Citez 2 moyens de communication internes en entreprise',
+                correctAnswer: ['mail', 'site internet', 'réseaux sociaux', 'téléphone', 'courrier', 'affichage'],
+                numberOfInputs: 2
+                
+            },
+            {
+                id: 26,
+                type: 'open-ended',
+                question: 'Citez 2 moyens de paiement professionnel',
+                correctAnswer: ['chèque', 'prélévement', 'virement', 'carte bancaire', 'effet de commerce', 'lettre de change', 'billet à ordre'],
+                numberOfInputs: 2
+                
+            },
+            {
+                id: 27,
+                type: 'open-ended',
+                question: 'Citez 2 moyens de classement dans une entreprise',
+                correctAnswer: ['alphabétique', 'alphanumérique', 'cloud', 'réseau', 'dossier suspendu', 'collaboratif', 'par auteur'],
+                numberOfInputs: 2
+                
+            }
+
+
+
         ]
     },
     {
@@ -476,6 +519,379 @@ const quizData = [
                 correctAnswer: ['25,98'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1
+            }
+        ]
+    },
+    {
+        id: 4,
+        section: 'Français',
+        score: 0,
+        questions: [ 
+            {
+                id: 42,
+                type: 'open-ended',
+                question: "Elle lui (couper) la parole.",
+                correctAnswer: ['a coupé'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 43,
+                type: 'open-ended',
+                question: "Ces informations nous (sembler) erronées.",
+                correctAnswer: ['ont semblé'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 44,
+                type: 'open-ended',
+                question: "Elle (préparer) plusieurs concours et s'(engager) à travailler.",
+                correctAnswer: ["a préparé" ,"s'est engagée"],
+                image: '',
+                numberOfInputs: 2
+            },
+            {
+                id: 45,
+                type: 'open-ended',
+                question: "Ce sont des films qu'il (voir) au cinéma. ",
+                correctAnswer: ['a vus'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 46,
+                type: 'open-ended',
+                question: "Ils (parler) un peu pour se distraire.",
+                correctAnswer: ['ont parlé'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 47,
+                type: 'open-ended',
+                question: "La discussion que nous (avoir) profitera à l'entreprise.",
+                correctAnswer: ['avons eu'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 48,
+                type: 'open-ended',
+                question: "Mettez à l'imparfait les verbes entre parenthèses : Jules (parler) très souvent à ses parents mais il les voit peu. ",
+                correctAnswer: ['parlait'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 49,
+                type: 'open-ended',
+                question: "Mettez à l'imparfait les verbes entre parenthèses : Nous (penser) que vous l'avez compris rapidement.",
+                correctAnswer: ['pensions'],
+                image: '',
+                numberOfInputs: 1
+            },
+            {
+                id: 48,
+                type: 'open-ended',
+                question: "Mettez à l'imparfait les verbes entre parenthèses : Elles (appeler) toujours leurs amis par des surnoms qui leur plaisent. ",
+                correctAnswer: ['parlait','plaisaient'],
+                image: '',
+                numberOfInputs: 1
+            }
+
+        ]
+    },
+    {
+        id: 3,
+        section: 'Anglais',
+        score: 0,
+        questions: [
+            {
+                id: 22,
+                type: 'multiple-choice',
+                question: 'There is ______ apple on ______ kitchen table',
+                answers: ['an / the',
+                 'a / an',
+                 'the / an',
+                  'the / the'],
+                correctAnswer: 'an / the'
+            },
+            {
+                id: 23,
+                type: 'multiple-choice',
+                question: "QWhat's ______ name ?",
+                answers: ['you', 'your', "you're", 'yours'],
+                correctAnswer: 'your'
+            },
+            {
+                id: 24,
+                type: 'multiple-choice',
+                question: "______ are you from ?",
+                answers: ['were', 'when', 'where','who'],
+                correctAnswer: 'where'
+            },
+            {
+                id: 25,
+                type: 'multiple-choice',
+                question: 'I have a sister, ______ name is sarah ?',
+                answers: ['she',
+                 'hers',
+                 'her',
+                  "she's"],
+                correctAnswer: 'her'
+            },
+            {
+                id: 26,
+                type: 'multiple-choice',
+                question: "She ______ in London.",
+                answers: ['living', 'lives', "live", 'leave'],
+                correctAnswer: 'lives'
+            },
+            {
+                id: 27,
+                type: 'multiple-choice',
+                question: "We ______ at the moment.",
+                answers: ['are studying', 'study', 'studies','are study'],
+                correctAnswer: 'are studying'
+            },
+            {
+                id: 28,
+                type: 'multiple-choice',
+                question: '______ you like something to drink ?',
+                answers: ["would",
+                 'do',
+                 'are',
+                  'have'],
+                correctAnswer: 'would'
+            },
+            {
+                id: 29,
+                type: 'multiple-choice',
+                question: "Our supplier ______ 12 different kinds copy machines",
+                answers: ['carrys', 
+                'carry', 
+                'carries',
+                 'ports'],
+                correctAnswer: 'carries'
+            },
+            {
+                id: 30,
+                type: 'multiple-choice',
+                question: "______ laptop is this ?",
+                answers: ["who's",
+                 'whose', 
+                 'who',
+                 'at who'],
+                correctAnswer: 'whose'
+            },
+            {
+                id: 31,
+                type: 'multiple-choice',
+                question: 'He ______ go to work yesterday, he was ill.',
+                answers: ['not',
+                 "don't",
+                 "is not",
+                  "didn't"],
+                correctAnswer: "didn't"
+            },
+            {
+                id: 32,
+                type: 'multiple-choice',
+                question: "This hotel ______ in the 1930's.",
+                answers: ['found', 
+                'was founded', 
+                "was founding", 
+                'founded'],
+                correctAnswer: "was founded"
+            },
+            {
+                id: 33,
+                type: 'multiple-choice',
+                question: "Our hotel is interested ______ purchasing 50 new double beds.",
+                answers: ['by', 
+                'from',
+                 'to',
+                'in'],
+                correctAnswer: 'in'
+            },
+            {
+                id: 34,
+                type: 'multiple-choice',
+                question: "She has been working here ______ 10 years.",
+                answers: ['since', 
+                'for', 
+                "during", 
+                'while'],
+                correctAnswer: "for"
+            },
+            {
+                id: 35,
+                type: 'multiple-choice',
+                question: "He's no longer works here, but he ______ manage the accounting department.",
+                answers: ['was', 
+                'use to',
+                 'was used to',
+                'used to'],
+                correctAnswer: 'used to'
+            },
+            {
+                id: 36,
+                type: 'multiple-choice',
+                question: "They're slowly ______ their new boss.",
+                answers: ['getting used to', 
+                'get used to',
+                 "getting use to",
+                'get use to'],
+                correctAnswer: "getting used to"
+            },
+            {
+                id: 37,
+                type: 'multiple-choice',
+                question: "I've bought my ticket, so next week ______ to Rome !",
+                answers: ['I will flying', 
+                'I will to fly', 
+                "I am flying", 
+                'I am fly'],
+                correctAnswer: "I am flying"
+            },
+            {
+                id: 38,
+                type: 'multiple-choice',
+                question: "When we ______ the design, we will send it to you",
+                answers: ['have finish', 
+                'finish',
+                 'finished',
+                'will finish'],
+                correctAnswer: 'finish'
+            },
+            {
+                id: 39,
+                type: 'multiple-choice',
+                question: "The CEO of our company has decided to ______ after 30 years in his post",
+                answers: ['step down', 
+                'step up',
+                'step over','step around'],
+                correctAnswer: "step down"
+            },
+            {
+                id: 40,
+                type: 'multiple-choice',
+                question: "______ we go to the gym now?",
+                answers: ["Let's", 
+                'Did', 
+                "Does", 
+                'Shall'],
+                correctAnswer: "Shall"
+            },
+            {
+                id: 41,
+                type: 'multiple-choice',
+                question: "______ the time I'm 25, i will have travelled the world",
+                answers: ['When', 
+                'In',
+                 'By',
+                'On'],
+                correctAnswer: 'By'
+            },
+            {
+                id: 32,
+                type: 'multiple-choice',
+                question: "If we ______ you, we would have told you",
+                answers: ['seen', 
+                'were seen', 
+                "have seen", 
+                'had seen'],
+                correctAnswer: "had seen"
+            },
+            {
+                id: 33,
+                type: 'multiple-choice',
+                question: "Our hotel is interested ______ purchasing 50 new double beds.",
+                answers: ['by', 
+                'from',
+                 'to',
+                'in'],
+                correctAnswer: 'in'
+            },
+            {
+                id: 34,
+                type: 'multiple-choice',
+                question: "She has been working here ______ 10 years.",
+                answers: ['since', 
+                'for', 
+                "during", 
+                'while'],
+                correctAnswer: "for"
+            },
+            {
+                id: 35,
+                type: 'multiple-choice',
+                question: "He's no longer works here, but he ______ manage the accounting department.",
+                answers: ['was', 
+                'use to',
+                 'was used to',
+                'used to'],
+                correctAnswer: 'used to'
+            },
+            {
+                id: 36,
+                type: 'multiple-choice',
+                question: "They're slowly ______ their new boss.",
+                answers: ['getting used to', 
+                'get used to',
+                 "getting use to",
+                'get use to'],
+                correctAnswer: "getting used to"
+            },
+            {
+                id: 37,
+                type: 'multiple-choice',
+                question: "I've bought my ticket, so next week ______ to Rome !",
+                answers: ['I will flying', 
+                'I will to fly', 
+                "I am flying", 
+                'I am fly'],
+                correctAnswer: "I am flying"
+            },
+            {
+                id: 38,
+                type: 'multiple-choice',
+                question: "When we ______ the design, we will send it to you",
+                answers: ['have finish', 
+                'finish',
+                 'finished',
+                'will finish'],
+                correctAnswer: 'finish'
+            },
+            {
+                id: 39,
+                type: 'multiple-choice',
+                question: "The CEO of our company has decided to ______ after 30 years in his post",
+                answers: ['step down', 
+                'step up',
+                'step over','step around'],
+                correctAnswer: "step down"
+            },
+            {
+                id: 40,
+                type: 'multiple-choice',
+                question: "______ we go to the gym now?",
+                answers: ["Let's", 
+                'Did', 
+                "Does", 
+                'Shall'],
+                correctAnswer: "Shall"
+            },
+            {
+                id: 41,
+                type: 'multiple-choice',
+                question: "______ the time I'm 25, i will have travelled the world",
+                answers: ['When', 
+                'In',
+                 'By',
+                'On'],
+                correctAnswer: 'By'
             }
         ]
     }
