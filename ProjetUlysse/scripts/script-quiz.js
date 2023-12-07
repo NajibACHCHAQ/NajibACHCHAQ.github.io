@@ -119,7 +119,6 @@ function initializeQuiz() {
 
         // Appeler la fonction pour gérer les réponses ouvertes
         handleOpenEndedAnswer(userAnswers, quizData[currentSectionIndex].questions[currentQuestionIndex].correctAnswer);
-
         // Passer à la question suivante ou à la section suivante
         moveToNextQuestionOrSection(false); // Utilisez false car le temps n'est pas écoulé
         console.log('After moveToNextQuestionOrSection');
@@ -209,35 +208,31 @@ function initializeQuiz() {
         console.log('Valeur de correctAnswers:', correctAnswers);
     
         // Filtrer les réponses vides de l'utilisateur
-        const trimmedUserAnswers = userAnswers.filter(answer => answer.trim() !== '');
+        const trimmedUserAnswers = userAnswers.map(answer => answer.trim());
     
         // Vérifier que correctAnswers est défini
         if (correctAnswers) {
-            let isCorrect = false;
+            let correctCount = 0;
     
             // Vérifier le format du modèle de réponse correcte
-            if (Array.isArray(correctAnswers[0])) {
+            if (Array.isArray(correctAnswers)) {
                 // Modèle avec une liste de chaînes
-                const correctSubset = correctAnswers[0].slice(0, trimmedUserAnswers.length);
-                isCorrect = trimmedUserAnswers.every((userAnswer, index) =>
-                    userAnswer.trim() === correctSubset[index].trim()
-                );
-            } else {
-                // Modèle avec une seule chaîne
-                isCorrect = trimmedUserAnswers.length === 1 &&
-                    trimmedUserAnswers[0].trim() === correctAnswers[0].trim();
+                correctCount = trimmedUserAnswers.reduce((count, userAnswer, index) => {
+                    const correctAnswer = correctAnswers[index] ? correctAnswers[index].trim() : '';
+                    if (userAnswer === correctAnswer) {
+                        return count + 1;
+                    }
+                    return count;
+                }, 0);
             }
     
             // Mettre à jour les scores et passer à la question suivante
-            if (isCorrect) {
-                console.log('Correct!');
-                updateScores(true);
-            } else {
-                console.log('Incorrect!');
-                updateScores(false);
-            }
+            console.log(`Nombre de champs corrects : ${correctCount}`);
+            updateScores(correctCount === trimmedUserAnswers.length);
+            console.log(scores)
         }
     }
+    
 
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {
