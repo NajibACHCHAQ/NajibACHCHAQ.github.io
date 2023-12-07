@@ -53,8 +53,9 @@ input{
     margin-bottom: 1vw !important;
     font-size: 1.4vw !important;
 }
-#reponses-container input,#question-container input{
+#reponses-container input,#question-container input, #modalQuestionForm input,.add-reponse input{
     width: 100%;
+
 }
 #create-question{
     margin: 0 auto;
@@ -65,7 +66,7 @@ section{
     width: 80%;
     justify-content: center;
     align-items: center;
-    padding: 1vw;
+    padding: 0.5vw;
     border: 2px solid rgba(120, 180, 237, 0.719);
     border-radius: 20px;
     margin: 0 auto;
@@ -152,7 +153,6 @@ select{
     flex-direction: column;
 }
 #questionList{    
-    padding-top: 5vw;
     margin-top: 1vw;
     display: flex;
     flex-direction: column;
@@ -191,6 +191,7 @@ select{
     border-radius: 10px 10px 0px 0px ;
     padding: 1vw;
     font-size: 1.7vw;
+    color: rgb(5, 27, 97);
     background-color: rgba(250, 235, 215, 0.184);
 
 }
@@ -203,10 +204,11 @@ select{
     width: 70%; /* Ajustez la largeur selon vos besoins */
     max-width: 600px; /* Définissez une largeur maximale si nécessaire */
     height: 600px;
-    background-color: rgba(231, 231, 231, 0.719);
+    background-color: rgba(231, 231, 231, 0.359);
     border: 2px solid grey;
     border-radius: 20px;
     display: none;
+    backdrop-filter: blur(10px);
 }
 .close{
     font-size: 2vw;
@@ -232,19 +234,10 @@ select{
 
 }
 .questionForm{
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
-}
-#blurredBackground {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    filter: blur(100%); /* Ajustez le niveau de flou selon vos préférences */
-    z-index: 999; /* Assurez-vous que le fond flouté est au-dessus du reste du contenu */
 }
