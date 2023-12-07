@@ -53,21 +53,21 @@
             <option value="">Choix-multiple</option>
         </select>
         </div>
-        <div><input type="text" placeholder="saisissez votre question"></div>
+        <div id="question-container"><input type="text" placeholder="saisissez votre question"></div>
         <div id="reponses-container">
             <div class="add-reponse">
                 <button type="button" onclick="ajouterChamp()">+</button>
                 <input class="reponse" type="text" placeholder="Saisissez une réponse">
             </div>
         </div>     
-        <button type="submit">Ajouter Question</button>
+        <button type="submit" id="create-question">Ajouter Question</button>
     </form>
 </section>
 <section>
     <!-- Liste des questions existantes -->
     <div id="questionList" class="display-question">
         <div style="display: flex; justify-content: space-between; width: 75%; margin-bottom: 1vw;">
-            <select name="" id="" >
+            <select name="" id="" style="width: fit-content; height: 2.4vw;">
                 <option value="">----</option>
                 <option value="">par section</option>
                 <option value="">par ordre croissant</option>

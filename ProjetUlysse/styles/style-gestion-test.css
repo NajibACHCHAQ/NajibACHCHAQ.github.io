@@ -43,6 +43,7 @@ body{
     background-attachment: fixed;
     background-color: rgba(95, 102, 102, 0.378);
     margin-bottom: 2vw;
+    padding-bottom: 1vw;
 
 }
 input{
@@ -50,14 +51,25 @@ input{
     border-radius: 5px;
     text-align: center;
     margin-bottom: 1vw !important;
+    font-size: 1.4vw !important;
+}
+#reponses-container input,#question-container input{
+    width: 100%;
+}
+#create-question{
+    margin: 0 auto;
 }
 section{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     align-items: center;
     padding: 1vw;
+    border: 2px solid rgba(120, 180, 237, 0.719);
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 1vw;
 }
 .titre-section{
     font-size: 1.2vw;
@@ -93,8 +105,10 @@ button:hover {
     margin-bottom: 1vw;
 }
 select{
-    width: fit-content;
-    border: 2px solid gainsboro;
+    width: 100%;
+    font-size: 1.4vw !important;
+    border: 2px solid rgb(51, 143, 230);
+    text-align: center;
 }
 
 .question-element{
@@ -117,6 +131,7 @@ select{
     height: 2vw;
     padding: 0.5vw;
     font-size: 1.5vw;
+    font-weight: bolder;
     background-color: rgb(68, 113, 136);
     color: white;
     border-radius: 100px;
