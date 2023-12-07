@@ -4,9 +4,8 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style-gestion-test.css">
     <link rel="icon" href="../assets/boatgreta2.png" type="image/png">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ulysse 21</title>
@@ -14,7 +13,127 @@
 
 
 <body>
+    <header>
+        <h1 class=" titre-section titre-page">Administration Quiz</h1>
+        <!-- Ajouter d'autres éléments d'en-tête si nécessaire -->
+    </header>
 
-    <script src="../scripts/script.js"></script>
+    <div class="admin-quiz">
+        <!-- Section pour gérer les sections -->
+        <section id="sections">
+            <h2 class="titre-section">Ajouter une nouvelle section</h2>
+            <!-- Formulaire pour ajouter une nouvelle section -->
+            <form id="sectionForm">
+                <label for="sectionName">Nom de la Section :</label>
+                <input type="text" id="sectionName" name="sectionName" required>
+                <button type="submit">Ajouter Section</button>
+            </form>
+            <!-- Liste des sections existantes -->
+            <ul id="sectionList">
+                List des section ici
+            </ul>
+        </section>
+
+        <!-- Section pour gérer les questions -->
+<section id="questions">
+    <h2 class="titre-section">Ajouter une nouvelle Questions</h2>
+    <!-- Formulaire pour ajouter une nouvelle question -->
+    <form id="questionForm" class="questionForm">
+        <div class="choix">
+            <label for="">Selectionnez une section</label>
+        <select name="" id="">
+            <option value="">Comptabilité</option>
+            <option value="">Francais</option>
+            <option value="">Anglais</option>
+        </select>
+        </div>
+        <div class="choix">
+            <label for="">Selectionnez un type de question</label>
+        <select name="" id="">
+            <option value="">Ouverte</option>
+            <option value="">Choix-multiple</option>
+        </select>
+        </div>
+        <div><input type="text" placeholder="saisissez votre question"></div>
+        <div id="reponses-container">
+            <div class="add-reponse">
+                <button type="button" onclick="ajouterChamp()">+</button>
+                <input class="reponse" type="text" placeholder="Saisissez une réponse">
+            </div>
+        </div>     
+        <button type="submit">Ajouter Question</button>
+    </form>
+
+    <!-- Liste des questions existantes -->
+    <div id="questionList" class="display-question">
+        <div class="entete-list" >
+            <div>Id</div>
+            <div >Section</div>
+            <div >Question</div>
+        </div>
+        <span type="button" class="question-element open-modal-button" data-question-id="1">
+            <div class="idQ">1</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="2">
+            <div class="idQ">2</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="3">
+            <div class="idQ">3</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="4">
+            <div class="idQ">4</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="5">
+            <div class="idQ">5</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="6">
+            <div class="idQ">6</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="7">
+            <div class="idQ">7</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+        <span type="button" class="question-element open-modal-button" data-question-id="8">
+            <div class="idQ">8</div>
+            <div class="section-name">Francais</div>
+            <div class="apercuQ">Quelle est le synonyme de ...</div>
+        </span>
+    </div>
+</section>
+
+
+    </div>
+<!-- La modal -->
+<div id="questionModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="header-modal"><h2>Suppression / Modification</h2>
+        <span class="close">&times;</span></div>
+        <!-- Contenu de la modal -->
+        
+        <form id="modalQuestionForm" class="questionForm">
+           <input type="text">
+           <input type="text">
+           <input type="text">
+        </form>
+    </div>
+</div>
+
+
+    <script src="../scripts/gestion-quiz.js"></script>
+
 </body>
+
 </html>

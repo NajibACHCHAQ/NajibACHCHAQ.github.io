@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../assets/hexagon-background.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.titre-page{
+    margin-top: 1vw !important;
+    font-size: 1.5vw !important;
+    font-weight: bold;
+    background-color: rgb(13, 43, 197) !important;
+    padding: 1.5vw !important;
+    color: antiquewhite;
+}
+
+.admin-quiz{
+    width: 90%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+    border: 2px solid grey;
+    border-radius: 20px;
+    margin-top: 0.5vw;
+    background: url(../assets/hexagon-background.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(95, 102, 102, 0.378);
+
+}
+input{
+    border: 2px solid rgb(51, 143, 230);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1vw !important;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 1vw;
+}
+.titre-section{
+    font-size: 1.2vw;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5vw;
+    background-color: rgb(51, 143, 230);
+    border-radius: 50px;
+    margin-bottom: 1vw;
+}
+
+button{
+    width: fit-content;
+    background-color: rgb(116, 255, 47) !important;
+    font-weight: bold;
+    color: rgb(38, 38, 38);
+    padding: 0.3vw !important;
+    border-radius: 100px;
+    color: white;
+    font-size: 1vw;
+}
+button:hover {
+    background-color: rgb(47, 255, 57) !important;
+
+}
+
+.questionForm{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto ;
+    justify-content: space-between;
+}
+.choix{
+    margin-bottom: 1vw;
+}
+select{
+    width: fit-content;
+    border: 2px solid gainsboro;
+}
+
+.question-element{
+    width: 80%;
+    margin: 1vw;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    border: 2px solid grey;
+    padding: 1vw;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.399) !important;
+}
+.question-element:hover{
+    background-color: rgba(128, 128, 128, 0.702);
+}
+.idQ{
+    width: 2vw;
+    height: 2vw;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    background-color: rgb(68, 113, 136);
+    color: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-right: 1vw;
+}
+
+.section-name{
+    font-size: 2.2vw;
+    color: rgb(82, 82, 117);
+}
+
+#reponses-container{
+    display: flex;
+    flex-direction: column;
+}
+#questionList{    
+    padding-top: 5vw;
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border-radius: 20px;
+
+}
+.add-reponse{
+    display: flex;
+    justify-content: center;
+}
+
+.add-reponse button{
+    font-size: 2vw;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    background-color: transparent !important;
+    color: green;
+    font-size: 2.3vw;
+    font-weight: bold;
+    margin-bottom: 1.2vw;
+}
+
+.entete-list{
+    display: grid;
+    width: 80%;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-right: 2px solid grey;
+    border-radius: 10px 10px 0px 0px ;
+    padding: 1vw;
+    font-size: 1.7vw;
+    background-color: rgba(250, 235, 215, 0.184);
+
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%; /* Ajustez la largeur selon vos besoins */
+    max-width: 600px; /* Définissez une largeur maximale si nécessaire */
+    height: 600px;
+    background-color: rgba(231, 231, 231, 0.719);
+    border: 2px solid grey;
+    border-radius: 20px;
+    display: none;
+}
+.close{
+    font-size: 2vw;
+    color: red;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+}
+
+.header-modal{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: rgba(59, 132, 210, 0.599);
+    padding: 0.5vw;
+    border-radius: 20px 20px 0 0;
+}
+
+.header-modal h2 {
+    font-size: 1.8vw;
+
+}
+.questionForm{
+    width: fit-content;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
