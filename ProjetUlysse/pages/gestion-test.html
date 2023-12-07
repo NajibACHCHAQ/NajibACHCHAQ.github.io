@@ -14,7 +14,6 @@
 
 <body>
     <header>
-        <h1 class=" titre-section titre-page">Administration Quiz</h1>
         <!-- Ajouter d'autres éléments d'en-tête si nécessaire -->
     </header>
 
@@ -63,9 +62,20 @@
         </div>     
         <button type="submit">Ajouter Question</button>
     </form>
-
+</section>
+<section>
     <!-- Liste des questions existantes -->
     <div id="questionList" class="display-question">
+        <div style="display: flex; justify-content: space-between; width: 75%; margin-bottom: 1vw;">
+            <select name="" id="" >
+                <option value="">----</option>
+                <option value="">par section</option>
+                <option value="">par ordre croissant</option>
+                <option value="">par ordre décroissant</option>
+            </select>
+            <input type="text" placeholder="mots-clé">
+        </div>
+        
         <div class="entete-list" >
             <div>Id</div>
             <div >Section</div>
@@ -78,13 +88,13 @@
         </span>
         <span type="button" class="question-element open-modal-button" data-question-id="2">
             <div class="idQ">2</div>
-            <div class="section-name">Francais</div>
-            <div class="apercuQ">Quelle est le synonyme de ...</div>
+            <div class="section-name">Anglais</div>
+            <div class="apercuQ">What is _______ name ?</div>
         </span>
         <span type="button" class="question-element open-modal-button" data-question-id="3">
             <div class="idQ">3</div>
-            <div class="section-name">Francais</div>
-            <div class="apercuQ">Quelle est le synonyme de ...</div>
+            <div class="section-name">Administratif</div>
+            <div class="apercuQ">J'écris un mail, je dois utiliser le même ...</div>
         </span>
         <span type="button" class="question-element open-modal-button" data-question-id="4">
             <div class="idQ">4</div>
@@ -116,7 +126,14 @@
 
 
     </div>
+
+
+
+    <script src="../scripts/gestion-quiz.js"></script>
+   
+</body>
 <!-- La modal -->
+<div id="blurredBackground"></div>
 <div id="questionModal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="header-modal"><h2>Suppression / Modification</h2>
@@ -124,16 +141,32 @@
         <!-- Contenu de la modal -->
         
         <form id="modalQuestionForm" class="questionForm">
-           <input type="text">
-           <input type="text">
-           <input type="text">
+            <div class="choix">
+                <label for="">Selectionnez une section</label>
+            <select name="" id="">
+                <option value="">Comptabilité</option>
+                <option value="">Francais</option>
+                <option value="">Anglais</option>
+            </select>
+            </div>
+           <div class="choix">
+            <label for="">Selectionnez un type de question</label>
+        <select name="" id="">
+            <option value="">Ouverte</option>
+            <option value="">Choix-multiple</option>
+        </select>
+        <div><input type="text" placeholder="saisissez votre question"></div>
+        <div id="reponses-update-container">
+            <div class="add-reponse">
+                <button type="button" onclick="ajouterChampUpdate()">+</button>
+                <input class="reponse" type="text" placeholder="Saisissez une réponse">
+            </div>
+        </div>     
+        
+        </div>
+        <button type="submit">Ajouter Question</button>
         </form>
     </div>
 </div>
-
-
-    <script src="../scripts/gestion-quiz.js"></script>
-
-</body>
 
 </html>

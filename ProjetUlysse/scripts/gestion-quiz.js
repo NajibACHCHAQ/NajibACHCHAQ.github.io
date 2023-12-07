@@ -25,6 +25,16 @@ function ajouterChamp() {
     // Ajouter le nouveau champ à votre conteneur
     document.getElementById('reponses-container').appendChild(nouveauChamp);
 }
+function ajouterChampUpdate() {
+    // Créer un nouveau champ d'entrée
+    var nouveauChamp = document.createElement('input');
+    nouveauChamp.className = 'reponse';
+    nouveauChamp.type = 'text';
+    nouveauChamp.placeholder = 'Saisissez une réponse';
+
+    // Ajouter le nouveau champ à votre conteneur
+    document.getElementById('reponses-update-container').appendChild(nouveauChamp);
+}
 document.addEventListener('DOMContentLoaded', function () {
     // Sélectionnez la modal
     const modal = document.getElementById('questionModal');
@@ -33,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const openModalButtons = document.querySelectorAll('.open-modal-button');
     openModalButtons.forEach(function (button) {
         button.addEventListener('click', function () {
+
             modal.style.display = 'block';
             console.log("click")
         });
@@ -45,12 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
     });
 
-    // Gestionnaire d'événements pour fermer la modal en cliquant en dehors de la modal
-    window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
+    // // Gestionnaire d'événements pour fermer la modal en cliquant en dehors de la modal
+    // window.addEventListener('click', function (event) {
+    //     if (event.target === modal) {
+    //         modal.style.display = 'none';
+    //     }
+    // });
 
     const modalQuestionForm = document.getElementById('modalQuestionForm');
     modalQuestionForm.addEventListener('submit', function (event) {
