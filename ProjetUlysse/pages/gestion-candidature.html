@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style-gestion-test.css">
+    <link rel="stylesheet" href="../styles/style-gestion-candidature.css">
+    <link rel="icon" href="../assets/boatgreta2.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulysse 21</title>
+</head>
+
+
+<body>
+    <H2>Gestion candidature</H2>
+    <section>
+        <!-- Liste des questions existantes -->
+        <div id="questionList" class="display-question">
+            <div style="display: flex; justify-content: space-between; width: 75%; margin-bottom: 1vw;">
+                <select name="" id="" style="width: fit-content; height: 2.4vw;">
+                    <option value="">----</option>
+                    <option value="">par section</option>
+                    <option value="">par ordre croissant</option>
+                    <option value="">par ordre décroissant</option>
+                </select>
+                <input type="text" placeholder="mots-clé">
+            </div>
+
+            <a href="">Exporter CSV</a>
+            
+            <div class="entete-list" >
+                <div>Id</div>
+                <div>Nom</div>
+                <div>email</div>
+                <div>score</div>
+                <div>statut</div>
+            </div>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">1</div>
+                <div class="section-name">Jean Francois H</div>
+                <div class="apercuQ">JF@gmail.com</div>
+                <div class="apercuQ">80/96</div>
+                <div class="apercuQ">traité</div>
+
+            </span>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">2</div>
+                <div class="section-name">Michel H</div>
+                <div class="apercuQ">mh@gmail.com</div>
+                <div class="apercuQ">80/96</div>
+                <div class="apercuQ">traité</div>
+
+            </span>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">3</div>
+                <div class="section-name">Jean Francois H</div>
+                <div class="apercuQ">JF@gmail.com</div>
+                <div class="apercuQ">80/96</div>
+                <div class="apercuQ">traité</div>
+
+            </span>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">4</div>
+                <div class="section-name">Mireille MATHIEUX</div>
+                <div class="apercuQ">MM@gmail.com</div>
+                <div class="apercuQ">85/96</div>
+                <div class="apercuQ">attente</div>
+
+            </span>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">5</div>
+                <div class="section-name">Gilbert ROBERT</div>
+                <div class="apercuQ">GR@gmail.com</div>
+                <div class="apercuQ">50/96</div>
+                <div class="apercuQ">traité</div>
+
+            </span>
+            <span type="button" class="question-element open-modal-button" data-question-id="1">
+                <div class="idQ">6</div>
+                <div class="section-name">Cammille DELATOUR</div>
+                <div class="apercuQ">CD@gmail.com</div>
+                <div class="apercuQ">96/96</div>
+                <div class="apercuQ">attente</div>
+
+            </span>
+
+        </div>
+    </section>
+    
+
+    
+    
+    
+        <script src="../scripts/gestion-quiz.js"></script>
+       
+
+
+
+    <script src="../scripts/gestion-quiz.js"></script>
+   
+</body>
+<!-- La modal -->
+<div id="questionModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="header-modal"><h2>Suppression / Modification</h2>
+        <span class="close">&times;</span></div>
+        <!-- Contenu de la modal -->
+        
+        <form id="modalQuestionForm" class="questionForm">
+            <div class="choix">
+                <label for="">Selectionnez une section</label>
+            <select name="" id="">
+                <option value="">Comptabilité</option>
+                <option value="">Francais</option>
+                <option value="">Anglais</option>
+            </select>
+            </div>
+           <div class="choix">
+            <label for="">Selectionnez un type de question</label>
+        <select name="" id="">
+            <option value="">Ouverte</option>
+            <option value="">Choix-multiple</option>
+        </select>
+        <div><label for="">Saisissez votre question</label><input type="text" placeholder="saisissez votre question"></div>
+        <div id="reponses-update-container">
+            <div class="add-reponse">
+                <button type="button" onclick="ajouterChampUpdate()">+</button>
+                <div><label for="">Saisissez vos réponse(s)</label><input class="reponse" type="text" placeholder="Saisissez une réponse"></div>
+            </div>
+        </div>     
+        
+        </div>
+        <button type="submit">Ajouter Question</button>
+        </form>
+    </div>
+</div>
+
+</html>

@@ -115,8 +115,7 @@ select{
 .question-element{
     width: 80%;
     margin: 1vw;
-    display: grid;
-    grid-template-columns: auto auto auto ;
+    display: flex;
     border: 2px solid grey;
     padding: 1vw;
     justify-content: space-between;
@@ -181,9 +180,8 @@ select{
 }
 
 .entete-list{
-    display: grid;
+    display: flex;
     width: 80%;
-    grid-template-columns: auto auto auto;
     justify-content: space-between;
     border-top: 2px solid grey;
     border-left: 2px solid grey;
