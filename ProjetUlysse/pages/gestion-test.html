@@ -15,9 +15,9 @@
 <body>
     <header>
         <div class="menu-dashboard" >
-            <a href="gestion-candidature.html" ><div >candidature</div></a>
+            <a href="gestion-candidature.html" ><div >Candidature</div></a>
             <h1>Gestion test</h1>
-            <a href="dashboard.html" ><div >dashboard</div></a>         
+            <a href="dashboard.html" ><div >Tableau de bord</div></a>         
         </div>
 
     </header>
@@ -28,7 +28,7 @@
             <h2 class="titre-section">Ajouter une nouvelle section</h2>
             <!-- Formulaire pour ajouter une nouvelle section -->
             <form id="sectionForm">
-                <label for="sectionName">Nom de la Section :</label>
+                <label for="sectionName">Nom de la Section</label>
                 <input type="text" id="sectionName" name="sectionName" required>
                 <button type="submit">Ajouter Section</button>
             </form>
@@ -154,9 +154,7 @@
 <div id="questionModal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="header-modal"><h2>Suppression / Modification</h2>
-        <span class="close">&times;</span></div>
-        <!-- Contenu de la modal -->
-        
+        <span class="close">&times;</span></div>       
         <form id="modalQuestionForm" class="questionForm">
             <div class="choix">
                 <label for="">Selectionnez une section</label>
@@ -178,10 +176,13 @@
                 <button type="button" onclick="ajouterChampUpdate()">+</button>
                 <div><label for="">Saisissez vos réponse(s)</label><input class="reponse" type="text" placeholder="Saisissez une réponse"></div>
             </div>
-        </div>     
-        
+        </div>             
         </div>
-        <button type="submit">Ajouter Question</button>
+        <div class="button-modal-container" >
+            <button type="submit" id="update-question">Modifier</button>
+            <button type="submit" id="update-question">Supprimer</button>
+        </div>
+        
         </form>
     </div>
 </div>
