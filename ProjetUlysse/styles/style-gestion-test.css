@@ -296,3 +296,9 @@ header{
     border-radius:10px ;
 
 }
+
+.menu-dashboard h1{
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: rgba(44, 44, 105, 0.785);
+}
