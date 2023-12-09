@@ -104,7 +104,7 @@ function initializeQuiz() {
             }
         }        
         // Démarrer le timer pour la question actuelle
-        startTimer(30, () => moveToNextQuestionOrSection(() => selectAnswer()), () => {});
+        startTimer(question.delay, () => moveToNextQuestionOrSection(() => selectAnswer()), () => {});
     }
 
     // Fonction appelée lorsqu'un utilisateur soumet une réponse à une question ouverte

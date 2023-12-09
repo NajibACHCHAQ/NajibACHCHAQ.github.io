@@ -9,7 +9,8 @@ const quizData = [
                 type: 'multiple-choice',
                 question: "Vous participez à une nouvelle offre promotionnelle, vous devez:",
                 answers: ['Soumettre une idée', "Distribuer l'offre", 'Participer au marketing', 'Je ne sais pas'],
-                correctAnswer: "Distribuer l'offre"
+                correctAnswer: "Distribuer l'offre",
+                delay:30
             },
             {
                 id: 2,
@@ -19,7 +20,8 @@ const quizData = [
                         'Vos dossier sont à jour, et vous pouvez traiter rapidement celui-ci sans trop dépasser vos horaires',
                         'Le moment est mal choisi, vous estimez que vous avez des dossiers plus urgents',
                         'Je ne sais pas'],
-                correctAnswer: 'Vos dossier sont à jour, et vous pouvez traiter rapidement celui-ci sans trop dépasser vos horaires'
+                correctAnswer: 'Vos dossier sont à jour, et vous pouvez traiter rapidement celui-ci sans trop dépasser vos horaires',
+                delay:30
             },
             {
                 id: 3,
@@ -29,14 +31,16 @@ const quizData = [
                  "Ces réunions successives reflètent l'incapacité de chacun à travailler en autonomie",
                   "C'est un moment d'échanges importants",
                    'Je ne sais pas'],
-                correctAnswer: "C'est un moment d'échanges importants"
+                correctAnswer: "C'est un moment d'échanges importants",
+                delay:30
             },
             {
                 id: 4,
                 type: 'multiple-choice',
                 question: "Dans la vie en général, vous êtes plutôt :",
                 answers: ['Dans les délais', "En avance", 'Hors délais', 'Je ne sais pas'],
-                correctAnswer: "Dans les délais"
+                correctAnswer: "Dans les délais",
+                delay:45
             },
             {
                 id: 5,
@@ -46,7 +50,8 @@ const quizData = [
                         "Je note tout et comme cela je n'oublie rien et tiens compte des modifications",
                         'Les taches sont notées, barrées et parfois reportées',
                         'Je ne sais pas'],
-                correctAnswer: "Je note tout et comme cela je n'oublie rien et tiens compte des modifications"
+                correctAnswer: "Je note tout et comme cela je n'oublie rien et tiens compte des modifications",
+                delay:30
             },
             {
                 id: 6,
@@ -56,7 +61,8 @@ const quizData = [
                  "Je dois répondre avant la fin de la 3ème sonnerie",
                   "Je laisse sonner si je suis déjà en ligne",
                    'Je ne sais pas'],
-                correctAnswer: "Je dois répondre avant la fin de la 3ème sonnerie"
+                correctAnswer: "Je dois répondre avant la fin de la 3ème sonnerie",
+                delay:30
             },
             {
                 id: 7,
@@ -66,7 +72,8 @@ const quizData = [
                         "J'envoie un mail à tout le monde pour prévenir",
                         "J'informe sur un agenda partagé mon absence et la marche à suivre",
                         'Je ne sais pas'],
-                correctAnswer: "J'informe sur un agenda partagé mon absence et la marche à suivre"
+                correctAnswer: "J'informe sur un agenda partagé mon absence et la marche à suivre",
+                delay:30
             },
             {
                 id: 8,
@@ -76,7 +83,8 @@ const quizData = [
                  "Merci de bien vouloir rester en ligne",
                   "Je ne sais pas, je me renseigne",
                    'Je ne sais pas'],
-                correctAnswer: "Merci de bien vouloir rester en ligne"
+                correctAnswer: "Merci de bien vouloir rester en ligne",
+                delay:30
             },
             {
                 id: 9,
@@ -86,7 +94,8 @@ const quizData = [
                  "Je demande à la secrétaire de la faire et de me l'envoyer par mail pour l'afficher ensuite",
                   "Je la crée et je l'affiche",
                    'Je ne sais pas'],
-                correctAnswer: "Je la crée et je l'affiche"
+                correctAnswer: "Je la crée et je l'affiche",
+                delay:30
             },
             {
                 id: 10,
@@ -96,7 +105,8 @@ const quizData = [
                         "Afnor",
                         "Agnor",
                         'Je ne sais pas'],
-                correctAnswer: "Afnor"
+                correctAnswer: "Afnor",
+                delay:30
             },
             {
                 id: 11,
@@ -106,7 +116,8 @@ const quizData = [
                  "Je la connais et je peux la faire attendre et finir mon travail",
                   "Je traite tout le monde de la même façon",
                    'Je ne sais pas'],
-                correctAnswer: "Je traite tout le monde de la même façon"
+                correctAnswer: "Je traite tout le monde de la même façon",
+                delay:30
             },
             {
                 id: 12,
@@ -116,7 +127,8 @@ const quizData = [
                  "Base de données",
                   "Tableur",
                    'Je ne sais pas'],
-                correctAnswer: "Tableur"
+                correctAnswer: "Tableur",
+                delay:30
             },
             {
                 id: 13,
@@ -125,7 +137,8 @@ const quizData = [
                 answers: ['Oui',
                         "Non",
                         'Je ne sais pas'],
-                correctAnswer: "Non"
+                correctAnswer: "Non",
+                delay:30
             },
             {
                 id: 14,
@@ -135,7 +148,8 @@ const quizData = [
                  "Un site internet dédié",
                   "Un logiciel type diaporame",
                    'Je ne sais pas'],
-                correctAnswer: "Un site internet dédié"
+                correctAnswer: "Un site internet dédié",
+                delay:30
             },
             {
                 id: 15,
@@ -145,7 +159,8 @@ const quizData = [
                  "Risque de distraction (téléphone, jeux...)",
                   "Difficulté de créer une synergie",
                    'Je ne sais pas'],
-                correctAnswer: "Difficulté de créer une synergie"
+                correctAnswer: "Difficulté de créer une synergie",
+                delay:30
             },
         ]
     },
@@ -162,7 +177,8 @@ const quizData = [
                  'Une réduction financière',
                  'Une réduction commerciale liée à un préjudice',
                  'je ne sais pas'],
-                correctAnswer: 'Une réduction commerciale liée à un préjudice'
+                correctAnswer: 'Une réduction commerciale liée à un préjudice',
+                delay:30
             },
             {
                 id: 17,
@@ -172,7 +188,8 @@ const quizData = [
                  'Une réduction financière',
                   "Une réduction commerciale liée au statut du client ou à l'importance de la commande",
                    'Je ne sais pas'],
-                correctAnswer: "Une réduction commerciale liée au statut du client ou à l'importance de la commande"
+                correctAnswer: "Une réduction commerciale liée au statut du client ou à l'importance de la commande",
+                delay:30
             },
             {
                 id: 18,
@@ -182,7 +199,8 @@ const quizData = [
                  "Une réduction commerciale liée à l'importance des commandes sur une période",
                   'Une réduction commerciale liée à un préjudice', 
                   'Je ne sais pas'],
-                correctAnswer: "Une réduction commerciale liée à l'importance des commandes sur une période"
+                correctAnswer: "Une réduction commerciale liée à l'importance des commandes sur une période",
+                delay:30
             },
             {
                 id: 19,
@@ -192,7 +210,8 @@ const quizData = [
                  'Une réduction comemrciale liée au mode de paiement',
                  'Une réduction commerciale',
                  'je ne sais pas'],
-                correctAnswer: 'Une réduction financière liée au mode de paiement'
+                correctAnswer: 'Une réduction financière liée au mode de paiement',
+                delay:30
             },
             {
                 id: 20,
@@ -202,13 +221,15 @@ const quizData = [
                  'Une taxe sur les achats',
                   "Une taxe sur les achats et les ventes",
                    'Je ne sais pas'],
-                correctAnswer: "Une taxe sur les achats et les ventes"
+                correctAnswer: "Une taxe sur les achats et les ventes",
+                delay:30
             },
             {
                 id: 21,
                 type: 'open-ended',
                 question: 'Que veut dire le sigle PGI ?',
                 correctAnswer: ['progiciel de gestion intégré'],
+                delay:30,
                 numberOfInputs: 1
                 
             },
@@ -217,7 +238,8 @@ const quizData = [
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires d\'un courrier d\'entreprise.',
                 correctAnswer: ['SIREN','nom entreprise','forme juridique','montant capital','adresse siège social','RCS'],
-                numberOfInputs: 3
+                numberOfInputs: 3,
+                delay:30
                 
             },
             {
@@ -225,7 +247,8 @@ const quizData = [
                 type: 'open-ended',
                 question: 'Citez 3 mentions obligatoires sur une facture',
                 correctAnswer: ["date, numéro de facture, nom de l'entreprise", "adresse siège", 'adresse facturation', 'SIREN', "SIRET", "nom du client", "taux TVA", "Identifiant TVA"],
-                numberOfInputs: 3
+                numberOfInputs: 3,
+                delay:30
                 
             },
             {
@@ -233,7 +256,8 @@ const quizData = [
                 type: 'open-ended',
                 question: 'Citez 2 moyens de communication internes en entreprise',
                 correctAnswer: ['mail', 'site internet', 'réseaux sociaux', 'téléphone', 'courrier', 'affichage'],
-                numberOfInputs: 2
+                numberOfInputs: 2,
+                delay:30
                 
             },
             {
@@ -241,7 +265,8 @@ const quizData = [
                 type: 'open-ended',
                 question: 'Citez 2 moyens de paiement professionnel',
                 correctAnswer: ['chèque', 'prélévement', 'virement', 'carte bancaire', 'effet de commerce', 'lettre de change', 'billet à ordre'],
-                numberOfInputs: 2
+                numberOfInputs: 2,
+                delay:30
                 
             },
             {
@@ -249,7 +274,8 @@ const quizData = [
                 type: 'open-ended',
                 question: 'Citez 2 moyens de classement dans une entreprise',
                 correctAnswer: ['alphabétique', 'alphanumérique', 'cloud', 'réseau', 'dossier suspendu', 'collaboratif', 'par auteur'],
-                numberOfInputs: 2
+                numberOfInputs: 2,
+                delay:30
                 
             }
 
@@ -270,21 +296,24 @@ const quizData = [
                  'À faire des factures',
                  'À enregistrer des écritures',
                   'Je ne sais pas'],
-                correctAnswer: 'À enregistrer des écritures'
+                correctAnswer: 'À enregistrer des écritures',
+                delay:30
             },
             {
                 id: 28,
                 type: 'multiple-choice',
                 question: "Quelle est la qualité première d’un comptable ?",
                 answers: ['Etre fort en maths', 'Savoir lire', 'Rester longtemps assis', 'Je ne sais pas'],
-                correctAnswer: 'Savoir lire'
+                correctAnswer: 'Savoir lire',
+                delay:30
             },
             {
                 id: 29,
                 type: 'multiple-choice',
                 question: "Tenir une comptabilité est obligatoire ?",
                 answers: ['Vrai', 'Faux', 'Je ne sais pas'],
-                correctAnswer: 'Vrai'
+                correctAnswer: 'Vrai',
+                delay:30
             },
             {
                 id: 30,
@@ -294,21 +323,24 @@ const quizData = [
                  'Pointer le compte banque',
                  'Etablir le bilan',
                   'Je ne sais pas'],
-                correctAnswer: 'Démarcher les clients'
+                correctAnswer: 'Démarcher les clients',
+                delay:30
             },
             {
                 id: 31,
                 type: 'multiple-choice',
                 question: "Le bilan est composé de : ",
                 answers: ['Du débit et du passif', 'Du débit et du crédit', "De l'actif et du passif", 'Je ne sais pas'],
-                correctAnswer: "De l'actif et du passif"
+                correctAnswer: "De l'actif et du passif",
+                delay:30
             },
             {
                 id: 32,
                 type: 'multiple-choice',
                 question: "On a l’obligation de faire le bilan tous les mois :",
                 answers: ['Vrai', 'Faux', 'Je ne sais pas'],
-                correctAnswer: 'Faux'
+                correctAnswer: 'Faux',
+                delay:30
             },
             {
                 id: 33,
@@ -318,7 +350,8 @@ const quizData = [
                  'Le nombre de salariés',
                  'Les biens et les ressources',
                   'Je ne sais pas'],
-                correctAnswer: 'Les biens et les ressources'
+                correctAnswer: 'Les biens et les ressources',
+                delay:30
             },
             {
                 id: 34,
@@ -328,7 +361,8 @@ const quizData = [
                 'Quand l’entreprise ne règle pas ses dépenses', 
                 'Quand on fait la différence entre ses charges et ses produits',
                  'Je ne sais pas'],
-                correctAnswer: 'Quand on fait la différence entre ses charges et ses produits'
+                correctAnswer: 'Quand on fait la différence entre ses charges et ses produits',
+                delay:30
             },
             {
                 id: 35,
@@ -338,7 +372,8 @@ const quizData = [
                  'Une ardoise client', 
                  'Une créance',
                  'Je ne sais pas'],
-                correctAnswer: 'Une créance'
+                correctAnswer: 'Une créance',
+                delay:30
             },
             {
                 id: 36,
@@ -348,7 +383,8 @@ const quizData = [
                  'A la banque',
                  "A l'entreprise",
                   'Je ne sais pas'],
-                correctAnswer: "A l'entreprise"
+                correctAnswer: "A l'entreprise",
+                delay:30
             },
             {
                 id: 37,
@@ -358,7 +394,8 @@ const quizData = [
                 'A déterminer le résultat de l’année', 
                 "À renseigner comment l’entreprise est exploité", 
                 'Je ne sais pas'],
-                correctAnswer: "A déterminer le résultat de l’année"
+                correctAnswer: "A déterminer le résultat de l’année",
+                delay:30
             },
             {
                 id: 38,
@@ -368,7 +405,8 @@ const quizData = [
                 'À lister les soldes des comptes',
                  'Ça n’existe pas',
                 'Je ne sais pas'],
-                correctAnswer: 'À lister les soldes des comptes'
+                correctAnswer: 'À lister les soldes des comptes',
+                delay:30
             },
             {
                 id: 39,
@@ -378,7 +416,8 @@ const quizData = [
                 'À un organisme de crédit type Sofinco', 
                 "Au fournisseur", 
                 'Je ne sais pas'],
-                correctAnswer: "Au fournisseur"
+                correctAnswer: "Au fournisseur",
+                delay:30
             },
             {
                 id: 40,
@@ -388,7 +427,8 @@ const quizData = [
                 'Non c’est interdit',
                  'Oui il peut, c’est inscrit sur sa facture',
                 'Je ne sais pas'],
-                correctAnswer: 'Oui il peut, c’est inscrit sur sa facture'
+                correctAnswer: 'Oui il peut, c’est inscrit sur sa facture',
+                delay:30
             },
             {
                 id: 41,
@@ -398,7 +438,8 @@ const quizData = [
                 'Les stocks',
                  "Les biens de l'entreprise",
                 'Je ne sais pas'],
-                correctAnswer: "Les biens de l'entreprise"
+                correctAnswer: "Les biens de l'entreprise",
+                delay:30
             },
             {
                 id: 42,
@@ -408,7 +449,8 @@ const quizData = [
                 'Un mode de paiement', 
                 "Un chèque du CIC", 
                 'Je ne sais pas'],
-                correctAnswer: "Un mode de paiement"
+                correctAnswer: "Un mode de paiement",
+                delay:30
             },
             {
                 id: 43,
@@ -418,7 +460,8 @@ const quizData = [
                 'La déchirer et en demander une autre',
                  'Réclamer un avoir',
                 'Je ne sais pas'],
-                correctAnswer: 'Réclamer un avoir'
+                correctAnswer: 'Réclamer un avoir',
+                delay:30
             },
             {
                 id: 44,
@@ -427,7 +470,8 @@ const quizData = [
                 answers: ['Vrai', 
                 'Faux',
                 'Je ne sais pas'],
-                correctAnswer: "Faux"
+                correctAnswer: "Faux",
+                delay:30
             },
             {
                 id: 45,
@@ -437,7 +481,8 @@ const quizData = [
                 'Un relevé du fournisseur', 
                 "Un chèque", 
                 'Je ne sais pas'],
-                correctAnswer: "Un relevé du fournisseur"
+                correctAnswer: "Un relevé du fournisseur",
+                delay:30
             },
             {
                 id: 46,
@@ -447,7 +492,8 @@ const quizData = [
                 'Le débit et le crédit du même compte',
                  'Au moins 3 lignes',
                 'Je ne sais pas'],
-                correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte'
+                correctAnswer: 'Au moins un débit d’un compte et un crédit d’un autre compte',
+                delay:30
             }
         ]
     },
@@ -462,7 +508,8 @@ const quizData = [
                 question: "D'après le document veuillez compléter : Remise 5% ",
                 correctAnswer: ['44'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 48,
@@ -470,7 +517,8 @@ const quizData = [
                 question: "D'après le document veuillez compléter : Sous-total remise reduite ",
                 correctAnswer: ['836'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 49,
@@ -478,7 +526,8 @@ const quizData = [
                 question: "D'après le document veuillez compléter : Total HT ",
                 correctAnswer: ['876'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 50,
@@ -486,7 +535,8 @@ const quizData = [
                 question: "D'après le document veuillez compléter : TVA 20% ",
                 correctAnswer: ['175.20'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 51,
@@ -494,7 +544,8 @@ const quizData = [
                 question: "D'après le document veuillez compléter : Total TTC ",
                 correctAnswer: ['1051.20'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 52,
@@ -502,7 +553,8 @@ const quizData = [
                 question: "L'article 2 coûte 110 € : si j'augmente mon prix de vente de 6%, quelle opération dois-je faire et quel est le résultat (exemple : 20,00 x 4,5 = 90,00)",
                 correctAnswer: ['110,00 x 1,06 = 116,60','1.06 x 110,00 = 116,60'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 53,
@@ -510,7 +562,8 @@ const quizData = [
                 question: "Je dois acheter une marchandise qui me coûte 235 € TTC, quelle est sa valeur en HT (TVA 20%)",
                 correctAnswer: ['195,83'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 54,
@@ -518,7 +571,8 @@ const quizData = [
                 question: "J'ai un chiffre d'affaires de 250 930 € HT, l'article 2 m'a rapporté 65 200€ qu'elle est la part de cet artcile par rapport au chiffre d'affaire total ? (en pourcentage)",
                 correctAnswer: ['25,98'],
                 image: '../assets/facture-test.png',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             }
         ]
     },
@@ -533,7 +587,8 @@ const quizData = [
                 question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Tu (penser) t'inscrire à ce stage et tu (savoir) que si tu t'y (inscrire), tu t'(engager) à signer un contrat. ",
                 correctAnswer: ['penses',' sais','inscris','engages'],
                 image: '',
-                numberOfInputs: 4
+                numberOfInputs: 4,
+                delay:30
             },
             {
                 id: 56,
@@ -541,7 +596,8 @@ const quizData = [
                 question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Je (être) en vacances et je (prendre) le temps de me reposer.",
                 correctAnswer: ['suis', 'prends'],
                 image: '',
-                numberOfInputs: 2
+                numberOfInputs: 2,
+                delay:30
             },
             {
                 id: 57,
@@ -549,7 +605,8 @@ const quizData = [
                 question: "Conjuguer au présent de l'indicatif le verbe indiqué entre parenthèses : Ils (mettre) toujours des shorts en été.",
                 correctAnswer: ['mettent'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
 
             {
@@ -558,7 +615,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : Elle lui (couper) la parole.",
                 correctAnswer: ['a coupé'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 59,
@@ -566,7 +624,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : Ces informations nous (sembler) erronées.",
                 correctAnswer: ['ont semblé'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 60,
@@ -574,7 +633,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : Elle (préparer) plusieurs concours et s'(engager) à travailler.",
                 correctAnswer: ["a préparé" ,"s'est engagée"],
                 image: '',
-                numberOfInputs: 2
+                numberOfInputs: 2,
+                delay:30
             },
             {
                 id: 61,
@@ -582,7 +642,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : Ce sont des films qu'il (voir) au cinéma. ",
                 correctAnswer: ['a vus'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 62,
@@ -590,7 +651,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : Ils (parler) un peu pour se distraire.",
                 correctAnswer: ['ont parlé'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 63,
@@ -598,7 +660,8 @@ const quizData = [
                 question: "Mettez au passé composé les verbes entre parenthèses : La discussion que nous (avoir) profitera à l'entreprise.",
                 correctAnswer: ['avons eu'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 64,
@@ -606,7 +669,8 @@ const quizData = [
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Jules (parler) très souvent à ses parents mais il les voit peu. ",
                 correctAnswer: ['parlait'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 65,
@@ -614,7 +678,8 @@ const quizData = [
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Nous (penser) que vous l'avez compris rapidement.",
                 correctAnswer: ['pensions'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             },
             {
                 id: 66,
@@ -622,7 +687,8 @@ const quizData = [
                 question: "Mettez à l'imparfait les verbes entre parenthèses : Elles (appeler) toujours leurs amis par des surnoms qui leur plaisent. ",
                 correctAnswer: ['parlait','plaisaient'],
                 image: '',
-                numberOfInputs: 1
+                numberOfInputs: 1,
+                delay:30
             }
 
         ]
@@ -640,21 +706,24 @@ const quizData = [
                  'a / an',
                  'the / an',
                   'the / the'],
-                correctAnswer: 'an / the'
+                correctAnswer: 'an / the',
+                delay:30
             },
             {
                 id: 68,
                 type: 'multiple-choice',
                 question: "What's ______ name ?",
                 answers: ['you', 'your', "you're", 'yours'],
-                correctAnswer: 'your'
+                correctAnswer: 'your',
+                delay:30
             },
             {
                 id: 69,
                 type: 'multiple-choice',
                 question: "______ are you from ?",
                 answers: ['were', 'when', 'where','who'],
-                correctAnswer: 'where'
+                correctAnswer: 'where',
+                delay:30
             },
             {
                 id: 70,
@@ -664,21 +733,24 @@ const quizData = [
                  'hers',
                  'her',
                   "she's"],
-                correctAnswer: 'her'
+                correctAnswer: 'her',
+                delay:30
             },
             {
                 id: 71,
                 type: 'multiple-choice',
                 question: "She ______ in London.",
                 answers: ['living', 'lives', "live", 'leave'],
-                correctAnswer: 'lives'
+                correctAnswer: 'lives',
+                delay:30
             },
             {
                 id: 72,
                 type: 'multiple-choice',
                 question: "We ______ at the moment.",
                 answers: ['are studying', 'study', 'studies','are study'],
-                correctAnswer: 'are studying'
+                correctAnswer: 'are studying',
+                delay:30
             },
             {
                 id: 73,
@@ -688,7 +760,8 @@ const quizData = [
                  'do',
                  'are',
                   'have'],
-                correctAnswer: 'would'
+                correctAnswer: 'would',
+                delay:30
             },
             {
                 id: 74,
@@ -698,7 +771,8 @@ const quizData = [
                 'carry', 
                 'carries',
                  'ports'],
-                correctAnswer: 'carries'
+                correctAnswer: 'carries',
+                delay:30
             },
             {
                 id: 75,
@@ -708,7 +782,8 @@ const quizData = [
                  'whose', 
                  'who',
                  'at who'],
-                correctAnswer: 'whose'
+                correctAnswer: 'whose',
+                delay:30
             },
             {
                 id: 76,
@@ -718,7 +793,8 @@ const quizData = [
                  "don't",
                  "is not",
                   "didn't"],
-                correctAnswer: "didn't"
+                correctAnswer: "didn't",
+                delay:30
             },
             {
                 id: 77,
@@ -728,7 +804,8 @@ const quizData = [
                 'was founded', 
                 "was founding", 
                 'founded'],
-                correctAnswer: "was founded"
+                correctAnswer: "was founded",
+                delay:30
             },
             {
                 id: 78,
@@ -738,7 +815,8 @@ const quizData = [
                 'from',
                  'to',
                 'in'],
-                correctAnswer: 'in'
+                correctAnswer: 'in',
+                delay:30
             },
             {
                 id: 79,
@@ -748,7 +826,8 @@ const quizData = [
                 'for', 
                 "during", 
                 'while'],
-                correctAnswer: "for"
+                correctAnswer: "for",
+                delay:30
             },
             {
                 id: 80,
@@ -758,7 +837,8 @@ const quizData = [
                 'use to',
                  'was used to',
                 'used to'],
-                correctAnswer: 'used to'
+                correctAnswer: 'used to',
+                delay:30
             },
             {
                 id: 81,
@@ -768,7 +848,8 @@ const quizData = [
                 'get used to',
                  "getting use to",
                 'get use to'],
-                correctAnswer: "getting used to"
+                correctAnswer: "getting used to",
+                delay:30
             },
             {
                 id: 82,
@@ -778,7 +859,8 @@ const quizData = [
                 'I will to fly', 
                 "I am flying", 
                 'I am fly'],
-                correctAnswer: "I am flying"
+                correctAnswer: "I am flying",
+                delay:30
             },
             {
                 id: 83,
@@ -788,7 +870,8 @@ const quizData = [
                 'finish',
                  'finished',
                 'will finish'],
-                correctAnswer: 'finish'
+                correctAnswer: 'finish',
+                delay:30
             },
             {
                 id: 84,
@@ -797,7 +880,8 @@ const quizData = [
                 answers: ['step down', 
                 'step up',
                 'step over','step around'],
-                correctAnswer: "step down"
+                correctAnswer: "step down",
+                delay:30
             },
             {
                 id: 85,
@@ -807,7 +891,8 @@ const quizData = [
                 'Did', 
                 "Does", 
                 'Shall'],
-                correctAnswer: "Shall"
+                correctAnswer: "Shall",
+                delay:30
             },
             {
                 id: 86,
@@ -817,7 +902,8 @@ const quizData = [
                 'In',
                  'By',
                 'On'],
-                correctAnswer: 'By'
+                correctAnswer: 'By',
+                delay:30
             },
             {
                 id: 87,
@@ -827,7 +913,8 @@ const quizData = [
                 'were seen', 
                 "have seen", 
                 'had seen'],
-                correctAnswer: "had seen"
+                correctAnswer: "had seen",
+                delay:30
             },
             {
                 id: 88,
@@ -837,7 +924,8 @@ const quizData = [
                 'mind',
                  'please',
                 'matter'],
-                correctAnswer: 'mind'
+                correctAnswer: 'mind',
+                delay:30
             },
             {
                 id: 89,
@@ -847,7 +935,8 @@ const quizData = [
                 'undress', 
                 "unlock", 
                 'untie'],
-                correctAnswer: "unfasten"
+                correctAnswer: "unfasten",
+                delay:30
             },
             {
                 id: 90,
@@ -857,7 +946,8 @@ const quizData = [
                 'permits to',
                  'allows you to',
                 'permits you'],
-                correctAnswer: 'allows you to'
+                correctAnswer: 'allows you to',
+                delay:30
             },
             {
                 id: 91,
@@ -867,7 +957,8 @@ const quizData = [
                 'do',
                  "doing",
                 'make'],
-                correctAnswer: "making"
+                correctAnswer: "making",
+                delay:30
             },
             {
                 id: 92,
@@ -877,7 +968,8 @@ const quizData = [
                 'was winning', 
                 "have won", 
                 'won'],
-                correctAnswer: "won"
+                correctAnswer: "won",
+                delay:30
             },
             {
                 id: 93,
@@ -887,7 +979,8 @@ const quizData = [
                 'does',
                  'has',
                 'will to'],
-                correctAnswer: 'would'
+                correctAnswer: 'would',
+                delay:30
             },
             {
                 id: 94,
@@ -896,7 +989,8 @@ const quizData = [
                 answers: ['set out', 
                 'set out to',
                 'wanted','set about'],
-                correctAnswer: "set out to"
+                correctAnswer: "set out to",
+                delay:30
             },
             {
                 id: 95,
@@ -906,7 +1000,8 @@ const quizData = [
                 'did break down', 
                 "breaking down", 
                 'breaking up'],
-                correctAnswer: "breaking down"
+                correctAnswer: "breaking down",
+                delay:30
             },
             {
                 id: 96,
@@ -916,7 +1011,8 @@ const quizData = [
                 "wouldn't to",
                  "didn't",
                 "aren't"],
-                correctAnswer: "didn't"
+                correctAnswer: "didn't",
+                delay:30
             }
         ]
     }
