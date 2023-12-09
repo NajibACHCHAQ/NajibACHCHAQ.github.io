@@ -41,7 +41,7 @@ body{
     background: url(../assets/hexagon-background.png);
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgba(95, 102, 102, 0.378);
+    background-color: rgba(220, 220, 220, 0.378);
     margin-bottom: 2vw;
     padding-bottom: 1vw;
 
@@ -71,6 +71,7 @@ section{
     border-radius: 20px;
     margin: 0 auto;
     margin-top: 1vw;
+    backdrop-filter: blur(15px);
 }
 .titre-section{
     font-size: 1.2vw;
@@ -121,10 +122,10 @@ select{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.399) !important;
+    background-color: rgba(196, 196, 196, 0.399) !important;
 }
 .question-element:hover{
-    background-color: rgba(128, 128, 128, 0.702);
+    background-color: rgba(255, 255, 255, 0.702) !important;
 }
 .idQ{
     width: 2vw;
@@ -143,8 +144,9 @@ select{
 }
 
 .section-name{
-    font-size: 2.2vw;
+    font-size: 1.5vw;
     color: rgb(82, 82, 117);
+
 }
 
 #reponses-container, .reponses-update-container{
@@ -238,4 +240,59 @@ select{
     margin-top: 30px;
     margin-right: auto;
     margin-left: auto;
+}
+
+header{
+    width: 100%;
+    margin-top: 1vw;
+}
+.menu-dashboard{
+    width: 90%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around; 
+    width: 90%; 
+    margin: 0 auto;
+}
+
+.menu-dashboard a{
+    width: fit-content; 
+    padding: 0.6vw; 
+    background-color: rgb(34, 94, 199);
+    color: white; 
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#sectionList{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.section-details{
+    width: fit-content;
+    display: flex;
+    padding: 0.5vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(82, 147, 193, 0.467);
+    border-radius: 20px;
+}
+.section-display-name{
+    color: rgb(45, 45, 46);
+    font-weight: bold;
+    font-size: 1.2vw;
+}
+.section-nb-question{
+    width: fit-content;
+    padding: 0.1vw;
+    display: flex;
+    justify-content: center;
+    font-size: 1vw;
+    align-items: center;
+    background-color: beige;
+    margin-left: 0.3vw;
+    font-weight: bold;
+    border-radius:10px ;
+
 }

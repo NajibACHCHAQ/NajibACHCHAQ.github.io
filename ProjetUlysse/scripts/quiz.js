@@ -509,7 +509,7 @@ const quizData = [
                 correctAnswer: ['44'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 48,
@@ -518,7 +518,7 @@ const quizData = [
                 correctAnswer: ['836'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 49,
@@ -527,7 +527,7 @@ const quizData = [
                 correctAnswer: ['876'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 50,
@@ -536,7 +536,7 @@ const quizData = [
                 correctAnswer: ['175.20'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 51,
@@ -545,7 +545,7 @@ const quizData = [
                 correctAnswer: ['1051.20'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 52,
@@ -554,7 +554,7 @@ const quizData = [
                 correctAnswer: ['110,00 x 1,06 = 116,60','1.06 x 110,00 = 116,60'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 53,
@@ -563,7 +563,7 @@ const quizData = [
                 correctAnswer: ['195,83'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 54,
@@ -572,7 +572,7 @@ const quizData = [
                 correctAnswer: ['25,98'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             }
         ]
     },
@@ -588,7 +588,7 @@ const quizData = [
                 correctAnswer: ['penses',' sais','inscris','engages'],
                 image: '',
                 numberOfInputs: 4,
-                delay:30
+                delay:50
             },
             {
                 id: 56,
@@ -597,7 +597,7 @@ const quizData = [
                 correctAnswer: ['suis', 'prends'],
                 image: '',
                 numberOfInputs: 2,
-                delay:30
+                delay:45
             },
             {
                 id: 57,
@@ -634,7 +634,7 @@ const quizData = [
                 correctAnswer: ["a préparé" ,"s'est engagée"],
                 image: '',
                 numberOfInputs: 2,
-                delay:30
+                delay:45
             },
             {
                 id: 61,
@@ -652,7 +652,7 @@ const quizData = [
                 correctAnswer: ['ont parlé'],
                 image: '',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 63,
@@ -661,7 +661,7 @@ const quizData = [
                 correctAnswer: ['avons eu'],
                 image: '',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 64,
@@ -670,7 +670,7 @@ const quizData = [
                 correctAnswer: ['parlait'],
                 image: '',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 65,
@@ -679,7 +679,7 @@ const quizData = [
                 correctAnswer: ['pensions'],
                 image: '',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             },
             {
                 id: 66,
@@ -688,7 +688,7 @@ const quizData = [
                 correctAnswer: ['parlait','plaisaient'],
                 image: '',
                 numberOfInputs: 1,
-                delay:30
+                delay:45
             }
 
         ]

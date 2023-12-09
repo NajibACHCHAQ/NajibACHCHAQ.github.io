@@ -14,10 +14,9 @@
 
 <body>
     <header>
-        <div class="menu-dashboard" style="display: flex; justify-content: space-around; width: 90%; margin: 0 auto;">
-            <a href="dashboard.html" style="width: fit-content; padding: 0.6vw; background-color: blue;color: white; text-decoration: none;"><div >dashboard</div></a>
-            <a href="gestion-candidature.html" style="width: fit-content; padding: 0.6vw; background-color: blue;color: white; text-decoration: none;"><div >candidature</div></a>
-          
+        <div class="menu-dashboard" >
+            <a href="gestion-candidature.html" ><div >candidature</div></a>
+            <a href="dashboard.html" ><div >dashboard</div></a>         
         </div>
 
     </header>
@@ -33,9 +32,12 @@
                 <button type="submit">Ajouter Section</button>
             </form>
             <!-- Liste des sections existantes -->
-            <ul id="sectionList">
-                List des section ici
-            </ul>
+            <div id="sectionList">
+                <div class="section-details"><div class="section-display-name">Francais</div><div class="section-nb-question">30</div></div>
+                <div class="section-details"><div class="section-display-name">Anglais</div><div class="section-nb-question">20</div></div>
+                <div class="section-details"><div class="section-display-name">Compta</div><div class="section-nb-question">15</div></div>
+                <div class="section-details"><div class="section-display-name">Communication</div><div class="section-nb-question">18</div></div>
+            </div>
         </section>
 
         <!-- Section pour gérer les questions -->
