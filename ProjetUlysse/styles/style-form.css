@@ -39,7 +39,7 @@ form {
     width: 100%;
     color: #266b86;
     background-color: rgba(240, 236, 232, 0.593);
-    font-size: 3vw; /* Ajustement de la taille du texte */
+    font-size: 3vw;
     border-radius: 12px;
 }
 
@@ -49,17 +49,16 @@ input {
     font-size: 18px;
     font-weight: bold;
     border-radius: 15px;
-    height: auto; /* Ajustement de la hauteur en pixels */
+    height: auto; 
     width: 100%;
     color: #006982;
     border: none;
     outline: none;
     text-align: center;
-    box-sizing: border-box; /* Boîte de modèle de bordure pour inclure le rembourrage dans la largeur et la hauteur */
-    margin-bottom: 10px; /* Ajout d'une marge inférieure pour l'espace entre les champs */
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
 }
 
-/* Ajout de styles pour le bouton */
 button {
     padding: 10px;
     font-size: 18px;

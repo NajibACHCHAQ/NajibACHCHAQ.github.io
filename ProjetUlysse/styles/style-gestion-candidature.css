@@ -4,3 +4,12 @@
     height: 600px;
     border: 1px solid black;
 }
+
+.candidatInfo{
+    font-size: 1.3vw;
+}
+
+.candidatInfoDetail{
+    font-size: 1.3vw;
+    font-weight: 600;
+}
