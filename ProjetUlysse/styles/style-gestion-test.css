@@ -15,7 +15,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: url(../assets/hexagon-background.png);
+    background: url(../assets/5184015.jpg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -23,7 +23,7 @@ body{
     margin-top: 1vw !important;
     font-size: 1.5vw !important;
     font-weight: bold;
-    background-color: rgb(13, 43, 197) !important;
+    background-color: rgb(115, 122, 155) !important;
     padding: 1.5vw !important;
     color: antiquewhite;
 }
@@ -38,7 +38,7 @@ body{
     border: 2px solid grey;
     border-radius: 20px;
     margin-top: 0.5vw;
-    background: url(../assets/hexagon-background.png);
+    background: url(../assets/5184015.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-color: rgba(220, 220, 220, 0.378);
@@ -52,6 +52,8 @@ input{
     text-align: center;
     font-size: 1.4vw !important;
     margin-bottom: 0.5vw !important;
+    background-color: rgb(191, 191, 191);
+
 }
 #reponses-container input,#question-container input, #modalQuestionForm input,.add-reponse input{
     width: 100%;
@@ -84,7 +86,7 @@ section{
 #sectionForm label{
     font-weight: bold;
     font-size: 1.8vw;
-    color: rgb(55, 55, 55);
+    color: rgb(226, 226, 226);
 }
 .titre-section{
     font-size: 1.2vw;
@@ -94,6 +96,7 @@ section{
     background-color: rgb(51, 143, 230);
     border-radius: 50px;
     margin-bottom: 1vw;
+    color: whitesmoke;
 }
 
 button{
@@ -112,11 +115,7 @@ button:hover {
 
 }
 
-.questionForm{
-    display: grid;
-    grid-template-rows: auto auto auto auto auto ;
-    justify-content: space-between;
-}
+
 .choix{
     margin-bottom: 1vw;
 }
@@ -125,11 +124,12 @@ select{
     font-size: 1.4vw !important;
     border: 2px solid rgb(51, 143, 230);
     text-align: center;
+    background-color: rgb(191, 191, 191);
 }
 
 .question-element{
     width: 80%;
-    margin: 1vw;
+    margin-top: 0.5vw;
     display: flex;
     border: 2px solid grey;
     padding: 1vw;
@@ -160,7 +160,11 @@ select{
 
 .section-name{
     font-size: 1.5vw;
-    color: rgb(82, 82, 117);
+    color: rgb(193, 193, 197);
+
+}
+.question-element:hover .section-name{
+    color: rgb(40, 40, 41);
 
 }
 
@@ -327,4 +331,7 @@ header{
     width: 50%; 
     margin: 0 auto; 
     justify-content: space-between;
+}
+label{
+    color: whitesmoke;
 }
