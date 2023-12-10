@@ -36,7 +36,7 @@
                     <option value="">score croissant</option>
                     <option value="">score décroissant</option>
                 </select>
-                <a href="">Exporter CSV</a>
+                <a href=""><img src="../assets/icons8-microsoft-excel-2019-48.png" alt=""></a>
                 <input type="text" placeholder="mots-clé">
             </div>
 
@@ -116,35 +116,35 @@
 <!-- La modal -->
 <div id="questionModal" class="modal" style="display: none;">
     <div class="modal-content">
-        <div class="header-modal"><h2>Suppression / Modification</h2>
+        <div class="header-modal"><h2>Candidat</h2>
         <span class="close">&times;</span></div>
         <!-- Contenu de la modal -->
         
         <form id="modalQuestionForm" class="questionForm">
             <div class="choix">
-                <label for="">Selectionnez une section</label>
-            <select name="" id="">
-                <option value="">Comptabilité</option>
-                <option value="">Francais</option>
-                <option value="">Anglais</option>
-            </select>
+                <div><label for="">Nom</label><span>Robert</span></div>
+                <div><label for="">Prenom</label><span>Jean</span></div>
+                <div><label for="">Mail</label><span>JR@gmail.fr</span></div>
+                <div><label for="">Statut Candidat</label><span>Demandeur d'emploi</span></div>
+                <div><label for="">Suivi</label><span>En attente</span></div>
+
+
+
             </div>
            <div class="choix">
-            <label for="">Selectionnez un type de question</label>
+            <label for="">Statut</label>
         <select name="" id="">
-            <option value="">Ouverte</option>
-            <option value="">Choix-multiple</option>
+            <option value="">En attente</option>
+            <option value="">En cours</option>
+            <option value="">Terminé</option>
         </select>
-        <div><label for="">Saisissez votre question</label><input type="text" placeholder="saisissez votre question"></div>
-        <div id="reponses-update-container">
-            <div class="add-reponse">
-                <button type="button" onclick="ajouterChampUpdate()">+</button>
-                <div><label for="">Saisissez vos réponse(s)</label><input class="reponse" type="text" placeholder="Saisissez une réponse"></div>
-            </div>
-        </div>     
         
         </div>
-        <button type="submit">Ajouter Question</button>
+        <div class="button-modal-container">
+            <button type="submit">Modifier statut</button>
+            <button type="submit">Envoyer email</button>
+    
+        </div>
         </form>
     </div>
 </div>
