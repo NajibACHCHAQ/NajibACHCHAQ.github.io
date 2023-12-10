@@ -50,8 +50,8 @@ input{
     border: 2px solid rgb(51, 143, 230);
     border-radius: 5px;
     text-align: center;
-    font-size: 1.4vw !important;
-    margin-bottom: 0.5vw !important;
+    font-size: 1.2vw !important;
+    margin-bottom: 0.3vw !important;
     background-color: rgb(191, 191, 191);
 
 }
@@ -117,11 +117,11 @@ button:hover {
 
 
 .choix{
-    margin-bottom: 1vw;
+    margin-bottom: 0.3vw;
 }
 select{
     width: 100%;
-    font-size: 1.4vw !important;
+    font-size: 1.2vw !important;
     border: 2px solid rgb(51, 143, 230);
     text-align: center;
     background-color: rgb(191, 191, 191);
@@ -222,15 +222,16 @@ select{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%; /* Ajustez la largeur selon vos besoins */
-    max-width: 600px; /* Définissez une largeur maximale si nécessaire */
-    height: 600px;
+    width: 80%; 
+    max-width: 600px; 
+    height: fit-content;
     background-color: rgba(231, 231, 231, 0.359);
     border: 2px solid grey;
     border-radius: 20px;
     display: none;
     backdrop-filter: blur(10px);
 }
+
 .close{
     font-size: 2vw;
     color: red;
@@ -258,9 +259,10 @@ select{
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin-top: 30px;
+    margin-top: 0.8vw;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 0.8vw;
 }
 
 header{
