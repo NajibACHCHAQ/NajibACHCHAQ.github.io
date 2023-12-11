@@ -103,39 +103,30 @@
         </div>
     </section>
     
-
-    
-    
-    
         <script src="../scripts/gestion-quiz.js"></script>
-       
-
-
-
-    <script src="../scripts/gestion-quiz.js"></script>
    
 </body>
 <!-- La modal -->
-<div id="questionModal" class="modal" style="display: none;">
+<div id="candidatModal" class="modal" style="display: none;">
     <div class="modal-content">
         <div class="header-modal"><h2>Candidat</h2>
         <span class="close">&times;</span></div>
         <!-- Contenu de la modal -->
         
-        <form id="modalQuestionForm" class="questionForm">
+        <form id="modalCandidat" class="candidatForm">
             <div class="choix">
-                <div><label for="" class="candidatInfo">Nom : </label><span class="candidatInfoDetail"> Robert</span></div>
-                <div><label for="" class="candidatInfo">Prenom : </label><span class="candidatInfoDetail"> Jean</span></div>
-                <div><label for="" class="candidatInfo">Mail : </label><span class="candidatInfoDetail"> JR@gmail.fr</span></div>
-                <div><label for="" class="candidatInfo">Statut Candidat : </label><span class="candidatInfoDetail"> Demandeur d'emploi</span></div>
-                <div><label for="" class="candidatInfo">Suivi : </label><span class="candidatInfoDetail"> En attente</span ></div>
+                <div><label for="" class="candidatInfo">Nom : </label><span class="candidatInfoDetail" id="candidatName"> Robert</span></div>
+                <div><label for="" class="candidatInfo">Prenom : </label><span class="candidatInfoDetail" id="candidatLastName"> Jean</span></div>
+                <div><label for="" class="candidatInfo">Mail : </label><span class="candidatInfoDetail" id="candidatEmail"> JR@gmail.fr</span></div>
+                <div><label for="" class="candidatInfo">Statut Candidat : </label><span class="candidatInfoDetail" id="candidatStatut"> Demandeur d'emploi</span></div>
+                <div><label for="" class="candidatInfo">Suivi : </label><span class="candidatInfoDetail" id="candidatSuivi"> En attente</span ></div>
 
 
 
             </div>
            <div class="choix">
             <label for="">Statut</label>
-        <select name="" id="">
+        <select name="" id="candidatSuivi">
             <option value="">En attente</option>
             <option value="">En cours</option>
             <option value="">Terminé</option>
@@ -143,9 +134,8 @@
         
         </div>
         <div class="button-modal-container">
-            <button type="submit">Modifier statut</button>
-            <button type="submit">Envoyer email</button>
-    
+            <button type="submit" onclick="modifierStatut()">Modifier statut</button>
+            <button type="button" onclick="ouvrirBoiteMail()">Envoyer email</button>    
         </div>
         </form>
     </div>
