@@ -202,9 +202,23 @@ function initializeQuiz() {
             showQuestion(quizData[currentSectionIndex].questions[currentQuestionIndex]);
         }
     }
+        
+    function normalizeNumber(number) {
+        // Normaliser le format des nombres décimaux (accepter à la fois la virgule et le point comme séparateurs)
+        return number.replace(/[,.]/g, '.');
+    }
     
     function normalizeString(str) {
-        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        // Normaliser les caractères spéciaux, points, virgules, etc.
+        const normalized = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    
+        // Si la chaîne est un nombre décimal, normalisez le format du nombre
+        if (!isNaN(normalized)) {
+            return normalizeNumber(normalized);
+        }
+    
+        // Remplacer '*' par 'x' et vice versa
+        return normalized.replace(/\*/g, 'x').replace(/x/g, '*');
     }
     
     function handleOpenEndedAnswer(userAnswers, correctAnswers) {
@@ -220,10 +234,17 @@ function initializeQuiz() {
     
             // Vérifier le format du modèle de réponse correcte
             if (Array.isArray(correctAnswers)) {
-                // Modèle avec une liste de chaînes
-                correctCount = trimmedUserAnswers.reduce((count, userAnswer, index) => {
-                    const correctAnswer = correctAnswers[index] ? normalizeString(correctAnswers[index]) : '';
-                    if (userAnswer === correctAnswer) {
+                // Modèle avec une liste de chaînes séparées par des virgules
+                const correctAnswerElements = correctAnswers
+                    .flatMap(correctAnswer => correctAnswer.split(','))  // Divise également sur les virgules
+                    .map(correctAnswer => normalizeString(correctAnswer.trim()));
+    
+                // Vérifier si au moins un élément de la réponse correcte correspond à la réponse de l'utilisateur
+                correctCount = trimmedUserAnswers.reduce((count, userAnswer) => {
+                    const normalizedUserAnswer = normalizeString(userAnswer);
+    
+                    // Comparer en ignorant la casse
+                    if (correctAnswerElements.some(correctAnswerElement => normalizedUserAnswer.toLowerCase() === correctAnswerElement.toLowerCase() || isNumericMatch(normalizedUserAnswer, correctAnswerElement))) {
                         return count + 1;
                     }
                     return count;
@@ -236,7 +257,14 @@ function initializeQuiz() {
             console.log(scores);
         }
     }
-      
+     
+    function isNumericMatch(value1, value2) {
+        const epsilon = 0.01;  // Marge d'erreur acceptable
+        const num1 = parseFloat(value1.replace(',', '.'));
+        const num2 = parseFloat(value2.replace(',', '.'));
+    
+        return Math.abs(num1 - num2) < epsilon;
+    }
 
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {
