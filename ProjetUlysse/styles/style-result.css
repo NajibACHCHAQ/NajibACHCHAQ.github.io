@@ -16,23 +16,23 @@ body{
     text-align: center;
     align-items: center;
     width: 80%;
-    height: 60%;
+    height: fit-content;
     color: #2d2d2d;
     margin: 0 auto;
-    margin-top: 50px;
-    font-size: 2vw;
+    margin-top: 1vw;
+    font-size: 1.3vw !important;
     padding: 28px;
     text-align: center;   
     box-shadow: -1px -1px 37px 4px #393838;
     border-radius: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 1vw !important;
 
 }
 #result-container{
 
     width: fit-content;
     min-width: 200px;
-    font-size: 1.4vw;
+    font-size: 1vw !important;
     background-color: rgba(199, 247, 247, 0.253);
     border: 6px ridge rgb(6, 52, 98);
     border-radius: 20px;

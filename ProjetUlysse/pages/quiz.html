@@ -37,13 +37,34 @@
         window.addEventListener('popstate', function () {
         history.pushState(null, null, document.URL);
 });
+// Variable pour suivre si le quiz est terminé
+let isQuizFinished = false;
 
-// document.addEventListener('visibilitychange', function() {
-//     if (document.visibilityState === 'hidden') {
-//         // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
-//         window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
-//     }
-// });
+// Mettez à jour la variable lorsque le quiz est terminé
+// Vous devrez remplacer cette fonction par votre propre logique
+function finishQuiz() {
+  isQuizFinished = true;
+  // Redirigez l'utilisateur vers la page de score
+  window.location.href = 'http://127.0.0.1:5500/pages/result.html';
+}
+
+window.onbeforeunload = function() {
+  if (!isQuizFinished) {
+    // Affichez la boîte de dialogue de confirmation de sortie
+    return "Êtes-vous sûr de vouloir quitter cette page ?";
+  }
+  else{
+    finishQuiz();
+  }
+};
+
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'hidden' && !isQuizFinished) {
+    // L'utilisateur a changé d'onglet, redirigez-le vers une autre page
+    window.location.href = 'http://127.0.0.1:5500/pages/abandon-quiz.html';
+  }
+});
+
 
 
     </script>

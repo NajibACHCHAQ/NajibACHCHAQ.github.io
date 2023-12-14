@@ -203,12 +203,16 @@ function initializeQuiz() {
         }
     }
     
+    function normalizeString(str) {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    }
+    
     function handleOpenEndedAnswer(userAnswers, correctAnswers) {
         console.log('Valeur de userAnswers:', userAnswers);
         console.log('Valeur de correctAnswers:', correctAnswers);
     
         // Filtrer les réponses vides de l'utilisateur
-        const trimmedUserAnswers = userAnswers.map(answer => answer.trim());
+        const trimmedUserAnswers = userAnswers.map(answer => normalizeString(answer));
     
         // Vérifier que correctAnswers est défini
         if (correctAnswers) {
@@ -218,7 +222,7 @@ function initializeQuiz() {
             if (Array.isArray(correctAnswers)) {
                 // Modèle avec une liste de chaînes
                 correctCount = trimmedUserAnswers.reduce((count, userAnswer, index) => {
-                    const correctAnswer = correctAnswers[index] ? correctAnswers[index].trim() : '';
+                    const correctAnswer = correctAnswers[index] ? normalizeString(correctAnswers[index]) : '';
                     if (userAnswer === correctAnswer) {
                         return count + 1;
                     }
@@ -229,10 +233,10 @@ function initializeQuiz() {
             // Mettre à jour les scores et passer à la question suivante
             console.log(`Nombre de champs corrects : ${correctCount}`);
             updateScores(correctCount === trimmedUserAnswers.length);
-            console.log(scores)
+            console.log(scores);
         }
     }
-    
+      
 
     // Fonction pour gérer les réponses aux questions à choix multiples
     function handleMultipleChoiceAnswer(selectedAnswer, correctAnswer) {

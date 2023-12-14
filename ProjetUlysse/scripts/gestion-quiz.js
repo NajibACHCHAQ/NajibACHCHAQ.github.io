@@ -110,7 +110,7 @@ function envoyerEmail() {
     var mail = document.getElementById('candidatEmail').textContent;
     var statutCandidat = document.getElementById('candidatStatut').textContent;
     var suivi = document.getElementById('candidatStatut').textContent;
-    var statutSelect = document.getElementById('candidatSuivi').value;
+    var statutSelect = document.getElementById('candidatSuivi').textContent;
 
     // Construire le corps du mail
     var sujet = 'Nouveau message pour ' + nom + ' ' + prenom;
