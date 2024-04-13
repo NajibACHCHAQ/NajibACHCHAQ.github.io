@@ -8,8 +8,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(91, 165, 234, 0.558);
-    height: 100%;
+
     margin: 0;
+    padding-bottom: 0px !important;
 }
 .validation-participation{
     display: flex;
@@ -25,8 +26,12 @@ body{
     text-align: center;   
     box-shadow: -1px -1px 37px 4px #393838;
     border-radius: 20px;
-    margin-bottom: 1vw !important;
+    margin-bottom: 50px !important;
 
+}
+.footer{
+    position: absolute;
+    bottom: 0 !important;
 }
 #result-container{
 

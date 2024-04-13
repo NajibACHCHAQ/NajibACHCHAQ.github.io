@@ -291,7 +291,7 @@ function initializeQuiz() {
     startQuiz();       
 }
 
-// Appelez la fonction d'initialisation du quiz
+// Appelez la fonction d'initialisation du quiz v4Lf4wEyg25WCPxw
 initializeQuiz();
 
 

@@ -551,7 +551,7 @@ const quizData = [
                 id: 52,
                 type: 'open-ended',
                 question: "L'article 2 coûte 110 € : si j'augmente mon prix de vente de 6%, quelle opération dois-je faire et quel est le résultat (exemple : 20,00 x 4,5 = 90,00)",
-                correctAnswer: ['110,00 x 1,06 = 116,60','1.06 x 110,00 = 116,60'],
+                correctAnswer: ['110,00 x 1,06 = 116,60'],
                 image: '../assets/facture-test.png',
                 numberOfInputs: 1,
                 delay:45

@@ -77,6 +77,8 @@ table {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
+    font-size: 1.4vh;
+    font-weight: bold;
 }
 .map{
     width: 90%; 
